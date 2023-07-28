@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 320px;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+li{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 320px;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDA1MzNf/Track%2001.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>I hardly ever exercise. ကၽြန္ေနာ္တစ္ခါတစ္ရံပဲ ေလ့က်င့္ခန္းလုပ္တယ္              </h3>
+<p>
+Marie: You are really fit, Paul. Do you exercise a lot? <br>
+ေပါလ္..နင္ကတကယ္ က်န္းမာသန္စြမ္းတယ္ေနာ္။ေလ့က်င့္ခန္း အမ်ားၾကီးလုပ္ျဖစ္လား                    <br><br>
+Paul: Well, I almost always get up early and I lift weights for an hour <br>
+ကၽြန္ေနာ္ အျမဲတမ္းေစာေစာအိပ္ရာကထျပီး..ဝိတ္တစ္နာရီၾကာၾကာမျဖစ္တယ္             <br><br>
+Marie: Seriously? <br>
+နင္တကယ္ ေျပာေနတာလား      <br><br>
+Paul: Sure. And then Ioften go swimming. <br>
+ေသခ်ာတာေပါ့။ျပီးရင္ ကၽြန္ေနာ္..မၾကာခဏေရကူးသြားတယ္             <br><br>
+Marie: Wow! How often do you exercise like that? <br>
+ဝိုး...နင္အဲ့သလို..ဘယ္ႏွစ္ၾကိမ္ ေလ့က်င့္ခန္းလုပ္သလဲ           <br><br>
+Paul: About five times a week. What about you? <br>
+တစ္ပတ္ငါးၾကိမ္ခန္႕ေလာက္ေပါ့။   နင္ကေကါ..   <br><br>
+Marie: Oh, I hardly ever exercise. I just watch TV in my free time. I guess I'm really couch potato. <br>
+ကၽြန္ေနာ္တစ္ခါတစ္ရံပဲ ေလ့က်င့္ခန္းလုပ္တယ္။အားတဲ့အခ်ိန္မွာဆို..တီဗြီပဲၾကည့္ျဖစ္တယ္။ ငါကေတာ့..တကယ္တီဗြီၾကည့္စြဲေနသူပဲေနမွာ     <br><br>
+<br>
+<h3> က်န္မွတ္ရန္ စကားလံုးမ်ား       </h3>
+<strong>every day -ေန႕တိုင္း </strong>
+<strong>once a week -တစ္ပတ္တစ္ခါ</strong>
+<strong>twice a week တစ္ပတ္ႏွစ္ခါ</strong>
+<strong>three times a week တစ္ပတ္သံုးခါ   </strong>
+<strong>Four times a year တစ္ႏွစ္ ၄ခါ  </strong>
+<strong>often -မၾကာခဏ</strong>
+<strong>ever -အျမဲ</strong>
+<strong>hardly ever- တစ္ခါတစ္ေလမွ်သာ   </strong>
+<strong> sometimes တစ္ခါတစ္ရံ</strong>
+<strong>always အျမဲတမ္း</strong>
+<strong>almost always အျမဲတမ္းနီးပါး    </strong>
+<strong>usually ပံုမွန္အားျဖင့္     </strong>
+<strong>almost never - တစ္ခါမွလည္း..မလုပ္နီပါး  </strong>
+</p>
+<br>
+<br>
+</body>
+</html>

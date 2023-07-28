@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 2500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://www.moemoetun.me/stories/George Washington.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+<p>
+There may be no greater American than George Washington. <br>
+ေဂ်ာ့ဂ္ဝါရွင္တန္ထက္ပုိျပီးၾကီးျမတ္တဲ့အေမရိကန္ဆိုတာ မရွိႏိုင္ဘူး(မရွိတာျဖစ္ႏိုင္) <br><br>
+Washington became the first United States President in 1789 with his unanimous victory in the first American election. <br>
+အေမရိကန္ရဲ႕ပထမဆံုးေရြးေကါက္ပြဲမွာ.ကန္႕ကြက္သူမရိွိေအာင္္ပြဲနဲ႕အတူ ဝါရွင္တန္ဟာအေမရိကန္ရဲ႕ပထမဆံုးသမၼတျဖစ္လာခဲ့တယ္<br><br>
+He was also unanimously elected to a second term in 1793, the only president ever to garner 100 percent of the electoral votes. <br>
+သူဟာ ၁၇၉၃ခုႏွစ္မွာအားလံုးရဲ႕ေထာက္ခံမႈျဖင့္ဒုတိယတစ္ၾကိမ္လည္းေရြးေကါက္တင္ေျမွွာက္ခံခဲ့တယ္..ေရြးခ်ယ္တင္ေျမွာက္သူရဲ႕ ၁၀၀ရာႏႈန္းကိုရရွိတဲ့တစ္ဦးတည္းေသာ သမၼတတစ္ေယာက္ေပါ့.. <br><br>
+ Washington was also the Commander-in-Chief of the First Continental Army that fought the British when the country was not yet established. <br>
+ႏိုင္ငံမတည္ေထာင္မွီ.အဂၤလိပ္ေတြကိုေတာ္လွန္ခဲ့တဲ့စစ္တပ္မွာသူဟာဗိုလ္ခ်ဴပ္ၾကီးတစ္ေယာက္လည္းျဖစ္ခဲ့တယ္<br><br>
+His epic "Crossing of the Delaware" river to recover New York City is still considered one of the greatest military moves in the history of warfare. <br>
+သူ႕ရဲ႕သမိုင္းေမာ္ကြန္းျဖစ္တဲ့ delawareျမစ္ကိုျဖတ္ျပီး နယူးေယာက္ျမိဳ႕ကိုျပန္လည္တုိက္ယူခဲ့တာဟာ စစ္ပြဲသမိုင္းမွာအထင္ရွားဆံုးလို႕သတ္မွတ္ခံထားရတုန္းပါပဲ.. <br><br>
+At the time of the crossing, the British had taken Boston and New York. <br>
+ျမစ္ကိုျဖတ္တဲ့အခ်ိန္မွာ..ျဗိတိန္ေတြဟာ..နယူးေယာက္နဲ႕ ေဘာ့စတန္ကိုသိမ္းထားခဲ့ျပီးျပီ<br><br>
+The Continental Army was on the run and disorganized, but Washington had a plan. <br><br>
+ျဗိတိသွ်ေတြကိုတိုက္ခိုက္တဲ့စစ္တပ္ဟာစည္းလံုးမႈေတြပ်က္ျပားေနခဲ့တယ္..ဒါေပမဲ့ ဝါရွင္တန္မွာ အစီစဥ္တစ္ခုရွိခဲ့တယ္<br><br>
+He decided to take his troops across the Delaware River in the middle of winter. <br>
+ေဆာင္းရာသီရဲ႕အလယ္မွာသူဟာစစ္သားေတြကို Delaware ျမစ္ကိုျဖတ္ျပီးယူဖို႕ဆံုးျဖတ္ခဲ့တယ္.. <br><br>
+This was a move that many military minds thought impossible, but not Washington. <br>
+ဒါဟာစစ္ပြဲပညာရွင္ေတြကမျဖစ္ႏိုင္ဘူးထင္ခဲ့တဲ့လုပ္ေဆာင္ခ်က္တစ္ခုေပါ့…ဒါေပမဲ့..ဝါရွင္တန္ကေတာ့မထင္ခဲ့ဘူး<br><br>
+The Americans were able to take New Jersey, and change the course of the war. <br>
+အေမရိကန္ေတြဟာ နယူးဂ်ာဇီကိုျပန္လည္ရယူႏိုင္ခဲ့ျပီး…စစ္ပဲြတစ္ခုလံုးကိုလည္းေျပာင္းလဲ့ပစ္ခဲ့ၾကတယ္.. <br><br>
+Another landmark moment for Washington was the winter at Valley Forge. <br>
+ဝါရွင္တန္အတြက္ေနာက္ထင္ရွားေက်ာ္ၾကားတာတစ္ခုက..Valley Forge ကေဆာင္းရာသီျဖစ္တယ္.. <br>
+In 1777, Washington led an army of more than 11,000 troops into Valley Forge in Pennsylvania, where the army suffered through a cold winter that claimed the lives of 3,000 men. <br>
+၁၇၇၇ခုႏွစ္မွာ.ဝါရွင္တန္ဟာ..ေအးလြန္းတဲ့ေဆာင္းရာသီေၾကာင့္စစ္သားအသက္ေပါင္း၃၀၀၀ေက်ာ္ေသခဲ့တဲ့ ပင္ဆာဗဲနီးယား Velley Forge ဆီသို႕စစ္သားေပါင္း ၁၁၀၀၀ေက်ာ္ကိုေခၚေဆာင္သြားခဲ့တယ္.. <br><br>
+When the spring arrived, instead of a demoralized, beaten group of soldiers, the army emerged battle ready, and able to continue the fight against the English in New York. <br>
+ေႏြဦးရာသီေရာက္တဲ့အခါ.စစ္သားေတြဟာ..စိတ္ဓာတ္က်..အရႈံးခံမဲ့အစား….တိုက္ပြဲအတြက္အဆင္အျဖစ္ေပၚထြက္လာျပီး..နယူးေယာက္မွာရွိတဲ့အဂၤလိပ္ေတြကိုဆက္ျပီးတိုက္ခိုက္ႏိုင္ခဲ့တယ္.. <br><br>
+ The army was able to survive the fierce winter because of the training, and preparedness of Washington's officers. <br>
+ေလ့က်င့္မႈေၾကာင့္စစ္တပ္ဟာ..ဆိုးဝါးတဲ့ေဆာင္းရာသီမွာ.ရွင္သန္ႏိုင္ခဲ့ျပီး..ဝါရွင္တန္ကအရာရွိေတြအတြက္အဆင္သင့္ျဖစ္ေနခဲ့တယ္. <br><br>
+Washington earned the nickname, "The Father of His Country," because of his military intelligence, and his concern for the people of the United States. <br>
+သူ႕ရဲ႕စစ္ပြဲညာဏ္ပညာႏွင့္အေမရိကန္ျပည္သူေတြကိုအေလးထားမႈေၾကာင့္ ဝါရွင္တန္ဟာ…ႏိုင္ငံရဲ႕ဖခင္ဆိုတဲ့ခ်စ္စႏိုးအမည္ရရွိခဲ့ပါတယ္…<br>
+</p>
+</body>
+</html>

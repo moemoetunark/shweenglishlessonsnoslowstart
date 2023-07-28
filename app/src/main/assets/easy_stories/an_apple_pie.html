@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDExMzBf/An%20Apple%20Pie.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+<p>
+The tree was full of red apples.<br>
+အပင္ဟာပန္းသီးအနီေရာင္ေတြနဲ႕ျပည့္ေနခဲ့တယ္<br><br>
+The farmer was riding his brown horse. <br>
+လယ္သမားဟာသူ႕ရဲ႕အညိုေရာင္ျမင္းကိုစီးေနခဲ့တယ္..<br><br>
+He stopped under the tree.<br>
+သူဟာသစ္ျမင္ေအာက္မွာ ရပ္လိုက္တယ္..<br><br>
+He reached out and picked an apple off a branch.<br>
+သူလွမ္းျပီး.သစ္ပင္အခက္ကေန..ပန္းသီးတစ္လံုးခူးယူလိုက္တယ္..<br><br>
+He bit into the raw apple.<br>
+သူဟာပန္းသီးကိုကိုက္ခြဲလိုက္တယ္..<br><br>
+He enjoyed the apple.<br>
+သူပန္းသီးကိုႏွစ္ျခိုက္စြာစားခဲ့တယ္..<br><br>
+ His horse turned its head to look at him.<br>
+သူ႕ရဲ႕ျမင္းကသူ႕ကိုၾကည့္ရန္ဦးေခါင္းကိုလွည့္လိုက္တယ္..<br><br>
+The farmer picked another apple off the tree.<br>
+လယ္သမားဟာေနာက္ပန္းသီးတစ္လံုးခူးလိုက္တယ္..<br><br>
+ He gave it to the horse. <br>
+ျမင္းကိုေပးလိုက္တယ္..<br><br>
+The horse ate the raw apple.<br>
+ျမင္းဟာပန္းသီးကိုစားလိုက္တယ္..<br><br>
+The horse enjoyed the apple.<br>
+ျမင္းဟာပန္းသီးကိုႏွစ္သက္တယ္...<br><br>
+The farmer put a dozen apples into a bag.<br>
+လယ္သမားဟာလြယ္အိတ္ထဲသို႕ပန္းသီးတစ္ဒါဇင္ထည့္လိုက္တယ္..<br><br>
+ He rode the horse back home.<br>
+သူဟာျမင္းစီးျပီးအိမ္သို႕ျပန္ခဲ့တယ္..<br><br>
+He put the horse in the barn.<br> 
+သူဟာျမင္းကို တင္းကုတ္ထဲမွာထားလိုက္တယ္..<br><br>
+He walked into his house.<br>
+သူဟာအိမ္ထဲသို႕ဝင္သြားခဲ့တယ္..<br><br>
+ The cat rubbed up against his leg. <br>
+ေၾကာင္ဟာသူ႕ရဲ႕ေျခကိုပြတ္ေနတယ္..<br><br>
+He gave the cat a bowl of warm milk.<br>
+သူဟာေၾကာင္ကိုႏို႕ေႏြးေႏြးေလးတစ္ခြက္ေပးလိုက္တယ္..<br><br>
+ He sat down on the sofa.<br>
+သူဟာဆိုဖာေပၚမွာထိုင္လိုက္တယ္..<br><br>
+He opened a book to read.<br>
+သူဖတ္ဖို႕စာအုပ္တစ္အုပ္ကိုဖြင့္လိုက္တယ္.<br><br>
+ His wife came home.<br>
+သူ႕မိန္းမအိမ္သုိ႕ျပန္လာတယ္..<br><br>
+She cooked the raw apples.<br>
+သူမဟာပန္းသီးေတြကိုခ်က္တယ္..<br><br>
+She made an apple pie.<br>
+သူမဟာပန္းသီး ပိုင္မုန္႕တစ္ခုလုပ္တယ္..<br><br>
+ They ate bread and hot soup for dinner.<br>
+သူတို႕ဟာညေနစာအတြက္ေပါင္မုန္႕နဲ႕စြတ္ျပဳတ္ပူပုစားခဲ့ၾကတယ္..<br><br>
+ They enjoyed the bread and soup.<br>
+သူတို႕ဟာေပါင္မုန္႕နဲ႕စြတ္ျပဳတ္ကိုႏွစ္ျခိဳက္ခဲ့ၾကတယ္..<br><br>
+They had hot apple pie for dessert.<br>
+အခ်ိဳပြဲအတြက္သူတို႕မွာ ပန္းသီးပိုင္မုန္ပူပူရွိတယ္..<br><br>
+They both enjoyed the apple pie.<br>
+သူတို႕ႏွစ္ေယာက္လံုးပန္းသီးပိုင္မုန္႕ကိုႏွစ္ျခိဳက္ခဲ့ၾကတယ္..<br>
+</p>
+</body>
+</html>

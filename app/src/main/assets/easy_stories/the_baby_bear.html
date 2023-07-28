@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 2500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDExNDhf/The%20Baby%20Bear.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+The baby bear followed his mama.<br>
+ဝက္ဝံကေလးဟာသူ႕အေမေနာက္ကိုလိုက္တယ္..<br><br>
+Mama bear walked through the woods. <br>
+အေမဝက္ဝံက သစ္ပင္ေတြကိုျဖတ္လို႕လမ္းေလွ်ာက္သြားတယ္<br><br>
+She was looking for berries to eat.<br>
+သူမဟာစားဖို႕ဘယ္ရီသီးေတြရွာေဖြေနတယ္..<br><br>
+She found some black berries.<br>
+အနက္ေရာင္ဘယ္ရီသီးတစ္ခ်ိဳ႕သူမေတြ႕တယ္<br><br>
+She started eating them. <br>
+သူမစာျပီးေတာ့သူတို႕ကိုစားတယ္<br><br>
+The baby started eating them, too. <br>
+ကေလးဟာလည္းသူတို႕ကိုစလို႕စားတယ္<br><br>
+They ate all the berries. <br>
+သူတို႕ဟာဘယ္ရီသီးေတြအားလံုးကိုစားလိုက္တယ္<br><br>
+Baby bear was full. <br>
+ဝက္ဝံကေလးက ဗိုက္ျပည့္သြားခဲ့တယ္<br><br>
+Mama bear was still hungry. <br>
+အေမဝက္္ဝံကဗိုက္ဆာေေနတုန္းပဲ<br><br>
+She started walking again. <br>
+သူမျပန္ျပီးစတင္လမ္းေလွ်ာက္တယ္<br><br>
+She wanted to find more berries to eat. <br>
+သူမဟာစားဖို႕ဘယ္ရီသီးေတြပိုရွာခ်င္ေသးတယ္<br><br>
+Baby bear lay down. He was full. <br>
+ဝက္ဝံကေလးက လွဲခ်လိုက္တယ္....သူကဗိုက္ျပည့္ေနတယ္ေလ..<br><br>
+He wanted to take a nap. <br>
+သူကတစ္ေမွးေလးေမွးခ်င္ေနတယ္..<br><br>
+But mama bear came back. <br>
+ဒါေပမဲ့ အေမဝက္ဝံကျပန္လာတယ္..<br><br>
+She growled at baby bear.<br>
+သူကဟာ ဝက္ဝံကေလးကို..ေဟာက္သံေပးလိုက္တယ္..<br><br>
+He understood mama's growl. <br>
+အေမရဲ႕ေဟာက္သံကိုသူနားလည္တယ္..<br><br>
+When mama growled, he obeyed.<br>
+အေမကေဟာက္သံေပးတဲ့အခါ..သူကနာခံလိုက္တယ္..<br><br>
+He got up and followed his mama. <br>
+သူထျပီး..အေမဝက္ဝံေနာက္လိုက္တယ္..<br><br>
+Someday he would take a nap after a meal.<br>
+တစ္ေန႕အစာစားျပီးေနာက္ သူတစ္ေမွးေလးေမွးရမယ္ေလ..<br><br>
+A squirrel ran up a tree with a nut.<br>
+ရွဥ့္တစ္ေကာင္ဟာ အမာခြံသီးနဲ႕သစ္ပင္ေပၚသို႕တက္တယ္..<br><br>
+It dropped the nut and ran back down to the ground.<br>
+အမာခြံသီးကိုပစ္ခ်လိုက္ျပီး..ေျမျပင္သို႕ျပန္ဆင္းေျပးတယ္..<br><br>
+It picked up the nut and looked at baby bear. <br>
+အမာခြံသီးကိုေကါက္လိုက္ျပီး..ဝက္ဝံေလးကိုၾကည့္တယ္..<br><br>
+Then it ran back up the tree.<br>
+ထို႕ေနာက္အပင္ေပၚသို႕ျပန္ေျပးတက္သြားတယ္..<br><br>
+Baby bear did not like nuts.<br>
+ဝက္ဝံေလးက အမာခြံသီးကိုမၾကိဳက္ဘူး<br><br>
+They were too hard to open.<br>
+သူတို႕ကဖြင့္(ခြဲ)ရခက္တယ္ေလ...<br>
+</p>
+</body>
+</html>

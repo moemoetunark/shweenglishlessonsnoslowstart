@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 320px;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 320px;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDA0OTVf/Track%2008.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>How's it going? အဆင္ေျပလား (ေနေကါင္းလား)            </h3>
+<img src="img/going.JPG"/>
+<p>
+Sun-hee: Hey, David. How's it going? <br>
+ေဟး...ေဒးဗစ္ ..ေနေကါင္းရဲ႕လား             <br><br>
+David: Fine, thanks. How are you? <br>
+ေကါင္းပါတယ္...ေက်းဇူးပါ။  နင္ေကါ ေနေကါင္းလား                      <br><br>
+Sun-hee: Pretty good. So, are you classes interesting this semester? <br>
+ေနေကါင္းပါတယ္ ။ ဒါနဲ႕ နင္သင္တန္းေတြ ဒီ စီမီစတာမွာ စိတ္ဝင္စားဖို႕ေကါင္းလား               <br><br>
+David: Yes, they are. I really love chemistry. <br>
+စိတ္ဝင္စားဖို႕ေကါင္းတယ္။ ဓာတုေဗဒ ဘာသာကိုေတာ့ တကယ္ၾကိဳက္တယ္          <br><br>
+Sun-hee: Chemistry? Are you and Beth in the same class? <br>
+ဓာတုေဗဒလား...နင္နဲ႕ Beth ကအတန္းတူတူပဲလား      <br>
+David: No, we aren't. My class is in the morning. Her class is in the afternoon. <br>
+မတူပါဘူး..ငါ့အတန္းက မနက္ခင္းမွာ။ သူမအတန္းက ေန႕လည္မွာေလ။<br><br>
+Sun-hee: Listen. I'm on my way to the cafeteria now. Are you free? <br>
+နားေထာင္ဦး။ ငါအခု ေကာ္ဖီဆိုင္ေတြဆီ သြားေနတာ။ နင္အားလား                <br><br>
+David: Let's go. <br>
+သြားၾကစို႕ <br>
+<h3> Yes/No ေမးခြန္းႏွင့္ အေျဖတိုေလးမ်ား             </h3>
+Are you free? နင္ အားလား <br>
+Yes, I am. အားပါတယ္။  No, I'm not. မအားပါဘူး <br><br>
+Is David from Mexico? <br>
+ေဒးဗစ္ မကၠတီကိုကလား      <br>
+Yes, he is. ဟုတ္တယ္။ <br>
+No, he isn't/No, he's not. မဟုတ္ပါဘူး<br><br>
+Is Beth's class in the morning? <br>
+Beth ရဲ႕အတန္းက မနက္ခင္းမွာလား        <br>
+Yes, it is. အင္း ဟုတ္တယ္။   <br>
+No, It isn't./ No, it's not. မဟုတ္ပါဘူး  <br><br>
+Are you and Beth in the same class? <br>
+နင္နဲ႕ Beth က အတန္းတူတူပဲ လား     <br>
+Yes, we are. ဟုတ္တယ္။ <br>
+No, we're not./ No, we aren't. မဟုတ္ပါဘူး။ <br><br>
+Are your classes interesting? <br>
+နင္သင္တန္းေတြစိတ္ဝင္စားဖို႕ေကါင္းလား          <br>
+Yes, they are. ဟုတ္တယ္။ <br>
+No, they're not./No, they aren't. မေကါင္းပါဘူး   <br>
+
+</p>
+<br>
+<br>
+</body>
+</html>

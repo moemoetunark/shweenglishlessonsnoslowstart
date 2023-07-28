@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM0MDRf/English%20Dictionary.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Excuse me, where can I find a dictionary?<br>
+တစ္ဆိတ္ေလာက္..ငါဘယ္နားမွာ အဘိဓာန္တစ္ခုရႏိုင္လဲ<br><br>
+B: What kind of dictionary would you like?<br>
+မင္းဘယ္လိုအဘိဓာန္အမ်ိဳးစားၾကိဳက္လဲ<br><br>
+A: A bilingual dictionary would be nice. <br>
+ႏွစ္ဘာသာပါတဲ့ အဘိဓာန္ဆိုရင္ေကါင္းမယ္<br><br>
+B: Well, there are many printed dictionaries.<br>
+ဟုတ္ျပီ...ထုတ္ေ၀ျပီးသား အဘိဓာန္ေတြအမ်ားၾကီးပဲ<br><br>
+A: Is there one you recommend?<br>
+မင္းညႊန္ေပးတာတစ္ခု ရွိလား
+B: Personally, I like the digital dictionaries.<br>
+ငါအလိုအရဆို..ငါက ဒစ္ဂ်စ္တယ္ အဘိဓာန္ေတြကိုၾကိဳက္တယ္<br><br>
+A: Do you sell those here?<br>
+ဒီမွာေရာင္းလား<br><br>
+B: Yes, they're like mini computers.<br>
+အင္း..သူတို႕ကကြန္ပ်ဴတာငယ္တစ္လံုးလိုေလ<br><br>
+A: They are much more expensive, aren't they?<br>
+အဲ့ဒါေတြက အရမ္းေစ်းၾကီးတယ္...မဟုတ္ဘူးလား<br><br>
+B: Unfortunately, they can be expensive.<br>
+ကံမေကါင္းစြာပဲ..အရမ္းကိုေစ်းၾကီးပါတယ္ <br><br>
+A: I think I'll stick with the printed version. <br>
+ငါထင္တယ္..ငါေတာ့ ပံုႏွံထားတာပဲသံုးမယ္..<br><br>
+B: Either way, I'm sure it will be very useful!<br>
+ဘယ္တစ္ခုျဖစ္ျဖစ္(ႏွစ္ခုထဲ) အရမ္းအသံုးတည့္မယ္ဆိုေသခ်ာတယ္<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMxMTFf/Easy%20Dialogue%202.%20Money%20and%20Happiness.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I want to be a doctor.<br>
+ငါဆရာ၀န္တစ္ေယာက္ျဖစ္ခ်င္တယ္       <br><br>
+B: Why do you want to be a doctor?</br>
+နင္ဘာေၾကာင့္ဆရာ၀န္တစ္ေယာက္ျဖစ္ခ်င္တာလဲ          <br><br>
+A: Doctors make a lot of money.<br>
+ဆရာ၀န္ေတြကေငြအရမ္းရတယ္ေလ        <br><br>
+B: Doctors also have to go to school for a long time.<br>
+ဆရာ၀န္ဟာ ေက်ာင္လည္းးအၾကာၾကီးတက္ရတယ္.         <br><br>
+A: Never mind, I want to be an engineer.<br>
+ရပါတယ္..ငါအင္ဂ်င္နီယာတစ္ေယာက္ျဖစ္ခ်င္တယ္       <br><br>
+B: Why do you want to be an engineer?<br>
+နင္ဘာေၾကာင့္အင္ဂ်င္နီယာျဖစ္ခ်င္တာလဲ         <br><br>
+A: Engineers make a lot of money.  <br>
+အင္ဂ်င္နီယာေတြက ေငြအရမ္းရတယ္         <br><br>
+B: Will you be happy though?  <br>
+နင္ေပ်ာ္ေကာ ေပ်ာ္မွာလား                  <br><br>
+A: If I have a lot of money, I will be happy.<br>
+ငါ့မွာေငြေတြသာအမ်ားၾကီးရွိရင္..ငါေပ်ာ္မွာလဲ           <br>
+B: Money doesn't equal happiness.  <br>
+ေငြကေပ်ာ္ရႊင္မႈနဲ႕ မတူညီပါဘူး     <br><br>
+A: But I can buy whatever I want with money. <br>
+ဒါေပမ့ဲေငြနဲ႕ငါဘာ၀ယ္ခ်င္ခ်င္ ၀ယ္လို႕ရတယ္ေလ         <br><br>
+B: You can't buy friends or family or love.<br>
+နင္သူငယ္ခ်င္း..မိသားစုနဲ႕ အခ်စ္ကိုေတာ့၀ယ္လို႕မရဘူး       <br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

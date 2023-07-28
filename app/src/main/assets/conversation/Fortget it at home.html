@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM0MTBf/Forgetting%20It%20at%20Home.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Did you bring the pie chart for our presentation?<br>
+ငါတို႕ presentation အတြက္မင္းဇယား၀ိုင္းယူလာလား<br><br>
+B: You're going to be mad.<br>
+မင္းေတာ့ရူးေတာ့မွာပဲ<br><br>
+A: What did you do?<br>
+မင္းဘာလုပ္ခဲ့လဲ<br><br>
+B: I forgot the pie chart.<br>
+ငါဇယား၀ိုင္းေမ့သြားခဲ့တယ္..<br><br>
+A: How could you forget?<br>
+ဘယ္လိုေမ့သြားခဲ့တာလဲ<br><br>
+B: I am so sorry.<br>
+ေတာင္းပန္ပါတယ္ကြာ<br><br>
+A: Where is it?<br>
+အဲဒါဘယ္မွာလဲ<br><br>
+B: It is at home.<br>
+အိမ္မွာပဲ.<br><br>
+A: Are your parents at home?<br>
+မင္းမိဘေတြအိမ္မွာလား<br><br>
+B: My mom is at home.<br>
+ငါ့အေမ အိမ္မွာရွိတယ္<br><br>
+A: Ask her to drop it off.<br>
+အဲ့ဒါလာေပးဖို႕သူမကိုေျပာလိုက္<br><br>
+B: I will call her right now.<br>
+ငါအခုပဲသူမကိုေခၚလိုက္မယ္<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

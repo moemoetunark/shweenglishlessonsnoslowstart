@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyOTFf/Easy%20Dialogue%207.%20Transferring%20Money.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I'd like to transfer some money.<br>
+ကၽြန္ေနာ္ေငြနည္းနည္းလႊဲခ်င္တယ္..<br><br>
+B: Between what two accounts would you like to transfer the money?<br>
+ဘယ္အေကါက္ႏွစ္ခုကေနမင္းလႊဲခ်င္တာလဲ<br><br>
+A: I'd like to transfer $100 from my savings account to my checking account.<br>
+ကၽြန္ေနာ့္ေငြစုအေကါက္ကေန..ေဒၚလာတစ္ရာကို..ခ်က္ကင္းအေကါက္သို႕လႊဲခ်င္တယ္.<br><br>
+B: All right, you just need to fill out this slip of paper.<br>
+ေကါင္းျပီး...ဒီစာရြက္ပိုင္းေပၚမွာပဲ..မင္းျဖည့္လိုက္<br><br>
+A: What information do I need to write down?<br>
+ဘာအခ်က္လက္ေတြေရးရမွာလဲ<br><br>
+B: You need to write both account numbers and how much you are transferring.<br>
+မင္းအေကါက္နံပါတ္ႏွစ္ခုလံုးရယ္...ျပီးရင္ေငြဘယ္ေလာက္လႊဲခ်င္တာရယ္..<br><br>
+A: Is the money available immediately?<br><br>
+ေငြကခ်က္ခ်င္းအဆင္သင့္ျဖစ္ေနမွာလား<br><br>
+B: It is. Could you please show me identification?<br>
+ဟုတ္တယ္...ေက်းဇူးျပဳလို႕မင္းေေထာက္ထားေတြျပလို႕ရမလား<br><br>
+A: Is there a limit to how many transfers I can make?<br>
+ဘယ္ႏွစ္ခါလြဲတယ္ဆိုတာကို..ကန္႕သတ္ခ်က္ရွိလား<br><br>
+B: You can make up to 25 free transfers in a year.<br>
+တစ္ႏွစ္ကို ၂၅ခါအထိ အခမဲ့လႊဲႏိုင္တယ္..<br><br>
+A: What happens if I want to make more?<br>
+တကယ္လို႕ကၽြန္ေနာ္ပိုလႊဲခ်င္တယ္ဆိုရင္ေကါ.<br><br>
+B: There is a fee for making more transfers.<br>
+ပိုလႊဲခအတြက္က်သင့္ေငြေပးရမယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

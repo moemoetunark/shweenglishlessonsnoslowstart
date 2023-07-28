@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyNzNf/Easy%20Dialogue%207.%20Money%20Lover.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Will you go out with me?<br>
+မင္းငါနဲ႕တြဲမလား<br><br>
+B: I think I'll pass.<br>
+ငါမထြက္ဘူးထင္တယ္..<br><br>
+A: Why are you rejecting me?<br>
+မင္းငါ့ကိုျငင္းဆန္ေနတာလား<br><br>
+B: You just want to date me because I am rich.<br>
+နင္ကငါ့ကိုတြဲခ်င္တာ.ငါခ်မ္းသာလို႕ပဲ<br><br>
+A: That's not true. <br>
+ဒါအမွန္မဟုတ္ဘူး<br><br>
+B: I heard you talking to your friends about my money.<br>
+နင္ကနင့္သူငယ္ခ်င္းေတြကို ငါ့ပိုက္ဆံအေၾကာင္းေျပာေနတာ ငါၾကားတယ္<br><br>
+A: I was just kidding.<br>
+ငါကစေနာက္ေနခဲ့တာ<br><br>
+B: You're a terrible liar.<br>
+မင္းကအရမ္းဆိုးတဲ့ လူလိမ္ပဲ<br><br>
+A: Okay, you got me.<br>
+အိုေက..နင့္ငါ့ကိုသိတာပဲ..<br><br>
+B: How long did you plan on dating me if I said yes?<br>
+ငါကသာလက္ခံမယ္ဆို..နင္ငါ့ကိုဘယ္ေလာက္တြဲဖို႕စီစဥ္ထားတာလဲ<br><br>
+A: I planned on marrying you and then taking your money.<br>
+ငါနင့္ကိုလက္ထပ္ဖို႕စီစဥ္ထားတယ္..ျပီးရင္နင့္ေငြေတြကိုယူမယ္...<br><br>
+B: You are disgusting.<br>
+နင္ကေတာ္ေတာ္စက္ဆုတ္တယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

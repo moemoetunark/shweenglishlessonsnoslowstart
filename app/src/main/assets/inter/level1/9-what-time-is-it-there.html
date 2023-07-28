@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 100%;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 100%;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM2ODVf/Track%2055.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>It's really cold. အရမ္းေအးတယ္     </h3>
+<img src="img/time.JPG"/>
+<p>
+Debbie: Hello? <br>
+ဟလို...<br><br>
+John: Hi, Debbie. This is John. I'm calling from Australia. <br>
+ဟိုင့္..ဒက္ဘီ..ဂၽြန္ပါကြာ။ ငါ ၾသစီက ဖုန္းဆက္ေနတာ<br><br>
+Debbie: Australia? <br>
+ၾသစီကလား <br><br>
+John: I'm at a conference in Sydney. Remember?<br>
+ငါ ဆစ္ဒနီျမိဳ႕ ေဟာေျပာပြဲတစ္ခုမွာ။ မွတ္မိေသးရဲ႕လား<br><br>
+Debbie: Oh, right. What time is it there? <br>
+အိုး..ဟုတ္သားပဲ။ အဲ့မွာ ဘယ္အခ်ိန္ ရွိျပီတုန္း    <br><br>
+John: It's 10:00 p.m. And it's four o'clock there in Los Angeles. Right? <br>
+ညဆယ္နာရီ ရွိျပီ။   ေလာ့အိမ္ဂ်လစ္မွာ ၄နာရီရွိျပီေနာ္..ဟုတ္လား             <br><br>
+Debbie: Yes-four o'clock in the morning! <br>
+အင္း - ဟုတ္တယ္...မနက္  ၄ နာရီေလ<br><br>
+John: 4:00 a.m.? oh, I'm really sorry. <br>
+နံနက္ေလးနာရီလား။..အိုး...ေဆာ္ရီးပါကြာ<br><br>
+Debbie: That's OK. I'm awake....now. <br>
+ရပါတယ္ကြာ။ ငါအခု ႏိုးေနပါျပီ <br><br>
+<h3> အခ်ိန္ ေျပာပံုေလးေတြ             </h3>
+<img src="img/time-1.JPG"/>
+<p>တစ္နာရီ ထိုးျပီ   </p><br>
+<img src="img/time-2.JPG"/><br>
+<p> တစ္နာရီနဲ႕ ငါးမိနစ္</p><br>
+<img src="img/time-3.JPG"/><br>
+<p> တစ္နာရီ ၁၅ မိနစ္ </p><br>
+<img src="img/time-4.JPG"/><br>
+<p> တစ္နာရီခြဲ(တစ္နာရီ မိနစ္ ၃၀)</p>
+<img src="img/time-5.JPG"/><br>
+<p> တစ္နာရီ မိနစ္ ၄၀ (သို႕) ၂နာရီထိုးရန္ မိနစ္ ၂၀ အလို။ </p>
+<img src="img/time-6.JPG"/><br>
+<p> တစ္နာရီ 45 မိနစ္ (သို႕) ၂နာရီထိုးရန္ ၁၅ မိနစ္အလို။</p>
+</p>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 2500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDExMTZf/a%20bird%20and%20a%20baby.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+<p>
+The baby was lying on her back.<br>
+လူကေလးဟာလဲေလ်ာင္းေနခဲ့တယ္..<br><br>
+A blue bird flew in through the window.<br>
+ျပတင္းေပါက္ကေနအျပာေရာင္ငွက္တစ္ေကာင္ပ်ံဝင္လာတယ္..<br><br>
+The blue bird had blue eyes. <br>
+အျပာေရာင္ငွက္ဟာ..အျပာေရာင္မ်က္လံုးရွိတယ္..<br><br>
+It sat on the baby's crib.<br>
+ငွက္ဟာကေလးရဲ႕ပုခက္ေပၚမွာနားလိုက္တယ္..<br><br>
+The bird had a bell around its neck.<br>
+ငွက္ရဲ႕လည္ပင္းမွာေခါင္းေခါင္းတစ္ခုရွိတယ္<br><br>
+The bell rang.<br>
+ေခါင္းေလာင္းကျမည္တယ္..<br><br>
+The baby smiled.<br>
+ကေလးကျပံုးလိုက္တယ္..<br><br>
+The baby reached for the bell. <br>
+ကေလးဟာေခါင္းေလာင္းဆီသို႕လွမ္းလိုက္တယ္..<br><br>
+The bird shook its head.<br>
+ငွက္ဟာသူ႕ရဲ႕ဦးေခါင္းကိုလႈပ္လိုက္တယ္..<br><br>
+The bell fell off the bird's neck.<br>
+ေခါင္းေလာင္းဟာငွက္ရဲ႕လည္ပင္းကေနကၽြတ္ထြက္သြားတယ္..<br><br>
+It fell next to the baby.<br>
+လူကေလးအနားကိုက်သြားတယ္..<br><br>
+The baby picked up the bell.<br>
+လူကေလးဟာေခါင္းေလာင္းကိုေကါက္ယူလိုက္တယ္..<br><br>
+The baby rang the bell.<br>
+ကေလးကေခါင္းေလာင္းကိုတီးလိုက္တယ္..<br><br>
+Another blue bird flew in through the window. <br>
+တစ္ျခားငွက္တစ္ေကါင္ဟာျပတင္းေပါက္ကေန..ပ်ံဝင္လာခဲ့တယ္<br><br>
+This blue bird also had blue eyes.<br>
+ဒီငွက္ဟာလည္း အျပာေရာင္မ်က္လံုးရွိတယ္..<br><br>
+The baby had brown eyes.<br>
+ကေလးမွာအညုိေရာင္မ်က္လံုးရွိတယ္.<br><br>
+The birds looked at the baby.<br>
+ငွက္ဟာကေလးကိုၾကည့္လိုက္တယ္<br><br>
+The baby looked at the birds.<br>
+ကေလးဟာငွက္ကိုၾကည့္လိုက္တယ္<br><br>
+The baby rang the bell again.<br>
+ကေလးကေခါင္းေလာင္းကိုတီးလိုက္တယ္..<br><br>
+Both birds flew away. <br>
+ငွက္ႏွစ္ေကာင္ဟာအေဝးသို႕ပ်ံသြားခဲ့တယ္..<br><br>
+The baby started to cry. <br>
+ကေလးကစျပီးေတာ့ငိုတယ္.<br><br>
+His mama came into the room. <br>
+သူ႕မေမအခန္းထဲသို႕ဝင္လာတယ္..<br><br>
+The baby smiled. <br>
+ကေလးကျပံဳးေနတယ္..<br><br>
+Mama saw the bell. <br>
+အေမကေခါင္းေလာင္းကိုျမင္တယ္..<br><br>
+She asked the baby where the bell came from.<br>
+သူမကကေလးကိုေခါင္းေလာင္းဘယ္ကလာသလဲလို႕ေမးလိုက္တယ္..<br><br>
+The baby pointed at the window.<br>
+ကေလးကျပတင္းေပါက္သို႕ညႊတ္ျပလိုက္တယ္..<br>
+</p>
+</body>
+</html>

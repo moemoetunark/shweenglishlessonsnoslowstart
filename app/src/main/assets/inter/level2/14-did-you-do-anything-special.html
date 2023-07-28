@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 320px;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+li{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 320px;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDA1Mjlf/Track%2012.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>Did you do anything special? ထူးျခားတဲ့တစ္ခုခုလုပ္ခဲ့သလား    </h3>
+<p>
+Rick: so, what did you do last weekend, Meg?<br>
+မက္...နင္အရင္တနဂၤေႏြစေနေန႕က ဘာလုပ္ခဲ့သလဲ      <br><br>
+Meg: Oh, I had a great time. I went to a karaoke bar and sang with some friends on Saturday. <br>
+အိုး..ငါအရမ္းေပ်ာ္စရာေကါင္းတဲ့အခ်န္ေတြရွိခဲ့တယ္ ။ စေန႕က သူငယ္ခ်င္းတစ္ခ်ိဳ႕နဲ႕..ကာရာအိုေကဆိုင္သြားျပီ...သီခ်င္းဆိုခဲ့ၾကတယ္    <br><br>
+Rick: How fun! Did you go to Lucky's? <br>
+ေပ်ာ္စရာေကါင္းလိုက္တာ..နင္ Lucky ဆိုင္သို႕သြားခဲ့တာလား             <br><br>
+Meg: No, we didn't. We went to that new place downtown. How about you? Did you go anywhere?<br>
+ငါတို႕မသြားခဲ့ဘူး။ ငါတို႕ျမိဳ႕ထဲကေနရာသစ္တစ္ခုဆီသြားခဲ့တယ္။ နင္ကေကါ..ဘယ္လုိလဲ..တစ္ေနရာ.ရာ သြားခဲ့သလား      <br><br>
+Rick: No, I didn't go anywhere all weekend. I just stayed home and studied for today's Spanish test. <br>
+ငါဒီအပတ္ ဘယ္မွ မသြားခဲ့ဘူး...အိမ္မွာေနျပီး..ဒီေန႕ေျဖရမယ့္ စပိန္ဘာသာ စာေမးပြဲတြက္ ေလ့လာေနခဲ့တာ               <br><br>
+Meg: Our test is today? I forgot about that! <br>
+ငါတို႕စာေမးပြဲဒီေန႕လား ။     အာ့ဒါငါ ေမ့သြားခဲ့တာ။      <br><br>
+Rick: Don't worry. You always get an A. <br>
+မပူပါနဲ႕..နင္ကအျမဲအဆင့္ A ရေနတာပဲ  <br>
+
+
+</p>
+<br>
+<br>
+</body>
+</html>

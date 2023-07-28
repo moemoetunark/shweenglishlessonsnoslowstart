@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDMxNDlf/Easy%20Dialogue%203.%20Alternate%20Bus%20Route.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I just missed my bus!<br>
+ကၽြေနာ္ဘတ္စ္ကားလြဲသြားျပီ..<br><br>
+B: Oh no! What are you going to do?<br>
+မျဖစ္ေသးဘူး...မင္းဘာလုပ္မလဲ။<br><br>
+A: I don't know! The next one comes in ten minutes!<br>
+မသိဘူး..ေနာက္ကားက၁၀မိနစ္လာမယ္..<br><br>
+B: You won't make it to work on time.<br>
+အခ်ိန္မွီအလုပ္လုပ္ဖို႕..မင္းအဒါမစီးနဲ႕<br><br>
+A: What should I do?<br>
+ငါဘာလုပ္သင့္လဲ<br><br>
+B: Ask the next bus driver for help.<br>
+ေနာက္ကားဆရာကိုအကူညီေတာင္း<br><br>
+A: How can he possibly help me?<br>
+သူငါ့ကိုဘယ္လိုကူညီႏိုင္မွာလဲ<br>
+B: He could tell you which bus to ride.<br>
+သူကမင္းဘယ္ကားစီးရမယ္ဆိုတာေျပာႏိုင္တယ္..<br><br>
+A: Do you think it's alright to ride a different bus?<br>
+မတူတဲ့ဘတ္စ္ကားစီးတာ အိုေကမယ္လို႕မင္းထင္လား<br><br>
+B: Sure, as long as you get to work on time.<br>
+ဟုတ္တယ္...မင္းအလုပ္သို႕အခ်ိန္မွေရာက္ရင္ေပါ့..<br><br>
+A: I just hope I don't get lost.<br>
+လမ္းမေပ်ာက္ဖို႕ပဲေမွ်ာ္လင့္တယ္<br><br>
+B: You won't. Besides, it's good not to sit idly by.<br>
+ေပ်ာက္မွာမဟုတ္ဘူး..ဒါ့အျပင္ ပ်င္းရိစြာမထိုင္ရဘူးေပါ့<br>
+</p>
+</body>
+</html>

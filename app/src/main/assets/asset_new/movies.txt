@@ -1,0 +1,86 @@
+﻿Genres ဇာတ္ကားအမ်ိဳးစားမ်ား
+
+Action Movie ဇာတ္ၾကမ္း
+
+Horror Movie 
+ေၾကာက္စရာေကါင္းေသာ ဇာတ္ကား(သရဲကား)
+
+Comedy ဟာသ
+
+Drama အခ်စ္အၾကမ္းစံုသည့္ဇာတ္ကားမ်ိဳး
+
+Science Fiction သိပၸံကား
+
+Historical film သမိုင္းေနာက္ခံကား
+
+Documentary မွတ္တမ္းဇာတ္ကား
+
+Director ဒါရိုက္တာ
+
+Editor တည္းျဖတ္သူ
+
+Entertainment ေဖ်ာ္ေျဖေရး
+
+Character ဇာတ္ေကာင္
+
+Family movie မိသားစုၾကည့္ဇာတ္ကား
+
+Movie Star ရုပ္ရွင္သရုပ္ေဆာင္
+
+Spy movie သူလွ်ိဳဇာတ္ကား
+
+Hero လူစြမ္းေကာင္း
+
+Villain လူဆိုး
+
+Scary ေၾကာက္စရာေကါင္းေသာ
+
+Ghost သရဲ၊တေစၦ
+
+Vampire ေသြးစုပ္ဖုတ္ေကာင္
+
+Dracula ေသြးစုပ္ဖုတ္ေကာင္
+
+Witch စုန္းမ
+
+စကားေျပာပံုစံမ်ား
+
+How often do you go to the cinema?
+ရုပ္ရွင္ရံုသို႕မင္းဘယ္ႏွစ္ၾကိမ္သြားသလဲ
+
+Who do you go with?
+မင္းဘယ္သူနဲ႕သြားလဲ
+
+What kind of movie do you like?
+မင္းဘာရုပ္ရွင္အမ်ိဳးစားၾကိဳက္သလဲ
+
+Who is your favorite actor or actress?
+မင္းရဲ႕အၾကိဳက္ဆံုးရုပ္ရွင္မင္းသား သို႕မဟုတ္မင္းသမီးက ဘယ္သူလဲ
+
+What is the name of the last film you saw?
+မင္းေနာက္ဆံုးၾကည့္ခဲ့တဲ့ ဇာတ္ကားနာမည္က ဘာလဲ
+
+Do you like horror movie? 
+မင္းေၾကာက္စရာ ေကါင္းတဲ့ဇာတ္ကားေတြကို ၾကိဳက္သလား
+
+What is the best movie you’ve even seen?
+မင္းခဲ့ဖူးတဲ့ဇာတ္ကားေတြထဲ အေကါင္းဆံုးကဘာလဲ
+
+Do you prefer to watch movie at home or in the cinema?
+မင္းရုပ္ရွင္ကိုအိမ္မွာၾကည့္ရတာနဲ႕ ရုပ္ရွင္ရံုမွာၾကည့္ရတာ ဘယ္ဟာပိုၾကိဳက္လဲ
+
+Do you even rent DVDs?
+ မင္း DVD ေတြငွားဘူးလား
+
+What is the worst movie you’ve ever watched?
+မင္းၾကည့္ဖူးတဲ့ကားေတြထဲ ဘာကားကအဆိုးဆံုးလဲ
+
+Have you even watched the Academy Awards?
+မင္းအကယ္ဒမီေပးပြဲၾကည့္ဖူးလား
+
+Do you watch movie in English or your language?
+မင္းဇာတ္ကားေတြကို အဂၤလိပ္လိုၾကည့္လား သို႕မဟုတ္မင္းရဲ႕ဘာသာစကားနဲ႕ၾကည့္လား
+
+When you watch English movie, do you prefer it dubbed or subtitled?
+မင္းအဂၤလိပ္ဇာတ္ကားၾကည့္တဲ့အခါ အသံောနက္ခံႏွင့္စာတန္းထိုးတာ ဘယ္ဟာပိုၾကိဳက္လဲ
+

@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 2500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://www.moemoetun.me/stories/Martin Luther King Jr.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+<p>
+Martin Luther King Jr. is one of the most famous Americans ever. <br>
+မာတင္လူသာကင္းဂ်ဴနီယာဟာ..အေမရိကန္ရဲ႕အျမဲတမ္းအေက်ာ္ၾကားဆံုးတစ္ေယာက္ျဖစ္ပါတယ္…<br><br>
+He was a pastor, and a humanitarian, but is known mostly for being a civil rights activist. <br>
+သူဟာလူသားခ်င္းစာနာတတ္သူ.ခရစ္ယာန္သင္းအုပ္ဆရာတစ္ေယာက္ျဖစ္တယ္..ဒါေပမဲ့အမ်ားဆံုးသိၾကတာကေတာ့ ႏိုင္ငံသားအခြင့္ေရးလႈပ္ရွားမႈေၾကာင့္ျဖစ္တယ္.. <br>
+<br>
+ King was the leader of the African-American Civil Rights Movement during the 1950s and 60s. <br>
+၁၉၅၀ ကေန ၆၀အတြင္း…….ကင္းဟာ..အာဖရိကန္-အေမရကန္ေတြရဲ႕ႏိုင္ငံသားအခြင့္ေရးလႈပ္ရွားမႈမွာ.ေခါင္းေဆာင္တစ္ေယာက္ျဖစ္ခဲ့တယ္.<br><br>
+His use of non-violent protest to affect social change was based on his Christian beliefs. <br>
+သူ႕ရဲ႕လူမႈအေျပာင္းလဲေတြျဖစ္ဖို႕အၾကမ္းမဖက္ဆႏၵျပမႈေတြဟာသူ႕ရဲ႕ခရစ္ယာန္ယံုၾကည္မႈအေပၚအေျခခံခဲ့တယ္<br><br>
+King was born Michael King, but his father changed his name in honor of the German reformer, Martin Luther.<br>
+ကင္းကို မိုက္ကယ္ကင္းလို႕ေမးဖြားခဲ့တယ္..ဒါေပမဲ့သူ႕ရဲ႕အေဖက ဂ်ာမနီကျပဳျပင္ေရးလုပ္ခဲ့သူ မာတင္လူသာကိုဂုဏ္ျပဳတဲ့အေနနဲ႕ သူ႕နာမည္ကိုေျပာင္းပစ္ခဲ့တယ္<br><br>
+The white and the southern culture in the United States wanted nothing to do with social change during the 60s.<br>
+ေတာင္ပိုင္းယာဥ္ေက်းမႈနဲ႕လူျဖဴေတြက ၆၀ခုႏွစ္ေတြမွာဘယ္လူမႈအေျပာင္းလဲကိုမွ မလိုခ်င္ခဲ့ၾကဘူး<br><br>
+ Segregation laws were in place that prohibited black Americans from eating at the same restaurants as whites, or to ride in the same section on public buses with white Americans.<br>
+လူမည္းအေမရိကန္ေတြကို…လူျဖဴေတြနဲ႕အတူစားေသာက္ဆိုင္တစ္ခုမွာအတူစားတာ...လူျဖဴေတြနဲ႕အတူကားအတူတူစီးတာေတြကို..တားျမစ္တဲ့ခြဲျခားတဲ့ဥပေဒေတြရွိေနခဲ့တယ္…<br><br>
+ King led the famous 1955 Montgomery Bus Boycott in reaction to Rosa Park's refusal to surrender her bus seat to a white passenger as was required by law in Montgomery, Alabama at the time.<br>
+ကင္းဟာ…အဲ့အခ်ိန္တုန္းက အဲလ္ဘားမားျပည္နယ္.ေမာင့္ဂိုမရီမွာဥပေဒအရျပဌာန္းထားတဲ့လူျဖဴေတြကိုဘတ္စကားထိုင္ခံုကိုေပးရမယ္ဆိုတာကို ရိုဆာပါ့က္ရဲ႕ျငင္းဆန္မႈကိုေထာက္ခံတဲ့ထင္ရွား
+ေက်ာ္ၾကားတဲ့ ေမာင့္ဂိုမနီကားသပိတ္ေမွာက္ျခင္းကို ေခါင္းေဆာင္ခဲ့တယ္..<br><br>
+King started his activism while serving as a Baptist minister for the Dexter Avenue Baptist Church. <br>
+ကင္းဟာသူ႕ရဲ႕လႈပ္ရွားမႈကို Dexter Avenue ႏွစ္ျခင္းခရစ္ေက်ာင္းအတြက္၀န္ၾကီးျဖစ္ခဲ့စဥ္စတင္ခဲ့တယ္<br>
+He believed strongly in the Christian belief that loving the neighbor as yourself, which was a philosophy he used throughout his civil rights years.<br>
+မိမိရဲ႕အိမ္နီးခ်င္းကို မိမိကဲ့သို႕ခ်စ္ခင္ရမယ္ဆိုတဲ့ခရစ္ယာန္ယံုၾကည္မႈကိုသူခိုင္ခိုင္မာမာယံုၾကည္ခဲ့တယ္..အဲ့ဒီယံုၾကည္မႈကိုႏိုင္ငံသားအခြင့္ေရးလႈပ္ရွားမႈႏွစ္ေတြအတြင္သူကအသံုးျပဳခဲ့တယ္<br><br>
+ He was also a great speaker.<br>
+သူဟာစကားေျပာေကါင္းသူတစ္ေယာက္လည္းျဖစ္တယ္…<br><br>
+His "I Have a Dream" speech is regarded as one of the most famous oratory in American history. <br>
+သူ႕ရဲ႕ “I have a dream.” ဆိုတဲ့စကားဟာအေမရိကန္သမိုင္းမွာအေက်ာ္ၾကားဆံုးစကားေျပာမႈအျဖစ္သတ္မွတ္ခံရတယ္<br><br>
+In it, he speaks of how his dream is for white and black Americans to walk together hand in hand as brothers.<br>
+လူျဖဴနဲ႕လူမည္းအေမရိကန္ေတြလက္ခ်င္းဆက္လို႕ညီအကိုလို..ဘယ္လိုအတူသြားမယ္ဆိုတဲ့သူ႕အိပ္မက္ေတြကိုေျပာတယ္…..<br><br>
+The speech also declared how it was his dream for all Americans to be judged, not by the color of their skin, but by the content of their character.<br>
+အသားအေရာင္ေပၚအေျခမခံပဲ…လူတစ္ဦးတစ္ေယာက္ရဲ႕စရိုက္အေပၚမွာအေျခခံလို႕ဆံုးျဖတ္ရမယ္ဆိုတဲ့သူ႕ရဲ႕အိပ္ကိုေၾကညာခဲ့တယ္..<br><br>
+On October 14, 1964, King was awarded the Nobel Peace Prize for his involvement in combating racial inequality in the United States. <br>
+၁၉၆၄ခုႏွစ္…ေအာက္တိုဘာ ၁၄မွာ..အေမရိကန္ႏိုင္ငံရဲ႕လူမ်ိဳးေရးကြဲျခားမႈကိုတိုက္ပြဲဝင္မႈေၾကာင့္သူဟာ..ႏိုဘဲလ္ျငိမ္းခ်မ္းေရးဆုကိုရရွိခဲ့တယ္…<br><br>
+He was assassinated in April, 1968, in Memphis, Tennessee at the age of 39.<br>
+အသက္ ၃၉ႏွစ္မွာ..တနက္ဆက္ျပည္နယ္..မန္ဖစ္(စ္)..၁၉၆၈ခုႏွစ္ ဧပရယ္မွာလုပ္ၾကံသတ္ျဖတ္ခံခဲ့ရတယ္…<br>
+</p>
+</body>
+</html>

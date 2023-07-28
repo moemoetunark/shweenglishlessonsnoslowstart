@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 2500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://www.moemoetun.me/stories/obama.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+Since 2008, Barack Obama has been president of the United States of America. <br>
+၂၀၀၈ ခုႏွစ္ကတည္းက အိုဘားမားဟာ အေမရိကန္ျပည္ေထာင္စုရဲ႕သမၼတစ္ေယာက္ျဖစ္တယ္..<br><br>
+He is a historic figure primarily because he is the first African American to hold the position of president. <br>
+သမၼတရာထူးကိုယူတဲ့ပထမဆံုးေသာ အဖရိကန္အေမရကန္တစ္ေယာက္ျဖစ္တဲ့အတြက္ သူဟာသမိုင္းဝင္ပုဂၢိလ္တစ္ေယာက္ျဖစ္တယ္...<br><br>
+His policies have gained him many supporters, as well as many detractors.<br>
+သူရဲ႕မူဝါဒေတြဟာ ေထာက္ခဲ့သူေတြအမ်ားၾကီးရသလို..သေထာထားမတူသူေတြလည္းအမ်ားၾကီးရွိခဲ့တယ္..<br><br>
+He is possibly one of the most divisive presidents to govern the country in the history of the United States.<br>
+အေမရကန္ျပည္ေထာင္စုရဲ႕ႏိုင္ငံကိုအုပ္ခ်ဳပ္တဲ့ ေသြးကြဲမႈကိုအမ်ားဆံုးျဖစ္ေစတဲ့သူေတြထဲကတစ္ေယာက္လည္းသူဟာျဖစ္ႏိုင္တယ္<br><br>
+Obama is a representative of the Democratic Party with his presidency coming after the controversial George W. Bush left office.<br>
+အိုဘားမားဟာ...အျငင္းပြားဖြယ္ျဖစ္ေသာေဂ်ာ့ဂ်္ဒဗလ်ဴဘုရွ္ျပီးေနာက္သမၼတျဖစ္လာေသာ ဒီမိုကရစ္တစ္ပါတီရဲ႕ကိုယ္စလွယ္တစ္ဦးျဖစ္တယ္..<br><br>
+One of the defining aspects of his presidency is the Patient Protection and Affordable Care Act, commonly and inaccurately called Obamacare. <br>
+Obamacare လို႕မမွန္မကန္ေခၚၾကတဲ့ က်န္းမာေရးေစာင့္ေရွာက္မႈအစီစဥ္ဟာ သူ႕သမၼတသက္တမ္းရဲ႕အဓိကအစိတ္ပိုင္းတစ္ခုျဖစ္ပါတယ္..<br><br>
+This act, passed into law by the U.S. Congress and signed by the president in March 2010, became effective on January 1, 2014. <br>
+ဒီအစီစဥ္ဟာ ၂၀၁၀မွာသမၼတကလက္မွတ္ေရးထိုးျပီး..လႊတ္ေတာ္ကေနဥပေဒတစ္ရက္အျဖစ္ျပဌာန္းကာ...ဇန္နဝါရီ တစ္ရက္ ၂၀၁၄ မွာအသက္ဝင္လာခဲ့တယ္..<br><br>
+It is the single, most significant change in government healthcare since Medicare was implemented in 1965. <br>
+၁၉၆၅ခုႏွစ္မွာ midcare ကိုအေကါက္ထည္ေဖာ္ျပီးကတည္းက.အစိုးရဲ႕တစ္ခုတည္းေသာက်န္းမာေရးေစာင့္ေရွာက္မႈ ထူးျခားတဲ့အေျပာင္းလဲျဖစ္ပါတယ္..<br><br>
+This act was intended to increase the affordability of care for Americans, expand insurance coverage, and lower the uninsured rate in the country.<br>
+ဒီဥပေဒဟာႏိုင္ငံမွာက်မ္းမာေရးအာမခံမရွိသူေတြကိုေလ်ာ့ခ်ဖို႕..က်မ္းမားေရးအသံုးစရိတ္တိုးျမွင့္ဖို႕ႏွင့္အေမရကန္ျပည္သူေတြရဲ႕က်မ္းမာေရးေစာင့္ေရွာက္ႏိုင္မႈကိုတိုးျမွင့္ဖို႕ရည္ရြယ္ခဲ့တယ္<br><br>
+It is a controversial act that has many detractors, but most Americans now carry health insurance, which was not true before 2014.<br>
+ဒီဥပေဒဟာ..သေဘာမတူသူေတြမ်ားစြာနဲ႕..အျငင္းပြားဖြယ္တစ္ခုျဖစ္တယ္..ဒါေပမဲ့အေမရကန္အမ်ားစုဟာအခု က်မ္းမာေရးအာမခံရွိကိုင္ထားႏိုင္ၾကတယ္..ဒါက၂၀၁၄ခုႏွစ္မတိုင္မီမရွိခဲ့တာေပါ့..<br><br>
+Obama was born in Honolulu, Hawaii in 1961.<br>
+အိုဘားမားကို ၁၉၆၁ခုႏွစ္..ဟာဝိုင္အီ..ဟိုႏိုလူလူမွာေမြးဖြားခဲ့တယ္<br><br>
+ He is a graduate of both Columbia University in New York City, and Harvard Law School. <br>
+သူဟာဟားဗတ္ဥပေဒေက်ာင္းႏွင့္နယူေယာက္ကိုလံဘီယာတကၠသိုလ္က ဘြဲ႕ရတစ္ေယာက္ျဖစ္တယ္<br><br>
+Before becoming president, he served as senator for the state of Illinois.<br>
+သူသမၼတမျဖစ္မွီ..အီလီႏြိဳက္စ္ျပည္နယ္နဲ႕အမတ္တစ္ဦးအျဖစ္တာဝန္ထမ္းေဆာင္ခဲ့တယ္<br><br>
+ He is considered a liberal by many southern conservatives, but this may be an unfair label.<br>
+ကြန္ဆားဗစ္တစ္ေတြက သူ႕ကိုလစ္ဘရစ္ဝါဒီတစ္ဦးအျဖစ္ထင္ၾကတယ္..ဒါေပမဲ့ဒါဟာမမွ်တတဲ့သမွတ္မႈတစ္ခုျဖစ္ႏိုင္တယ္..<br><br>
+The perception is largely due to the Affordable Care Act, and his attempts at immigration reform.<br>
+ဒီလိုထင္ရတာဟာ..သူ႕ရဲ႕လူဝင္မႈၾကီးၾကပ္ေရးအေျပာင္းလဲႏွင့္ Affordable Care Act ေၾကာင့္ျဖစ္တယ္..<br><br>
+ Additionally, Obama ended the U.S. involvement in the Iraq war. <br>
+ဒါ့အျပင္..အိုးဘားမားဟာ..အေမရိကန္ေတြရဲ႕အီရတ္စစ္ပြဲမွာပါဝင္ပတ္သက္မႈကိုအဆံုးသတ္ခဲ့တယ္..<br><br>
+He also ordered the military operation that eventually resulted in the death of Osama Bin Laden.<br>
+ေနာက္ဆံုးအိုစမာဘင္လာဒင္ကိုသတ္ဖို႕သူဟာစစ္ေရးဆိုင္ရာအမိန္းကိုေမးခဲ့တယ္..<br><br>
+ Obama was reelected as president in November, 2012.<br>
+အိုဘားမားဟာ ၂၀၁၂ခုႏွစ္ႏိုဝင္ဘာလမွာ..သမၼတအျဖစ္ျပန္လည္အေရြးခံရတယ္..<br>
+</p>
+</body>
+</html>

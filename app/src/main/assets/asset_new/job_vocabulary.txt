@@ -1,0 +1,44 @@
+﻿• accountant စာရင္းကိုင္
+• actor သရုပ္ေဆာင္
+• actress သရုပ္ေဆာင္းမိန္းမ
+• athlete အားကစားသမား
+• author စာေရးဆရာ
+• baker ေပါင္မုန္႕ဖုတ္သူ
+• banker ဘဏ္အလုပ္လုပ္သူ
+• barber ဆံသသူ
+• beautician အလွျပင္သူ
+• broker ပြဲစား
+• burglar ေဖာက္ထြင္းသူခိုး
+• butcher သားသတ္သူ
+• carpenter လက္သမား
+• chauffeur သူေဌး၏ယာဥ္ေမာင္း
+• chef စားဖိုမႈး
+• clerk စာေရး
+• coach နည္းျပ
+• craftsman လက္မႈပညာသည္
+• criminal ရာဇ၀တ္ေကါင္
+• crook လူလိမ္
+• dentist သြားဆရာ၀န္
+• doctor ဆရာ၀န္
+• editor တည္းျဖတ္သူ
+• engineer အင္ဂ်င္နီယာ
+• farmer လယ္သမား
+• fire fighter မီးသတ္သမား
+• fisherman တံငွာသည္
+• judge တရားသူၾကီး
+• lawyer ေရွ႕ေန
+• magician ေမွာ္ဆရာ
+• musician ဂီတသမား
+• nurse သူနာျပဳ
+• pharmacist ေဆး၀ါးစပ္ေဖာ္ေရာင္းသူ
+• pilot ေလယာဥ္မွဴး
+• poet ကဗ်ာဆရာ
+• policeman ရဲသား
+• politician ႏိုင္ငံေရးသမား
+• printer ပံုႏွိပ္ဆရာ၊ပံုႏွိပ္စက္ပိုင္ရွင္
+• professor ပါေမာကၡ
+• teacher ေက်ာင္းဆရာ
+• waiter စားပြဲထိုး
+• waitress စားပြဲထိုးအမ်ိဳးသမီး
+• watchmaker
+

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI5NzNf/Easy%20Dialogue%2013.%20Asking%20about%20Fees.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: What fees does this bank charge?<br>
+ဒီဘဏ္ကဘာအခေတြေပးရသလဲ<br><br>
+B: There are different fees depending on the kind of account you have with us.<br>
+မင္းမွာဘယ္လိုအေကါက္မ်ိဳးငါတို႕နဲ႕အတူရွိသလဲဆိုတာမူတည္ျပီး မတူတဲ့အခေတြေပးရတယ္..<br><br>
+A: I have a basic checking account.<br>
+အေျခခံ ခ်က္ကင္းအေကါက္ငါ့မွာရွိတယ္..<br><br>
+B: There is no fee for a basic checking account unless you have less than the minimum balance.<br>
+ရွိရမယ့္အနည္းဆံုးရွိရမယ့္ေငြထက္မနည္းဘူးဆိုရင္ ဘာအဖိုးခမွ ေပးစရာမလိုဘူး<br><br>
+A: How much is the minimum balance?<br>
+အနည္းဆံုးရွိရမယ့္ေငြကဘယ္ေလာက္လဲ<br><br>
+B: You need to have at least $25.00 in your account everyday or else you will pay an $8 monthly fee.<br>
+ေန႕တိုင္းမင္းရဲ႕အေကါက္မွာအနည္းဆံုးေဒၚလာ၂၀ရွိရမယ္..မဟုတ္ရင္တစ္လကိုအခ၈ေဒၚလာေပးရမယ္<br><br>
+A: Are there overdraft charges?<br><br>
+အပိုထုတ္ေငြအတြက္ေကါ အခရွိလား<br><br>
+B: Yes, for each overdraft there is a $35 fee.<br>
+ဟုတ္တယ္..အပိုထုတ္တိုင္း ၃၅ေဒၚလာေပးရမယ္..<br><br>
+A: What about ATM fees?<br>
+ATM ခေကါဘယ္လိုလဲ<br><br>
+B: If you use one of our ATMs there is no fee.<br>
+ငါတို႕ ATM ကိုသံုးရင္ ဘာအခမွေပးစရာမလိူဘူး<br><br>
+A: What if I use another bank's ATM?<br>
+တစ္ျခားဘဏ္ရဲ႕ ATM ကိုသံုးမယ္ဆိုေကါ..<br><br>
+B: Then you will be charged $2.00<br>
+ဒါဆိုမင္းကိုႏွစ္ေဒၚလာတပ္လိမ့္မယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

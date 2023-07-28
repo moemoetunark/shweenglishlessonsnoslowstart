@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 100%;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+strong{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 100%;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM5NDJf/Track%2002.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>I don't feel well. ကၽြန္ေနာ္ေနမေကါင္းဘူး။           </h3>
+<img src="img/feel.JPG"/>
+<p>
+Steve: Hi, Kyle. How's it going?<br>
+ဟိုင့္..ေကးလ္...အေျခေနဘယ္လိုလဲ          <br><br>
+Kyle: Oh, hi Steve. Not so well, actually. I don't feel well. <br>
+အိုး..ဟိုင့္..စတိဗ္...ေနမေကါင္းဘူးကြာ။ ငါေနမေကါင္းျဖစ္ေနျပီ             <br><br>
+Steve: What's the matter? Hey, you don't look so good. <br>
+ဘာျဖစ္တာလဲ။  ေဟးေကာင္..မင္းေနေကါင္းတဲ့ ပံုမရဘူးေနာ္                        <br><br>
+Kyle: I have stomachache. <br>
+ငါဗိုက္နာေနတာ...<br><br>
+Steve: That's too bad. Do you have the flu? <br>
+အရမ္းဆိုးတာပဲ။     မင္းတုတ္ေကြးလည္းရွိလား              <br><br>
+Kyle: No, I just feel really sick. <br> 
+မရွိပါဘူး...ေနမေကါင္းတာေလာက္ပဲ            <br><br>
+Steve: Well, do you want something? A glass of soda? <br>
+မင္းတစ္ခုခု လိုခ်င္လား။ ဆိုဒါတစ္ခြက္ ယူမလား    <br><br>
+Kyle: No, but thanks anyway. <br>
+မလိုေတာ့ပါဘူး...ဒါေပမဲ့ ေက်းဇဴးပါ           <br><br>
+Steve: Well, I'm going to have some pizza. Is that OK? <br>
+ငါေတာ့ ပီဇာနည္းနည္းစားေတာ့မယ္...အဆင္ေျပပါ့မလား                 <br><br>
+<h3>က်န္မွတ္ရန္ စကားလံုးမ်ား       </h3>
+<img src="img/feel1.JPG"/><br>
+<strong>a backache - ခါးနာ </strong><br>
+<strong>a earache -နားကို </strong><br>
+<strong>a stomachache -ဗိုက္နာ</strong><br>
+<strong>a toothache -သြားကိုက္။သြားနာ</strong><br>
+<strong>a cold - အေအးမိ</strong><br>
+<strong>a cough -ေခ်ာင္းဆိုး      </strong><br>
+<strong>a fever - အဖ်ား  </strong><br>
+<strong>the flu -တုတ္ေကြး     </strong><br>
+<strong>a sore throat -လည္ေခ်ာင္းနာ       </strong><br>
+</p>
+<br>
+<br>
+</body>
+</html>

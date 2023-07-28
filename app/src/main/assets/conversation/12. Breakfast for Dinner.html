@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI5Mzdf/Easy%20Dialogue%2012.%20Breakfast%20for%20Dinner.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I want to get pancakes.<br>
+ငါဘိန္းမုန္႕ယူမယ္..<br><br>
+B: Are you crazy? It's 8:00 p.m.<br>
+မင္းရူးေနလား..ဒါည၈နာရီ.<br><br>
+A: Does it matter?<br>
+ဒါကအေရးပါလား<br><br>
+B: It's dinner time.<br>
+ဒီအခုက ညစာစားခ်ိန္ေလ..<br><br>
+A: I know, but I really like breakfast food.<br>
+ငါသိတယ္..ဒါေပမဲ့ငါမနက္စာ အစားစာကိုတကယ္ၾကိဳက္တယ္..<br><br>
+B: Why don't you just wait for tomorrow morning?<br>
+မနက္ျဖန္နံနက္ခင္းထိမင္းဘာလို႕မေစာင့္တာလဲ<br><br>
+A: I'm too impatient.<br>
+ငါကသိပ္စိတ္မရွည္ဘူး..<br><br>
+B: I'm going to get actual dinner food.<br>
+ငါေတာ့တကယ့္ညစာ အစားစာပဲယူမယ္..<br><br>
+A: Sure, go ahead.<br>
+ေသခ်ာတာေပါ့..ယူေလ..<br><br>
+B: You know, they might not have pancakes right now?<br>
+သူတို႕မွာအခု..ဘိန္းမုနန္႕မရွိရင္..မရွိႏိုင္ဘူး<br><br>
+A: I would go to another restaurant then.<br>
+ဒါဆိုငါတစ္ျခားစားေသာက္ဆိုင္သြားမယ္<br><br>
+B: You really like pancakes.<br>
+မင္းကတကယ္ ဘိန္းမုန္႕ၾကိဳက္တာပဲ<br><br>
+A. I don't like pancakes. I love them.<br>
+ငါဘိန္းမုန္႕ကိုၾကိုက္တာမဟုတ္ပဲ...စြဲလမ္းတာ.<br>
+</p>
+<br>
+<br>
+</body>
+</html>

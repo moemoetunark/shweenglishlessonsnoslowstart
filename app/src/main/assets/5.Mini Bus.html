@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDMzMjBf/Easy%20Dialogue%208.%20Muni%20Bus.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Excuse me!<br>
+တစ္ဆိတ္ေလာက္<br><br>
+B: Yes, how can I help you?<br>
+ဟုတ္ကဲ့...ဘယ္လိုကူညီေပးရမလဲ<br><br>
+A: I can't find the muni bus I'm looking for.<br>
+ငါရွာေနတဲ့ မနီဘတ္စ္ရွာမေတြ႕ဘူး<br><br>
+B: Well, the letters flash on the sign as they arrive.<br>
+သူတို႕ေရာက္တဲ့အခါ သေကၤတမွာစာလံုးေပၚတယ္..<br><br>
+A: That's the problem- I don't see the 8x muni.<br>
+ဒါျပသနာပဲ..muni 8x ကိုကၽြေနာ္မေတြ႕ဘူး<br><br>
+B: Oh! There's been a misunderstanding.<br>
+အိုး..နားလည္မႈလြဲသြားျပီ<br><br>
+A: What do you mean?<br>
+ဘာကိုဆိုလိုတာလဲ<br><br>
+B: The line you're looking for is actually a bus line.<br>
+မင္းရွာေနတဲ့လိုင္းက..တကယ္ေတာ့ ဘတ္စ္လိုင္းပဲ (no mini line)<br><br>
+A: Oh! Where can I take it?<br>
+အိုး..အဲဒါကၽြေနာ္ဘယ္ေနရာ ယူရမလဲ<br><br>
+B: Just go out to the stop on the street.<br>
+လမ္းေပၚကကါးမွတ္တိုင္ကိုထြက္ၾကစို႕<br><br>
+A: It's a little confusing to have a mini bus and muni train!<br>
+မူရီဘတ္စ္န႕ဲရထားစီးရတာ တကယ္ရႈပ္ေထြးတယ္<br><br>
+B: Just remember, if it has a number, it's a muni bus!<br>
+မွတ္ထား...နံပါတ္ရွိတယ္..<br>
+</p>
+</body>
+</html>

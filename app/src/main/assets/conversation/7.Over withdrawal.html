@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyOTFf/Easy%20Dialogue%207.%20Transferring%20Money.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Why do I have a negative balance in my checking account?<br>
+ကၽြန္ေနာ့္ရဲ႕ ခ်က္ကင္းအေကါက္မွာ..ဘာလို႕လက္က်န္ေငြက..negative ျဖစ္ေနတာလဲ<br><br>
+B: This means you used more money than you actually had in your account.<br>
+ဆိုလိုတာက..မင္းအေကါက္ထဲမွာရွိတဲ့ေငြထက္ မင္းပိုလို႕သံုးခဲ့တာပဲ<br><br>
+A: So what do I do now?<br>
+အခုငါဘာလုပ္သင့္လဲ<br><br>
+B: The negative amount is how much you owe the bank.<br>
+Negative ပမာဏဆိုတာမင္းက ဘဏ္ကိုဘယ္ေလာက္အေၾကြးတင္တဲ့ပမာဏျဖစ္တယ္..<br><br>
+A: Am I going to be hit with an extra fee?<br>
+ကၽြန္ေနာ္အပိုခေတြေပးရေတာ့မွာလား<br><br>
+B: The bank will charge you a $35 overdraft fee.<br>
+ပိုထုတ္ယူမႈအတြက္မင္းကိုဘဏ္က ၃၅ေဒၚလာေတာင္းခံမယ္..<br><br>
+A: How long do I have to pay the negative amount back?<br>
+negative ပမာဏကိုဘယ္ေလာက္ၾကာၾကာကၽြန္ေနာ္ေပးရမွာလဲ<br><br>
+B: You should do it as soon as possible or else the bank can charge you more money.<br>
+မင္းျဖစ္ႏုိင္သမွ်အျမန္ဆံုးေပးသင့္တယ္...မဟုတ္ရင္.ဘဏ္ကမင္းကိုေငြေတြပိုေတာင္းခံႏိုင္တယ္..<br><br>
+A: What happens if I don't pay it back?<br>
+ကၽြန္ေနာ္ ျပန္မေပးဘူးဆိုေကါ..<br><br>
+B: The bank can close your account and send the balance to collections.<br><br>
+မင္းရဲ႕အေကါက္ကိုဘဏ္ကပိတ္ႏိုင္တယ္.ျပီးရင္မင္းကိုballance collectionလည္းေတာင္းႏိုင္တယ္..<br><br>
+A: That's not good for my credit.<br>
+ဒါငါ့ credit အတြက္မေကါင္းဘူး..<br><br>
+B: No it's not. You'd better get it taken care of.<br>
+ဟုတ္တယ္..မေကါင္းဘူး..မင္းအဲဒါကိုဂရုစိုက္သင့္ျပီ..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

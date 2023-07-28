@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMxNzBf/Easy%20Dialogue%204.%20A%20Disease.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: How are you feeling?<br>
+မင္းဘယ္လိုေနလဲ...<br><br>
+B: A little better, but it is still hard to talk.<br>
+နည္းနည္းပိုေကါင္းလာတယ္..ဒါေပမဲ့..စကားေျပာဖို႕ခက္ေနတယ္..<br><br>
+A: What did the doctor say the problem was?<br>
+ဘာျပသနာလဲဆိုတာ ဆရာ၀န္ကဘာေျပာခ့ဲလဲ<br><br>
+B: It's called mononucleosis.<br>
+ဒါကအက်ိတ္ထြက္အဖ်ားေရာဂါလို႕ေခၚတယ္.<br><br>
+A: Isn't that the kissing disease?<br>
+နမ္းတာကရတဲ့ေရာဂါမဟုတ္လား<br><br>
+B: There are ways to get it besides kissing!<br>
+နမ္းတာအျပင္တျခားဟာေတြလည္းရွိတယ္..<br><br>
+A: Oh yeah? Name a few.<br>
+အိုး..ဟုတ္လား..နည္းနည္းေျပာျပ<br><br>
+B: Sharing drinks and food also spreads the disease.<br>
+အစားစာကိုေ၀စားတာ..ေသာက္တာေတြကလည္း ေရာဂါကိုျပန္႕ေစတယ္<br><br>
+A: Really?! I share drinks with my friends all the time!<br>
+ဟုတ္လား..ငါ့သူငယ္ခ်င္းေတြနဲ႕အျမဲငါေ၀ေသာက္တယ္..<br><br>
+B: Yeah, so did I.<br>
+အင္း..ငါလည္းတူတူပဲ..<br><br>
+A: Well, I won't share with you again, that's for sure!<br>
+ငါေတာ့မင္းနဲ႕တစ္ဖန္မမွ်ေ၀ေတာ့ဘူး..ဒါေသခ်ာတယ္..<br><br>
+B: I won't share with anyone ever again!<br>
+ငါေတာ့ဘယ္သူနဲ႕မွ.တစ္ဖန္ဘယ္ေတာ့မွ မမွ်ေ၀ေတာ့ဘူး<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

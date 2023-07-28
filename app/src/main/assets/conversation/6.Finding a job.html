@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyNDVf/Easy%20Dialogue%206.%20Finding%20a%20Job.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I'm trying to find a job to pay for college.<br>
+ေကါလိပ္အတြက္ေပးဖို႕ငါအလုပ္တစ္ခုရဖို႕ၾကိဳးစားေနတယ္<br><br>
+B: Good for you!<br>
+ေကါင္းတာပဲ<br><br>
+A: Do you have a job right now?<br>
+အခုမင္းမွာ အလုပ္ရွိလား<br><br>
+B: Yes, I am a waitress.<br>
+အင္း..ငါကစားပြဲထိုးေလ.<br><br>
+A: Any tips on finding a part-time job?<br>
+အခ်ိန္ပိုင္းအလုပ္ေတြရွာဖို႕..အၾကံညာဏ္ေလးေတြရွိလား<br><br>
+B: Be friendly, offer your resume, and dress nicely.<br>
+ခင္ခင္မင္မင္ေန..မင္းရဲ႕ resumeကိုေပး...သပ္သပ္ရပ္ရပ္၀တ္...<br><br>
+A: I've done that so many times.<br>
+ငါအ့ဲဒါေတြအၾကိမ္မ်ားစြာလုပ္ျပီးျပီ<br><br>
+B: Sometimes companies don't need any employees.<br>
+တစ္ခါတစ္ေလ ကုမၸဏီေတြက အလုပ္သမားမလိုဘူးေလ<br><br>
+A: How did you get your job?<br>
+နင့္အလုပ္ကိုနင္ဘယ္လိုရခဲ့လဲ<br><br>
+B: Just send applications and hope someone calls.<br>
+ေလွ်ာက္လႊာကိုပို႕လိုက္တယ္..တစ္ေယာက္ေယာက္ေခၚလာဖို႕ေစာင့္တယ္..<br><br>
+A: So is it based on luck?<br>
+အဲ့ဒါက ၾကံတရာဒအေပၚမူတည္တာေပါ့.<br><br>
+B: A little bit luck helps!<br>
+ကံနည္းနည္းေကါင္းဖို႕လိုတယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1100px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDMwOTBf/Easy%20Dialogue%202.%20Bus%20Schedule.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<p>
+A: There are so many buses going to Montebello.<br>
+မြန္တီဘီလိုသြားတဲ့ကားေတြအမ်ားၾကီးပဲ<br><br>
+B: There are many places in Montebello.<br>
+မြန္တီဘီလိုမွာေနရာေတြအမ်ားၾကီးရွိတယ္...<br><br>
+A: How do I know which bus to take?<br>
+ဘယ္ကားစီးရမယ္ဆိုတာ ငါဘယ္လိုသိရမလဲ<br><br>
+B: First, choose where you want to go in Montelello.<br>
+ပထမ..မြန္တီဘီလိုဘယ္ေနရာကိုမင္းသြားခ်င္တယ္ဆိုတာေရြး<br><br>
+A: Alright, then what's next?<br>
+ဟုတ္ျပီး..ေနာက္ဘာလုပ္ရမလဲ<br><br>
+B: Read the list of Montebello buses going to that stop.<br>
+အဲဒီမွတ္တိုင္သြားမယ့္မြန္တီဘီလိုဘတ္စ္စရင္းကိုဖတ္..<br><br>
+A: There are three. How do I choose one?<br>
+သံုးစီးရွိတယ္..ဘယ္လိုတစ္ခုကိုေရြးရမလဲ<br><br>
+B: They're all going to the same place?<br>
+အဲကားေတြတစ္ေနရာတည္းပဲသြားမလား<br><br>
+A: Yes, it looks like they are.<br>
+အင္း..သူတို႕သြားမယ့္ပံုပဲ<br><br>
+B: Then choose the bus based on the timetable.<br>
+ဒါဆို..အခ်ိန္ဇယားကိုအေျခခံျပီးကားကိုေရြးေပါ့<br><br>
+A: This is the bus that gets me there the soonest.<br>
+ဒီကားကငါ့ကိုအဲဒီေနရာကိုအျမန္ဆံုးေရာက္ေစမဲ့ကားပဲ<br><br>
+B: You'd better get moving; it'll be here soon!<br>
+မင္းသြားင့္ျပီ...မၾကာခင္ဒီကိုေရာက္ေတာ့မွာ<br>
+</p>
+</body>
+</html>

@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyMzhf/Easy%20Dialogue%206.%20Buying%20a%20Bicycle.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I'm thinking of buying a bicycle.<br>
+ကၽြန္ေနာ္စက္ဘီးတစ္စီး၀ယ္ဖို႕စဥ္းစာေနတယ္.<br><br>
+B: That sounds like a good idea.<br>
+ၾကားရတာအၾကံေကါင္းပဲ<br><br>
+A: Yes, it would help me beat the car traffic.<br>
+ဟုတ္တယ္..ကားလမ္းေၾကာပိတ္တာေတြကိုေက်ာ္ျဖတ္ဖို႕အေထာက္ကူျပဳလိမ့္မယ္.<br><br>
+B: It would also save you a lot of gas money.<br>
+ဂစ္အတြက္ေငြေတြကိုလည္းစုေဆာင္းႏိုင္မယ္..<br><br>
+A: I'm kind of scared though.<br>
+ငါစိုးလည္းစိုးရိမ္တယ္..<br><br>
+B: Scared of what?<br>
+ဘာကိုစိုးရိမ္တာလဲ<br><br>
+A: I don't want to fall.<br>
+ကၽြန္ေနာ္မလဲက်ခ်င္ဘူး<br><br>
+B: As long as you practice you should be fine.<br><br>
+မင္းေလ့က်င့္မယ္ဆိုရင္..အိုေကမွာပါ..<br><br>
+A: Yes, but I could also get hit by a car.<br>
+ဟုတ္တယ္..ဒါေပမဲ့ကားလည္းအတိုက္ခံရႏိုင္တယ္..<br><br>
+B: I think you will be okay. Just make sure to buy a helmet, too.<br>
+မင္းအိုေကလိမ့္မယ္ငါထင္တယ္....ဦးထုပ္တစ္ခုလည္းျဖစ္ေအာင္၀ယ္ခဲ့<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

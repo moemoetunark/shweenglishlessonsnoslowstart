@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 320px;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+li{
+   font-family: myFirstFont;
+   font-size: 100%;
+   background-color: #63a9a7;
+   color: #fff002;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 320px;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDA1MDJf/Track%2014.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>I work at five. ကၽြန္ေနာ္ ငါးနာရီမွာ အလုပ္စတင္တယ္</h3>
+<p>
+Kevin: So, do you usually come to the gym in the morning? <br>
+ဒါဆို နင္က မနက္ခင္းဆို..gym သို႕ပံုမွန္လာတယ္ေပါ့        <br><br>
+Allie: Yes, I do. I usually come here at 10:00. <br>
+အင္း ..ဟုတ္တယ္။  ပံုမွန္အားျဖင့္ ၁၀နာရီဆို ဒီကိုလာတယ္       <br><br>
+Kevin: Really? What time do you go to work? <br>
+တကယ္လား။ နင္ဘယ္အခ်ိန္အလုပ္သြားလဲ <br><br>
+Allie: Oh, I work in the afternoon. I start work at five. <br>
+အိုး..ကၽြန္မေန႕လည္မွာ အလုပ္လုပ္တယ္။ ငါးနာရီမွာ အလုပ္စတင္တယ္။ <br><br>
+Kevin: Wow, that's late. When do you get home at night? <br>
+ေနာက္က်တယ္ေနာ္။ ညဆို ဘယ္အခ်ိန္အိမ္ျပန္ေရာက္လဲ             <br><br>
+Allie: I usually get home at midnight. <br>
+ပံုမွန္အားျဖင့္ ညသန္းေခါင္မွ အိမ္သို႕ေရာက္တယ္         <br><br>
+Kevin: Midnight? That's late. What do you do, exactly? <br>
+ညသန္းေခါင္လား။ေနာက္က်တယ္ေနာ္။ တိတိက်က် နင္ဘာလုပ္သလဲ           <br><br>
+Allie: I'm a chef. I work at thee Pink Elephant. <br>
+ကၽြန္မက စားပြဲထိုးတစ္ေယာက္ပါ။ Pink Elephant စားေသာက္ဆိုင္မွာလုပ္တယ္          <br><br>
+Kevin: That's my favorite restaurant! By the way, I'm Kevin. <br>
+ဒါကၽြန္ေနာ့္ အၾကိဳက္ဆံုးစားေသာက္ဆိုင္ပဲ။ စကားမစပ္..ကၽြန္ေနာ္က ကီဗင္ျဖစ္ပါတယ္                      <br><br>
+</p>
+<h3> Time Expressions -အခ်ိန္ကို ေဖာ္ျပျခင္း        </h3>
+<li>I get up at 6:00 in the morning on weekdays. <br> အလုပ္လုပ္တဲ့ေန႕ေတြဆို..မနက္ ၆နာရီမွာ ကၽြန္ေနာ္ အိပ္ရာကထတယ္</li>
+<li>I go to bed around ten in the evening on weeknights. <br> အလုပ္လုပ္တဲ့ညေတြဆို..ကၽြန္ေနာ္အိပ္ရာသို႕ ၁၀နာရီဝန္းက်င္မွာ ဝင္တယ္                </li>
+<li>I leave work early in the afternoon on weekends. <br>တနဂၤေနြ၊စေနေန႕ေတြဆို.ေန႕လည္ခင္း အလုပ္ေစာေစာနားတယ္ </li>
+<li>I get home late at night on Fridays. <br> ေသာၾကာေန႕ဆို..အိမ္ကိုေနာက္က်မွ ကၽြန္ေနာ္ေရာက္တယ္                 </li>
+<li>I stay up until midnight on Saturdays. <br> စေန႕ေန႕ေတြဆို..ညသန္းေခါင္မွထိ ကၽြန္ေနာ္ မအိပ္ပဲေနတယ္</li>
+<li>I exercise before noon on Saturdays. <br> စေနေန႕ေတြဆို ေန႕လည္မတိုင္ခင္ ကၽြန္ေနာ္ ေလ့်က်င့္ခန္းလုပ္တယ္</li>
+<li>I wake up after noon on Sundays. <br> တနဂၤေႏြရက္ေတြဆို..ကၽြန္ေနာ္..ေန႕လည္ေက်ာ္မွ အိပ္ရာကႏိုးတယ္</li>
+<br>
+<br>
+</body>
+</html>

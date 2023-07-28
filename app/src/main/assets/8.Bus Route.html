@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDMzNTBf/Easy%20Dialogue%209.%20Bus%20Route.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: At what time does the Montebello bus leave?<br>
+မြန္တီဘီလိုကားက ဘယ္အခ်ိန္ထြက္လဲ<br><br>
+B: It leaves every ten minutes.<br>
+၁၀မိနစ္တိုင္း ထြက္တယ္<br><br>
+A: Do you know when the next one is coming?<br>
+ေနာက္တစ္စီးဘယ္အခ်ိန္လာမွာမင္းသိလား<br><br>
+B: Well, you actually just missed it.<br>
+အင္း..မင္းတကယ္ေတာ့သီသီေလးလြဲသြားတာ<br><br>
+A: You mean I have to wait ten whole minutes?<br>
+ငါဆယ္မိနစ္လံုးေစာင့္ရမယ္လို႕မင္းဆိုလိုတာလား<br><br>
+B: Unfortunately. Sometimes, though, it's a little faster.<br>
+၀မ္းနည္းပါတယ္..ဒါေပမဲ့တစ္ခါတစ္ေလ..နည္းနည္းေစာေစာလည္းလာတယ္<br><br>
+A: I wonder if I'll still have enough time for shopping.<br>
+ကၽြန္ေနာ္ေရွာ့ပင္းထြက္ဖို႕အခ်ိန္ရွိပါ့အံုးမလား..<br><br>
+B: You only have a few minutes to buy something.<br>
+တစ္ခုခု၀ယ္ဖို႕မင္းမနစ္အနည္းငယ္ပဲရွိတယ္..<br><br>
+A: I'm in a bit of a hurry.<br>
+ကၽြန္ေနာ္နည္းနည္းခံုမင္ေနတယ္ <br><br>
+B: You should try to find different bus routes.<br>
+မင္းတျခားကားလိုင္းရွာသင့္တယ္<br><br>
+A: Is it easy to navigate bus routes?<br>
+ကားလိုင္းရွာဖို႕ကလြယ္လား<br><br>
+B: Very easy. Here's a map for you to read.<br>
+အရမ္းလြယ္တယ္..ေရာ့ဒီမွာမင္းအတြက္ေျမပံု<br>
+</p>
+</body>
+</html>

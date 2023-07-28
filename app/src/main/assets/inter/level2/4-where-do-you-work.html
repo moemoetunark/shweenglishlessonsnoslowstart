@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 320px;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 320px;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDA0OTZf/Track%2011.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>Where do you work? ဘယ္မွာ အလုပ္လုပ္သလဲ </h3>
+<p>
+Jason: Where do you work, Andrea? <br>
+အန္ဒီရီယာ...နင္ဘယ္မွာ အလုပ္လုပ္သလဲ <br><br>
+Andrea: I work at Thomas Cook Travel. <br>
+ကၽြန္မ Thoma Cook Tra ကုမၸဏီမွာ လုပ္တယ္  <br><br>
+Jason: Oh, really? What do you do there? <br>
+အိုး..တကယ္လား...နင္ အဲ့မွာ ဘာလုပ္လဲ <br><br>
+Andrea: I'm a guide. I take people on tours to countries in South America, like Peru. <br>
+ကၽြန္မက အည့္လမ္းညႊန္တစ္ေယာက္ပါ။ ပီရူးလို.ေတာင္အေမရိက ႏိုင္ငံေတြဆီ လူေတြကိုက်မအလည္ခရီးေခၚျပီးသြားတယ္           <br><br>
+Jason: How interesting! <br>
+စိတ္ဝင္စားစရာ ေကါင္းလိုက္တာ       <br><br>
+Andrea: Yes, it's a great job. I really love it. And what do you do?<br>
+ဟုတ္တယ္...အလုပ္ေကါင္းတစ္ခုပဲ။ ကၽြန္မအရမ္းသေဘာက်တယ္။နင္ေကါ ဘာလုပ္လဲ           <br><br>
+Jason: Oh, I'm a student. I have a part-time job, too. <br>
+အိုး..ကၽြန္ေနာ္က ေက်ာင္းသားပါ။ အခ်ိန္းပိုင္းအ လုပ္တစ္ခုလည္းရွိတယ္ ။ <br><br>
+Andrea: Where do you work? <br>
+နင္ဘယ္မွာ အလုပ္လုပ္သလဲ  <br>
+Jason: In a fast-food restaurant. <br>
+fast-food စားေသာက္ဆိုင္တစ္ခုမွာ။      <br><br>
+Andrea: Which restaurant? <br>
+ဘယ္စားေသာက္ဆိုင္လဲ      <br><br>
+Jason: Humburger Heaven. <br>
+Humburger Heaven စားေသာက္ဆိုင္ေလ။         <br><br>
+<h3>
+</p>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI3NzJf/A%20Laptop%20for%20School.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Mom, can you buy me a laptop?<br>
+အေမ..ငါ့အတြက္လက္ေတာ့ကြန္ပ်ဴတာတစ္လံုး၀ယ္ေပးႏုိင္မလား<br><br>
+B: You are only 13.<br>
+နင္က ၁၃ႏွစ္ပဲရွိေသးတာေလ<br><br>
+A: Everyone in school has one.<br>
+ေက်ာင္းကလူတိုင္းမွာရွိတယ္..<br><br>
+B: They must be rich then.<br><br>
+သူတို႕ကခ်မ္းသာလို႕ျဖစ္ရမယ္<br><br>
+A: I really need it.<br>
+ကၽြန္ေနာ္တကယ္လိုေနတာ<br><br>
+B: What do you need it for?<br>
+နင္ဘာအတြက္လိုအပ္တာလဲ<br><br>
+A: I want to bring it to school for homework.<br>
+အိမ္စာလုပ္ဖို႕အတြက္ေက်ာင္းကိုယူမလို႕<br><br>
+B: Aren't there computers at school?<br>
+ေက်ာင္းမွာကြန္ပ်ဴတာမရွိဘူးလား<br><br>
+A: They are way too slow.<br>
+အဲဒါေတြကအရမ္းေနွးတယ္<br><br>
+B: Back in my days, there were no computers.<br>
+ငါတို႕တုန္းက..ဘယ္ကြန္ပ်ဴတာမွ မရွိခဲ့ဘူး<br><br>
+A: I hate it when you say that.<br>
+အေမအဲ့ဒါေျပာရင္ သားအရမ္းမုန္းတာပဲ<br><br>
+B: I hate it when you ask for things.<br>
+နင္ပစၥည္းေတြေတာင္းတဲ့အခါလည္းငါမုန္းတယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

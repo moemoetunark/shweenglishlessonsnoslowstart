@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 2500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDExMTdf/A%20Birthday%20Bike.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+<p>
+January 7 is Benny's birthday.<br>
+ဇန္နဝါရီး ၇ရက္ဟာ ဘန္နီရဲ႕ေမြးေန႕ျဖစ္တယ္.<br><br>
+He will be eight years old.<br>
+သူဟာအသက္၈ႏွစ္ျပည့္မွာျဖစ္ပါတယ္..<br><br>
+He is in the third grade. <br>
+သူဟာသံုးတန္းျဖစ္ပါတယ္...<br><br>
+He goes to Park Elementary School.<br>
+သူဟာ Park Elementary School မွာေက်ာင္းတက္ပါတယ္..<br><br>
+ An elementary school is for kids.<br>
+Elementary School ဆိုတာ..ကေလးေတြအတြက္ျဖစ္ပါတယ္..<br><br>
+It is only one mile away.<br>
+ေက်ာင္းဟာတစ္မိုင္ပဲေဝးပါတယ္..<br><br>
+He walks to school.<br>
+သူဟာေက်ာင္းသို႕လမ္းေလွ်ာက္သြားတယ္<br><br>
+ It only takes 20 minutes.<br>
+၁၅မိနစ္ပဲၾကာပါတယ္..<br><br>
+ When it rains, he wears a raincoat.<br>
+မိုးရြာတဲ့အခါ သူဟာမိုးကာအဂၤ်ီဝတ္ပါတယ္..<br><br>
+He used to take an umbrella.<br>
+သူဟာထီးတစ္ေဆာင္ယူသြားေလ့ရွိတယ္<br><br>
+ But he lost the umbrella.<br>
+ဒါေပမဲ့သူ႕ထီးေပ်ာက္သြားခဲ့တယ္..<br><br>
+His mother gave him another umbrella.<br>
+သူ႕အေမကေနာက္ထီးတစ္လက္သူ႕ကိုေပးတယ္.<br><br>
+He broke that one.<br>
+သူဟာအဲ့ဒီထီးကို ခ်ိဳးလိုက္တယ္.. <br><br>
+His mom said, "You and umbrellas don't get along." <br>
+သူ႕အေမကေျပာတယ္.."နင္နဲ႕ထီးနဲ႕မတည့္ဘူး"<br><br>
+For his eighth birthday, Benny wants a bicycle.<br>
+သူ႕ရဲ႕၈ႏွစ္ေျပာေမြးေန႕အတြက္..ဘန္နီကစက္ဘီးတစ္စီးလိုခ်င္တယ္<br><br>
+ He can ride the bike to school. <br>
+သူေက်ာင္းသို႕စက္ဘီးစီးသြားႏိုင္တာေပါ့<br><br>
+After school he can ride with his friends.<br>
+ေက်ာင္းဆင္းတဲ့အခါသူ႕သူငယ္ခ်င္းေတြနဲ႕စီးႏိုင္တာေပါ့<br><br>
+He can ride the bike to the swimming pool.<br>
+သူဟာေရကူးကန္သို႕စက္ဘီးစီးသြားႏိုင္တာေပါ့<br><br>
+He can ride the bike to the library.<br>
+သူဟာစာၾကည့္တိုက္သို႕စက္ဘီးစီးသြားႏိုင္တာေပါ့..<br><br>
+His mom and dad took him to the bike store.<br>
+အေမနဲ႕အေဖကသူ႕ကိုစက္ဘီးဆုိင္သို႕ယူသြားခဲ့တယ္..<br><br>
+They asked him to look at the bikes.<br>
+သူ႕တို႕ကသူ႕ကိုစက္ဘီးေတြကိုၾကည့္ဖို႕ေျပာလိုက္တယ္..<br><br>
+ He looked at all the bikes. <br>
+စက္ဘီးေတြအားလံုးကိုသူၾကည့္လိုက္တယ္.<br><br>
+He chose a red bike. <br>
+အနီေရာင္တစ္စီးကိုသူေရြးလိုက္တယ္..<br><br>
+He showed his parents. <br>
+သူကသူ႕မိဘကိုျပလိုက္တယ္..<br><br>
+Dad said it cost too much. <br>
+အေဖျကေျပာတယ္..ဒါအရမ္းကုန္က်မ်ားတယ္..<br><br>
+He told Benny to choose another bike. <br>
+သူကဘန္နီကိုတစ္ျခားတစ္စီးေရြးဖို႕ေျပာလိုက္တယ္..<br><br>
+Benny chose a blue bike. <br>
+ဘန္နီက အျပာေရာင္တစ္စီးကိုေရြးလိုက္တယ္.<br><br>
+Dad said the blue bike was the right price.<br>
+အျပာေရာင္စက္ဘီးကသင့္ေတာ္တဲ့ေစ်းႏႈန္းပဲလို႕အေဖကေျပာလိုက္တယ္...<br>
+</p>
+</body>
+</html>

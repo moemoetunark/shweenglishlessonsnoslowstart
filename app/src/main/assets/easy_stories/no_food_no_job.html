@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 2500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDExNDJf/no%20food%20no%20job.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+I am an adult.<br>
+ကၽြန္ေနာ္က အရြယ္ေရာက္ျပီးသူတစ္ေယာက္ျဖစ္တယ္<br><br>
+ I'm not a kid. <br>
+ကၽြန္ေနာ္ကေလးတစ္ေယာက္မဟုတ္ဘူး<br><br>
+I'm a grown-up.<br>
+ကၽြန္အရြယ္ေရာက္ေနျပီ..<br><br>
+I need some money. <br>
+ကၽြန္ေနာ္ေငြလိုတယ္..<br><br>
+I have no food.<br>
+ကၽြန္ေနာ့္မွာအစားစာမရွိဘူး<br><br>
+I am hungry.<br>
+ကၽြန္ေနာ္ဗိုက္ဆာတယ္.<br><br>
+I am not thirsty, because water is everywhere.<br>
+ကၽြန္ေနာ္ေရမဆာဘူး..ေရကေနရာႏိုင္းမွာရွိလို႕<br><br>
+But water has no taste.<br>
+ဒါေပမဲ့ ေရကအရာမရွိဘူး<br><br>
+I want to drink a soda. <br>
+ကၽြန္ေနာ္ဆိုဒါေသာက္ခ်င္တယ္<br><br>
+I want to drink milk.<br>
+ကၽြန္ေနာ္ႏို႕ေသာက္ခ်င္တယ္ <br><br>
+I want to drink coffee. <br>
+ကၽြန္ေနာ္ေကာ္ဖီေသာက္ခ်င္တယ္<br><br>
+I want to work. <br>
+ကၽြန္ေနာ္အလုပ္လုပ္ခ်င္တယ္<br><br>
+Nobody will hire me. <br>
+ကၽြန္ေနာ့္ကိုဘယ္သူမွငွားမွာမဟုတ္ဘူး<br><br>
+Nobody is hiring anybody. <br>
+ဘယ္သူကမွဘယ္သူ႕ကိုငွားမေနၾကဘူး<br><br>
+Companies are firing people.<br>
+ကုမၸဏီေတြက လုပ္ေတြကိုအလုပ္ျဖဳတ္ေနၾကတယ္ <br><br>
+Companies are laying off people.<br>
+ကုမၸဏီေတြကလူေတြငွားတာရပ္ထားၾကတယ္<br><br>
+Everyone is looking for a job. <br>
+လူတိုင္းကအလုပ္ရွာေနၾကတယ္<br><br>
+I cannot pay my rent. <br>
+ငါငွားရတာေတြအတြက္ ငါမေပးႏိုင္ဘူး<br><br>
+I will have to live in my car.<br>
+ကၽြန္ေနာ္ကားမွာေနရလိမ့္မယ္<br><br>
+I don't want to live in my car.<br>
+ကၽြန္ေနာ္ကားမွာမေနခ်င္ဘူး<br><br>
+My car has no bed.<br>
+ငါ့ကားမွာအိပ္ရာမရွိဘူး<br><br>
+Everyone should live in a house or an apartment.<br>
+လူတိုင္းကအိမ္သို႕မဟုတ္.တိုက္ခန္းမွာေနသင့္တယ္ <br><br>
+Many people don't have a car. <br>
+လူေတာ္ေတာ္မ်ားမ်ားဟာကားမရွိၾကဘူး<br><br>
+They live on the street. <br>
+သူတို႕ဟာလမ္းေပၚမွာေနၾကတယ္<br><br>
+A street has no bed.<br>
+လမ္းဟာအိပ္ရာမရွိဘူး<br><br>
+Nobody should live on the street. <br>
+ဘယ္သူမွလမ္းေပၚမွွာမေနသင့္ဘူး<br><br>
+I don't know what to do. <br>
+ဘာလုပ္ရမွာ ငါမသိဘူး<br><br>
+I don't know where to go. <br>
+ဘယ္သြားရမွာငါမသိဘူး<br><br>
+Maybe I will go to church.<br>
+ငါဘုရားေက်ာင္းကိုသြားရင္သြားမယ္..<br><br>
+Maybe I will find help there.<br>
+ငါအဲ့ဒီမွာ အကိုညီရွာရင္ရွာမယ္<br>
+</p>
+</body>
+</html>

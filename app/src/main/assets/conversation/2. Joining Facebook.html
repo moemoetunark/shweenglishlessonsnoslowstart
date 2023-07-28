@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyNTZf/Easy%20Dialogue%206.%20Pictures%20on%20Facebook.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: You should add me on Facebook.<br>
+မင္းငါ့ကို fb မွာအပ္သင့္တယ္..<br><br>
+B: I don't have a Facebook.<br>
+င့ါမွာ Facebook မရွိဘူူ<br><br>
+A: Why don't you make one?<br>
+မင္းဘာလို႕တစ္ခုမလုပ္တာလဲ<br><br>
+B: I don't have money.<br>
+ငါ့မွာေငြမရွိဘူး<br><br>
+A: Facebook is free to join.<br>
+fb ကအခမဲ့သံုးလို႕ရတယ္...<br><br>
+B: What do I have to do?<br>
+ငါဘာလုပ္ရမွာလဲ<br><br>
+A: Go to the website and sign up.<br>
+website ကုိသြားျပီး..sign up လုပ္လိုက္<br><br>
+B: It says I need an email address.<br>
+အီးမဲလ္တစ္ခုကၽြန္ေနာ္လိုအပ္တယ္..<br><br>
+A: Don't you have one?<br>
+မင္းမွာမရွိဘူးလား<br><br>
+B: I don't remember the password.<br>
+ငါ့password ကိုမမွတ္မိဘူး<br><br>
+A: Don't you ever email friends?<br>
+မင္းသူငယ္ခ်င္းေတြကိုတစ္ခါမွ အီးမဲလ္မပို႕ဘူးလား<br><br>
+B: I like texting better.<br>
+ငါစာရိုက္ရတာပဲၾကိဳက္တယ္<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

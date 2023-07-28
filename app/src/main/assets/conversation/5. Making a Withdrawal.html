@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI4NTdf/Easy%20Dialogue%2010.%20Over%20Withdrawal.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I'd like to make a withdrawal.
+ကၽြန္ေနာ္ေငြထုတ္ခ်င္တယ္.
+B: Will that be from your checking or savings account?
+ခ်က္ကင္းအေကါက္ထဲကထုတ္မွာလား...ေငြစုအေကါက္ကထုတ္မွာလား
+A: I don't have a savings account.
+ကၽြန္ေနာ္မွာေငြစုအေကါက္မရွိဘူး
+B: Then it will be from your checking account.
+ဒါဆိုမင္းရဲ႕ခ်က္ကင္းအေကါက္ထဲကေပါ့
+A: I'd like to take out $200.
+ကၽြန္ေနာ္ ေဒၚလာ ၂၀၀ ထုတ္ခ်င္တယ္
+B: Do you have a withdrawal form?
+မင္းမွာေငြထုတ္ပံုစံရွိလား
+A: Where can I get one of those?
+ကၽြန္ေနာ္ဘယ္ေနရာမွာ ရႏိုင္လဲ
+B: They are located right behind you on the table.
+မင္းေနာက္ပဲမွာရွိတဲ့စားပြဲေပၚမွာရွိတယ္...
+A: What do I need to write on the form?
+ပံုစံမွာဘာေတြေရးရမွာလဲ
+B: You need to write the name on the account, the account number, and how much you want to take out.
+မင္းရဲ႕အေကါက္ေပၚမွာနာမည္ရယ္..အေကါက္နံပါတ္ရယ္..ျပီးရင္မင္းဘယ္ေလာက္ထုတ္ခ်င္သလဲဆိုတာရယ္..
+A: Is that all?
+အဲဒါအားလံုးလား
+B: I also need photo identification.
+ဓာတ္ပံုသက္ေသလည္းလိုတယ္..
+</p>
+<br>
+<br>
+</body>
+</html>

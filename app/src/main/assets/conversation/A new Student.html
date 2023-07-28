@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI3NzRf/A%20New%20Student.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I have never seen you before.<br>
+ငါနင့္ကိုတစ္ခါမွမျမင္ဖူးဘူး..<br><br>
+B: I am a new student.<br>
+ကၽြန္ေနာ္ကေက်ာင္းသားအသစ္ေလ<br><br>
+A: Where are you from?<br>
+မင္းကဘယ္ကလဲ<br><br>
+B: I am from Japan.<br>
+ကၽြန္ေနာ္ဂ်ပန္ကပါ<br><br>
+A: I love Japan!<br>
+ကၽြန္ေနာ္ ဂ်ပန္ကိုၾကိဳက္တယ္..<br><br>
+B: What do you love about it?<br>
+ဘယ္ဟာနဲ႕ပတ္သက္လို႕ၾကိဳက္တာလဲ<br><br>
+A: I love the food, the culture, and the location.<br>
+အစားစာ...ယာဥ္ေက်းမႈနဲ႕..ေနရာေဒသေတြကိုၾကိဳက္တယ္<br><br>
+B: I could show you around some day.<br>
+တစ္ေန႕မင္းကိုငါလိုက္ျပႏိုင္တယ္.<br><br>
+A: That would be so fun!<br>
+ေပ်ာ္စရာအရမ္းေကါင္းမွာပဲေနာ္<br><br>
+B: But first, can you show me around here?<br>
+ဒါေပမဲ့ပထမဆံုးအေနနဲ႕ နင္ငါ့ကိုဒီနားမွလိုက္ျပႏိုင္မလား<br><br>
+A: It would be my pleasure.<br>
+ရတယ္ေလ...<br><br>
+B: Let's start after school. <br>
+ေက်ာင္းျပီးရင္စၾကစို႕<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

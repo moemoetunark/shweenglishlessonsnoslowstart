@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMxMjBf/Easy%20Dialogue%202.%20Swimming%20%281%29.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Can you teach me to swim?<br>
+မင္းငါ့ကိုေရကူးဖို႕သင္ေပးႏိုင္မလား<br><br>
+B: Why don't you take a class instead?<br>
+သင္တန္းတစ္ခုမင္းဘာလို႕မတက္တာလဲ<br><br>
+A: Swim classes are embarrassing.<br>
+ေရကူးသင္တန္းကစိတ္ပ်က္ဖို႕ေကါင္းတယ္..<br><br>
+B: I suppose I can teach you.<br>
+ငါဆိုလိုတာ..မင္းကိုငါသင္ေပးႏုိင္တယ္လို႕..<br><br>
+A: How did you learn to swim?<br>
+မင္းေရကူးဖို႕ဘယ္လိုသင္ခ့ဲလဲ<br><br>
+B: My father threw me into a lake when I was 4 years old.<br>
+ငါ၄ႏွစ္သားအရြယ္တုန္းက ငါ့အေဖကငါ့ကိုေရကန္ထဲပစ္ခ်လိုက္တယ္..<br><br>
+A: You could have drowned!<br>
+မင္းေရနစ္ႏိုင္တယ္ေနာ္..<br><br>
+B: I could have, but I swam instead.<br>
+နစ္ႏိုင္တာေပါ့..ဒါေပမဲ့နစ္မယ့္အစားငါေရကူးခ့ဲတယ္<br><br>
+A: Is that how you plan to teach me?<br>
+ဒါကမင္းငါ့ကိုဘယ္လိုသင္ခ်င္တယ္ဆိုတဲ့အစီစဥ္လား<br><br>
+B: It's the best way to learn.<br>
+ဒါကသင္ယူဖို႕အေကါင္းဆံုးနည္းလမ္းပဲ<br><br>
+A: I think I will sign up for the class after all.<br>
+အားလံုးျပီးေနာက္ေတာ့ယဒါထင္တာ..ငါသင္တန္းတစ္ခုတက္ရမယ္..<br><br>
+B: Okay. That is less work for me.<br>
+အိုေက...ငါ့အတြက္ေတာ့သိပ္အလုပ္မျဖစ္ဘူး<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿
+I`d like four tickets please.
+ကၽြန္ေနာ္လက္မွတ္ ၄ေစာင္ရခ်င္တယ္..
+Would you like front row seats?
+မင္းေရွ႕တန္းကခံုယူမလား
+That sounds great, but how much do they cost?
+ေကါင္းမွာပဲ..ဒါေပမဲ့ အဲဒါကဘယ္ေလာက္က်လဲ
+They`re £30 each.
+တစ္ေစာင္ကို ၃၀စီ၊
+
+Oh that's fine. I`d like to reserve four front-row seats for this Saturday`s match.
+အိုေကတယ္…ဒီစေနေန႕ပြဲအတြက္ ကၽြန္ေနာ္ ေရွ႕တန္းခံု ေလးခံု ၾကိဳမွာထားခ်င္တယ္..
+Ok, that`ll be £120.အိုေက…၁၂၀ က်ပါတယ္.
+Here you go.
+ေရာ့ဒီမွာ
+Thank you. Here are your tickets.
+ေက်းဇူးပဲ…ေရာ့ဒီမွာ မင္းလက္မွတ္ေတြ
+How much are the tickets?
+လက္မွတ္ေတြက ဘယ္ေလာ္ကလဲ
+Who`s playing today?
+ဒီညဘယ္သူေတြ ကစားမလဲ
+Who`s winning?
+ဘယ္သူႏိုင္ေနလဲ
+What`s the score?
+ဂိုးရလာဒ္က ဘာလဲ
+How much time is left in the game?
+ကစားပြဲမွာ အခ်ိန္ဘယ္ေလာက္က်န္ေသးလဲ
+Which half are we in?
+ငါတို႕ဘယ္အပိုင္းမွာလဲ(ပထမပို္င္းလား ဒုတိယပိုင္းလား)
+Do you think this game will be a draw?
+ဒီပြဲသေရက်မယ္လို႕မင္းထင္လား
+Do you think this team will go to the finals?
+ဒီအသင္းေနာက္ဆံုး ဖိုင္နယ္ေရာက္မယ္လို႕မင္းထင္လား
+Do you think your team will be relegated this year?
+မင္းရဲ႕အသင္းဒီႏွစ္တန္းဆင္းရမယ္လို႕ထင္လား
+Do you think your team will be promoted this year?
+ဒီႏွစ္မင္းရဲ႕အသင္း တန္းတက္မယ္လို႕ထင္လား
+

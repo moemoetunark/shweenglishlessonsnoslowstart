@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyMDJf/Easy%20Dialogue%205.%20Bees.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Why are you spraying pesticides?<br>
+မင္းပိုးသတ္ေဆးေတြဘာလို႕ျဖန္းေနတာလ..<br><br>
+B: To kill the insects in the garden.<br>
+ဥယာဥ္ျခံထဲက ပိုးေတြကိုသတ္မလို႕..<br><br>
+A: Not all insects are bad.<br>
+ပိုးအားလံုးက မဆိုးပါဘူး..<br><br>
+B: They are ruining my vegetables.<br>
+သူတို႕ေတြငါ့ ဟင္းသီးဟင္းရြက္ေတြကိုဖ်က္ဆီးေနၾကတယ္.<br><br>
+A: You should buy the right kind of poison.<br>
+မင္းမွန္ကန္တယ္..အဆိပ္အမ်ိဳးစား၀ယ္သင့္တယ္.<br><br>
+B: What do you mean?<br>
+ဘာကိုဆိုလိုတာလဲ..<br><br>
+A: Some poisons kill bees.<br>
+တစ္ခ်ိဳ႕အဆိပ္ေတြက ပ်ားေတြကိုသတ္တယ္..<br><br>
+B: That's alright. Bees sting people.<br>
+ဒါအိုေကတယ္..ပ်ားေတြက လူေတြကိုနာက်င္ေစတယ္..<br><br>
+A: Without bees, your garden will not have fruit.<br>
+ပ်ားေတြမရွိရင္..မင္းဥယာဥ္သစ္သီးေတြရွိမွာမဟုတ္ဘူး<br><br>
+B: Why is that?<br>
+ဘာလို႕လဲ<br>
+A: Bees pollinate the flowers so fruit can grow.<br>
+ပ်ားေတြဟာ ပန္းပြင့္ေတြကို ၀တ္မႈန္ေပးမယ္..ဒါဆို..အသီးထြက္တာေပါ..<br><br>
+B: Help me pick out a pesticide that is safe for bees.<br>
+ပ်ားေတြအတြက္စိတ္ခ်ရတဲ့ ပိုးသတ္ေဆးေရြးဖို႕ငါ့ကုိကူညီပါ..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

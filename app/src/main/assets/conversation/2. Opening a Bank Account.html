@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMxMTRf/Easy%20Dialogue%202.%20Opening%20a%20Bank%20Account.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I'd like to open a checking account.<br>
+Checking account တစ္ခုဖြင့္ခ်င္တယ္..<br><br>
+B: We would love to have you as our customer.<br>
+မင္းကိုငါတို႕ေဖာက္သည္အျဖစ္ရွိေစခ်င္တယ္<br><br>
+A: What documents do you need from me?<br>
+ငါ့ဆီကဘယ္လိုစာရြက္စာတမ္းလိုအပ္လဲ<br><br>
+B: Do you have state issue identification?<br>
+မင္းမွာႏိုင္ငံေတာ္ကထုတ္ေပးထားတဲ့သက္ေသခံရွိလား<br><br>
+A: Is my driver's license okay?<br>
+ငါ့ရဲ႕ကားေမာင္းလို္င္စင္ဆို အိုေကလား<br><br>
+B: That's perfect. I also need your Social Security Number.<br>
+ျပည့္စံုတယ္..မင္းရဲ႕လံုျခံဳေရးအာမခံနံပါတ္လည္းလိုတယ္.<br><br>
+A: Is there a minimum balance requirement?<br>
+အနည္းဆံုးလိုအပ္တဲ့လက္က်န္ေငြပမာဏရွိလား<br><br>
+B: Our basic checking account has a $25.00 minimum balance per month.<br>
+အေျခခံခ်က္ကင္းအေကါက္ကေတာ့..တစ္လကိုအနည္းဆံုး ၂၅ေဒၚလာရွိတယ္..<br><br>
+A: I can keep that in my account.<br>
+ငါ့အေကါက္ထဲအဲဒီပမာဏေတာ့သိမ္းထားႏိုင္တယ္..<br><br>
+B: I also need proof of address.<br>
+သင့္ရဲ႕လိပ္စာကိုကိုလည္း လိုတယ္.<br><br>
+A: Can I show you my gas bill?<br>
+ငါ့ဂစ္ဖိုးေပးထားတ့ဲ bill ကိုျပလို႕ရလား<br><br>
+B: Yes, now I need you to sign some papers.<br>
+ရတယ္..အခုမင္းစာရြက္တစ္ခ်ိဳ႕မွာလက္မွတ္ထိုးဖို႕လိုမယ္..<br><br>
+</p>
+<br>
+</body>
+</html>

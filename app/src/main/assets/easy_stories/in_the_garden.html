@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 2500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://www.moemoetun.me/stories/In the Garden.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+Mama was in the garden.<br>
+ေမေမဟာပန္းျခံထဲမွာရွိေနခဲ့တယ္..<br><br>
+"What are you doing?" Johnny asked.<br>
+ဂၽြန္ီက ဘာလုပ္ေနလဲလို႕ေမးလိုက္တယ္..<br><br>
+She said she was planting roses. <br>
+ႏွင္းဆီးပင္စိုက္ေနတယ္လို႕ေျပာလိုက္တယ္.	<br><br>
+Roses are flowers.<br>
+ႏွင္းဆီဆိုတာ ပန္းပြင္းေတြျဖစ္တယ္..<br><br>
+They are very pretty. <br>
+အရမ္းလွတယ္..<br><br>
+They are usually red. <br>
+ပံုမွန္အားျဖင့္ အနီေရာင္ေပါ့..<br><br>
+Roses have thorns. <br>
+သူတို႕မွာ ဆူးေတြရွိတယ္..<br><br>
+His mama said, "Thorns will stick you.<br>
+ဆူးေတြကနင့္ကိုစူးလိမ့္မယ္<br><br>
+Be careful around thorns."<br>
+စူးေတြကိုသတိထားလို႕ သူ႕အေမကေျပာလိုက္တယ္..<br><br>
+Johnny went to the front yard.<br>
+ဂၽြန္နီဟာ အေရွ႕ျခံဝန္းသို႕သြားတယ္..<br><br>
+His dog Rex was waiting for him. <br>
+သူ႕ေခြး..Rex ကသူ႕ကိုေစာင့္ေနတယ္..<br><br>
+Johnny picked up a stick and threw it.<br>
+သူဟာတုတ္တစ္ေခ်ာင္းေကါက္လိုက္ျပီး..ပစ္ခ်လို္ကတယ္..<br><br>
+Rex chased the stick.<br>
+Rex ကတုတ္ကိုလိုက္တယ္..<br><br>
+He brought the stick back.<br>
+သူတုန္ကိုျပန္ယူလိုက္တယ္..<br><br>
+Johnny ran around the house.<br>
+ဂၽြန္နီဟာအိမ္ကိုပတ္ေပးတယ္..<br><br>
+Rex chased him.<br>
+Rex ကသူ႕ေနာက္ကိုလိုက္တယ္..<br><br>
+Johnny ran through the garden.<br>
+ဂၽြန္ီဟာဥယဥ္ျခံကိုပတ္ေပးတယ္.<br><br>
+Rex ran through the garden.<br>
+Rexလည္းဥယာဥ္ျခံျဖတ္ေျပးတယ္.<br><br>
+Mom yelled at Johnny and Rex.<br>
+အေမကဂၽြန္ီနဲ႕.Rex ကိုေအာ္လိုက္တယ္..<br><br>
+She told them to play somewhere else.<br>
+တစ္ျခားတစ္ေနရာမွာကစားဖို႕သမကသူတို႕ကိုေျပာလိုက္တယ္..<br><br>
+She told them to stay out of the garden.<br>
+ပန္းျခံအျပင္မွာေနဖို႕သူမက သူတို႕ကိုေျပာလိုက္တယ္..<br><br>
+Johnny apologized to his mom. <br>
+ဂၽြန္နီကသူ႕အေမကိုေတာင္းပန္လိုက္တယ္.<br><br>
+He went to the garage and got his bike.<br>
+သူဟာဂိုေဒါင္သြားျပီးစက္ဘီးကိုယူတယ္..<br><br>
+He went for a bike ride.<br>
+သူစက္ဘီးစီးဖို႕ထြက္သြားခဲ့တယ္..<br><br>
+Rex ran next to the bike.<br>
+Rexကစက္ဘီးကိုကပ္ျပီးလုိက္တယ္..<br>
+</p>
+</body>
+</html>

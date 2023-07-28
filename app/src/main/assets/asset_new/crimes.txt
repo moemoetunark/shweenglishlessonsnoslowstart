@@ -1,0 +1,34 @@
+﻿• Arson မီးရွဳိးမႈ
+• Theft ခိုးမႈ
+• Robbery လုယက္မႈ
+• Burglary ေဖာက္ထြင္းမႈ
+• Shoplifting ဆိုင္တြင္းအလစ္သုတ္မႈ
+• Pickpocketing ခါးပိုက္ႏွိပ္မႈ
+• Assault ေစာ္ကားမႈ
+• Murder လူသတ္မႈ
+• Murderer လူသတ္သမား
+• Rape မႈဒိမ္းမႈ
+• Rapist မုဒိမ္းမႈက်ဴးလြန္သူ
+• Thief သူခိုး
+• Robber သူခိုး၊လုယက္သူ
+• Bigamy တရား၀င္အိမ္ေထာင္ရွိလ်က္ေနာက္ထပ္အိမ္ေထာင္ျပဳမႈ
+• Blackmail ျခိမ္းေျခာက္ေငြညွစ္မႈ
+• Bribe လာဘတ္ထိုးျခင္း
+• Bribery လာဘတ္ထိုးမႈ
+• Conspiracy လွ်ိ႕၀ွက္ပူးေပါင္းၾကံစည္မႈ
+• Fraud လိမ္လည္မႈ
+• Forgery အတုလိမ္လည္ျပဴလုပ္မႈ (စာရြက္စာတမ္း၊စာခ်ဳပ္)
+• Homicide လူသတ္မႈ
+• Manslaughter မေတာ္တစ္ဆလူသတ္မႈ
+• Kidnapping ျပန္ေပးဆြဲမႈ
+• Human trafficking လူေမွာင္ခိုကူးမႈ
+• Child abuse ကေလးသူငယ္မ်ားအား မတရားျပဳမႈ
+• Slander အသေရဖ်က္မႈ
+• Smuggling ေမွာင္ခိုမႈ
+• Hijacking အပိုင္စီးမႈ
+• Espionage သူလွိ်ဳမႈ
+• Rob လုယက္သည္
+• Steal ခိုးသည္
+• Break into ေဖာက္ထြင္းသည္
+• Perjury မုသားသက္ေသထြက္ဆိုမႈ
+

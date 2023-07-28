@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMzNjBf/Easy%20Dialogue%209.%20Rain.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: The forecast said it would rain tomorrow.<br>
+ၾကိဳတင္ခန္႕မွန္းခ်က္က မနက္ျဖန္မိုးရြာမယ္တဲ့<br><br>
+B: Why do you sound so excited?<br>
+မင္းဘာလို႕အရမ္းစိတ္လႈပ္ရွားေနတာလဲ<br><br>
+A: We have a big PE test tomorrow.<br>
+မနက္ျဖန္ PE test ရွိတယ္..<br><br>
+B: I didn't know that.<br>
+ငါမသိခဲ့ဘူး..<br><br>
+A: We have to run ten kilometers.<br>
+ငါတို႕ကီလိုမီတာ..၁၀ ေျပးရမယ္..<br><br>
+B: I think that is next week.<br>
+အဲ့ဒါက ေနာက္အပတ္လို႕ငါထင္ခဲ့တာ..<br><br>
+A: Then what are we doing tomorrow?<br>
+ဒါဆို..မနက္ျဖန္..ငါတို႕ဘာလုပ္ၾကမလဲ<br><br>
+B: I think we will be playing street hockey.<br>
+ငါတို႕လမ္းေဘးေဟာ္ကီကစားမယ္လို႕ငါထင္တယ္..<br><br>
+A: Hockey is my favorite sport!<br>
+ေဟာ္ကီက ငါ့ရဲ႕အၾကိဳက္ဆံုး အားကစားပဲ.<br><br>
+B: Too bad it may rain.<br>
+အရမ္းဆိုးတယ္..မိုးရြာမွာ.<br><br>
+A: I hope it doesn't rain, after all.<br>
+မရြာလို႕ပဲငါေမွ်ာ္လင့္တယ္..ဘာျဖစ္ျဖစ္.<br><br>
+B: You change your mind very quickly.<br>
+မင္းစိတ္ကို မင္းအရမ္းျမန္ျမန္ေျပာင္းလဲတာပဲေနာ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

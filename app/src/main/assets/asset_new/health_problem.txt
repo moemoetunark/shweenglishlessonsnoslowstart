@@ -1,0 +1,68 @@
+﻿Health Problem က်မ္းမာေရးျပသနာမ်ား
+Headache ေခါင္းကိုက္ျခင္း
+Sore throat ရည္ေခ်ာင္နာ
+Stomachache ဗိုက္နာျခင္း
+Chest pain ရင္ဘတ္နာ
+Cough ေခ်ာင္းဆိုးျခင္း
+Earache နားကိုျခင္း
+Cold အေမမိျခင္း
+Temperature အပူခ်ိန္တက္ျခင္း
+Bruise ညိုမဲစြဲျခင္း
+Indigestion အစာမေၾကျခင္း
+Diarrhea ၀မ္းေလ်ာ့ျခင္း
+Sunburn ေနေလာင္ျခင္း
+
+Have got ႏွင့္ေျပာသည့္ က်မ္းမာေရးျပသနာမ်ား
+
+I have got a headache. 
+ကၽြန္ေနာ္ေခါင္းကိုက္ေနတယ္
+I’ve got a sore throat. 
+ကၽြန္ေနာ္လည္ေခ်ာင္းနာေနတယ္၊
+I’ve got a cold. 
+ကၽြန္ေနာ္အေအးမိေနတယ္
+I’ve got a temperature. 
+ကၽြန္ေနာ္အပူခ်ိန္တက္ေနတယ္
+I’ve got a stomachache. 
+ကၽြန္ေနာ္အစာအိမ္နာ(ဗိုက္နာ)ေနတယ္
+I’ve got a chest pain. 
+ကၽြန္ေနာ္ရင္ဘတ္နာေနတယ္
+I’ve got an earache. 
+ကၽြန္ေနာ္ နားကိုက္ေနတယ္
+I’ve got a pain in my leg.
+ ငါ့ေခ်ေထာက္နာေနတယ္
+I’ve got bruise in my face. 
+ငါ့မ်က္နွာညိုမဲစြဲေနတယ္
+I’ve got indigestion. 
+ကၽြန္ေနာ္အၾကာမေၾကျဖစ္ေနတယ္
+I’ve got diarrhea.
+ ကၽြန္ေနာ္၀မ္းေလ်ာ့ေနတယ္
+I’ve got painful joints. 
+ကၽြန္ေနာ့္အဆစ္ေတြ နာေနတယ္
+I’ve got sunburn in my face.
+ ငါ့မ်က္ႏွာေနေလာင္သြားမယ္
+I’ve got a runny nose today. 
+ဒီေန႕ကၽြန္ေနာ္ႏွာစီးေနတယ္
+I’ve have a congested nose.
+ ကၽြန္ေနာ္ႏွာေခါင္းပိတ္ေနတယ္
+
+I feel sick. 
+ကၽြန္ေနာ္ေနမေကါင္းဘူး
+I feel dizzy.
+ ကၽြန္ေနာ္ေခါင္းမူးေနတယ္
+I feel breathless.
+ ကၽြန္ေနာ္အသက္ရွဴရခက္ေနတယ္
+I feel faint. 
+ကၽြန္ေနာ္သတိလစ္သလိုမ်ိဳးျဖစ္ေနတယ္
+I feel particularly bad at night.
+ ညဖက္ဆိုပိုဆိုးတာခံစားရတယ္
+I am depressed. 
+ကၽြန္ေနာ္စိတ္ဖီးစီးေနတယ္
+I am constipated.
+ ကၽြန္ေနာ္၀မ္းခ်ဳပ္ေနတယ္
+I feel tired all the time. 
+ကၽြန္ေနာ္ အျမဲေမာပန္းေနတယ္
+I lost my appetite. 
+ကၽြန္ေနာ္စားခ်င္စိတ္ေပ်ာက္ေနတယ္
+I lost my voice. 
+ကၽြန္ေနာ္အသံ၀င္ေနတယ္၊
+

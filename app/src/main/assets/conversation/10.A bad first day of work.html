@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI4MzJf/Easy%20Dialogue%2010.%20A%20Bad%20First%20Day%20of%20Work.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: How was your first day of work?<br>
+မင္းရဲ႕အလုပ္ပထမေန႕ကဘယ္လိုလဲ<br><br>
+B: It was terrible.<br>
+အရမ္းဆိုးတယ္..<br><br>
+A: What happened?<br>
+ဘာျဖစ္ခဲ့တာလဲ<br><br>
+B: My coworkers bullied me.<br>
+ငါ့နဲ႕အတူလုပ္တ့ဲသူေတြငါ့ကိုအႏိုင္က်င့္ၾကတယ္<br><br>
+A: How did they bully you?<br>
+သူတို႕နင့္ကိုဘယ္လိုအႏိုင္က်င့္ၾကတာလဲ<br><br>
+B: They said I didn't deserve to be there.<br><br>
+သူတို႕ကငါဒီမွာရွိေနဖို႕မသင့္ဘူးလို႕ေျပာတယ္..<br><br>
+A: You're the most passionate veterinarian I know!<br>
+နင္ကငါ့သိတဲ့ခံစားခ်က္အျပင္းထန္ဆံုးသူတစ္ေယာက္ပဲ<br><br>
+B: I don't deserve this kind of treatment.<br>
+ဒီလိုဆက္ဆံတာမ်ိဳးန႕ဲ ငါမထိုက္တန္ဘူး<br><br>
+A: Do you have any idea why they bullied you?<br>
+သူတို႕ဘာေၾကာင့္နင့္ကိုအႏိုင္က်င့္ၾကတယ္ဆိုတာ နင့္မွာအထင္ရွိလား<br><br>
+B: It's because they're a lot older than me.<br>
+သူတို႕ကငါ့ထက္အရမ္းအသက္ၾကီးၾကလို႕ေလ<br><br>
+A: You need to talk to your boss.<br>
+မင္းရဲ႕ ေဘာ့စ္နဲ႕မင္းစကားေျပာဖို႕လိုတယ္.<br><br>
+B: Yeah, I will.<br>
+အင္း..ငါေျပာမွာပဲ<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

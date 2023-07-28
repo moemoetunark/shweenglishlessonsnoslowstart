@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI4ODhf/Easy%20Dialogue%2010.%20Track%20Racing.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I'm so sore from running!<br>
+ငါေျပးလို႕အရမ္းနာက်င္ေနတယ္.<br><br>
+B: Maybe you've been practicing too hard.<br>
+မင္းအရမ္းေလ့က်င့္ေနခဲ့တာမလား<br><br>
+A: I want to do well on the big race next week!<br>
+ေနာက္အပတ္ပျပိုင္ပြဲၾကီးမွာငါေကါင္းစြာလုပ္ခ်င္တယ္..<br><br>
+B: After all that practicing, you'll be too tired to run!<br>
+မင္းအဲ့လိုေလ့က်င့္ျပီးေနာက္မွာ..ေျပးဖို႕အတြက္အရမ္းပင္ပန္းေနလိမ့္မယ္..<br><br>
+A: I won't. I'm trying to get faster, though.<br>
+မျဖစ္ပါဘူး..ငါပိုျမန္ဖို႕အတြက္ၾကိဳးစားေနတာ..<br><br>
+B: You're pretty fast.<br>
+မင္းကျမန္ပါတယ္..<br><br>
+A: I feel like my grandma can run faster than me!<br>
+ငါကေတာ့ ငါ့အဘြားေတာင္ငါ့ထက္ေျပးႏိုင္သလိုခံစားေနရတာ..<br><br>
+B: You just have to believe in yourself and you'll do well.<br>
+မင္းကိုမင္းယံုၾကည္ဖို႕လိုတယ္..ျပီးရင္ေကါင္းေကါင္းလုပ္ရမယ္.<br><br>
+A: I always get nervous before races.<br>
+ျပိဳင္ပြဲမ၀င္ခင္ငါအျမဲစိုးရိမ္တတ္တယ္..<br><br>
+B: Maybe you should run distance races instead.<br>
+အေ၀းျပး ျပိုင္ပြဲမွာမင္းျပိဳင္သင့္တယ္..<br><br>
+A: Do you really think I have good endurance?<br>
+ငါခံႏိုင္ရည္ရွိမယ္လို႕မင္းတကယ္ထင္လား..<br><br>
+B: Of course! Otherwise, you couldn't train this hard.<br>
+ေသခ်ာတာေပါ့..မဟုတ္ရင္ ဒီလိုျပင္းျပင္းထန္ထန္မင္းမေလ့က်င့္ႏိုင္ဘူး<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

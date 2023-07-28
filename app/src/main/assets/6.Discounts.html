@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDMyNDFf/Easy%20Dialogue%206.%20Discounts.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Take out your student ID card.<br>
+မင္းရဲ႕ေက်ာင္းသားကတ္ကိုထုတ္<br><br>
+B: Why do you need it?<br>
+ဘာေၾကာင့္လိုအပ္တာလဲ<br><br>
+A: If you show it to the driver, your ticket costs less.
+<br>
+မင္းအဲဒါကိုကားဆရာကိုျပရင္..လက္မွတ္ခ သက္သာတယ္<br><br>
+B: That is very helpful to students!<br>
+ေက်ာင္းသားေတြအတြက္ေတာ္ေတာ္ အေထာက္ကူျဖစ္တယ္. <br><br>
+A: Yes, saving every little bit counts.<br>
+အင္း..နည္းနည္းသက္သာတာကအစတြက္ရမယ္<br><br>
+B: He charged me a whole dollar less!<br>
+သူငါ့ကိုတစ္ေဒၚလာလံုးေလ်ာ့လိုက္တယ္..<br><br>
+A: Yes, bus drivers are nice to students.<br>
+အင္း..ကားဆရာေတြက ေက်ာင္းသားေတြကိုေကါင္းတယ္ <br><br>
+B: I wish I'd known to do it sooner.<br>
+အဲဒါလုပ္ရမွာမၾကာခင္ကသိခဲ့ရမွာ<br><br>
+A: Me too. We would have saved some money. <br>
+ငါေရာပဲ..ငါတို႕ေငြနည္းနည္းသက္သာမွာ<br><br>
+B: Does it work for college students, too?<br>
+ေကာလိပ္ေက်ာင္းသားေတြအတြက္ပါ အလုပ္ျဖစ္လား<br><br>
+A: I think so, as long as you show a school ID.<br>
+ဟုတ္တယ္ထင္တာပဲ..မင္းသာေက်ာင္းသားကတ္ျပႏိုင္မယ္ဆိုေပါ့ <br><br>
+B: I'd better tell my big brother, too!<br>
+ငါ့အကိုၾကီးကိုလည္းငါေျပာသင့္တယ္<br>
+</p>
+</body>
+</html>

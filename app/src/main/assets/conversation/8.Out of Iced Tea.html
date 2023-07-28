@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMzMjNf/Easy%20Dialogue%208.%20Out%20of%20Iced%20Tea.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Hi sir, what can I get you today?<br>
+ဟိုင္း ဆာ..ကၽြန္ေနာ္ဒီေန႕ဘာလုပ္ေပးရမလဲ..<br><br>
+B: I'll have one glass of iced tea.<br>
+ကၽြန္ေနာ္..Iced tea တစ္ခြက္ေသာက္မယ္..<br><br>
+A: I'm sorry, but we are out of iced tea.<br>
+၀မ္းနည္းပါတယ္..ဒါေပမဲ့ Iced Tea ကုန္ေနျပီ..<br><br>
+B: How can you be out of iced tea?<br>
+ဘယ္လိုကုန္သြားတာလဲ..<br><br>
+A: We didn't get all of the ingredients.<br>
+ပါ၀င္ရမယ့္ပစၥည္းအားလံုးငါတို႕မရခဲ့ဘူး<br><br>
+B: Iced tea is all I want.<br>
+ငါက Iced tea ပဲလိုခ်င္တာ..<br><br>
+A: Sir, we have plenty of other drinks.<br>
+ကၽြန္ေနာ္တို႕မွာတစ္ျခားေသာက္စရာေတြမ်ားၾကီးရွိတယ္..<br><br>
+B: I guess lemonade would be okay.<br>
+သံပုရာကအိုေကမယ္လို႕ငါထင္တယ္..<br><br>
+A: Lemonade coming right up!<br>
+သံပုရာရည္လာလိမ့္မယ္..<br><br>
+B: Wait. You should give me a discount.<br>
+ေနဦး...မင္းငါ့ကို ေလ်ာ့ေစ်းေပးသင့္တယ္.. <br><br>
+A: I will give you a 15% discount.<br>
+မင္းကိုငါ ၁၅ရာခိုင္နႈန္းေလ်ာ့ေပးမယ္..<br><br>
+B: Good! This restaurant is doing something right today.<br>
+ေကါင္းတာေပါ့..ဒီစားေသာက္ဆိုင္ဒီေန႕အမွန္ေတြလုပ္ေနတယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

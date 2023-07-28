@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyNjVf/Easy%20Dialogue%207.%20Emergency%20Concussion.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Hello, 911? I need an ambulance.<br>
+ဟလို...၉၁၁ ကလား..ကၽြန္ေနာ္လူနာတင္ကားတစ္စီးလိုေနတယ္.<br><br>
+B: What's the situation?<br>
+အေျခေနက ဘာလဲ<br><br>
+A: My friend fell off her bike and hit her head.<br>
+ငါ့သူငယ္ခ်င္းစက္ဘီးကေနျပဳတ္က်တယ္...သူေခါင္းထိသြားတယ္..<br><br>
+B: Is she unconscious?<br>
+သူသတိမရဘူးလား<br><br>
+A: No, but she is bleeding a lot.<br>
+မရဘူး..သူမအရမ္းေသြးေတြထြက္ေနတယ္..<br><br>
+B: Please tell me your location.<br>
+ေက်းဇူးျပဳလို႕မင္းရဲ႕ေနရာ ေျပာျပပါ..<br><br>
+A: We are near the community college.<br>
+ငါတို႕က ကြန္မ်ဴနတီ ေကါလိပ္နားမွာ..<br><br>
+B: Please don't let her stand. Do you have her ID?<br>
+ေက်းဇူးျပဴလို႕သူမကိုမရပ္ခိုင္းနဲ႕..သူမ မွတ္ပံုတင္ ရွိလား<br><br>
+A: Yes. I also found her insurance card.<br>
+ဟုတ္တယ္..သူမရဲ႕အာမခံကတ္လည္းေတြ႕တယ္..<br><br>
+B: Good, you will need those at the hospital.<br>
+ေကါင္းတယ္..ေဆးရံုမွာမင္းအဲဒါေတြလိုအပ္တယ္..<br><br>
+A: She is beginning to feel less dizzy.<br>
+သူမမူးတာေတာ့နည္းနည္းသက္သာစျဖစ္လညတယ္..<br><br>
+B: Good, just sit tight, the ambulance will be there soon.<br>
+ေကါင္းတယ္..ထိုင္ပဲထိုင္တယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿မိသားစုႏွင့္ဆိုင္တဲ့အဂၤလိပ္ေ၀ါဟာရမ်ား
+
+Father အေဖ
+Uncle ဦးေလး
+Mother အေမ
+Aunt အေဒၚ
+Parent မိဘ
+Brother-in-law ေယာက္ဖ၊ခယ္အို
+Grandparent အဖိုးအဖြား
+Sister-in-law ေယာင္းမ၊ခယ္မ
+Grandchildren ေျမး
+Father-in-law ေယာက္ခထီး
+Grandson ေျမးေယာက္်ား
+Mother-in-law ေယာက္ခမ
+Granddaughter ေျမးမိန္းကေလး
+Son-in-law သမက္
+Son သား
+Daughter-in-law ေခၽြးမ
+Daughter သမီး
+Stepfather ပေထြး
+Brother ညီ၊အကို
+Stepmother မိေထြး
+Sister အစ္မ၊ညီမ(ညီအမ)
+Step-daughter လင္ပါ၊မယားပါသမီး
+Elder brother အကို
+Stepson လင္ပါ၊မယားပါသား
+Elder sister အစ္မ
+Stepbrother ဖေအတူ၊
+Husband လင္
+Cousin ၀မ္းကြဲ
+Wife မိန္းမ(မယား)
+Nephew တူ
+Niece တူမ
+Ancestors ဘိုးေဘးဘီဘင္မ်ား

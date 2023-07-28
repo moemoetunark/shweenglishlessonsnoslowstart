@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyMzdf/Easy%20Dialogue%206.%20Basketball.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: You sure are buying a lot of stuff!<br>
+မင္းပစၥည္းေတြအမ်ားၾကီး၀ယ္ေနပါလား..<br><br>
+B: It's all the equipment I need for basketball.<br>
+ငါဘတ္စကက္ေျပာအတြက္လိုအပ္တဲ့အေထာက္အကူပစၥည္းေတြအားလံုးပဲ<br><br>
+A: What do you need besides a ball and a hoop?<br>
+ကြင္းနဲ႕ေဘာလံုးအျပင္မင္းဘာေတြလိုအပ္ေသးလို႕လဲ<br><br>
+B: All good players have a good pair of shoes.<br>
+ကစားသမားေကါင္းေတြက..ေကါင္းတဲ့ရွႈိးဖိနပ္ေတာ့ရွိၾကတယ္.<br><br>
+A: That makes three things.<br>
+ဒါနဲ႕ဆိုသံုးခုေလ..<br><br>
+B: You should also wear comfortable clothes when you play.<br>
+ကစားတဲ့အခါသက္ေတာင့္သက္သာရွိတဲ့အ၀တ္စားေတြလည္း၀တ္သင့္တယ္..<br><br>
+A: What about all that candy you're buying?<br>
+မင္းေ၀ေနတယ္..သၾကားလံုးေတြကေကါ..<br><br>
+B: A player has to stay energized!<br>
+ကစားသမားအားလံုးက..အားအင္တက္ေနဖို႕လိုတယ္..<br><br>
+A: I don't think it's good to run on sugar.<br>
+သၾကားစားတာကေကါင္းတယ္လို႕မထင္ဘူး<br><br>
+B: Then I'll eat it while I'm watching the basketball game.<br>
+ဒါဆို..ငါဘတ္စကက္ေဘာပြဲၾကည့္ေနတဲ့အခါစားမွာေပါ့<br><br>
+A: Are you watching it on television?<br>
+မင္း TV ကေနၾကည့္မွာလား<br><br>
+B: Yes. There's a big game on Sunday.<br>
+ဟုတ္ယ္..တနဂၤေႏြမွာပြၾကီးတစ္ပြဲရွိတယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,109 @@
+﻿Weather Vocabularies ရာသီဥတုဆိုင္ရာေ၀ါဟာရမ်ား
+
+Sunny ေနသာေသာ
+Cloudy တိမ္ထူေသာ
+Hot ပူေသာ
+Cold ေအးေသာ
+Nice သာယာေသာ
+Humid စိုထိုင္းေသာ
+Windy ေလထန္ေသာ
+Rainy မိုးရြာေသာ
+Foggy ျမဴႏွင္းက်ေသာ
+Clear တိမ္ကင္းစင္ေကာ
+Forecat ခန္႕မွန္းသည္
+Weather forecast ရာသီဥတုခန္႕မွန္းခ်က္
+Partly cloudy တိမ္အသင့္တင့္ျဖတ္ထိုးေသာ
+Fine ရာသီဥတုသာယာေသာ
+Gloomy မႈန္မႈိုင္းေနေသာ
+Overcast တိမ္မ်ားျဖင့္ျပည့္ေနေသာ
+Lightning လွ်ပ္စီးျခင္း
+Thunder မိုးျခိမ္းသံ
+Chilly ေအးတိေအးစက္ျဖစ္ေသာ
+Damp စိုထိုင္းေသာ
+Warm ေႏြးေသာ
+Blizzard ႏွင္းမုန္တိုင္း
+
+It is sunny today. ဒီေန႕ေနသာတယ္
+It is hot today. ဒီေန႕ပူတယ္၊
+It is raining outside.
+အျပင္မွာမိုးရြာေနတယ္
+What is the weather like in Yangon?
+ရန္ကုန္ရာသီဥတုက ဘယ္လိုလဲ
+It is usually hot. ပံုမွန္အားျဖင့္ပူတယ္၊
+
+The airplane couldn’t take off because of the blizzard.
+ႏွင္းမုန္တိုင္းေၾကာင့္ေလယာဥ္မထြက္ႏိုင္ခဲ့ဘူး
+
+In the summer, the average temperature here is 20 degrees Celsius.
+ေႏြရာသီဒီမွာပ်ဥ္းမွ်အပူခ်ိန္ ၂၀ ဒီဂရီ ရွိတယ္
+
+It may look cloudy in the morning, but the sun always comes out by afternoon.
+မနက္မွာတိမ္ထူသလိုလိုနဲ႕ေန႕လယ္ဆိုရင္အျမဲေနကထြက္လာတယ္
+
+• English Vocabulary about the weather 
+• ရာသီဥတုဆိုင္ရာအဂၤလိပ္စကားလံုးမ်ား
+
+• Rain-မိုးႏွင့္ဆုိင္ေသာ ေ၀ါဟာရမ်ား
+
+• Drizzle (ဒရစ္ဇဲလ္) မိုးဖြဲဖြဲရြာသည္
+• Shower ခဏတစ္ျဖဳတ္၀ါသည့္မိုး
+• Rain မိုး(n) မိုးရြာသည္ (V)
+• Dwonpour ရုပ္တစ္ရက္သည္းထန္စြာရြာသည့္မိုး၊မိုးပုဆိန္
+• Flood  ေရၾကီးျခင္း
+• Hail မိုးသီးမ်ား
+• Cold --ခ်မ္းတာႏွင့္ဆိုင္ေသာစကားလံုးမ်ား
+• Sleet မိုးႏွင္းက်ျခင္း (မိုးေရာႏွင္းပါ)
+• Snow ႏွင္း
+• Snowflake  ဆီးႏွင္းပြင့္
+• Blazzard  ႏွင္းမုန္တိုင္း
+• Temperature အပူခ်ိန္စကားလံုးမ်ား
+• Hot ပူေသာ
+• Warm ေႏြးေသာ
+• Cold ေအးေသာ
+• Freezing ခိုက္ခုိက္တုန္ခ်မ္းေသာ၊ေအးခဲေနေသာ
+• Cloud တိမ္ႏွင့္ဆိုင္ေသာ စကားလံုးမ်ား
+• Cloudy တိမ္ထူေသာ
+• Glommy မဲေမွာင္ေနေသာ (တိမ္အနက္ေရာင္မ်ားျဖင့္)
+• Foggy ႏွင္းျမဴဆို္င္းေနေသာ
+• Overcast တိမ္ထူျပီး မဲေမွာင္ေနေသာ
+• Clear တိမ္ကင္းစင္ေသာ
+• Wind ေလႏွင့္ဆိုင္ေသာ စကားလံုးမ်ား
+• Breeze ေလေျပညွင္း
+• Blustery ေလျပင္းထန္ေသာ
+• Windy ေလတုိက္ေသာ
+• Gale   ေလျပင္း
+• Hurricane ဟာရီကိန္းမုန္တိုင္း 
+• Cyclone ဆုိင္ကလုန္းမုန္တိုင္း
+• Sand storm သဲမုန္တိုင္း
+• တစ္ျခားကစားလံုးမ်ား
+• Forecast မိုးေလ၀သခန္႕မွန္းခ်က္
+• Drought မိုးေခါင္းျခင္း
+• Lightning လွ်ပ္စီးျခင္း
+• Thunder မိုးခ်ဳန္းသံ
+• Thunderbolt မိုးၾကိဳးသြား
+• ရာသီဥတုအေၾကာင္းစကားေျပာျခင္း
+• Talking about the weather.
+• It is sunny today.
+ဒီေန႕ေနသာတယ္
+• It is hot today.
+ ဒီေန႕ပူတယ္
+• It is a nice day today.
+ဒီေန႕ကေတာ့သာယာတဲ့ရက္ေလးပဲ
+• It is drizziling outside.
+အျပင္မိုးဖြဲဖြဲရြာေနတယ္.
+• It is snowing. ႏွင္းေတြက်ေနတယ္
+• It is raining. မိုးရြာေနတယ္
+Take an umbrella. ထီးယူသြားပါ
+• ရာသီဥတုႏွင့္ဆိုင္ေသာေမးခြန္းမ်ား
+• What is like outside?
+အျပင္မွာရာသီဥတုဘယ္လိုလဲ
+• How’s the weather?
+ရာသီဥတုဘယ္လိုလဲ
+• How’s the weather like?
+ရာသီဥတုဘယ္လိုလဲ
+• What is the temperature?
+အပူခ်ိန္ကဘယ္ေလာက္လဲ
+• What is the weather forecast?
+ရာသီဥတုခန္႕မွန္းခ်က္ဘာလဲ
+
+

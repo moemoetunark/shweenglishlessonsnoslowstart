@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyNzZf/Easy%20Dialogue%207.%20Online%20Shopping.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I love your blue bag.<br>
+မင္းရဲ႕အျပာေရာင္အိတ္ကိုငါၾကိဳက္တယ္...<br><br>
+B: Thank you, I just bought it.<br>
+ေက်းဇူး..ကၽြန္ေနာ္.၀ယ္လာတာပဲရွိေသးတာ<br><br>
+A: It looks very expensive.<br>
+အရမ္းေစ်းၾကီးမယ့္ပံုပဲ..<br><br>
+B: It really wasn't. I bought it used online.<br>
+မၾကီးပါဘူး....သံုးျပီးသား အြန္လို္င္းကကၽြန္ေနာ္၀ယ္တာ..<br><br>
+A: It looks brand new!<br>
+လံုး၀အသစ္စစ္လိုပဲ.<br><br>
+B: I know, and I saved $200.<br>
+သိတယ္...ေဒၚလာ၂၀၀ ကုန္က်သက္သာေစတယ္..<br><br>
+A: Wow, I wonder why they didn't want it anymore.<br>
+၀ိုး...သူတို႕ဘာေၾကာင့္အဲ့ဒါကို မလိုခ်င္ၾကေတာ့တာလဲ ငါသိခ်င္မိတယ္..<br><br>
+B: I don't care. As long as it's cheap, I'll take it.<br>
+ဂရုမစိုက္ဘူး....ေစ်းသာသက္သာမယ္ဆိုရင္ေတာ့..ကၽြန္ေနာ္ယူမယ္..<br><br>
+A: Do you think I could find one online too?<br>
+ငါလည္း အြန္လိုင္းမွာတစ္ခုရွာလို႕ရတယ္ မင္းထင္လား<br><br>
+B: You probably could. They have everything online nowadays.<br>
+ရႏိုင္တယ္..အခုေခတ္မွာ အြန္လိုင္းမွာ အားလံုးရွိတယ္..<br><br>
+A: That's true. I'm going to go look now.<br>
+ဒါမွန္တယ္...ငါအခုသြားၾကည့္ေတာ့မယ္..<br><br>
+B: Good luck!<br>
+ကံေကါင္းပါေစ..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

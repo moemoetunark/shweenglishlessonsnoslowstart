@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 2500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDExNDZf/Tell%20the%20Truth.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+She was angry. <br>
+သူမေဒါသထြက္ေနခဲ့တယ္<br><br>
+She was angry at her husband. <br>
+သူမဟာသူမရဲ႕ေယာက်္ားကိုေဒါသထြက္ခဲ့တယ္<br><br>
+He lied to her. <br>
+သူဟာသူမကိုလိမ္ခဲ့တယ္<br><br>
+He lied many times.<br>
+သူအၾကိမ္မ်ားစြာလိမ္ခဲ့တယ္ <br><br>
+She was tired of his lies. <br>
+သူမဟာသူ႕ရဲ႕လိမ္ညာမႈေတြကိုျငီးေငြ႕ခဲ့တယ္<br><br>
+She said enough was enough.<br>
+သူကမေျပာတယ္.ေတာ္ျပီးဆိုတာေတာ္ျပီးလို႕<br><br>
+She took off her ring. <br>
+သူမဟာသူမရဲ႕လက္စြတ္ကိုခၽြတ္လိုက္တယ္<br><br>
+She dropped it into the toilet. <br>
+သူမအဲ့ဒီလက္စြတ္ကိုအိမ္သာထဲပစ္ထည့္လုိက္တယ္<br><br>
+She flushed the toilet.<br>
+သူမကအိမ္သာကိုေဆးလိုက္တယ္<br><br>
+She got into her car.<br>
+သူမကားထဲသို႕ဝင္သြားတယ္<br><br>
+She got on the freeway. <br>
+သူမဟာအျမန္လမ္းမေပၚေရာက္သြားတယ္<br><br>
+She drove the car fast. <br>
+သူမကားကိုျမန္ျမန္ေမာင္းတယ္<br><br>
+She was crying. <br>
+သူမငိုေနတယ္<br><br>
+She was very sad. <br>
+သူမအရမ္းဝမ္းနည္းေနတယ္<br><br>
+She drove the car faster.<br>
+သူမကားကိုပိုျမန္ေအာင္ေမာင္းလိုက္တယ္.. <br><br>
+She passed many cars. <br>
+သူမကားေတာ္ေတာ္မ်ားမ်ားကိုေက်ာ္တက္တယ္<br><br>
+The speed limit was 60 mph.<br>
+အျမန္ႏႈန္းသတ္မွတ္ခ်က္က တစ္နာရီကိုမိုင္၆၀ျဖစ္တယ္<br><br>
+She was going 80 mph.<br>
+သူမဟာ တစ္နာရီကိုမိုင္ ၈၀နဲ႕သြားေနခဲ့တယ္<br><br>
+A cop saw her.<br>
+ရဲတစ္ေယာက္ကသူမကိုျမင္တယ္<br><br>
+The cop chased her. <br>
+ရဲဟာသူမေနာက္ကိုလိုက္တယ္<br><br>
+The cop turned on his red light.<br>
+ရဲ႕အနီမီးကိုဖြင့္လိုက္တယ္ <br><br>
+He turned on his siren. <br>
+အခ်က္ေပးသံကိုသူဖြင့္လိုက္တယ္<br><br>
+She heard the cop car. <br>
+ရဲကားကိုသူမၾကားလိုက္တယ္<br><br>
+She saw the flashing light. <br>
+သူမမီးေရာင္ကိုျမင္တယ္..<br><br>
+She drove faster. <br>
+သူမပိုျမန္ေအာင္ေမာင္းတယ္<br><br>
+Now she was going 90 mph. <br>
+အခုသူမတစ္နာရီကိုမိုင္၉၀သြားေနတယ္.<br><br>
+The cop drove faster. <br>
+ရဲဟာကားကိုပိုျမန္ေအာင္ေမာင္းလိုက္တယ္<br><br>
+It started to rain.<br>
+မိုးစျပီးရြာတယ္<br><br>
+She didn't slow down.<br>
+သူမအရွိန္မေလ်ာ့ခဲ့ဘူး<br><br>
+She lost control. <br>
+သူမအထိန္းမဲ့သြားခဲ့တယ္..<br><br>
+The car rolled over.<br>
+ကားဟာလိမ့္သြားတယ္..<br><br>
+It rolled over and over.<br>
+ကားဟာလိမ့္ရင္းလိမ့္သြားတယ္..<br><br>
+She died before it came to a stop.<br>
+ကားမရပ္မွီသူမေသသြားခဲ့တယ္<br>
+</p>
+</body>
+</html>

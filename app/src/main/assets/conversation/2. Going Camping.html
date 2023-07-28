@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMxMDJf/Easy%20Dialogue%202.%20Going%20Camping.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I won't be in town this weekend.<br>
+ဒီတနဂၤေႏြစေနမွာငါ ျမိဳ႕မွာရွိမွာ မဟုတ္ဘူး<br><br>
+B: Neither will I.<br>
+ငါလည္းရွိမွာ မဟုတ္ဘူး<br><br>
+A: I'm going on a camping trip. What are you doing?<br>
+ငါစခန္းခ်ခရီးတစ္ခုထြက္မယ္....မင္းေကါဘာလုပ္မွာလဲ<br><br>
+B: I will be visiting my grandma.<br>
+ငါ့ဖြားဆီကို အလည္သြားမယ္..<br><br>
+A: I think camping will be more fun.<br>
+ငါအထင္စခန္းခ်ခရီးထြက္တာက ပိုေပ်ာ္္ဖို႕ေကါင္းမယ္..<br><br>
+B: Why don't you take me with you?<br>
+မင္းငါ့ကိုဘာလို႕မင္းနဲ႕အတူမေခၚတာလဲ<br><br>
+A: I don't think your parents will allow it.<br>
+မင္းမိဘေတြကခြင့္ေပးလိမ့္မယ္လို႕မထင္ဘူး<br><br>
+B: You are probably right, but I want to go.<br>
+မင္းမွန္ရင္မွန္မယ္..ဒါေပမဲ့ ငါသြားခ်င္တယ္<br><br>
+A: I'll bring you back a souvenir.<br>
+မင္းအတြက္ငါ အမွတ္တရပစၥည္း၀ယ္လာမယ္..<br><br>
+B: I don't want it. I want to go, too.<br>
+အဲဒါမလိုခ်င္ဘူး..သြားလည္ခ်င္တာ..<br><br>
+A: You can't always get what you want.<br>
+မင္းလိုခ်င္တာကိုအျမဲမရႏိုင္ဘူးေလ..<br><br>
+B: I hope you get eaten by a bear.<br>
+မင္းကို ၀က္၀ံကိုက္ပါေစလို႕ငါေမွ်ာ္လင့္ေနတယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

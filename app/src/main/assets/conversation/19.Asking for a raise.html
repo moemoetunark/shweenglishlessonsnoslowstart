@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMwNzFf/Easy%20Dialogue%2019.%20Asking%20for%20a%20Raise.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Hey, Mr. Smith. Are you busy?<br>
+ေဟး.မစ္စတာ..စမစ္...မင္းအလုပ္မ်ားေနလား<br><br>
+B: Not at all. What's going on?<br>
+မမ်ားပါဘူး...ဘာေတြျဖစ္ေနလဲ..<br><br>
+A: I've been working with the company for 10 years.<br>
+ငါ့ရဲ႕ကုမၸဏီနဲ႕ငါအလုပ္လုပ္ေနတာ..၁၀ႏွစ္ၾကာျပီ..<br><br>
+B: Yes, and I appreciate your dedication.<br>
+အင္း..မင္းရဲ႕ေပးဆပ္မႈေတြကိုငါအသိမွတ္ျပဳတယ္..<br><br>
+A: I think I should get a raise for my dedication.<br>
+မင္းရဲ႕ေပးဆပ္မႈအတြက္မင္းလစာပိုရသင့္တယ္လို႕ငါထင္တယ္..<br><br>
+B: Of course, but it must be reasonable.<br>
+ဟုတ္တာေပါ့..ဒါေပမဲ့...ဒါကမွ်တဖို႕ရမယ္..<br><br>
+A: I think I should be paid $30 an hour.<br>
+တစ္နာရီမင္းကို ေဒၚလာ၃၀ ေပးသင့္တယ္လို႕ငါထင္တယ္..<br><br>
+B: That's a little too much.<br>
+ဒါကနည္းနည္းမ်ားေနတယ္..<br><br>
+A: I have a master's degree, and I'm a great worker.<br>
+ငါမဟာဘြဲ႕လည္းရထားတယ္..ျပီးရင္.ေတာ္တဲ့အလုပ္သမားတစ္ေယာက္ပဲ<br>
+B: I know, but the economy is bad.<br>
+ငါသိတယ္..ဒါေပမဲ့ စီးပြားေရးကဆိုးေနတယ္..<br><br>
+A: How about $25 an hour?<br>
+တစ္နာရီ ၂၅ေဒၚလာဆို ဘယ္လိုလဲ<br><br>
+B: That can be considered!<br>
+ဒါကမွ်တမႈရွိပါတယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

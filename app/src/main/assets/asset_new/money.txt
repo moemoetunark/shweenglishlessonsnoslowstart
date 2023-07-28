@@ -1,0 +1,48 @@
+﻿• Bank account ဘဏ္စရင္း
+• Bank ဘဏ္
+• Bankbook ဘဏ္စာအုပ္
+• ATM  Card 
+• Bank charge ဘဏ္၀န္ေဆာင္ခ
+• Borrow ေခ်းယူသည္
+• Bank branch ဘဏ္ခြဲ
+• Cashflow ၀င္ေငြထြက္ေငြစီးဆင္းမႈ
+• Deposit ဘဏ္တြင္ေငြထည့္သည္(ျခင္း)
+• Deposit account ေငြစုဘဏ္ေကါက္(အတိုးရ)
+• Foreign exchange ႏိုင္ငံျခားေငြလဲျခင္း
+• Foreign exchange rate ႏိုင္ငံျခားေငြလဲႏႈန္း
+• Interest အတိုး
+• Interest rate အတိုးႏႈန္း
+• Lend ေခ်းသည္
+• Loan ဘဏ္မွထုတ္ေခ်းေငြ
+• Pay ေပးသည္
+• Pay in ေငြထည့္သည္
+• Payee ေငြလက္ခံသူ
+• Pension ပင္စင္ရေငြ
+• Salary လစာ
+• Bank state ၀င္ေငြထြက္ေငြအစီရင္ခံစာ
+• Withdraw ေငြထုတ္သည္
+• Withdrawal ေငြထုတ္ျခင္း
+• Free အခေၾကးေငြေပးစရာမလိုေသာ
+• Cheap ေစ်းခ်ိဳေသာ
+• Expensive ေစ်းၾကီးေသာ
+• Reasonable ေစ်းအသင့္အတင့္ျဖစ္ေသာ
+• Waste ဖုန္းတီးသည္
+• Save (သို႕) save up စုေဆာင္းသည္
+• Spend သံုးစြဲသည္
+• Cost ကုန္က်သည္
+• Afford တတ္ႏိုင္သည္
+• Last week I spent $40 on food, and $20 on books. 
+• လြန္ခဲ့တဲ့အပတ္ကကၽြန္ေနာ္အစားေသာက္အ
+• တြက္ေဒၚလာ၄၀သံုးတယ္..ျပီးရင္စာအုပ္
+• အတြက္ေဒၚလာ ၂၀သံုးတယ္
+• I paid $400 for a new computer. 
+o ကၽြန္ေနာ္ကြန္ပ်ဴတာအသစ္တစ္လံုးအတြက္ေဒၚလာ
+o ၄၀၀ ေပးခဲ့ရတယ္
+• My new desk cost me $300. ငါ့ရဲ႕စားပြဲခံုအသစ္ေဒၚလာ ၃၀၀ကုန္တယ္
+• Where do I have to pay for this book? ဒီစာအုပ္အတြက္ေငြဘယ္ေနရာမွာေပးရမလဲ
+• Can you lend me some money? မင္းငါ့ကိုေငြနည္းနည္းေခ်းႏိုင္မလား
+• Can I borrow some money from you? မင္းဆီကငါေငြနည္းနည္းေခ်းလို႕ရမလား
+• I am saving up to marry. ငါလက္ထပ္ဖို႕ေငြစုေနတယ္
+• Parents often think children waste their money on unimportant things. မင္းကေတြကကေလးေတြဟာအေရး
+o မၾကီးတဲ့အရာေတြမွာေငြျဖဳန္းတယ္လို႕ထင္ၾကတယ္
+

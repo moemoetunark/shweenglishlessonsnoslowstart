@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMwNDBf/Easy%20Dialogue%2016.%20Should%20I%20Move.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I'm thinking of moving to Texas.<br>
+ငါ တက္ဆက္ျပည္နယ္သို႕ေျပာင္းဖို႕စဥ္းစားေနတယ္..<br><br>
+B: Why? You love California.<br>
+ဘာေၾကာင့္လဲ..မင္းက ကါလီဖိုးနီးယာကိုၾကိဳက္တာေလ..<br><br>
+A: I do, but there's a great teaching job in Texas.<br>
+ဟုတ္တယ္..ဒါေပမဲ့တက္ဆက္မွာကစာသင္ရတဲ့အလုပ္ေကါင္းေတြရွိတယ္.. <br><br>
+B: How much would you get?<br>
+မင္းဘယ္ေလာက္ရမွာလဲ<br><br>
+A: I would get $70,000 a year.<br>
+တစ္ႏွစ္ကိုေဒၚလာ ခုနစ္ေသာင္းရမယ္..<br><br>
+B: How much do you make now?<br>
+မင္းအခုေကါ ဘယ္ေလာက္ရလဲ<br><br>
+A: I earn $60,000 a year.<br>
+ငါအခုတစ္ႏွစ္ ေျခာက္ေသာင္းရတယ္..<br><br>
+B: I still don't think you should move.<br>
+မင္းေျပာင္းသင့္တယ္လို႕ငါမထင္တုန္းပဲ<br><br>
+A: Really? Why not?<br>
+တကယ္....ဘာေၾကာင့္လဲ<br><br>
+B: All your friends and family are here.<br>
+မင္းမိသားစုနဲ႕ သူငယ္ခ်င္းေတြအားလံုးဒီမွာေလ..<br><br>
+A: Are there any other reasons?<br>
+တစ္ျခားအေၾကာင္းျပခ်က္ေတြရွိလား<br><br>
+B: I think you'll earn $70,000 if you're patient.<br>
+မင္းသည္းခံမယ္ဆို..မင္းခုနစ္ေသာင္းရလိမ့္မယ္လို႕ငါထင္တယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

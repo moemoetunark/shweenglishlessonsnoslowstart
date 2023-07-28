@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 2500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDExMTlf/a%20cat%20a%20a%20dog.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+<p>
+The black cat jumped up onto the chair.<br>
+အနက္ေရာင္ေၾကာင္ဟာကုလားထိုင္ေပၚသို႕ခုန္တက္လိုက္တယ္..<br><br>
+ It looked down at the white dog.<br>
+အျဖဴေရာင္ေခြးကိုငံု႕ၾကည့္လိုက္တယ္<br><br>
+The dog was chewing on a bone. <br>
+ေခြးဟာအရိုးတစ္ေခ်ာင္းကိုဝါးေနခဲ့တယ္<br><br>
+The cat jumped onto the dog.<br>
+ေၾကာင္ကေခြးဆီသို႕ခုန္ဆင္းလိုက္တယ္..<br><br>
+The dog kept chewing the bone.<br>
+ေခြးကအရိုးကိုဆက္ျပီးဝါးေနခဲ့တယ္.<br><br>
+The cat played with the dog's tail.<br>
+ေၾကာင္ဟာေခြးရဲ႕အျမီးကိုကစားေနတယ္..<br><br>
+The dog kept chewing the bone.<br>
+ေခြးဟာအရိုးကိုဆက္ျပီးဝါးေနခဲ့တယ္.<br><br>
+The cat jumped back onto the chair.<br>
+ေၾကာင္ကကုလားထိုင္ေပၚသို႕ျပန္ခုန္တက္လိုက္တယ္<br><br>
+ It started licking its paws. <br>
+ေၾကာင္းဟာသူ႕ရဲ႕ေျခသည္းေတြကို လွ်ာနဲ႕လ်က္ေနတယ္..<br><br>
+The dog stood up.<br>
+ေခြးကမတ္တပ္ရပ္လိုက္တယ္..<br><br>
+It looked at the cat.<br>
+ေၾကာင္ကိုၾကည့္လိုက္တယ္<br><br>
+It licked the cat's fur.<br>
+ေၾကာင္ရဲ႕အေမႊးကိုလွ်ာနဲ႕လ်က္တယ္..<br><br>
+The cat licked the dog's nose.<br>
+ေၾကာင္ကေခြးရဲ႕ႏွာေခါင္းကိုလွ်ာနဲ႕လ်က္တယ္..<br><br>
+The dog went back to its bone<br>
+ေခြးကသူ႕ရဲ႕အရိုးဆီျပန္သြားတယ္<br><br>
+A boy ran through the room.<br>
+လူကေလးတစ္ေယာက္အခန္းကိုျဖတ္ေျပးတယ္<br><br>
+He was wearing a yellow shirt. <br>
+သူဟာရွပ္အဂၤ်ီ အဝါေရာင္ကို၀တ္ဆင္ထားခဲ့တယ္<br><br>
+He almost ran into the chair.<br>
+သူဟာကုလားထိုင္ကိုတုိက္မိလုနီပါးပါပဲ..<br><br>
+The cat jumped off the chair. <br>
+ေၾကာင္ဟာကုလားထိုင္ေပၚကေန ခုန္ဆင္းသြားတယ္..<br><br>
+The cat jumped onto the sofa.<br>
+ေၾကာင္ဟာ ဆိုဖာေပၚသို႕ခုန္တက္လိုက္တယ္..<br><br>
+The chair fell onto the floor next to the dog.<br>
+ကုလားထိုင္ဟာေခြးနဲ႕ကပ္လ်က္ၾကမ္းျပင္သို႕က်သြားတယ္.<br><br>
+The dog stopped chewing the bone.<br>
+ေခြးက အရိုးဝါးေနတာကိုရပ္လိုက္တယ္..<br><br>
+The dog chased the boy.<br>
+ေခြးကလူကေလးကို လိုက္တယ္<br><br>
+ The boy ran out to the street. <br>
+လူကေလးဟာလမ္းသို႕ထြက္ေျပးသြားတယ္..<br><br>
+He threw a stick.<br>
+ဟူဟာတုတ္တစ္ေခ်ာင္းပစ္ခ်လိုက္တယ္..<br><br>
+The dog chased the stick. <br>
+ေခြးကတုတ္ဆီကိုလိုက္တယ္..<br><br>
+The dog lay down.<br>
+ေခြးဟာလဲွလိုက္တယ္..<br><br>
+It chewed on the stick.<br>
+တုတ္ေခ်ာင္းကိုလွ်ာနဲ႕လ်က္လိုက္တယ္...<br><br>
+<br>
+<b>.အဂၤလိပ္စာရဲ႕အဓိပၸါယ္ကိုနားလည္ေစဖို႕ရြယ္ရြယ္ျပီးမူရင္းအဓိပၸါယ္အတိုင ္းသာဘာသာျပန္ထားတယ္။အဂၤလိပ္စာကိုေသခ်ာစြာနားလည္ေစဖို႕အတြက္ ျမန္မာစကားေျပေခ်ာေမြ႕ေအာင္ျပန္ဆိုမထားပါ</b>
+</p>
+</body>
+</html>

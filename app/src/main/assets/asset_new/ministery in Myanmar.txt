@@ -1,0 +1,280 @@
+﻿ဝန္ႀကီးဌာန
+
+ၿပည္ေထာင္စုဝန္ႀကီး (ၿပည္ထဲေရးဝန္ႀကီးဌာန)
+Union Minister (Ministry of Home Affairs)
+
+ဒုတိယဝန္ႀကီး (ၿပည္ထဲေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Home Affairs)
+
+ဒုတိယဝန္ႀကီး (ၿပည္ထဲေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Home Affairs)
+
+ၿပည္ေထာင္စုဝန္ႀကီး(ကာကြယ္ေရးဝန္ႀကီးဌာန)
+Union Minister (Ministry of Defence)
+
+ဒုတိယဝန္ႀကီး (ကာကြယ္ေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Defence)
+
+ဒုတိယဝန္ႀကီး (ကာကြယ္ေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Defence)
+
+ၿပည္ေထာင္စုဝန္ႀကီး(နယ္စပ္ေရးရာဝန္ႀကီးဌာန)
+Union Minister (Ministry of Boder Affairs)
+
+ဒုတိယဝန္ႀကီး(နယ္စပ္ေရးရာဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Boder Affairs)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (ႏိုင္ငံၿခားေရးဝန္ႀကီးဌာန)
+Union Minister (Ministry of Foreign Affairs)
+
+ဒုတိယဝန္ႀကီး (ႏိုင္ငံၿခားေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Foreign Affairs)
+
+ဒုတိယဝန္ႀကီး (ႏိုင္ငံၿခားေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Foreign Affairs)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (ၿပန္ၾကားေရးဝန္ႀကီးဌာန)
+Union Minister (Ministry of Information)
+
+ဒုတိယဝန္ႀကီး (ၿပန္ၾကားေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Information)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (သမၼတရံုးဝန္ႀကီးဌာန-၁)
+Union Minister (Ministry of President Office-1)
+
+ဒုတိယဝန္ႀကီး (သမၼတရံုးဝန္ႀကီးဌာန-၁)
+Deputy Minister (Ministry of President Office-1)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (သမၼတရံုးဝန္ႀကီးဌာန-၂)
+Union Minister (Ministry of President Office-2)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (သမၼတရံုးဝန္ႀကီးဌာန-၃)
+Union Minister (Ministry of President Office-3)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (သမၼတရံုးဝန္ႀကီးဌာန-၄)
+Union Minister (Ministry of President Office-4)
+
+ဒုတိယဝန္ႀကီး (သမၼတရံုးဝန္ႀကီးဌာန-၄)
+Deputy Minister (Ministry of President Office-4)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (သမၼတရံုးဝန္ႀကီးဌာန-၅)
+Union Minister (Ministry of President Office-5)
+
+ဒုတိယဝန္ႀကီး (သမၼတရံုးဝန္ႀကီးဌာန-၅)
+Deputy Minister (Ministry of President Office-5)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (သမၼတရံုးဝန္ႀကီးဌာန-၆)
+Union Minister (Ministry of President Office-6)
+
+ၿပည္ေထာင္စုဝန္ႀကီး(သာသနာေရးဝန္ႀကီးဌာန)
+Union Minister (Ministry of Religious Affairs)
+
+ဒုတိယဝန္ႀကီး (သာသနာေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Religious Affairs)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (သမဝါယမဝန္ႀကီးဌာန)
+Union Minister (Ministry of Cooperatives)
+
+ဒုတိယဝန္ႀကီး (သမဝါယမဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Cooperatives)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (လယ္ယာစိုက္ပ်ိဳးေရးႏွင့္ ဆည္ေၿမာင္းဝန္ႀကီးဌာန)
+Union Minister (Ministry of Agriculture and Irrigation)
+
+ဒုတိယဝန္ႀကီး (လယ္ယာစိုက္ပ်ိဳးေရးႏွင့္ ဆည္ေၿမာင္းဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Agriculture and Irrigation)
+
+ဒုတိယဝန္ႀကီး (လယ္ယာစိုက္ပ်ိဳးေရးႏွင့္ ဆည္ေၿမာင္းဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Agriculture and Irrigation)
+
+ၿပည္ေထာင္စုဝန္ႀကီး(ေမြးၿမဴေရး၊ ေရလုပ္ငန္းႏွင့္ ေက်းလက္ေဒသဖြံ႕ၿဖိဳးေရး ဝန္ႀကီးဌာန)
+Union Minister (Ministry of Livestock, Fisheries and Rural Development)
+
+ဒုတိယဝန္ႀကီး (ေမြးၿမဴေရး၊ ေရလုပ္ငန္းႏွင့္ ေက်းလက္ေဒသဖြံ႕ၿဖိဳးေရး ဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Livestock, Fisheries and Rural Development)
+
+ဒုတိယဝန္ႀကီး (ေမြးၿမဴေရး၊ ေရလုပ္ငန္းႏွင့္ ေက်းလက္ေဒသဖြံ႕ၿဖိဳးေရး ဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Livestock, Fisheries and Rural Development)
+
+ဒုတိယဝန္ႀကီး (ေမြးၿမဴေရး၊ ေရလုပ္ငန္းႏွင့္ ေက်းလက္ေဒသဖြံ႕ၿဖိဳးေရး ဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Livestock, Fisheries and Rural Development)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (ဆက္သြယ္ေရး၊ သတင္း အခ်က္အလက္ႏွင့္ နည္းပညာ ဝန္ႀကီးဌာန)
+Union Minister (Ministry of Commu-nications and Information Techonlogy)
+
+ဒုတိယဝန္ႀကီး (ဆက္သြယ္ေရး၊ သတင္း အခ်က္အလက္ႏွင့္ နည္းပညာ ဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Commu-nications and Information Techonlogy)
+
+ဒုတိယဝန္ႀကီး (ဆက္သြယ္ေရး၊ သတင္း အခ်က္အလက္ႏွင့္ နည္းပညာဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Commu-nications and Information Techonlogy)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (ပို႔ေဆာင္ေရးဝန္ႀကီးဌာန)
+Union Minister (Ministry of Transport)
+
+ဒုတိယဝန္ႀကီး (ပို႔ေဆာင္ေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Transport)
+
+ဒုတိယဝန္ႀကီး (ပို႔ေဆာင္ေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Transport)
+
+ၿပည္ေထာင္စုဝန္ႀကီး(ပတ္ဝန္းက်င္ ထိန္းသိမ္း ေရးႏွင့္ သစ္ေတာေရးရာ ဝန္ႀကီးဌာန)
+Union Minister (Ministry of Environmental Conservation and Forestry)
+
+ဒုတိယဝန္ႀကီး (ပတ္ဝန္းက်င္ ထိန္းသိမ္းေရးႏွင့္ သစ္ေတာေရးရာဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Environ-mental Conservation and Forestry)
+
+ဒုတိယဝန္ႀကီး (ပတ္ဝန္းက်င္ ထိန္းသိမ္းေရးႏွင့္ သစ္ေတာေရးရာဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Environ-mental Conservation and Forestry)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (လွ်ပ္စစ္စြမ္းအားဝန္ႀကီး ဌာန)
+Union Minister (Ministry of Electric Power)
+
+ 
+ဒုတိယဝန္ႀကီး (လွ်ပ္စစ္စြမ္းအားဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Electric Power)
+
+ဒုတိယဝန္ႀကီး (လွ်ပ္စစ္စြမ္းအားဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Electric Power)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (လူဝင္မႈ ႀကီးၾကပ္ေရးႏွင့္ ၿပည္သူ႔အင္အားဝန္ႀကီးဌာန)
+Union Minister (Ministry of Immigration and Population)
+
+ဒုတိယဝန္ႀကီး (လူဝင္မႈ ႀကီးၾကပ္ေရးႏွင့္ ၿပည္သူ႔အင္အားဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Immigration and Population)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (စြမ္းအင္ဝန္ႀကီးဌာန)
+Union Minister (Ministry of Energy)
+
+ဒုတိယဝန္ႀကီး (စြမ္းအင္ဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Energy)
+
+ဒုတိယဝန္ႀကီး (စြမ္းအင္ဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Energy)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (စက္မႈဝန္ႀကီးဌာန)
+Union Minister (Ministry of Industry)
+
+ဒုတိယဝန္ႀကီး (စက္မႈဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Industry)
+
+ဒုတိယဝန္ႀကီး (စက္မႈဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Industry)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (စီးပြားေရးႏွင့္ ကူးသန္း ေရာင္းဝယ္ေရးဝန္ႀကီးဌာန)
+Union Minister (Ministry of Commerce )
+
+ဒုတိယဝန္ႀကီး (စီးပြားေရးႏွင့္ ကူးသန္း ေရာင္းဝယ္ေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Commerce )
+
+ၿပည္ေထာင္စုဝန္ႀကီး (အားကစားဝန္ႀကီးဌာန)
+Union Minister (Ministry of Sports)
+
+ဒုတိယဝန္ႀကီး
+Deputy Minister (Ministry of Sports)
+
+ဒုတိယဝန္ႀကီး
+Deputy Minister (Ministry of Sports)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (ပညာေရးဝန္ႀကီးဌာန)
+Union Minister (Ministry of Education)
+
+ဒုတိယဝန္ႀကီး (ပညာေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Education)
+
+ဒုတိယဝန္ႀကီး (ပညာေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Education)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (က်န္းမာေရးဝန္ႀကီးဌာန)
+Union Minister (Ministry of Health)
+
+ဒုတိယဝန္ႀကီး (က်န္းမာေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Health)
+
+ဒုတိယဝန္ႀကီး (က်န္းမာေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Health)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (သတၱဳတြင္းဝန္ႀကီးဌာန)
+Union Minister (Ministry of Mines
+
+ဒုတိယဝန္ႀကီး (သတၱဳတြင္းဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Mines)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (ယဥ္ေက်းမႈဝန္ႀကီးဌာန)
+Union Minister (Ministry of Culture)
+
+ဒုတိယဝန္ႀကီး (ယဥ္ေက်းမႈဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Culture)
+
+ဒုတိယဝန္ႀကီး (ယဥ္ေက်းမႈဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Culture)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (ဘ႑ာေရးဝန္ႀကီးဌာန)
+Union Minister (Ministry of Finance)
+
+ဒုတိယဝန္ႀကီး (ဘ႑ာေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Finance)
+
+ဒုတိယဝန္ႀကီး (ဘ႑ာေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Finance)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (အမ်ိဳးသားစီမံကိန္းႏွင့္ စီးပြားေရး ဖြံ႕ၿဖိဳးတိုးတက္မႈ ဝန္ႀကီးဌာန)
+Union Minister (Ministry of National Planning and Economic Development)
+
+ဒုတိယဝန္ႀကီး (အမ်ိဳးသားစီမံကိန္းႏွင့္ စီးပြားေရး ဖြံ႕ၿဖိဳးတိုးတက္မႈ ဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of National Planning and Economic Development)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (ေဆာက္လုပ္ေရးဝန္ႀကီး ဌာန)
+Union Minister (Ministry of Construction)
+
+ဒုတိယဝန္ႀကီး (ေဆာက္လုပ္ေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Construction)
+
+ဒုတိယဝန္ႀကီး (ေဆာက္လုပ္ေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Construction)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (အလုပ္သမား၊ အလုပ္ အကိုင္ႏွင့္ လူမႈဖူလံုေရး ဝန္ႀကီးဌာန)
+Union Minister (Ministry of Labour, Employment and Social Security)
+
+ဒုတိယဝန္ႀကီး (အလုပ္သမား၊ အလုပ္အကိုင္ ႏွင့္ လူမႈဖူလံုေရး ဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Labour, Employment and Social Security)
+
+ဒုတိယဝန္ႀကီး (အလုပ္သမား၊ အလုပ္အကိုင္ ႏွင့္ လူမႈဖူလံုေရး ဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Labour, Employment and Social Security)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (ရထားပို႔ေဆာင္ေရး ဝန္ႀကီးဌာန)
+Union Minister (Ministry of Rail Transport)
+
+ဒုတိယဝန္ႀကီး (ရထားပို႔ေဆာင္ေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Rail Transport)
+
+ဒုတိယဝန္ႀကီး (ရထားပို႔ေဆာင္ေရးဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Rail Transport)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (လူမႈဝန္ထမ္းကယ္ဆယ္ ေရးႏွင့္ ၿပန္လည္ေနရာခ်ထားေရး ဝန္ႀကီးဌာန)
+Union Minister (Ministry of Social Welfare, Relief and Resettlement)
+
+ဒုတိယဝန္ႀကီး (လူမႈဝန္ထမ္း ကယ္ဆယ္ေရးႏွင့္ ၿပန္လည္ေနရာခ်ထားေရး ဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Social Welfare, Relief and Resettlement)
+
+ဒုတိယဝန္ႀကီး (လူမႈဝန္ထမ္း ကယ္ဆယ္ေရးႏွင့္ ၿပန္လည္ေနရာခ်ထားေရး ဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Social Welfare, Relief and Resettlement)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (သိပၸံႏွင့္နည္းပညာဝန္ႀကီး ဌာန)
+Union Minister (Ministry of Science and Technology)
+
+ဒုတိယဝန္ႀကီး (သိပၸံႏွင့္နည္းပညာဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Science and Technology)
+
+ဒုတိယဝန္ႀကီး (သိပၸံႏွင့္နည္းပညာဝန္ႀကီး ဌာန)
+Deputy Minister (Ministry of Science and Technology)
+
+ၿပည္ေထာင္စုဝန္ႀကီး (ဟိုတယ္ႏွင့္ ခရီး သြားလာေရး ဝန္ႀကီးဌာန)
+Union Minister (Ministry of Hotels and Tourism)
+
+ဒုတိယဝန္ႀကီး (ဟိုတယ္ႏွင့္ ခရီးသြားလာေရး ဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Hotels and Tourism)
+
+ဒုတိယဝန္ႀကီး (ဟိုတယ္ႏွင့္ ခရီးသြားလာေရး ဝန္ႀကီးဌာန)
+Deputy Minister (Ministry of Hotels and Tourism)
+
+

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 100%;
+height: auto;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM2NDFf/Track%2010.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+<h3>He's over there. သူ..ဟိုမွာ   </h3>
+<img src="img/over.JPG"/> <br>
+Jennifer: Excuse me. Are you Steven Carson?<br>
+တစ္ဆိတ္ေလာက္...နင္က စတီဗင္ ကါဆင္လား     <br><br>
+David: No, I'm not. He's over there. <br>
+ကၽြန္ေနာ္ မဟုတ္ပါဘူး..သူဟိုဘက္မွာ...  <br><br>
+Jennifer: Oh, I'm sorry. <br>
+အိုး...ေဆာ္ရီးေနာ္...           <br><br>
+Jennifer: Steven? This is your book.<br>
+စတီဗင္လား..ဒါနင့္စာအုပ္ေလ<br><br>
+Steven: Oh, thank you. You're in my class, right? <br>
+အိုး..ေက်းဇူးပါပဲ..နင္က ငါတို႕အတန္းထဲကေနာ္..ဟုတ္တယ္မလား<br><br>
+Jennifer: Yes, I am. I'm Jennifer Miller.<br>
+ဟုတ္တယ္...ကၽြန္မက ဂ်င္နီဖာ ဗမလာပါ။ <br><br>
+Steven: Hey, David, this is Jennifer. <br>
+ေဟး..ေဒးဗစ္ ..သူက ဂ်င္နီဖာ ေနာ္။           <br>
+She's in our math class. <br>
+သူမက ငါတို႕သခ်ၤာ အတန္းကေလ       <br><br>
+Divid: Hi, Jennifer. <br>
+ဟိုင္း...ဂ်င္နီဖာ..<br><br>
+Jennifer: Hi, David. Nice to meet you. <br>
+ဟိုင္း..ေဒးဗစ္..ေတြ႕ရတာ ဝမ္းသာပါတယ္ေနာ္                <br>
+
+</p>
+<br>
+<br>
+</body>
+</html>

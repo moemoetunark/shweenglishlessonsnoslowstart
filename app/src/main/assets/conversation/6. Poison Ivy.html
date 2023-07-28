@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyNTRf/Easy%20Dialogue%206.%20Poison%20Ivy.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Have you ever heard of poison ivy?<br>
+တိုက္ကပ္ႏြယ္ပင္အဆိပ္ဆိုတာ မင္းၾကားဖူးလား<br><br>
+B: Isn't that a super villain?<br>
+အရမ္းဆိုတဲ့အရာ မဟုတ္ဘူးလား..<br><br>
+A: I wouldn't know. Tell me more.<br>
+ငါမသိဘူး..ငါ့ကိုပိုျပီးေျပာျပ<br><br>
+B: I once read about Poison Ivy in a comic book.<br>
+ကာတြန္းစာအုပ္မွာ..တိုက္ကပ္ႏြယ္ပင္အဆပ္အေၾကာင္းငါတစ္ခါ ဖတ္ဖူးတယ္<br><br>
+A: Oh, no. That's not what I'm talking about.<br>
+မဟုတ္ဘူး..အဲ့ဒါငါေျပာေနတ့ဲအေကါင္းမဟုတ္ဘူး<br><br>
+B: Then what did you mean?<br>
+ဒါဆုိမင္းဘာကိုဆိုလိုတာလဲ..<br><br>
+A: I was talking about the plant.<br>
+ငါကအပင္အေၾကာင္းေျပာေနခဲ့တာ..<br><br>
+B: Is it the one that makes you itch?<br>
+မင္းကိုယားယံေစတဲ့အပင္မဟုတ္ဘူးလား<br><br>
+A: Yes. I fell into a patch of it.<br>
+ဟုတ္တယ္..ငါအဲ့ဒီကို လဲက်ခဲ့တယ္..<br><br>
+B: Did you wash it off?<br>
+မင္းေဆးေၾကာ့ခဲ့လား..<br><br>
+A: Yes, but it still itches.<br>
+ဟုတ္တယ္..ဒါေပမဲ့ ယားေနတုန္းပဲ..<br><br>
+B: The Poison Ivy I think of is better than this poison ivy.<br>
+ငါထင္တဲ့ တုိက္ကပ္ပင္အဆိပ္က ဒီဟာထက္ေတာ့ ပိုေကါင္းတယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

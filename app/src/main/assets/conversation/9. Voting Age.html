@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMzNzZf/Easy%20Dialogue%209.%20Voting%20Age.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: They should increase the voting age to 21.<br>
+မဲေပးရမယ့္အသက္ကို..၂၁အထိတိုးျမွင့္သင့္တယ္..<br><br>
+B: Why do you think they should do that?<br>
+ဘာလို႕ဒီဟာကိုလုပ္သင့္တယ္လို႕မင္းထင္တာလဲ<br><br>
+A: Well, people can't drink until they're 21.<br>
+လူေတြက၂၁ႏွစ္အထိ..အရက္မေသာက္ရတယ္..<br><br>
+B: That's so they'll have time to make the right decision.<br>
+မွန္ကန္တဲ့ဆံုးျဖတ္ခ်က္ခ်က္ဖို႕..သူတို႕မွာအခ်ိန္ရွိဖို႕ေပါ့.<br><br>
+A: They can't decide what's best for them until they're 21.<br>
+၂၁ႏွစ္ထိ.သူတို႕အတြက္ဘာမွ အေကါင္းဆံုးဆိုတာ..မဆံုးျဖတ္ႏိုင္ဘူး..<br><br>
+B: I suppose you have a point.<br>
+မင္ဒီေနရာမင္းမွန္တယ္..ငါဆိုလိုတာ..<br><br>
+A: Voting is something very important.<br>
+မဲေပးတာကအေရးၾကီးတာတစ္ခုေလ..<br><br>
+B: People should think hard and make the right decision.<br>
+လူေတြဟာခက္ခဲစဥ္းစားျပီ..ဆံုးျဖတ္ခ်က္အမွန္ခ်သင့္တယ္.<br><br>
+A: I hope the teenagers are old enough to do that.<br>
+ဆက္ေက်ာ္သက္ဟာ..ဒီလိုလုပ္ဖို႕အတြက္.လံုေလာက္တယ္လို႕ငါေမွ်ာ္လင့္တယ္<br><br>
+B: Maybe your idea is a good one.<br>
+မင္းအေတြးေခၚေကါင္းရင္ေကါင္းမယ္..<br><br>
+A: Then again, lots of adults don't vote, either.<br>
+တစ္ဖန္..အရြယ္ေရာက္ျပီးသူေတာ္ေတာ္မ်ားမ်ားလည္း မဲမေပးၾကဘူး<br><br>
+B: I guess it always depends on the individual.<br>
+ဒါကတစ္ဦးတစ္ေယာက္အေပၚပဲ.မူတည္တယ္လို႕..ငါထင္တယ္<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

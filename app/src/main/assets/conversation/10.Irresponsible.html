@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI5Mjlf/Easy%20Dialogue%2011.%20Too%20Irresponsible.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I was fired from my part-time job.<br>
+ငါ့ရဲ႕အခ်ိန္ပိုင္းအလုပ္ကေနငါ့အထုတ္ခံရတယ္<br><br>
+B: Why did you get fired?<br>
+မင္းဘာလို႕အထုတ္ခံရတာလဲ<br><br>
+A: My boss said I was too irresponsible.<br>
+ငါ့ရဲ႕ ေဘာ့စ္က ငါကအရမ္းတာ၀န္မဲ့တယ္ေျပာတယ္..<br><br>
+B: Didn't you do good work for him?<br>
+မင္းသူ႕အတြက္အလုပ္ေကါင္းလုပ္ေပးခဲ့လား<br><br>
+A: I missed a few days of work.<br>
+ငါအရက္ရက္အနည္းငယ္လြဲသြားတယ္<br><br>
+B: Why is that a problem?<br>
+အဲ့ဒီျပသနာကဘာေၾကာင့္လဲ<br><br>
+A: I went to the arcade and he found out.<br>
+ေစ်းတန္ဒကိုငါသြားတာကို သူေတြ႕သြားခဲ့တယ္<br><br>
+B: Did you post pictures on Facebook again?<br>
+မင္း fbမွာပံုေတြထပ္တင္ခဲ့ေသးလား<br><br>
+A: Yes, but I didn't know he'd see them.<br>
+ဟုတ္တယ္..ဒါေပမဲ့ သူတို႕ျမင္လိမ့္မယ္လို႕ငါမထင္ခဲ့ဘူး<br><br>
+B: Everyone can see your Facebook.<br>
+လူတိုင္းကမင္း fb ကိုျမင္ႏိုင္တာပဲ<br><br>
+A: I'll be more careful next time.<br>
+ေနာက္ဆိုငါပိုျပီးဂရုစို္က္ရမယ္<br><br>
+B: Just don't do bad things at all!<br>
+မေကါင္းတာေတြကိုမလုပ္ရံုပဲ<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

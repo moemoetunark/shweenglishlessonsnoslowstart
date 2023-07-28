@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1000px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI4MTNf/Easy%20Dialogue%201.%20Key%20Confusion.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I can't unlock the door!<br>
+ငါတံခါးကိုဖြင့္လို႕မရဘူး<br><br>
+B: Maybe it's because the key is brand new.<br>
+ေသာ့ကအသစ္စက္စက္မလို႕ျဖစ္ႏုိင္တယ္<br><br>
+A: The lock won't turn at all!<br>
+ေသာ့ကလံုး၀မလ့ဲဘူး...<br><br>
+B: Are you sure the key is not upside down?<br>
+ေသာ့ကအထက္ေအာက္ေေျပာင္းျပန္ျဖစ္မေနဘူးဆိုတာ ေသခ်ာလား<br><br>
+A: I've flipped it five times!<br>
+ငါငါးခါေလာက္ လွည့္ျပီးျပီ<br><br>
+B: It still doesn't work?<br>
+အလုပ္မျဖစ္တုန္းပဲလား<br><br>
+A: No! The door is still locked.<br>
+မရဘူး..တံခါးကေသာ့ပိတ္ေနတုန္းပဲ<br><br>
+B: Let me try to open it.<br>
+ငါၾကိဳးစားဖြင့္ၾကည့္မယ္..<br><br>
+A: Maybe you'll have better luck.<br>
+မင္းပိုျပီးကံေကါင္းႏိုင္တယ္..<br><br>
+B: I see what the problem is. You're using your old key!<br>
+ျပသနာကဘာလဲဆိုတာငါေတြ႕ျပီ..မင္းကေသာ့အေဟာင္းကိုသံုးေနတာကိုး<br><br>
+A: Oops! I'm so used to my old house.<br>
+အိုးစ္...ငါကအိမ္အေဟာင္းနဲ႕အရမ္းအက်င့္ရေနလို႕<br><br>
+B: It's alright; eventually you'll get used to this one.<br>
+အိုေကပါတယ္...ေနာက္ဆံုးေတာ့မင္းဒီဟာကိုက်င့္သားရသြားမွာပါ..<br>
+</p>
+<br>
+<br>
+</body>
+</html>

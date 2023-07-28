@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 100%;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 100%;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM5NzBf/Track%2015.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>It's an emergency. အေရးေပၚ</h3>
+<img src="img/emergency.JPG"/>
+<p>
+Man: Excuse me. Can you help me? Is there any public restroom around here? <br>
+တစ္ဆိတ္ေလာက္...ငါ့ကုိကူညီႏိုင္မလား...ဒီနားတစ္ဝိႈက္..အမ်ားသံုးအိမ္သာရွိလား               <br><br>
+Woman: A public restroom? Hmm. I'm sorry. I don't think so. <br>
+အမ်ားသံုးအိမ္သာလား...ဟင္း..စိတ္မေကါင္းပါဘူး ရွိမယ္မထင္ဘူး <br><br>
+Man: Oh, no. My son needs a restroom - now. It's emergency. <br>
+မျဖစ္ေသးပါဘူး....င့ါသားအိမ္သာ တက္ခ်က္ေနတာ။ အေရးေပၚျဖစ္ေနျပီ           <br><br>
+Woman: Oh, dear. Well, there's a restroom in the department store on the Main Street. <br>
+အိုး..ကေလးရယ္....လမ္းမၾကီးေပၚစတိုးဆိုင္မွာေတာ့ အိမ္သာရွိတယ္         <br><br>
+Man: Where on Main Street? <br>
+လမ္းမၾကီး ဘယ္နားလဲ    <br><br>
+Woman: It's on the corner of Main And First Avenue. <br>
+လမ္းမၾကီးနဲ႕..ပထမလမ္းရဲ႕ ေထာင္းမွာ           <br><br>
+Man: On the corner of Main and First. <br>
+လမ္းကၾကီးနဲ႕..ပထမလမ္းရဲ႕ေထာင့္ေနာ္...<br><br>
+Woman: Yes, it's across from the park. You can't miss it. <br>
+ဟုတ္တယ္...ပန္းျခံကို ျဖတ္လိုက္....မလြဲႏိုင္ပါဘူး         <br><br>
+Man: Thanks a lot. ေက်းဇူး အမ်ားၾကီးပါပဲ     <br>
+ <h3> လမ္းျပ ေျမပံု        </h3>
+ <img src="img/map.JPG"/>
+</p>
+<br>
+<br>
+</body>
+</html>

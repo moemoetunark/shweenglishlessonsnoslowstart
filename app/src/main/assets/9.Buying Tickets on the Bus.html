@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'Lesson Player',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDI5Mzlf/Easy%20Dialogue%2012.%20Buying%20Tickets%20on%20the%20Bus.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Excuse me! I need a ticket.<br>
+တစ္ဆိတ္ေလာက္..ကၽြန္မလက္မွတ္တစ္ေစာင္လိုတယ္..<br><br>
+B: You owe me a dollar.<br>
+မင္းငါ့ကို တစ္ေဒၚလာအေၾကြးတင္ေနတယ္..(ေပးရမယ္)<br><br>
+A: I already put one in!<br>
+ကၽြန္ေနာ္ တစ္ေဒၚလာထည့္ျပီးျပီ<br><br>
+B: Yes, and you owe me another.<br>
+ဟုတ္တယ္..မင္းငါကိုေနာက္ထပ္တစ္ေဒၚလာေပးရဦးမယ္..<br><br>
+A: The counter says fare is one dollar!<br>
+ေကာင္တာကေျပာတာခရီးခက.တစ္ေဒၚလာပဲဆို..<br><br>
+B: The fare counter tells how much money you've inserted.<br>
+ခရီးခေကါင္တာကေျပတာက..မင္းေငြဘယ္ေလာက္ထည့္လိုက္တယ္ဆိုတာ.<br><br>
+A: I don't understand.<br>
+ကၽြန္ေနာ္နားမလည္ဘူး<br><br>
+B: It reads one dollar because you put in a dollar.<br>
+မင္းတစ္ေဒၚလာထည့္လို႕ေကာင္တာက တစ္ေဒၚလာဖတ္တာ<br><br>
+A: How do I know I've paid the fare?<br>
+ကၽြန္ေနာ္ခရီးခေပးျပီးတာကိုဘယ္လိုသိႏိုင္လဲ<br><br>
+B: The counter will go back to zero.<br>
+ေကာင္က သုညသို႕ျပန္ေရာက္သြားမယ္.<br><br>
+A: Oh, I see what you mean.<br>
+အိုး..မင္းဆိုလိုတာငါနားလည္ျပီ<br><br>
+B: Now that you've paid your two dollars, here's your ticket.<br>
+အခုမင္းႏွစ္ေဒၚလာေပးျပီးျပီ..ေရာ့မင္းရဲ႕လက္မွတ္<br>
+</p>
+</body>
+</html>

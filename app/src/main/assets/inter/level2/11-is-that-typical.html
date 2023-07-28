@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 320px;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+li{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 320px;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDA1MTdf/Track%2045.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>Is that typical? ဒါျဖစ္ေနက်လား    </h3>
+<p>
+Marcos: How many brothers and sisters do you have, Mei-li? <br>
+မီလီ..နင့္မွာ ညီအကိုေမာင္ႏွစ္မ ဘယ္ႏွစ္ေယာက္ ရွိလဲ                 <br><br>
+Mei-li: Actually, I'm an only child. <br>
+အမွန္က..ကၽြန္မက တစ္ဦးတည္းေသာ သမီး (သား)။       <br><br>
+Marcos: Really? တကယ္လား <br><br>
+Mei-li: yeah, a lot of families in China have only one child these days. <br>
+ဟုတ္တယ္..ဒီေခတ္..တရုတ္ႏိုင္ငံမွာ မိသားစုေတြအမ်ားစုက ကေလးတစ္ေယာက္ပဲရွိတာ              <br><br>
+Marcos: I didn't know that. <br>
+ကၽြန္ေနာ္ မသိလို႕ပါ     <br><br>
+Mei-li: What about you, Marcos? <br>
+မာကို...နင့္အေၾကာင္းကေကါ..<br><br>
+Marcos: I come from a big family. I have three brothers and two sisters. <br>
+ကၽြန္ေနာ္က မိသားစုၾကီးကလာတာ။ ကၽြန္ေနာ့္မွာ..အကိုသံုးေသာက္..အစ္မႏွစ္ေယာက္ရွိတယ္                         <br><br>
+Mei-li: Is that typical in Peru? <br>
+ပီရူးမွာဒါက ပံုမွန္ပဲလား    <br><br>
+Marcos: I'm not sure. Many families are smaller these days. But big families are great because you get a lot of brithday presents.  <br><br>
+ကၽြန္ေနာ္လည္း မေသခ်ာဘူး။ ဒီေခတ္မွာက မိသားစုေတြ...သိပ္မၾကီးဘူး။ ဒါေပမဲ့ မိသားစုၾကီးတာက ေကါင္းတယ္...ေမြးေန႕လက္ေဆာင္ေတြ မ်ားၾကီဒရတယ္  <br><br>
+
+</p>
+<br>
+<br>
+</body>
+</html>

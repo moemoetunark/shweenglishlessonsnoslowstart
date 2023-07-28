@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyNTJf/Easy%20Dialogue%206.%20Getting%20a%20Sandwich.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Welcome to Sarah's Sandwiches!<br>
+Sarah Sandvich သို႕ၾကိဳဆိုပါတတယ္.<br><br>
+B: Hi! I don't know where to start.<br>
+ဟိုင္း..ငါဘယ္ကစရာမွာမသိဘူး.<br><br>
+A: Let's start with the bread.<br>
+ေပါင္မုန္႕နဲ႕စၾကစို႕.<br><br>
+B: I want something healthy and tasty.<br>
+အရသာရွိ..က်န္းမာေရးနဲ႕လည္းညီတာတစ္ခုငါစားခ်င္တယ္..<br><br>
+A: I recommend the sweet grain bread.<br>
+ေပါင္မုန္႕ကင္ခ်ိဳခ်ိဳေလးကို.ငါအၾကံေပးတယ္..<br><br>
+B: Okay, thank you.<br>
+အိုေက..ေက်းဇူး<br><br>
+A: What kind of meat do you recommend?<br>
+ဘယ္လိုအသားမ်ိဳးကိုမင္းအၾကံျပဳခ်င္လဲ..<br><br>
+B: Turkey would be good for you!<br>
+ၾကက္ဆင္ကမင္းအတြက္ေကါင္းမယ္..<br><br>
+A: Okay, I'll get that.<br>
+အိုေက..ငါအဲ့ဒါယူမယ္..<br><br>
+B: I'll also add tomatoes, lettuce, onions, and cucumber.<br>
+ခရမ္းခ်ည္သီး..ဆလတ္ရြက္...ၾကက္သြန္ပင္ႏွင့္သခြားသီးပါငါထည့္လိုက္မယ္..<br><br>
+A: Thanks for helping me create a healthy sandwich!<br>
+က်န္းမာေရးနဲ႕ညီတဲ့ေပါင္မုန္႕လုပ္ရန္ငါ့ကိုကူညီတာအတြက္ ေက်းဇဴးပါ..<br><br>
+B: It is my pleasure.<br>
+ကၽြန္ေနာ္လည္း၀မ္းသာပါတယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

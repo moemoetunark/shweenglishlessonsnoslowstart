@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDI5MDRf/Easy%20Dialogue%2011.%20Closet%20Space.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I need a bigger closet.<br>
+ငါပိုၾကီးတဲ့ ဗီရိုတစ္လံုးလိုတယ္<br><br>
+B: I think you just need fewer clothes.<br>
+မင္းပိုနည္းတဲ့အ၀တ္စားေတြပဲလိုတယ္လို႕ငါထင္တယ္<br><br>
+A: A woman can never have too many clothes.<br>
+မိန္းမတစ္ေယာက္တည္း အ၀တ္စားေတြအလြန္မရွိႏိုင္ဘူး<br><br>
+B: She can if they don't fit in her closet!<br>
+သူမအ၀တ္စားေတြက ဗီရိုမွာမဆန္႕ရင္ရွိႏိုင္တယ္..<br><br>
+A: Maybe we should take your things out of it.<br>
+ငါတို႕မင္းအ၀တ္စားေတြကိုဗီရိုကထုတ္ရင္ထုတ္ရမယ္.<br><br>
+B: Then where would I put my clothes?<br>
+ဒါဆိုငါ့အ၀တ္စားေတြ ဘယ္မွာထားရမွာလဲ<br><br>
+A: You can put them in a small wardrobe.<br>
+ေသးငယ္တဲ့မတ္ရပ္ဗီရိုတစ္လံုးမွာမင္းထားႏိုင္တယ္..<br><br>
+B: I think it's easier if you throw some dresses out.<br>
+တစ္ခ်ိဳ႕အ၀တ္စားေတြကိုလႊင့္ပစ္ရင္ပိုလြယ္မယ္လို႕ငါထင္တယ္.<br><br>
+A: My dresses are nicer than your clothes!<br>
+ငါ့အ၀တ္စားေတြကမင္းဟာထက္ေကါင္းတယ္.<br><br>
+B: I only have the clothes that are necessary.<br>
+ငါမွာ့လိုအပ္တဲ့(ရွိသင့္ရွိထိုက္တဲ့)အ၀တ္စားေတြပဲရွိတာ..<br><br>
+A: So do I. I need to look nice more often than you do.<br>
+ငါ့မွာေရာပဲ..ငါကနင့္ထက္ပိုလွဖို႕လုိအပ္တယ္..<br><br>
+B: I wish your attitude was as nice as your dresses.<br>
+မင္းရဲ႕သေဘာထားေတြက..မင္းအ၀တ္စားေတြလိုေကါင္းဖို႕ငါဆႏၵရွိတယ္..<br>
+</p>
+</body>
+</html>

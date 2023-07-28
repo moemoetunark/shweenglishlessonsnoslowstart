@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMzNDZf/Easy%20Dialogue%209.%20Breaking%20Up.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: We need to talk.<br>
+ငါတို႕စကားေျပာဖို႕လိုတယ္..<br><br>
+B: You're breaking up with me.<br>
+နင္ကငါကိုျဖတ္မလို႕လား<br><br>
+A: I didn't even say anything yet.<br>
+ငါဘာမွေတာင္မေျပာရေသးဘူး<br><br>
+B: I already know.<br>
+ငါသိႏွင့္ျပီ..<br><br>
+A: You're right, I'm breaking up with you.<br>
+နင္မွန္တယ္..ငါနင္နဲ႕ျပတ္စဲေတာ့မယ္..<br><br>
+B: Why? I thought things were going good.<br>
+ဘာလို႕လဲ...အရာေတြကေကါင္းေနတယ္လို႕ငါထင္ခဲ့တာ..<br><br>
+A: They were. Things happen.<br>
+ေကါင္းေနခဲ့တယ္...ဒါေပမဲ့အရာေတြကျဖစ္လာတယ္.<br><br>
+B: What kind of "things?"<br>
+ဘယ္လိုဟာေတြလဲ<br><br>
+A: I can't tell you. You'll get mad.<br>
+နင့္ကိုမေျပာျပႏိုင္ဘူး...နင္ရူးသြားလိမ့္မယ္.<br><br>
+B: I need to know.<br>
+ငါသိဖို႕လိုအပ္တယ္..<br><br>
+A: I met someone else.<br>
+ငါေနာ္ကတစ္ေယာက္ေတြ႕ထားတယ္..<br><br>
+B: You're right, I am mad.<br>
+နင္မွန္တယ္..ငါရူးျပီ.<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

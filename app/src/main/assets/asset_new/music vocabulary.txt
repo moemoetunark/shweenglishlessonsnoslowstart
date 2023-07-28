@@ -1,0 +1,70 @@
+﻿• Music Vocabulary ဂီတဆိုင္ရာေ၀ါဟာရမ်ား
+• Musician ဂီတသမား
+• Songwriter သီျခင္းေရးသူ
+• Song composer သီခ်င္းေရးသူ
+• Rock Star ေရာ့ခ္အဆိုေတာ္
+• Pop Star ေပါ့ပ္အဆိုေတာ္
+• Classical music ေရွ႕ေဟာင္းသီခ်င္း
+• Rock music ေရာ့ခ္ဂီတ
+• Pop music ေပါ့ပ္ဂီတ
+• Hip-hop music ဟဲ့ေဟာ့ပ္ဂီတ
+• Jazz music ဂ်က္ဇ္ဂီတ
+• Rapper ရပ္အဆိုေတာ္
+• Genre ဂီတအပ်ိဳးစား
+• Cello တေယာ္အၾကီးမ်ိဳး
+• Violin တေယာ
+• Piano စႏၵယား
+• Guitar ဂစ္တာ
+• Guitarist ဂစ္တာသမား
+• Saxophone ဆက္ဇိုဖုန္း
+• Flute ပေလြ
+• Flutist ပေလြမႈတ္သူ
+• Pianist စႏၵယားတီးသူ
+• Drum ဗံု၊စည္၊ဒရမ္
+
+• How often do you listen to music?
+• မင္းသီခ်င္းဘယ္ေလာက္နားေထာင္လဲ
+
+• When do you normally listen to music?
+• ဘယ္အခ်ိန္ပံုမွန္အားျဖင့္သီခ်င္းနားေထာင္လဲ
+
+• Are you able to concentrate on other activities when you are listening to music?
+• သီခ်င္းနားေထာင္ေနစဥ္အတြင္းမွာမင္းတစ္ျခားအရာေတြကိုအာရံုစိုက္ႏိုင္လား
+
+• What kind of music is your favorite?
+• ဘယ္သီခ်င္းအမ်ိဳးစားကမင္းရဲ႕အၾကိဳက္ဆံုးလဲ
+
+• Do you like classical music?
+• ေရွ႕ေဟာင္းသီခ်င္းေတြကိုမင္းၾကိဳက္လား
+
+• Do you like country music?
+• Country သီခ်င္းအမ်ိဳးစားကိုမင္းၾကိဳက္လား
+
+• Do you like jazz?
+• မင္း Jazz ဂီတကိုၾကိဳက္လား
+
+• Do you listen to all kinds of music?
+• မင္းသီခ်င္းအမ်ိဳးစားအားလံုးကိုနားဆင္လား
+
+• Is there any kind of music that you hate?
+• မင္းမၾကိဳက္တဲ့ သီခ်င္းအမ်ိဳးစားရွိလား
+
+• Can you play any musical instrument? 
+• မင္းဘယ္တူရိယာကိုတီးတတ္သလဲ
+
+• If not, which instrument would you like to play?
+• မတတ္ဘူးဆိုရင္..မင္းဘယ္တူရိယာကိုတီးခတ္ခ်င္သလဲ
+
+• Which musical instruments do people from your country usually play?
+• မင္းရဲ႕ႏိုင္ငံမွာဘယ္တူရီယာကိုလူေတြပံုမွန္အားျဖင့္တီးခတ္ၾကသလဲ
+
+• Is there any traditional musical instrument in your country?
+• မင္းရဲ႕ႏိုင္ငံမွာ ရိုးရာတူရိယာအမ်ိဳးစားေတြရွိသလား
+
+• Do you like singing?
+• မင္းသီခ်င္းဆိုရတာကိုၾကိဳက္သလား
+
+• Are you a good singer?
+• မင္းကေတာ္တဲ့အဆိုေတာ္တစ္ေယာက္လား
+
+

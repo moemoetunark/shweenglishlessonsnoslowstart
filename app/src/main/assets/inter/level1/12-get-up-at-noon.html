@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 100%;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 100%;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM3Mzlf/Track%2007.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>I get up at noon. ကၽြန္ေနာ္ေန႕လည္မွ အိပ္ရာက ထတယ္        </h3>
+<img src="img/get-up.JPG"/>
+<p>
+Jack: Let's go to the park on Sunday. <br>
+တနဂၤေႏြေန႕ ပန္းျခံသြားၾကစို႕။        <br><br>
+Amy: OK, but let's go in the afternoon. I sleep late on weekends. <br>
+အိုေက...ဒါေပမဲ့ ေန႕ခင္းသြားၾကမယ္ေလ။ တနဂၤေႏြ စေနေန႕ေတြက ကၽြန္ေနာ္ အိပ္တာေနာက္က်တယ္                         <br><br>
+Jack: What time do you get up on Sundays. <br>
+တနဂၤေႏြရက္ေတြဆို မင္းဘယ္အခ်ိန္ အိပ္ရာက ထလဲ          <br><br>
+Amy: At ten o'clock. <br>
+10 နာရီ ထတယ္။ <br><br>
+Jack: Oh, that's early. On Sundays, I get up at noon. <br>
+အိုး အေစာၾကီးပဲ။ တနဂၤေႏြရက္ေတြဆို ကၽြန္ေနာ္ ေန႕လည္မွ အိပ္ရာကထတာ။             <br><br>
+Amy: Really? Do you eat breakfast then? <br>
+တကယ္လား ...နင္မနက္စာေကါ စားလို႕လား     <br>
+Jack: Sure. I have breakfast every day. <br>
+စားတာေပါ့။   ေန႕တိုင္းစားတယ္။
+Amy: Then let's meet at this restaurant at one o'clock. <br>
+ဒါဆို..တစ္နာရီခ်ိန္..ငါတို႕စားေသာက္ဆိုင္မွာ ဆံုၾကမယ္      <br>
+They serve breakfast all day! <br>
+မနက္စာ တကယ္ေနကုန္ ရတယ္ေလ      <br>
+ <br>
+</p>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI4MzVf/Easy%20Dialogue%2010.%20A%20Hat.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Does this hat match my suit?<br>
+ငါ့ရဲ႕၀တ္စုံနဲ႕ ဒီဦးထုပ္နဲ႕လိုက္လား<br><br>
+B: Well, it's the same color.<br>
+အင္း..အေရာင္ကတူတူပဲ..<br><br>
+A: That's good enough for me.<br>
+ဒါကငါ့အတြက္ေကါင္းတယ္..<br><br>
+B: Are you going to a dinner party?<br>
+မင္းညစာစားပြဲသြားမလို႕လား<br><br>
+A: No, I'm going to a job interview.<br>
+မဟုတ္ဘူး..ငါအလုပ္အင္တာဗ်ဴးသြားမလို႕<br><br>
+B: Then maybe you should wear a tie.<br>
+မင္းလည္စည္းတစ္ခု၀တ္သင့္တယ္လို႕ငါထင္တယ္<br><br>
+A: That's a good idea.<br>
+ဒါအၾကံေကါင္းပဲ<br><br>
+B: Also, I would not wear the hat if I were you.<br>
+ငါသာမင္းဆိုလွ်င္..ဦးထုတ္လည္း၀တ္မွာမဟုတ္ဘူး..<br><br>
+A: Why not? It matches well.<br>
+ဘာလို႕မ၀တ္ရမွာလဲ..လိုက္တယ္ေလ..<br><br>
+B: You look like a mobster from the movies!<br>
+မင္းဇာတ္ကားထဲက လူဆိုးနဲ႕တူတယ္..<br><br>
+A: Don't hats make you look more professional?<br>
+ဦးထုပ္က ပိုျပီးငါ့ကို pro မဆန္ေစဘူးလား<br><br>
+B: Only if you're applying to be a hit-man.<br>
+မင္းလူသတ္သမားအလုပ္အတြက္ ေလွ်ာက္ေတာ့မယ္ဆိုရင္ေတာ့ေပါ့..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

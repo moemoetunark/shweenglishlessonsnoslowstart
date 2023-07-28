@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMxMzRf/Easy%20Dialogue%2023.%20Broken%20Legs.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Can you help me get up the stairs, please?<br>
+ေလွကားကိုတက္ဖို႕အတြက္မင္းငါ့ကိုေက်းဇူးျပဳလို႕ကူညီႏိုင္မလား<br><br>
+B: Of course. What happened to your leg?<br>
+ေသခ်ာတာေပါ့..မင္းေျခေထာက္ဘာျဖစ္တာလဲ<br><br>
+A: I broke it a week ago.<br>
+တစ္ပတ္မတိုင္ခင္ကက်ိဳးသြားခဲ့တာ..<br><br>
+B: How did that happen?<br>
+ဘယ္လိုျဖစ္ခ့ဲတာလဲ<br><br>
+A: I was playing basketball and fell.<br>
+ဘတ္စကေဘာကစားရင္နဲ႕ လဲက်သြားတာ..<br><br>
+B: Ouch! Did someone push you?<br>
+အိုးခ်္...မင္းကိုတစ္ေယာက္ေယာက္ကတြန္းခ်လိုက္တာလား<br><br>
+A: No, I just jumped and landed wrong.<br>
+မဟုတ္ဘူး..ကၽြန္ေနာ္ခုန္ျပီး..အက်မွားသြားတာ။။<br><br>
+B: I broke my leg once too.<br>
+တစ္ခါကငါ့ေျခေထာက္လည္းက်ိဳးဖူးတယ္..<br><br>
+A: How did it happen to you?<br>
+မင္းေကါဘယ္လိုျဖစ္ခဲ့တာလဲ<br><br>
+B: A boy pushed me down a hill and I landed on my leg.<br>
+လူကေလးတစ္ေယာက္ကငါ့ကိုေတာင္ကသို႕တြန္းခ်တာ..ျပီးရင္ငါ့ေျခေထာက္နဲ႕ေျမမွာက်တယ္<br><br>
+A: That sounds like a mean kid.<br>
+ဒါကယုတ္မာတဲ့ကေလးပဲ<br><br>
+B: Yes, but I kicked him with the cast.<br>
+ဟုတ္တယ္..ငါသူ႕ကိုကန္ေက်ာက္ခဲ့တယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

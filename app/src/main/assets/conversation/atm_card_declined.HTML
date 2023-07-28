@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI5MzZf/Easy%20Dialogue%2012.%20ATM%20Card%20Being%20Declined.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I'm sorry, but your card was declined.<br>
+ကၽြန္ေနာ္ေဆာ္ရီးပါ...ကၽြန္ေနာ့္ကတ္ကိုလက္မခံျဖစ္ေနလို႕<br><br>
+B: This is my ATM card and I know I have money in my account.<br>
+ဒါကကၽြန္ေနာ့္ ATM ကတ္..ငါ့အေကါက္မွာေငြရွိတာကို သိတယ္..<br><br>
+A: Maybe you have less money in the account than you thought.<br>
+မင္းအေကါက္မွာ ေငြကမင္းထင္နာထက္ နည္းႏိုင္တယ္.<br><br>
+B: I just checked my balance this morning.<br>
+ကၽြန္ေနာ္မနက္ေစာေစာကပဲ လက္က်န္ေငြစစ္ထားတာ..<br><br>
+A: Your account may have been frozen.<br>
+မင္းအေကါက္ကိုသံုးမရေအာင္ လုပ္ထားတာျဖစ္ႏိုင္တယ္..<br><br>
+B: Why would the bank do that?<br>
+ဘဏ္က ဘာလို႕အဲ့ဒီလို..လုပ္မွာလဲ.<br><br>
+A: You should contact your bank.<br>
+မင္းရဲ႕ဘဏ္ကိုဆက္သြယ္သင့္တတယ္<br><br>
+B: How else can I pay for these items?<br>
+ဒါေတြအတြက္တစ္ျခားဘယ္လိုေပးႏိုင္လဲ.<br><br>
+A: Do you have a credit card?<br>
+မင္းမွာ credit ကတ္ရွိလား<br><br>
+B: I can write you a check. <br>
+မင္းကိုငါ ခ်က္လက္မွတ္ေပးမယ္<br><br>
+A: If it's from the same bank account as your ATM card, then I can't accept that check.<br>
+မင္းရဲ႕ ATM ကတ္နဲ႕အေကါက္တူဆိုရင္..ကၽြန္မခ်က္လက္မွတ္ကိုလက္မခံႏိုင္ဘူး<br><br>
+B: I guess I can't go shopping today then.<br>
+ကၽြန္ေနာ္ထင္တယ္...ဒါဆိုေရွာ့ပင္းမထြက္ရေတာ့ဘူး<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

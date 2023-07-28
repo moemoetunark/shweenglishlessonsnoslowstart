@@ -1,0 +1,43 @@
+﻿plane ေလယာဥ္ပ်ံ
+Motorbike ေမာ္ေတာ္ဆိုင္ကယ္
+Taxi တကၠစီ(အငွားကား)
+Bicycle စက္ဘီး
+Train ရထား
+Boat ေလွ
+Tube train ေျမေအာက္ရထား
+Bus ဘတ္စ္ ကား
+Yacht ရြက္ေလွ
+Lorry ကုန္တင္ကား
+ဘတ္စ္ကားနဲ႕ ရထားစံုစမ္းေမးျမန္းျခင္း
+
+Could you tell me the time of the next train to Mandalay, please?
+မႏၱေလးသြားမယ့္ရထားေနာက္တစ္စီးရဲ႕အခ်ိန္ကိုမင္းေျပာျပလို႕ရလား
+What time does it depart?
+ဘယ္အခ်ိန္ထြက္လဲ
+What time does it arrive?
+ဘယ္အခ်ိန္ေရာက္မွာ
+How long is the journey?
+ခရီးကဘယ္ေလာက္ၾကာလဲ
+
+ေလယာဥ္ပ်ံခရီးစံုစမ္းျခင္း
+Is there a flight to London, please?
+လန္ဒန္ကိုသြားမယ့္ ခရီးစဥ္ရွိလား
+Is it a direct flight, or do I have to change planes?
+ဒါက ဒါရိုက္သြားတဲ့ ေလေၾကာင္းလား သို႕မဟုတ္ ေလယာဥ္တစ္ဆင့္စီးရမလား
+Do they serve food?
+အစားစာ၀န္ေဆာင္မႈေပးလား
+What terminal does it leave from?
+ဘယ္ terminal ကေနထြက္မွာ
+Is there an airport bus?
+ေလဆိပ္ကားရွိသလား
+Can I have a window seat? ျပတင္းေပါက္နားကခံုရမလား
+What time do I have to check in?
+Check-in ဘယ္အခ်ိန္လုပ္ရမလဲ
+What time does it take off?
+ဘယ္အခ်ိန္ထြက္မွာ
+What time does it land?
+ဘယ္အခ်ိန္ဆိုက္ေရာက္မလဲ
+How long is the flight?
+ခရီးစဥ္ကဘယ္ေလာက္ၾကာလဲ
+
+

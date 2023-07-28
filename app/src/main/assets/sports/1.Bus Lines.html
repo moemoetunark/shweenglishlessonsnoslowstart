@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://www.moemoetun.me/conversationmp3/Easy Dialogue 13. Hockey.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: This is a weird looking golf club.<br>
+ဒါကတကယ္ပံုစံမက်တဲ့ ေဂါက္ကြင္းပဲ<br><br>
+B: That's not a golf club.<br>
+ဒါေဂါက္ကြင္းမဟုတ္ဘူး<br><br>
+A: What is it, then?<br>
+အဲဒါဆို..ဘာလဲ<br><br>
+B: It's a hockey stick.<br>
+ဒါကေဟာ္ကီတုတ္ေခ်ာင္း..<br><br>
+A: Is hockey that game the men play on ice?<br>
+ေဟာ္ကီဆိုတာ..ေယာက္်ားေတြေရးခဲမွာကစားတ့ဲပြဲလား<br><br>
+B: Yes it is. It's a difficult game.<br>
+ဟုတ္တယ္...ခက္ခဲတဲ့ကစားပြဲတစ္ခုပဲ..<br><br>
+A: It reminds me a lot of soccer.<br>
+ဒါကငါ့ကို ေဘာလံုးကိုသတိရေစတယ္..<br><br>
+B: I think hockey is more difficult than soccer.<br>
+ငါထင္တာ..ေဟာ္ကီက ေဘာလံုးထက္ပိုခက္ခဲတယ္လို႕..<br><br>
+A: Why do you think that?<br>
+မင္းဘာလို႕အဲဒါထင္တာလဲ<br><br>
+B: Well, you have to skate. Soccer is just kicking.<br>
+အင္း..စကိတ္လည္းစီးရတယ္..ေဘာလံုးက ကန္တာေလာက္ပဲ<br><br>
+A: I think there is more to it than that.<br>
+ငါထင္တာ အဲဒါထက္ပိုလို႕လုပ္စရာေတာ့ရွိမယ္..<br><br>
+B: Either way, I'd be terrible at both!<br>
+ဘာျဖစ္ျဖစ္..ႏွစ္ခုလံုးကိုငါမၾကိဳက္ဘူး<br><br>
+</p>
+<br>
+<br>
+</div>
+</body>
+</html>

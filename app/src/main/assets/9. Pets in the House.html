@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDMzNTlf/Easy%20Dialogue%209.%20Pets%20in%20the%20House.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Who let the dog inside?<br>
+အခန္းထဲဘယ္သူေခြးကိုသြင္းတာလဲ<br><br>
+B: I did. What's the problem?<br>
+ငါပဲေလ...ဘာျပသနာရွိလို႕လဲ<br><br>
+A: He got mud all over the new carpet!<br>
+ေကာ္ေဇာအသစ္မွာညြံေတြေပေစတယ္..<br><br>
+B: That wasn't him. I just gave him a bath!<br>
+အဲ့ဒါသူမဟုတ္ဘူး..ငါသူ႕ကိုေရခ်ိဳးလိုက္တယ္.<br><br>
+A: Now that I look closer, these look like footprints!<br>
+အခုငါအနီးကပ္ၾကည့္တယ္..ေျခရာေတြနဲ႕တူတယ္..<br><br>
+B: Well, they're not mine, they're too big!<br>
+အ့ဲဒါငါ့ေျခရာေတြမဟုတ္ဘူး..အရမ္းၾကီးတယ္.<br><br>
+A: They're not mine, either. I haven't been outside.<br>
+ငါေျခရာေတြလည္းမဟုတ္ဘူး..ငါအျပင္မထြက္ဘူး<br><br>
+B: I think those are dad's footprints.<br>
+အေဖရဲ႕ေျခရာေတြလို႕ငါထင္တယ္..<br><br>
+A: I think you're right!<br>
+မင္းမွန္တယ္လို႕ငါထင္တယ္..<br><br>
+B: Dad's in big trouble now.<br>
+အခုအေဖေတာ့ ျပသနာပဲ<br><br>
+A: Yes he is. Maybe he'll sleep in the dog house tonight.<br>
+သူဟုတ္တယ္..ဒီညသူေခြးအိပ္တဲ့အိမ္မွာ အိပ္ႏိုင္တယ္..<br><br>
+B: I don't think the dog wants dad as a roommate.<br>
+ေခြးကအေဖကိုသူ႕အခန္းေဖာ္ျဖစ္ေစခ်င္မယ္လို႕ငါမထင္ဘူး<br>
+</p>
+</body>
+</html>

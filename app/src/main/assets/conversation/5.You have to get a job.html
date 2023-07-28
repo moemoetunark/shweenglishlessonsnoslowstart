@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyMzJf/Easy%20Dialogue%205.%20You%20Have%20to%20Get%20a%20Job.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: How long have you been watching T.V.?<br>
+နင္တြဗြီၾကည့္ျပီးေနတာ ဘယ္ေလာက္ၾကာပီလဲ<br><br>
+B: About 10 hours.<br>
+၁၀နာရီခန္႕ေလာက္ရွိျပီ..<br><br>
+A: You need to get a job!<br>
+နင္အလုပ္တစ္ခုရဖို႕လိုတယ္<br><br>
+B: Why? You and dad make so much money.<br>
+ဘာေၾကာင့္လဲ..အေမနဲ႕အေဖကေငြေတြအရမ္းရေနတာပဲ<br><br>
+A: You can't just sit around all day.<br>
+နင္တစ္ေနကုန္ထိုင္ပဲထိုင္ေနလို႕ျဖစ္ဘူး.<br><br>
+B: But I'm not good at anything.<br>
+ကၽြန္ေနာ္ဘယ္အရာမွာမွ မေတာ္ဘူး<br><br>
+A: Everyone is good at something.<br>
+လူတိုင္းကတစ္ခုခုမွာေတာ့ ေတာ္ၾကတယ္..<br><br>
+B: Well, I'm good at watching T.V.<br>
+အင္း..ငါတီဗြီၾကည့္တဲ့ေနရာေတာ့ ေတာ္သားပဲ<br><br>
+A: Why don't you become a T.V. critic?<br>
+နင္ဘာလို႕ TV မွာေ၀ဖန္ေရးသမားမျဖစ္ႏိုင္မွာလဲ<br><br>
+B: I would love to watch T.V. and write great reviews!<br>
+ကၽြန္ေနာ္တီဗြီၾကည့္တာၾကိဳက္တယ္..သံုးသပ္ခ်က္ေကါင္းေကါင္းေတြလည္းေရးခ်င္တယ္<br><br>
+A: See? You are good at something.<br>
+ေတြ႕လား...နင္ကတစ္ခုခုေတာ့ ေတာ္သားပဲ<br><br>
+B: Thanks, Mom. I'll start looking for jobs now.<br>
+ေက်းဇူးပဲအေမ..ကၽြန္ေနာ္.အခုပဲအလုပ္စရွာေတာ့မယ္.<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

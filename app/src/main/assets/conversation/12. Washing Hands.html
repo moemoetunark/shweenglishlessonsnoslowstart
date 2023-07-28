@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMxNDJf/Easy%20Dialogue%2025.%20Washing%20Hands.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Public restrooms gross me out.<br>
+အမ်ားသံုးအိပ္သာကတကယ္စိတ္ပ်က္ဖို႕ေကါင္းတယ္..<br><br>
+B: They're not always bad.<br>
+အျမဲတမ္းေတာ့မဆိုးပါဘူး<br><br>
+A: Even when they look clean, there are germs everywhere.<br>
+သန္႕ရွင္းပံုေပၚတ့ဲအခါေတာင္မွ...ေရာဂါပိုးေတြေနရာတိုင္းမွာရွိတယ္..<br><br>
+B: That's because so many people don't wash their hands.<br>
+လူေတာ္ေတာ္မ်ားမ်ားက သူတို႕လက္ကိုမေဆးေၾကာ့လို႕ေလ..<br><br>
+A: That makes me so angry.<br>
+အဲဒါငါ့ကိုတကယ္ေဒါသထြက္ေစတယ္..<br><br>
+B: Me too. Washing hands is a simple thing to do.<br>
+ငါ့ကိုလည္းပဲ၊..လက္ေဆးတာကလုပ္ဖို႕ရိုးရိုးေလးပါ..<br><br>
+A: I think everyone is just too lazy to do it.<br>
+ငါထင္တာ လူတိုင္းက အဲဒါလုပ္ဖို႕အရမ္းပ်င္းၾကတာ.<br><br>
+B: It's very rude of them.<br>
+သူတို႕အရမ္းရိုင္းတယ္..<br><br>
+A: I agree. Even five-year-olds know better than not to wash their hands.<br>
+ငါသေဘာတူတယ္.ငါးႏွစ္ကေလးေတြေတာင္.လက္မေဆးဖုိ႕သိေနၾကျပီ..(စည္းကမ္းမလိုက္နာ)<br><br>
+B: But there's not much we can do about it.<br>
+ငါတို႕လုပ္ႏိုင္တာ ဒီကိစၥမွာ သိပ္မရွိဘူး<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

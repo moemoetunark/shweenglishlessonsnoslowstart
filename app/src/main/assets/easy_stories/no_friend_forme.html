@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 2500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDExNDRf/No%20Friends%20for%20Me.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+I am lonely.<br>
+ငါအထီးက်န္တယ္..<br><br>
+I am always by myself.<br>
+ငါျမဲတမ္းငါတစ္ေယာက္တည္းပဲ..<br><br>
+I meet people every day. <br>
+ငါလူေတြကိုေန႕တုိင္းေတြ႕တယ္.<br><br>
+I smile at them. <br>
+ငါသူတို႕ကိုျပံဳျပတယ္<br><br>
+I say hello. <br>
+ငါသူတို႕ကိုႏႈတ္ဆက္တယ္<br><br>
+I am nice to them. <br>
+ငါသူတို႕ကိုေကါင္းပါတယ္..<br><br>
+I want to have a friend. <br>
+ငါသူငယ္ခ်င္းတစ္ေယာက္ရွိခ်င္တယ္<br><br>
+But I have no friends. <br>
+ဒါေပမဲ့ငါ့မွာသူငယ္ခ်င္းမရွိဘူး<br><br>
+What is wrong with me?<br>
+ငါဘာမွားေနလို႕လဲ<br><br>
+I am polite. <br>
+ကၽြန္ေနာ္ကယာဥ္ေက်းပါတယ္..<br><br>
+I am friendly. <br>
+ငါခင္တတ္တယ္<br><br>
+I am nice. <br>
+ငါသေဘာေကါင္းတယ္<br><br>
+I am kind. <br>
+ငါၾကင္နာတတ္တယ္<br><br>
+Why don't people like me? <br>
+လူေတြငါ့ကိုဘာလို႕မၾကိဳက္တာလဲ<br><br>
+All I want is one friend. <br>
+ငါလိုအပ္တာအားလံုးက သူငယ္ခ်င္းတစ္ေယာက္ပဲ<br><br>
+Everyone has one friend. <br>
+လူတိုင္းမွာသူငယ္ခ်င္းတစ္ေယာက္ေတာ့ရွိတယ္<br><br>
+I always see people with their friends.<br>
+လူေတြမွာသူငယ္ခ်င္းေတြနဲ႕ငါအျမဲေတြ႕တယ္<br><br>
+They laugh with each other. <br>
+လူတို႕အခ်င္းခ်င္းရယ္ၾကတယ္<br><br>
+They have fun with each other. <br>
+လူတို႕အခ်င္းခ်င္းေပ်ာ္ၾကတယ္<br><br>
+They do things with each other. <br>
+သူတို႕အခ်င္းခ်င္း အလုပ္လုပ္ၾကတယ္<br><br>
+What about me?<br>
+ငါကဘယ္လိုလဲ<br><br>
+ I am by myself.<br>
+ငါကတစ္ေယာက္တည္း<br><br>
+I watch TV by myself.<br>
+ငါတစ္ေယာက္တည္းတီဗြီၾကည့္တယ္<br><br>
+I go to movies by myself. <br>
+ရုပ္ရွင္ၾကည့္ဖို႕ငါတစ္ေယာက္တည္းသြားတယ္<br><br>
+I go to restaurants by myself. <br>
+စားေသာက္ဆိုင္သို႕ငါတစ္ေယာက္တည္းသြားတယ္<br><br>
+I go to the park by myself. <br>
+ငါပန္းျခံသို႕တစ္ေယာက္တည္းသြားတယ္<br><br>
+I told my mother that I am lonely. <br>
+ငါအထီးက်န္တယ္ဆိုတာ ငါ့အေမကိုေျပာတယ္<br><br>
+She said it is my fault. <br>
+ဒါကငါ့ရဲ႕အမွားလို႕သူမကေျပာတယ္<br><br>
+"Why?" I asked.<br>
+ဘာေၾကာင့္လဲလို႕ ငါေမးလိုက္တယ္ <br><br>
+She said, "Because you never ask anyone to be with you." <br>
+အေမကေျပာတယ္..နင္ကလူေတြကိုနင္နဲ႕အတူရွိဖို႕ဘယ္ေတာ့မွမေတာင္းဆိုလိုတဲ့<br><br>
+My mom is right. <br>
+အေမကမွန္တယ္..<br><br>
+I never ask people to be with me. <br>
+ငါဘယ္ေတာ့မွလူေတြကိုငါနဲ႕အတူရွိေနဖို႕မေတာင္းဆိုဘူး<br><br>
+I am afraid they will say no.<br>
+သူတို႕ျငင္းမွာကိုငါေၾကာက္တယ္<br>
+</p>
+</body>
+</html>

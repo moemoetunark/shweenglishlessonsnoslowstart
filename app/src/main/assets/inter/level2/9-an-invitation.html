@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 320px;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+li{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 320px;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDA1MTVf/Track%2036.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>An invitation - ဖိတ္ၾကားျခင္း   </h3>
+<p>
+Dave: I have tickets to the soccer match on Friday night. Would you like to go? <br>
+ေသာၾကာေန႕ေဘာလံုးပြဲအတြက္ လက္မွတ္ေတြ ငါ့မွာရိွိတယ္။ နင္သြားခ်င္လား               <br>
+Susan: Thanks. I'd love to. What time does it start? <br><br>
+ေက်းဇူးပါ.သြားခ်င္တာေပါ့။ ဘယ္အခ်ိန္စမွာလဲ        <br><br>
+Dave: At 8:00. <br>
+၈နာရီ စမွာ <br><br>
+Susan: That sounds great. So, do you want to have dinner at 6:00?<br>
+အိုေကပါတယ္ ။    ဒါဆို.၆နာရီမွာ..ညေနစာ စားၾကမယ္ေလ.      <br><br>
+Dave: Uh, I'd love to, but I have to work late. <br>
+စားခ်င္တယ္..ဒါေပမဲ့...ကၽြန္ေနာ္ အလုပ္ေနာက္က်မွာ          <br><br>
+Susan: Oh, that's OK. Let's just meet at the stadium before the match around 7:30. <br>
+အိုေက..ငါတို႕၇နာရီ ဝန္းက်င္ ေဘာလံုးကြင္းမွာ ေတြ႕ၾကမယ္      <br><br>
+Dave: OK. Why don't we meet at the gate? <br>
+အိုေက..ဝင္ေပါက္မွာ ငါတို႕ေတြ႕ရင္ မေကါင္းဘူးလား          <br>
+Susan: That sounds fine. See you there. <br>
+အဆင္ေျပပါတယ္။ အဲ့ဒီမွာ ေတြ႕မယ္ေနာ္     
+</p>
+<br>
+<br>
+</body>
+</html>

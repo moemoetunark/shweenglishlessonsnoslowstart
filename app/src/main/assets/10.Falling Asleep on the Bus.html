@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDMwNjJf/Easy%20Dialogue%2018.%20Falling%20Asleep%20on%20the%20Bus.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Hey, you need to wake up now.<br>
+ေဟး...မင္းအခုအိပ္ရာကထပ္ဖို႕လိုတယ္..<br><br>
+B: Where am I?<br>
+ငါဘယ္နားမွာလဲ.<br><br>
+A: You're at the last stop on the route.<br>
+လမ္းေၾကာင္းရဲ႕ေနာက္ဆံုးမွတ္တိုင္းမွာေလ<br><br>
+B: What?! How did we get so far?<br>
+ဘယ္လို..ငါတို႕ဘယ္လိုဒီေလာက္အေ၀းေရာက္သြားတာလဲ<br><br>
+A: You fell asleep and didn't request a stop.<br>
+မင္းအိပ္ေပ်ာ္သြားခ့ဲတယ္..ျပီးရင္ရပ္ဖို႕အတြက္မေတာင္းခံခဲ့ဘူး<br><br>
+B: I was supposed to get off three stops ago!<br>
+သံုးမွတ္တိုင္..မတိုင္ခင္ကငါဆင္းရမွာ.<br><br>
+A: I didn't know. All I do is drive the bus.<br>
+ငါမသိခဲ့ဘူး..ငါလုပ္ရတာက.ကားေမာင္းတာပဲ<br><br>
+B: How can I get back from here?<br>
+ငါဒီကေနဘယ္လိုျပန္သြားရမလဲ<br><br>
+A: A bus going back will arrive soon.<br>
+ျမန္သြားတဲ့ကားမၾကာခင္ေ၇ာက္လာမယ္<br><br>
+B: That's good. I'd hate to be stranded.<br>
+ေကါင္းတယ္...ငါရပ္ေနရတာကိုမုန္းတယ္.<br><br>
+A: Make sure you don't fall asleep this time!<br>
+ဒီတစ္ၾကိမ္မအိပ္ေပ်ာ္ေစနဲ႕ေနာ္.<br><br>
+B: Trust me, I'll never fall asleep again!<br>
+ယံုစမ္းပါ..ငါဘယ္ေတာ့မွာ တစ္ဖန္မအိပ္ေပ်ာ္ေစရဘူး<br>
+</p>
+</body>
+</html>

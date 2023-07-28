@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMxOTNf/Easy%20Dialogue%204.%20Making%20a%20Deposit.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I'd like to deposit my paycheck.<br>
+ကၽြန္ေနာ္ရဲ႕ေငြကို ဘဏ္္ထဲထည့္ခ်င္တယ္..<br><br>
+B: Do you have an account here?<br>
+နင့္မွာဘဏ္အေကါက္ရွိလား<br><br>
+A: I have a checking account.<br>
+ကၽြန္ေနာ္ ခ်က္ကင္းအေကါက္ရွိတယ္..<br><br>
+B: You need to fill out a deposit slip.<br>
+ေငြအပ္တ့ဲစာရြက္မွာ ျပည့္ဖို႕လိုတယ္..<br><br>
+A: Where can I find those?<br>
+အဲဒါေတြ ဘယ္မွာရွာရမလဲ<br><br>
+B: There are deposit slips on the tables throughout the branch.<br>
+ဘဏ္တစ္ေလွ်ာက္စားပြဲေပၚမွာေငြအပ္တဲ့စာရြက္ေတြခ်ည္းပဲ<br><br>
+A: What information do I put on the deposit slip?<br>
+ေငြအပ္စာရြက္မွာဘာအခ်က္လက္ေတြျဖည့္ရမလဲ<br><br>
+B: You need to put the name on the account, the account number and the amount of the deposit.<br>
+မင္းရဲ႕အေကါက္နာမည္ရယ္....အေကါက္နံပါတ္ရယ္ ႏွင့္အပ္ခ်င္တဲ့ေငြပမာဏရယ္ေပါ့..<br><br>
+A: How long till I can access the money?<br>
+ဘယ္ေလာက္ထိဆို..ကၽြန္ေနာ့္ေငြကိုသံုးရမလဲ..(ဘဏ္ထဲအပ္ေငြ)<br><br>
+B: You can access it immediately.<br>
+ခ်က္ခ်င္းပဲသံုးျပဳလို႕ရတယ္..<br><br>
+A: Can I only make a deposit with a teller?<br>
+ဘဏ္ထဲေငြလက္ခံသူနဲ႕ပဲ.ေငြကိုထည့္လို႕ရလား<br><br>
+B: No, you can also use an ATM or even your cell phone.<br>
+မဟုတ္ဘူး..မင္းATM လည္းသံုးလို႕ရတယ္..သို႕မဟုတ္..ဖုန္းလည္းသံုးလို႕ရတယ္<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

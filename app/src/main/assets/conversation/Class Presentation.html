@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI3ODBf/Class%20Presentation.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I am so nervous for the class presentation.<br>
+အတန္းတြက္ presenation လုပ္ရမွာကိုငါအရမ္းေၾကာက္ေနတယ္<br><br>
+B: Don't be. You're so smart.<br>
+မျဖစ္ပါနဲ႕  နင္ကအရမ္းေတာ္တယ္<br><br>
+A: I know, but I don't like a big audience.<br>
+ငါသိတယ္..ဒါေပမဲ့ ပရိတ္သတ္မ်ားၾကီးကိုငါသိပ္မၾကိဳက္ဘူး<br><br>
+B: Do you want my advice?<br>
+နင္ငါ့ရဲ႕အၾကံလိုခ်င္လား<br><br>
+A: Of course, I do.<br>
+ေသခ်ာတာေပါ့..<br><br>
+B: Imagine the audience in their underwear.<br>
+ပရိတ္သတ္ေတြကို မရွိသလိုသေဘာထားလိုက္<br><br>
+A: That is insane!<br>
+ဒါရူးတာပဲ<br><br>
+B: It really works.<br>
+အဲ့ဒါတကယ္အလုပ္ျဖစ္တယ္<br><br>
+A: Have you tried it?<br>
+နင္ေကါအဲ့ဒါစမ္းၾကည့္ျပီးျပီလား<br><br>
+B: Yes. I got an A on my presentation.<br>
+ဟုတ္တယ္..ငါ့ Presentation တုန္းကငါအဆင့္ A ရတယ္ေလ<br><br>
+A: I'll try it then.<br>
+ငါလည္းလုပ္ၾကည့္မယ္..<br><br>
+B: You can do it!<br>
+မင္းလုပ္ႏိုင္ပါတယ္<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

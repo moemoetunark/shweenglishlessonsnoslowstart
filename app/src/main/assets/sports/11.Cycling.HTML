@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI5MDhf/Easy%20Dialogue%2011.%20Cycling.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Do you like my new bicycle?<br>
+မင္းငါ့ရဲ႕စက္ဘီးအသစ္ကိုၾကိဳက္လား<br><br>
+B: It looks very sporty!<br>
+အရမ္းလည္းအားကစားနဲ႕ကိုက္တယ္.<br><br>
+A: It's a racing bike. I bought it so I could be in the triathlon.<br>
+ဒါကျပိဳင္စက္ဘီးေလ..ေရကူး၊စက္ဘီး၊အေျပးျပိုင္ပြဲမွာ၀င္ဖို႕ငါ၀ယ္ခဲ့တာ.<br><br>
+B: Wow! I hear triathlons are difficult!<br>
+၀ိုး..စက္ဘီးျပိဳင္ပြဲကခက္ခဲတာငါၾကားဖူးတယ္.<br><br>
+A: You have to train hard for them.<br>
+အင္း ျပိဳင္ပြဲေတြအတြက္အရမ္းေလ့က်င့္ရတယ္..<br><br>
+B: Are triathlons always based on the same three sports?<br>
+Triathlons ဆိုတာအျမဲတမ္းအားကစားသံုးခုနဲ႕ပဲဆိုင္တာလား<br><br>
+A: Yes. They are cycling, running, and swimming.<br>
+ဟုတ္တယ္..စက္ဘီးရယ္..အျပးရယ္..ေရကူးရယ္ေပါ့..<br><br>
+B: It's so exciting! I'll be sure to watch you compete.<br>
+အရမ္းစိတ္လႈပ္ရွားစရာပဲ..မင္းျပိဳင္တာငါၾကည့္မွာေသခ်ာတယ္.<br><br>
+A: It's not a competition against others.<br>
+သူမ်ားေတြနဲ႕ျပိဳင္ရတဲ့ပြဲမဟုတ္ဘူး<br><br>
+B: It's not? No one can win first place?<br>
+မဟုတ္ဘူးလား..ဘယ္သူမွမထပေနရာမႏိုင္..ႏိုင္ဘူးလား<br><br>
+A: You can, but I just want to prove to myself I can do it.<br>
+ႏိုင္..ႏွိင္တယ္..ဒါေပမဲ့ငါလုပ္ႏိုင္တယ္ဆိုတာ..ငါ့ကိုငါသက္ေသျပဖို႕ပဲ<br><br>
+B: I'm sure you can! I'll even sponsor you in the race.<br>
+မင္းလုပ္ႏိုင္တာငါသိတယ္....ျပိဳင္ပြဲမွာငါမင္းကို စပြန္တာေပးမယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

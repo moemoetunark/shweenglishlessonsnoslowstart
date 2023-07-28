@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI5NjFf/Easy%20Dialogue%2012.%20Wait%2030%20Minutes%21.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: It's so hot! Let's go swimming now!<br>
+အရမ္းပူတယ္..ေရကူးသြားၾကမယ္..<br><br>
+B: We have to wait a while before swimming.<br>
+ငါတို႕ေရမဆိုးခင္ အနည္းငယ္ေစာင့္ရမယ္..<br><br>
+A: But why? The sun is so hot!<br>
+ဒါေပမဲ့ဘာလို႕လဲ..ေနကအရမ္းပူတယ္..<br><br>
+B: It's bad to swim after you just ate.<br>
+စားျပီးခ်င္းေရကူးတာက မေကါင္းဘူး<br><br>
+A: Why? Will you sink in the water?<br>
+ဘာလို႕လဲ...ေရမွာျမဳတ္မွာလား<br><br>
+B: No. The motion and sudden cold will make you sick.<br>
+မဟုတ္ဘူး..လႈပ္ရွားတာနဲ႕လတ္တစ္ေလာေအးတာက..မင္းကိုေနမေကါင္းျဖစ္ေစတယ္..<br><br>
+A: What kind of sick?<br>
+ဘယ္လိုေနမေကါင္းျဖစ္တာ<br><br>
+B: It can make you nauseated, and you might throw up.<br>
+မင္းကိုမအီမသာျဖစ္ေစတယ္..မင္းရင္မင္းအန္ရင္အန္မယ္.<br><br>
+A: How long do we have to wait?<br>
+ငါတို႕ဘယ္ေလာက္ေစာင့္ရမွာလဲ<br><br>
+B: Only about half an hour.<br>
+နာရီ၀က္ေလာက္ပါပဲ..<br><br>
+A: Half an hour?! I'll bake in the sun!<br>
+နာရီ၀က္လား..ငါေနဆာလႈံမယ္..<br><br>
+B: It's better than throwing up your lunch!<br>
+ေန႕လည္စာကိုလႊင့္ပစ္တာထက္ေကါင္းတာေပါ့<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

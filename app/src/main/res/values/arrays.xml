@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="song_lyric_files">
+        <item>lyrics/Cry on my shoulder.txt</item>
+        <item>lyrics/Flashlight by Jessie J.txt</item>
+        <item>lyrics/Forgiveness Lyrics Translation.txt</item>
+        <item>lyrics/I Will Be Right Here Waiting For You Lyrics.txt</item>
+        <item>lyrics/Imagine me without you.txt</item>
+        <item>lyrics/Just Give Me a Reason Lyrics.txt</item>
+        <item>lyrics/Locked Away by R.txt</item>
+        <item>lyrics/More Than Words.txt</item>
+        <item>lyrics/My pride lyrics.txt</item>
+        <item>lyrics/Need you now Lyrcis.txt</item>
+        <item>lyrics/nothing gonna change.txt</item>
+        <item>lyrics/Passenger let her go.txt</item>
+        <item>lyrics/See you again.txt</item>
+        <item>lyrics/Somebody\'s me lyrics.txt</item>
+        <item>lyrics/Standbymeby.txt</item>
+        <item>lyrics/Taylor Swift black space.txt</item>
+        <item>lyrics/ThinkingoutloudbyEdSheeran.txt</item>
+        <item>lyrics/Until You.txt</item>
+        <item>lyrics/We Don\'t talk anymore lyrics.txt</item>
+        <item>lyrics/Westlife if i let you go.txt</item>
+        <item>lyrics/Why not me.txt</item>
+        <item>lyrics/You Are My Sunshine.txt</item>
+        <item>lyrics/You Are My Sunshine.txt</item>
+    </string-array>
+</resources>

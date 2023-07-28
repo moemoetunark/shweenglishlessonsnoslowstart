@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI5ODdf/Easy%20Dialogue%2013.%20Yoga.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Why are you limping around like that?<br>
+မင္းဘာလို႕အဲ့လိုေထာ့နဲ႕ေထာ့နဲ႕ျဖစ္ေနတာလဲ<br><br>
+B: I signed up for the new yoga class.<br>
+ေယာဂသင္တန္းတစ္ခုမွာငါမွတ္ပံတင္ခ့ဲတယ္<br><br>
+A: Did they make you do all those weird positions?<br>
+အာ့လိုထူးဆန္းတဲ့ပံုစံေတြလုပ္ခိုင္းတာလား<br><br>
+B: Yes! Some of those stretches hurt!<br>
+ဟုတ္တယ္..တစ္ခ်ိဳ႕ဆန္႕တာေတြက နာတယ္..<br><br>
+A: I'm not flexible enough for yoga.<br>
+ငါေတာ့ ေယာဂက်င့္တာနဲ႕သိပ္အထာမက်ဘူး<br><br>
+B: I don't think I am, either.<br>
+ငါလည္းက်မယ္လို႕မထင္ဘူး<br><br>
+A: Why did you sign up for it?<br>
+မင္းဘာလို႕မွတ္ပံုတင္ခဲ့တာလဲ<br><br>
+B: I heard it's good for your body.<br>
+ငါတို႕ခႏၶာအတြက္ေကါင္းတယ္လို႕ငါၾကားတယ္..<br><br>
+A: I heard mostly women take that class.<br>
+မိန္းမအမ်ားစုကအဲဒီသင္တန္းတက္ၾကတယ္လို႕ငါၾကားတ္။။<br><br>
+B: Well, there's that, too.<br>
+အင္းဟုတ္တယ္..အ့ဲမွာလည္းမိန္းမေတြပဲ<br><br>
+A: This is punishment for your bad intentions.<br>
+မင္းရဲ႕မေကါင္းတဲ့ရည္ရြယ္ခ်က္အတြက္အဲ့ဒါ အျပစ္ေပးတာပဲ.<br><br>
+B: Maybe. Either way, I don't deserve this!<br>
+ဟုတ္မွာပါ..ဘာျဖစ္ျဖစ္..ဒါဒီဟာေတာ့ မထိုက္တန္ဘူး<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

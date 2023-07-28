@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMwMzNf/Easy%20Dialogue%2016.%20Insomnia.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I'm so tired today.<br>
+ငါဒီေန႕အရမ္းပင္ပန္းတယ္..<br><br>
+B: Did you stay up late watching TV again?<br>
+မင္းတီဗြီၾကည့္ျပီး.အိပ္တာအရမ္းေနာက္က်ခဲ့လား<br><br>
+A: No, I tried to sleep at 11 p.m.!<br>
+မဟုတ္ဘူး..ငါ ညေန၁၁နာရီမွာ..အိပ္ဖို႕ၾကိဳးစားခဲ့တယ္<br><br>
+B: And you couldn't fall asleep?<br>
+ျပီးရင္မင္းအိပ္မေပ်ာ္ခဲ့မလား<br><br>
+A: No. I lay in bed until 3 a.m.<br>
+မေပ်ာ္ခဲ့ဘူး...ငါအိပ္ရာမွာမနက္သံုးနာရီထိ..လဲွေနခဲ့တာ..<br><br>
+B: Isn't that the time you usually fall asleep?<br>
+ဒါကမင္းပံုမွန္အားျဖင့္အိပ္ေပ်ာ္သြားတဲ့အခ်ိန္မလား<br><br>
+A: I suppose it is, actually.<br>
+တကယ္ေတာ့..ဟုတ္တယ္..<br><br>
+B: Your body is too used to going to sleep really late.<br>
+မင္းရဲ႕ကိုယ္ခႏၶာကတကယ္အိပ္တာေနာက္က်တာနဲ႕က်င့္သားရေနျပီ..<br><br>
+A: What should I do? I'm tired.<br>
+ငါဘာလုပ္သင့္လဲ..ငါေမာပန္းတယ္..<br><br>
+B: Try to tire yourself out and sleep early today.<br>
+မင္းကိုယ္မင္းေမာပန္းေအာင္လုပ္လိုက္..ျပီးရင္ေစာေစာအပ္.<br><br>
+A: Tonight is the season finale, though…<br>
+ဒါေပမဲ့ဒီညက ရာသီရဲ႕ေနာက္ဆံုးပဲ..<br><br>
+B: You're hopeless!<br>
+မင္းေမ်ာ္လင့္ခ်က္မ့ဲသြားျပီ<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Shwe English Lessons</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_privacy1">Privacy Policy</string>
+    <string name="menu_exit">Exit App</string>
+    <string name="rating">Rate App</string>
+    <string name="navigation_drawer_open">Nav Open</string>
+    <string name="navigation_drawer_close">Nav Close</string>
+    <string name="download">အင်္ဂလိပ်စာအုပ်များ download ယူရန် ဒီနေရာကိုနှိပ်ပါ</string>
+    <!--These are all test app ID and AdUnit IDS -->
+    <string name="admob_app_id">ca-app-pub-4137439985376631~4759465300</string>
+    <string name="banner_2021">ca-app-pub-4137439985376631/6236198507</string>
+    <string name="exit_banner">ca-app-pub-4137439985376631/7440349937</string>
+    <string name="interstial_2021">ca-app-pub-4137439985376631/7532985951</string>
+    <string name="inter_goback">ca-app-pub-4137439985376631/7392286906</string>
+    <string name="app_open_ads">ca-app-pub-4137439985376631/2141894404</string>
+
+    <string name="splah_text">Learn English for free!</string>
+    <string name="splash_description">Learn English on your finger tip!</string>
+    <string name="exit_the_app">Want to exit?</string>
+    <string name="no">NO</string>
+    <string name="yes">Yes</string>
+    <string name="do_you_want_to_exit">Do you want to exit?</string>
+    <string name="app_exit_desc">Thank you for using our app. If you have any question, reach me at moemoetun4u@gmail.com</string>
+    <string name="play_button">"play "</string>
+
+</resources>

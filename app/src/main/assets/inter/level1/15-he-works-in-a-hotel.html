@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 100%;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 100%;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM3ODNf/Track%2023.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>He works in a hotel. သူဟိုတယ္မွာ အလုပ္လုပ္တယ္</h3>
+<img src="img/hotel.JPG"/>
+<p>
+Rachel: Where does your brother work? <br>
+နင့္အကို ဘယ္မွာ အလုပ္လုပ္လဲ    <br><br>
+Angela: In a hotel. <br>
+ဟိုတယ္တစ္ခုမွာ <br><br>
+Rachel: Oh, really? My brother works in a hotel, too. He's a front desk clerk. <br>
+အိုး..တကယ္လား..ငါ့အကိုလည္း ဟိုတယ္မွာလုပ္တယ္။  သူကေရွ႕ဆံုးစားပြဲမွာ ထုိင္စာေရးေလ  <br><br>
+Angela: How does he like it? <br>
+သူ႕အလုပ္ကို ႏွစ္သက္ရဲ႕လား     <br><br>
+Rachel: He hates it. He doesn't like the manager.<br>
+သူသိပ္မႏွစ္သက္ဘူး။ သူမန္ေနဂ်ာကို သိပ္မႏွစ္သက္ဘူး။           <br><br>
+Angela: That's too bad. What hotel does he work for? <br>
+သူက ဘယ္လို ဟိုတယ္မွာ အလုပ္လုပ္လဲ။ <br><br>
+Rachel: The Plaza. ပလာဇာ ေပါ့။   <br><br>
+Angela: That's funny. My brother works there, too. <br>
+ရယ္ရတယ္ေနာ္။  ငါ့အကိုလည္း အာ့မွာပဲ အလုပ္လုပ္တယ္<br><br>
+Rachel: Oh, that's interesting. What does he do? <br>
+အိုး...စိတ္ဝင္စားစရာပဲ။ သူက ဘာလုပ္တာလဲ  <br><br>
+Angela: Actually, he's the manager. <br>
+အမွန္က...သူက မန္ေနဂ်ာပဲ   <br>
+</p>
+<br>
+<br>
+</body>
+</html>

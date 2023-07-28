@@ -1,0 +1,124 @@
+﻿<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI4MDRf/Easy%20Dialogue%201.%20Different%20Bank%20Accounts.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<body>
+<p>
+A: Now that I have my first job, I need a bank account.<br>
+ငါအခုငါ့ရဲ႕ပထမဆံုးအလုပ္ရျပီ...ငါဘဏ္အေကါက္တစ္ခုလိုအပ္တယ္..<br><br>
+B: What kind of bank account are you going to open?<br>
+မင္းဘယ္လိုဘဏ္အေကါက္မ်ိဳးဖြင့္မွာလဲ<br><br>
+A: There are different types of bank accounts?<br>
+ဘဏ္အေကါက္သံုးမ်ိဳးရွိမလား..<br><br>
+B: You can open a checking account.<br>
+Checking အေကါက္ဖြင့္လို႕ရတယ္.<br><br>
+A: That means I'll have checks to pay bills, right?<br>
+ဆိုလိုတာက..bill ေပးဖို႕ကၽြန္ေနာ့္မွာ ခ်က္လက္မွတ္ရွိမွာေပါ့ေနာ္...ဟုတ္လား<br><br>
+B: Yes, and you'll get a debit card you can use, too.<br>
+ဟုတ္တယ္..ျပီးရင္..Debit card တစ္ခုလည္းမင္းသံုးလို႕ရမယ္<br><br>
+A: That's different from a credit card, right?<br>
+ဒါက credit ကတ္နဲ႕ေကါ ကြာတယ္မလား<br><br>
+B: Yes, a debit card takes money directly from your bank account.<br>
+ဟုတ္တယ္..debit ကတ္ဟာမင္းရဲ႕ဘဏ္ထဲကေနေငြတိုက္ရိုက္ထုတ္ယူတယ္<br><br>
+A: So what is a savings account?<br>
+ေငြစုအေကါက္ဆိုတာ ဘာလဲ<br><br>
+B: That's a low interest earning account meant for you to save money.<br>
+အတိုးႏႈန္းနည္းတဲ့.စုထားႏိုင္တဲ့အေကါက္ကိုေခၚတယ္.<br><br>
+A: So that's not for everyday spending?<br>
+ဒါဆို..ေန႕စဥ္သံုးဖို႕အတြက္မဟုတ္ဘူးေပါ့ေနာ္<br><br>
+B: No, that's to save up for your retirement.<br>
+မဟုတ္ဘူး..မင္းရဲ႕အနားယူဖို႕အတြက္ စုဖို႕ပဲ<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

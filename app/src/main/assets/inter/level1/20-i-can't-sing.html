@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 100%;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 100%;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM4NDFf/Track%2045.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>I can't sing. သီခ်င္းမဆိုတတ္ဘူး</h3>
+<img src="img/talent.JPG"/>
+<p>
+Kayla: Oh, look. There's a talent contest on Saturday. Let's enter. <br>
+အိုး...ၾကည့္လိုက္ပါဦး..စေနေန႕..စြမ္းရည္ျပိုင္ပြဲရွိတယ္။ ငါတို႕ဝင္ျပိဳင္ၾကမယ္ေလ            <br><br>
+Philip: I can't enter a talent contest. What can I do?<br>
+ငါဝင္မျပိဳင္ႏိုင္ဘူး။ ဘာလုပ္ရမလဲ <br><br>
+Kayla: You can sing really well. <br>
+နင္သီခ်င္းေကါင္းေကါင္းဆိုတတ္တာပဲ              <br><br>
+Philip: Oh, thanks....Well, you can, too.<br>
+ေက်းဇူး...နင္လည္းဆိုတတ္တယ္ေလ           <br><br>
+Kayla: Oh, no. I can't sing at all- but I can play the piano. <br>
+မဟုတ္ေသးပါဘူး..ငါကလံုးလံုးကို မဆိုတတ္တာ..ဒါေပမဲ့ငါ စႏၵယားတီးတတ္တယ္              <br><br>
+Philip: So maybe we can enter the contest.<br>
+ဒါဆို..ငါတို႕ ျပိဳင္ပြဲဝင္လို႕...ရႏိုင္တယ္...<br><br>
+Kayla: Sure. Why not? <br>
+ေသခ်ာတာေပါ့...ဘာလို႕မရ ရမွာလဲ       <br><br>
+Philip: OK. Let's practice tomorrow. <br>
+အိုေက..မနက္ျဖန္ ေလ့က်င့္ၾကစို႕         <br>
+</p>
+<br>
+<br>
+</body>
+</html>

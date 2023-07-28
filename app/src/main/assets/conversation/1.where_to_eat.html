@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI4MjZf/Easy%20Dialogue%201.%20Where%20to%20Eat.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I am so hungry.<br>
+ငါအရမ္းဗိုက္ဆာေနတယ္..<br><br>
+B: Me too. My stomach is growling.<br>
+ငါလည္းပဲ..ငါ့အစာအိမ္ကလႈပ္ေနျပီ..<br><br>
+A: Are there any good places nearby?<br>
+အနီးနားမွာေနရာေကါင္းေတြရွိလား<br><br>
+B: Do you want to go to the restaurant across the street?<br>
+လမ္းဟိုဖက္မွာရွိတ့ဲစားေသာက္ဆိုင္သို႕မင္းသြားခ်င္လား<br><br>
+A: Oh no! That place is so dirty!<br>
+အိုး.မသြားခ်င္ဘူး..ေနရာကအရမ္းညစ္ပတ္တယ္..<br><br>
+B: I heard the food was good.<br>
+အစားစာေတြကေတာ့ေကါင္းတယ္လို႕ငါၾကားတယ္..<br><br>
+A: The food is good, but not the place itself.<br>
+အစားစာေတြကေကါင္းတယ္..ေနရာကမေကါင္းတာ.<br><br>
+B: What's so dirty about it?<br>
+အဲဒီေနရာမွာညစ္ပတ္ေနတာလဲ..<br><br>
+A: The staff only cleans the tables once a day.<br>
+အကူေတြကတစ္ရက္မွာတစ္ခါပဲ..စားပြဲေတြကိုသန္႕ရွင္းေရးလုပ္တယ္..<br><br>
+B: Wow, that is crazy! Anything else?<br>
+၀ိုး..ဒါရူးတာပဲ..တစ္ျခားေကါ..<br><br>
+A: The bowls and plates are not washed well.<br>
+ဟင္းထည့္ခြက္နဲ႕ပန္းကန္ေတြလည္းေသခ်ာမေဆးဘူး<br><br>
+B: Let's not go there anymore.<br>
+ဒါတို႕မသြားၾကစို႕အဲဒီကို..<br>
+</p>
+<br>
+<br>
+</body>
+</html>

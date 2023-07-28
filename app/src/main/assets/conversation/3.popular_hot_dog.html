@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMxNThf/Easy%20Dialogue%203.%20Popular%20Hot%20Dogs.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Have you ever been to that popular hot dog stand?<br>
+လူၾကိဳက္မ်ားတ့ဲ ေဟာ့ေဒါ့ေတြေရာင္းတ့ဲေနရာမင္းေရာက္ဖူးလား<br><br>
+B: No, I have not.<br>
+ဟင့္အင့္..မေရာက္ဖူးဘူး..<br><br>
+A: My friends said the hot dogs are really great.<br>
+ငါ့သသူငယ္ခ်င္းကေျပာတာ..ေဟာ့ေဒါ့ေတြအရမ္းေကါင္းတယ္တ့ဲ<br><br>
+B: The line is always really long.<br>
+ေစာင့္ေနတဲ့လူတန္းကအျမဲတမ္းအရမ္းရွည္တယ္.<br><br>
+A: I say we wait for them.<br>
+ငါေျပာတာ...ငါတို႕ေစာင့္ၾကမယ္..<br><br>
+B: They're just hot dogs.<br>
+ဒါေတြကေဟာ့ေဒါ့ေတြပါပဲကြာ..<br><br>
+A: My friends said everyone should try it at least once.<br>
+ငါ့သူငယ္ခ်င္းေတြကေျပာတယ္..လူတိုင္းေတာ့တစ္ခါေေလာက္စမ္းၾကည့္သင့္တယ္တဲ့<br><br>
+B: Do you always listen to your friends?<br>
+မင္းကမင္းသူငယ္ခ်င္းကိုအျမဲနားေထာင္တာလား..<br><br>
+A: No, but their opinions matter.<br>
+မဟုတ္ဘူး..ဒါေပမဲ့.သူတို႕ထင္ျမင္ခ်က္ေတြကအေရးၾကီးတယ္.<br><br>
+B: My opinion is: forget the hot dogs.<br>
+ငါအထင့္ကေတာ့...ေဟာ့ေဒါ့ကိုေမ့လိုက္..<br><br>
+A: Fine, I'm going to eat one in front of you.<br>
+ေကါင္းျပီ..မင္းေရွ႕ငါစားျပမယ္..<br><br>
+B: You won't ever reach the front of the line.<br>
+တန္းစီးရဲ႕ေရွ႕ကိုမင္းဘယ္ေတာ့မွမေရာက္ဘူး..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

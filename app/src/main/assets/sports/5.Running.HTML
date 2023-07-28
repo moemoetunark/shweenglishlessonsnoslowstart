@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyMjVf/Easy%20Dialogue%205.%20Running.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I'm surprised to see you out running.<br>
+မင္းေျပးေနတာကိုေတြ႕တာငါရမ္းအံ့ၾသတယ္..<br><br>
+B: I want to join the track team next semester.<br>
+ေနာက္စီမီစတာငါအေျပးအသင္းကို၀င္မယ္..<br><br>
+A: Is that why you're training so hard?<br>
+ဒါေၾကာင့္မင္းကအရမ္းေလ့က်င့္ေနတာလား<br><br>
+B: Yes. I want to be in shape for tryouts.<br>
+ဟုတ္တယ္..ငါအစမ္းပြဲမွာ..ခႏၶာလွခ်င္တယ္..<br><br>
+A: You don't just run to get in shape.<br>
+ခႏၶာလွခ်င္တာနဲ႕မင္းေျပးစရာမလိုဘူး<br><br>
+B: What should I do then?<br>
+ဒါဆိုငါဘာလုပ္ရမွာလဲ..<br><br>
+A: You should do some weight training, too.<br>
+မင္း၀ိတ္ေတြလည္းေလ့က်င့္သင့္တာေပါ့..<br><br>
+B: What good is weight training?<br>
+၀ိတ္ေလ့က်င့္တာက ဘာေကါင္းတာရွိလဲ<br><br>
+A: It will give you strong legs so you can run well.<br>
+မင္းရဲ႕ေျခေထာက္ေတြကိုသန္မာေစမယ္..ဒါဆိုမင္းေကါင္းေကါင္းေျပးႏိုင္တာေပါ့..<br><br>
+B: If my legs get too muscular, I'll look like a frog!<br>
+ငါ့ေျခေထာက္ေတြအရမ္းၾကြက္သားေတြထလာရင္..ငါဖားနဲ႕တူမယ္..<br><br>
+A: Frogs are pretty fast.<br>
+ဖားေတြကအရမ္းျမန္တယ္..<br><br>
+B: That's true. Maybe as a frog, I'd win all the races.<br>
+ဒါမွန္တယ္..ဖားတစ္ေကါင္လိုဆို...မင္းျပိဳင္ပြဲအားလံုးကိုႏုိင္မယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

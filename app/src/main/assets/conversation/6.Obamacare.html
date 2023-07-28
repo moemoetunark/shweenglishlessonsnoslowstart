@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyNTVf/Easy%20Dialogue%206.%20Obamacare.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: My university is passing out fliers for health insurance.<br>
+ငါ့တကၠသိုလ္မွာ..က်မ္းမာေရးအာမခံခ်က္အတြက္..ဖိုင္ေတြလုိက္ေ၀ေနတယ္..<br><br>
+B: Mine, too. If I don't choose, I'll get Obamacare.<br>
+ငါ့တကၠသိုလ္မွာေရာပဲ..ငါမေရြးဘူးဆို...ငါေတာ့အိုဘားမားကဲယ..ရမယ္<br><br>
+A: What's Obamacare?<br>
+အိုဘားမားကဲယဆိုတာ ဘာလဲ<br><br>
+B: It's the new healthcare provided by the Affordable Healthcare Act.<br>
+Affordable Care Act ကေနေထာက္ပံ့တဲ့ က်န္းမာေရးေစာင့္ေရွာက္မႈအသစ္ေလ<br><br>
+A: What does it promise?<br>
+အဲ့ဒါက ဘာေတြကတိေပးထားလဲ<br><br>
+B: It just regulates health insurance so that it's affordable for everyone.<br>
+လူတိုင္းအတြက္တတ္ႏိုင္ေအာင္...က်န္းမာေရးအာမခံခ်က္ေတြကို ..ထိန္းခ်ဳပ္ထားတယ္.<br><br>
+A: That sounds like a great step forward!<br>
+ၾကားရတာ..တကယ့္တိုးတက္မႈတစ္ခုပဲ<br><br>
+B: I think Obama is really keeping his promises.<br>
+ငါ့အထင္..အိုးဘားမားဟာတကယ္သူ႕ကတိေတြကို..အေကါင္ထည္ေဖာ္ေနတယ္..<br><br>
+A: I wish there were more changes to the education system.<br>
+ပညာေရးစနစ္ေတြပိုေျပာင္းလာဖို႕လည္း ငါဆႏၵရွိတယ္..<br><br>
+B: Most of the acts passed were to help immigrant students.<br>
+ေအာင္ျမင္သြားတဲ့ ဥပေဒျပဳတာအမ်ားစုက ေျပာင္းေရြ႕ေက်ာင္းသားေတြကို ကူညီဖို႕ပဲ..<br><br>
+A: It's a shame they fight so hard for underfunded education.<br>
+Underfunded Education အတြက္ပဲသူတို႕ၾကိဳးစားေနတာ..ရွက္စရာ<br><br>
+B: It's a bit of a letdown for everybody.<br>
+လူတိုင္းအတြက္ေတာ့ အနည္းငယ္ဆုတ္ယုတ္မႈေပါ့..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

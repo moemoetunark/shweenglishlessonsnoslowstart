@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 320px;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+li{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 320px;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDA1MzJf/Track%2018.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>How was your vacation? နင့္အားလပ္ရက္ခရီး ဘယ္လိုလဲ    </h3>
+<p>
+Celia: Hi, Don. How was your vacation? <br>
+ဟုိင္း..ဒြန္...နင့္အားလပ္ရက္ခရီး ဘယ္လိုလဲ         <br><br>
+Don: It was excellent! I went to Hawaii with my cousin. We had a great time.<br>
+အရမ္းသာယာတယ္။  ငါ့ညီဝမ္းကြဲနဲ႕ ဟာဝိုင္အီသို႕သြားခဲ့ၾကတာ။ ငါတို႕အရမ္းေပ်ာ္ခဲ့ၾကတယ္               <br><br>
+Celia: Lucky you. How long were you there? <br>
+နင္က ကံေကါင္းလိုက္တာ။ အဲ့မွာ ဘယ္ေလာက္ၾကာခဲ့လဲ           <br><br>
+Don: About a week. တစ္ပတ္ခန္႕ေပါ့ <br><br>
+Celia: Fantastic! Was the weather OK? <br>
+မိုက္တာေပါ့။   ရာသီဥတုေကါ..အိုေကလား         <br><br>
+Don: Not really. It was cloudy a lot. But we went surfing every day. The waves were amazing. <br>
+သိပ္ေတာ့ မေကါင္းဘူး...အရမ္းတိမ္ထူတယ္။ ဒါေပမဲ့ ငါတို႕ေန႕တိုင္းလႈိင္းစီးထြက္တယ္။ လႈိင္းေတြက အံ့ၾသစရာေကါင္းတယ္              <br><br>
+Celia: So, what was the best thing about the trip? <br>
+ဒါဆို..ခရီးစဥ္နဲ႔ပတ္သက္လို႕အေကါင္းဆံုးတစ္ခုက ဘာျဖစ္မလဲ          <br><br>
+Don: Well, something incredible happened....<br>
+အင္း မယံုႏုိင္စရာေကါင္းတာ တစ္ခုေတာ့ျဖစ္ခဲ့တယ္........<br>
+</p>
+<br>
+<br>
+</body>
+</html>

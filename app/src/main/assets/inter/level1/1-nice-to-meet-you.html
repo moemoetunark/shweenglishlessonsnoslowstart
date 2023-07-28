@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta https-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 100%;
+height: auto;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM2Mzlf/Track%2001.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>Nice to meet you. ေတြ႕ရတာဝမ္းသာပါတယ္။        </h3>
+<img src="img/nice.JPG"/><br>
+<p>
+Michael: Hello. My name is Michael Ota. <br>
+ဟလို...ကၽြန္ေနာ့္နာမည္...မိုက္ကယ္ အိုတာပါ။       <br><br>
+Jennifer: Hi. My name is Jennifer Miller. <br>
+ဟိုင့္... ကၽြန္မနာမည္ ..ဂ်င္နီဖာ...ေမလာပါ။    <br><br>
+Michael: Nice to meet you, Jennifer. <br>
+ေတြ႕ရတာ ဝမ္းသာပါတယ္ ဂ်င္နီဖာေရ.။          <br><br>
+Jennifer: Nice to meet you, too. <br>
+ကၽြန္မလည္းေတြ႕ရတာ ဝမ္းသာပါတယ္။         <br><br>
+Michael: I'm sorry. What is your last name again?  <br>
+အားနာပါတယ္....နင့္ရဲ႕last name ကဘာလဲ  <br><br>
+Jennifer: It's Miller. <br>
+ေမလာ ျဖစ္ပါတယ္။    <br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI5MjFf/Easy%20Dialogue%2011.%20Lunch%20Break.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: It's finally lunch time!<br>
+ေနာက္ဆံုးေတာ့ ေန႕လည္စာအခ်ိန္ေရာက္ျပီ<br><br>
+B: I've been counting the minutes.<br>
+ငါမိနစ္ေတြကို ေရျပီးေနခဲ့တာ<br><br>
+A: How long is our lunch break?<br>
+ေန႕လည္စာနားတာ ဘယ္ေလာက္ၾကၾကာလဲ<br><br>
+B: It's 30 minutes.<br>
+မိနစ္သံုးဆယ္ေလ.<br><br>
+A: That's it? I worked for 5 hours.<br>
+ဟုတ္လာူ..ကၽြန္ေနာ္ငါးနာရီၾကာၾကာလုပ္ခ့ဲျပီ<br><br>
+B: I know it's terrible, but what can we do?<br>
+အရမ္းဆိုးတာငါသိတယ္..ဒါေပမဲ့ငါတို႕ဘာတတ္ႏိုင္လ<br><br>
+A: Can we protest?<br>
+ငါတို႕ဆႏၵျပလို႕ရလား<br><br>
+B: We would get fired.<br>
+ငါတို႕အလုပ္ျဖဳတ္ခံရလိမ့္မယ္<br><br>
+A: But we deserve a longer lunch break.<br>
+ဒါေပမဲ့ငါတို႕ ပိုၾကာတဲ့ ေန႕လည္စာအခ်ိန္ရဖို႕ထုိက္တန္တယ္..<br><br>
+B: I agree. I think we should have 1 hour.<br>
+ငါသေဘာတူတယ္..ငါတို႕တစ္နာရီရသင့္တယ္လို႕ငါထင္တယ္..<br><br>
+A: Let's start a petition rather than protest.<br>
+ဆႏၵျပဖို႕ထက္ သနားခံတာတစ္ခု စၾကစို႕<br><br>
+B: A petition is a perfect idea!<br>
+သနားခံတာက အေကါင္းဆံုးပဲ<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

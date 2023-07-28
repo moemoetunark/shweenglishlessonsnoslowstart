@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 100%;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM2NTlf/Track%2044.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>It's a disaster. အရမ္းဆိုးတာပဲ</h3>
+<img src="img/disaster.JPG"/>
+<p>
+Pat: Great. Our clothes are dry. Where is my new blouse? <br>
+Julie: What color is it? <br>
+ဘာအေရာင္လဲ <br><br>
+Pat: It's white. <br>
+အျဖဴေရာင္ေလ။       <br><br>
+Julie: Here's a light blue blouse. Is it yours? <br>
+ဒီမွာ အျပာေပ်ာ့ေရာင္ ...တစ္ခု။ အာ့ဒါနင့္ဟာလား <br><br>   
+Pat: No, It's not mine.....Wait. It is mine. It's disaster. <br>
+အဲ့ဒါ ငါ့ဟာ မဟုတ္ဘူး....ေနဦး...အဲ့ဒါ ..ငါ့ဟာ။   အရမ္းဆိုးတာပဲ။
+Julie: Oh, no! All our clothes are light blue. <br>
+မဟုတ္ဘူး...ငါတို႕အဝတ္စားေတြက အကုန္လံုး အျပာေပ်ာ့ေရာင္ ေတြခ်ည္း။<br><br>
+Pat: Here's the problem. It's these new blue jeans. Whose jeans are these? <br>
+ျပသတာပဲ။  ဒီ ဂ်ိမ္းအသစ္ေတြ။ ဒါဘယ္သူ႕ဂ်ိမ္းေတြလဲ             <br><br>
+Julie: Uh, they're mine. Sorry. <br>
+အာ့...အာ့ဒါ ငါဟာ့ေတြ။    ေဆာရီ        <br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI4MjFf/Easy%20Dialogue%201.%20Online%20Accounts.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Do you have any online accounts?<br>
+အြန္လိုင္းအေကါက္တစ္ခုမင္းမွာရွိလား<br><br>
+B: What is an online account?<br>
+အြန္လိုင္းအေကါက္ဆိုတာကဘာလဲ<br><br>
+A: Something you use on social networks.<br>
+လူမႈကြန္ယက္ေတြမွာမင္းသံုးတာေလ..<br><br>
+B: I don't know what those are.<br>
+အဲဒါေတြက ဘာေတြလဲဆိုတာ..ငါမသိဘူး<br><br>
+A: Websites where you talk about yourself.<br>
+မင္းကိုယ္တိုင္အေၾကာင္းေျပာတဲ့ websites ေတြေလ<br><br>
+B: Why would I want to do that?<br>
+ငါဘာေၾကာင့္အဲဒါကိုလုပ္ခ်င္တာလဲ<br><br>
+A: So you can make friends.<br>
+မင္းသူငယ္ခ်င္းေတြဖြဲ႕လို႕ရတယ္..<br><br>
+B: I already have friends.<br>
+ငါ့မွာသူငယ္ခ်င္းေတြရွိႏွင့္ျပီ<br><br>
+A: You can make more friends.<br>
+မင္းသူငယ္ခ်င္းေတြအမ်ားၾကီးဖြဲ႕လို႕ရတယ္<br><br>
+B: But I don't need more friends.<br>
+ဒါေပမဲ့ကၽြန္မသူငယ္ခ်င္းပိုျပီးမလိုအပ္ဘူး<br><br>
+A: Forget I mentioned anything.<br>
+ငါေျပာခဲ့တာေတြေမ့လိုက္ေတာ့<br><br>
+B: You're still my friend, right?<br>
+မင္းဟာငါ့သူငယ္ခ်င္းပဲေနာ္..ဟုတ္တယ္မလား<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

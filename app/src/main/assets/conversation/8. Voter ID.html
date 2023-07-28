@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMzMjhf/Easy%20Dialogue%208.%20Voter%20ID.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Did you hear about the ID enforcement?<br>
+ID enforcement အေၾကာင္းမင္းၾကားျပီးျပီလား<br><br>
+B: No, what's that?<br>
+ႏိုး...ဘာလဲအာ့ဒါက<br><br>
+A: It's a law requiring voters to show ID before voting.<br>
+မဲမေပးမွီ.မဲေပးသူေတြ ID ျပရမယ့္ ဥပေဒေလ..<br><br>
+B: That doesn't sound like a bad idea.<br>
+ဒါကဆိုးတဲ့ အေတြးေခၚေတာ့မဟုတ္ဘူး<br><br>
+A: There are many voters who cannot afford an ID, though.<br>
+ဒါေပမ့ဲ ID မတတ္ႏိုင္တ့ဲလူေတြ အမ်ားၾကီးပဲ...<br><br>
+B: I didn't think about that.<br>
+အဲ့ဒါငါမေတြးမိဘူး..<br><br>
+A: If IDs are required, even less people will show up to vote.<br>
+ID သာလိုအပ္မယ္ဆို...လူအနည္းငယ္ပဲ မဲေပးၾကလိမ့္မယ္.<br><br>
+B: That completely goes against what they're trying to accomplish.<br>
+သူတို႕ေအာင္ျမင္းျပီးစီးခ်င္တာနဲ႕ေတာ့ လံုး၀ဆန္႕က်င္ဖက္ေပါ့.<br><br>
+A: Besides, many voters don't even have a birth certificate.<br>
+ဒါအျပင္..မဲေပးသူေတာ္ေတာ္မ်ားမ်ားဟာလည္း..ေမြးလက္မွတ္မရွိၾကဘူး<br><br>
+B: That's another big problem.<br>
+ဒါလည္းေနာက္ျပသနာၾကီးတစ္ခုပဲ<br><br>
+A: I'm completely against this voting requirement.<br>
+ငါေတာ့ဒီမဲေပးရမည့္လိုအပ္ခ်က္ေတြကို လံုး၀ဆန္႕က်င္တယ္.<br><br>
+B: Me, too! All it will do is keep people from voting.<br>
+ငါေရာပဲ..ဒါကလူေတြမဲေပးဖို႕ခက္ခဲေစမယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

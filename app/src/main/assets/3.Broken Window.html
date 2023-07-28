@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDMxNDlf/Easy%20Dialogue%203.%20Alternate%20Bus%20Route.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: My son broke a window yesterday.<br>
+ငါ့သားတံခါးကိုခ်ိဳးပစ္လိုက္တယ္..မေန႕က<br><br>
+B: How did he do that?<br>
+သူအဲ့ဒါဘယ္လိုလုပ္ခဲ့တာလဲ<br><br>
+A: He said he was practicing his pitching.<br>
+သူေျပာတာ..သူေဘာလံုးပစ္ေလ့က်င့္ေနခဲ့တာတဲ့<br><br>
+B: He was pitching against the window?<br>
+ျပတင္းေပါက္ကိုသူ႕ကပစ္ေနခဲ့တာလား..<br><br>
+A: No, against the side of the house.<br>
+မဟုတ္ဘူး..အိမ္ဖက္ကိုပစ္ေနခဲ့တာ..<br><br>
+B: If he missed, he's not a very good pitcher.<br>
+သူလြဲသြားရင္..သူကအပစ္ေတာ္တ့ဲသူတစ္ေယာက္မဟုတ္ဘူး<br><br>
+A: No, but he's pretty fast and can run long distances.<br>
+မဟုတ္ဘူး.သူကလ်င္ျမန္ျပီး..အေ၀းၾကီးေျပးႏိုင္တယ္..<br><br>
+B: How do you know that?<br>
+မင္းဘယ္လိုသိလဲ<br><br>
+A: I chased him when I found out he broke the window.<br>
+ျပတင္းတံခါးက်ိဳးသြားတဲ့အခါ..ငါသူ႕ကိုေနာက္ေယာင္ခံလိုက္ေနတာေလ..<br><br>
+B: Well, you contributed to his training.<br>
+အင္း..သူေလ့က်င့္ခန္းအတြက္ပဲ..<br><br>
+A: As his coach, my fee is three months of his allowance. <br>
+သူ႕နည္းျပအေနနဲ႕..ငါေပးလိုက္ရတာက..သူ႕မုန္႕ဖို႕သံုးလစာပဲ<br><br>
+B: What a coincidence! That's enough for a new window.<br>
+တိုက္ဆိုင္တာပဲ..ျပတင္းတံခါးတစ္ခုအတြက္လံုေလာက္ပါတယ္...<br>
+</p>
+</body>
+</html>

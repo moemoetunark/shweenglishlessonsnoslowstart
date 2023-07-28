@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMxNzJf/Easy%20Dialogue%204.%20A%20Forgotten%20Anniversary.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: So what are we doing on Saturday?<br>
+ဒါဆို...စေနေန႕ငါတို႕ဘာလုပ္ၾကမလဲ<br><br>
+B: I don't have anything planned.<br>
+ငါ့မွာစီစဥ္ထားတာဘာမွမရွိဘူး<br><br>
+A: Are you kidding me?<br>
+မင္းငါ့ကိုေနာက္ေနတာလား<br><br>
+B: No, what is so special about Saturday?<br>
+မဟုတ္ဘူး...စေနေန႕ကဘာလို႕အထူးေန႕ျဖစ္ေနတာလဲ<br><br>
+A: I shouldn't even have to tell you.<br>
+ငါမင္းကုိေျပာျပဖို႕ေတာင္မသင့္ဘူး<br><br>
+B: Is it your birthday?<br>
+မင္းရဲ႕ေမြးေန႕လား<br><br>
+A: No, it's our one-year anniversary!<br>
+မဟုတ္ဘူ...ငါတို႕ႏွစ္ပတ္လည္ေန႕ေလ<br><br>
+B: I am so sorry.<br>
+ကၽြန္ေနာ္ေတာင္းပန္ပါတယ္..<br><br>
+A: You should be. I guess I'm not that important.<br>
+မင္းေတာင္ပန္သင့္တာေပါ့...ငါကေတာ့အေရးမပါဘူးလို႕ပဲထင္တယ္..<br><br>
+B: You are. I'll make it up to you.<br>
+မင္းအေရးပါတယ္...ငါမင္းအတြက္လုပ္ေပးမွာ<br><br>
+A: How are you going to do that?<br>
+မင္းဘယ္လိုလုပ္မွာလဲ<br><br>
+B: I'm going to get you an expensive gift.<br>
+ငါမင္းကိုေစ်းၾကီးတ့ဲလက္ေဆာင္တစ္ခုေပးမွာ<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI5NTBf/Easy%20Dialogue%2012.%20Night%20Shift.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I have the worst job shift ever.<br>
+ငါ့အလုပ္ခ်ိန္ကအဆိုးဆံုးပဲ<br><br>
+B: No. I do.<br>
+မင္းမဟုတ္ဘူး..ငါျဖစ္ေနတာ..<br><br>
+A: My shift is from 6 p.m. to 2 a.m.<br>
+ငါ့အခ်ိန္က..ညေနေျခာက္နာရီကေန.ညဥ့္ႏွစ္နာရီေလ..<br><br>
+B: My shift is from 6 p.m. to 5 a.m.<br>
+ငါ့အခ်ိန္က..ညေျခာက္နာရီကေန...မနက္ငါးနာရီ.<br><br>
+A: Okay, I was wrong. You have the worst shift.<br>
+အိုေက..ငါမွားတယ္..မင္းအခ်ိန္ပ အဆိုးဆံုး<br><br>
+B: It's ruining my health.<br>
+ငါ့ရဲ႕က်န္းမာေရးကို ဖ်က္ဆီးေနတယ္..<br><br>
+A: I have to change my sleeping schedule.<br>
+ငါရဲ႕အိပ္တဲ့အခ်ိန္ကိုလည္း ေျပာင္းလိုက္ရတယ္..<br><br>
+B: I can never have dinner with my family anymore.<br>
+ငါမိသားစုနဲ႕ငါညစာဘယ္ေတာ့မွ မစားရေတာ့ဘူး<br><br>
+A: Me too. My parents are mad at me.<br>
+ငါလည္းပဲ..ငါ့မိဘေတြက ငါ့ကိုကိုေဒါသထြက္ေနၾကျပီ..<br><br>
+B: Mine too. They want me to quit.<br>
+ငါလည္းပဲ..ငါမိဘေတြက ငါ့ကိုအလုပ္ထြက္ေစခ်င္ၾကတယ္..<br><br>
+A: Let's quit together.<br>
+ငါတို႕တူတူထြက္ၾကမယ္..<br><br>
+B: Yeah! Let's quit next week.<br>
+ဟုတ္တယ္..ငါတို႕ေနာက္အပတ္ထြက္ၾကမယ္...<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

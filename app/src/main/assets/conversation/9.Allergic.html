@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMzMzhf/Easy%20Dialogue%209.%20Allergic.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Have you been to this restaurant before?<br>
+ဒီစားေသာက္ဆိုင္ကုိမင္းအရင္ကေရာက္ဖူးလား<br><br>
+B: Yes. The last time I came here was two years ago.<br>
+ဟုတ္တယ္..ငါဒီကိုေနာက္ဆံုးလာခဲ့တာ..လြန္ခဲ့တဲ့ႏွစ္ႏွစ္မတိုင္ခင္က..<br><br>
+A: Does it still look the same?<br>
+ဘာမွ မေျပာင္းလဲေသးဘူးလား<br><br>
+B: It looks nicer now. The paintings are amazing.<br>
+ပိုလွသြားတယ္..ပန္းခ်ီကားေတြအရမ္းအံ့ၾသဖို႕ေကါင္းတယ္..<br><br>
+A: Does the food taste the same?<br>
+အစားစာေတြရဲ႕အရသာေကါတူတူလား..<br><br>
+B: Yes. Their crab cake tastes great as always.<br>
+ဟုတ္တယ္..သူတို႕ရဲ႕ဂဏန္းနဲ႕လုပ္ထာူတဲ့ cake ကအျမဲလိုေကါင္းတယ္<br><br>
+A: I am allergic to crab.<br>
+ငါနဲ႕ဂဏန္းနဲ႕မတည့္ဘူး<br><br>
+B: That's too bad.<br>
+အရမ္းဆိုးတယ္..<br><br>
+A: It's okay! The chicken sandwich is just as great.<br>
+အိုေကပါတယ္..ၾကက္သားေပါင္မုန္႕ကပဲေကါင္းတယ္..<br><br>
+B: I am allergic to chicken.<br>
+ငါကၾကက္သားနဲ႕မတည့္ဘူး...<br><br>
+A: What aren't you allergic to?<br>
+မင္းကဘယ္ဟာနဲ႕မတည့္တာရွိေသးလို႕လဲ<br><br>
+B: All the stuff that tastes bad.<br>
+အရသာမေကါင္းတဲ့အရာအကုန္ပဲ<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

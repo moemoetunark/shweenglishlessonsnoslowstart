@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDI5NjJf/Easy%20Dialogue%2012.%20The%20Big%20Announcement.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I have a big surprise for you!<br>
+မင္းအတြက္ငါ့မွာ အံ့ၾသစရာၾကီးတစ္ခုရွိတယ္..<br><br>
+B: Is it a new toy?<br>
+ကစားစရာအသစ္လား<br><br>
+A: No, it's a big announcement!<br>
+မဟုတ္ဘူး..ေၾကညာခ်က္ၾကီးပဲ<br><br>
+B: That doesn't sound very exciting.<br>
+သိပ္စိတ္လႈပ္ရွားစရာ မၾကားဘူး<br><br>
+A: We are moving to a new house!<br>
+ငါတို႕အိမ္သစ္ေျပာင္းေတာ့မယ္.<br><br>
+B: What's wrong with our apartment?<br>
+ငါတို႕တိုက္ခန္းဘာမွားလို႕လဲ<br><br>
+A: Well, a house is bigger.<br>
+အင္း...အိမ္ကပိုၾကီးတာေပါ့<br><br>
+B: Apartments are cozier.<br>
+တုိက္ခန္းေတြက ပိုျပီးသက္ေတာင့္သက္သာရွိတယ္<br><br>
+A: You can have a dog in the new house.<br>
+အိမ္အသစ္မွာမင္းေခြးတစ္ေကါင္ရွိလို႕ရတယ္..<br><br>
+B: But we already have a cat.<br>
+ဒါေပမဲ့ငါ့မွာ ေၾကာင္တစ္ေကာင္ရွိႏွင့္ျပီ.<br><br>
+A: The new house has a treehouse in the backyard.<br>
+အိမ္သစ္ေနာက္ေဖးမွာ သစ္ပင္အိမ္တစ္လံုးရွိတယ္..<br><br>
+B: Now there's a big surprise! I'm so excited!<br>
+အခုေတာ့ အ့ံၾသစရာေတြ႕ျပီ..ငါအရမ္းစိတ္လႈပ္ရွားတယ္..<br>
+</p>
+</body>
+</html>

@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 100%;
+height: auto;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM2MzZf/Track%2019.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<img src="img/interesting.JPG"/> <br>
+<p>
+<h3>It's interesting. စိတ္ဝင္စားဖို႕ေကါင္းတယ္   </h3>
+Wendy: Wow! What are these? <br>
+ဝိုး..ဒါက ဘာေတြလဲ <br><br>
+ံHelen: They're earnings. <br>
+ အဲ့ဒါ နားဆြဲေတြေလ။      <br><br>
+Wendy: Oh, cool. Thank you, Helen. They're great.<br>
+ဟိုး..မိုက္တယ္ေနာ္..ေက်းဇူးပဲ ေဟလင္။ နားဆြဲေတြအရမ္းလွတယ္                 <br><br>
+Helen: You are welcome. <br>
+ၾကိဳဆိုပါတယ္။<br><br>
+Rex: Now open this box! <br>
+ကဲအခု..ဒီေသတၱာ ဖြင့္လိုက္ၾကစို႕  <br><br>
+Wendy: OK. Uh, What's this? <br>
+အိုေက။  အာ..ဒါဘာလဲ  <br><br>
+Rex: It's a scarf. <br>
+ဒါက လည္စည္း ပုဝါေလ။     <br><br>
+Wendy: Oh, it's......interesting. Thank you, Rex. It's very nice.<br>
+အိုး....ဒါေလး..က စိတ္ဝင္စားဖို႕ေကါင္းလိုက္တာ....ေက်းဇူးပဲ..Rex။ ဒါအရမ္းလွတာပဲ              <br>
+
+</p>
+<br>
+<br>
+</body>
+</html>

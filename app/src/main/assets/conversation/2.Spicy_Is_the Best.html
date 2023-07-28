@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMxMTlf/Easy%20Dialogue%202.%20Spicy%20Is%20the%20Best.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Do you want to meet up for lunch?<br>
+မင္းေန႕လည္စာစားဖို႕အတြက္ေတြ႕ခ်င္လား<br><br>
+B: Sure, where are we going?<br>
+ေသခ်ာတာေပါ့..ငါတို႕ဘယ္သြားၾကမလဲ<br><br>
+A: It depends. Are you a picky eater?<br>
+ဒါကအေျခေနေပၚမူတည္တယ္...မင္းကအစားေသာက္ေရြးတဲ့သူလား<br><br>
+B: Not at all. I like almost anything.<br>
+မဟုတ္ဘူး...ငါအားလံုးနီးပါးကိုၾကိဳက္တယ္..<br><br>
+A: What about spicy food?<br>
+စပ္တဲ့အစားစာေတြေကါ..<br><br>
+B: That's my favorite kind!<br>
+ငါ့အၾကိဳက္ဆံုးပဲ..<br><br>
+A: Mine too! I know a place with very spicy hot wings.<br>
+ငါလည္းပဲ..အရမ္းပူစပ္တဲ့ၾကက္ေတာင္ပံေရာင္းတဲ့ေနရာကိုငါသိတယ္..<br><br>
+B: Then we should go there.<br>
+ဒါဆို..ငါတို႕အဲ့ဒီကိုသြားသင့္တယ္..<br><br>
+A: However, it is a little bit far.<br>
+ဒါေပမဲ့မည္း..အဲ့ဒီေနရာကနည္းနည္းေ၀းတယ္.<br><br>
+B: That's fine. I really want to try these wings.<br>
+ဒါကအိုေကပါတယ္..အဲဒီအေတာင္ပံေတြကိုငါတကယ္..စားၾကည့္ခ်င္တယ္..<br><br>
+A: Okay, then I'll send you the address.<br>
+အိုေက...ငါမင္းဆီကိုလိပ္စာပို႕လိုက္မယ္..<br><br>
+B: See you there.<br>
+အဲ့ဒီမွာဆံုၾကမယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

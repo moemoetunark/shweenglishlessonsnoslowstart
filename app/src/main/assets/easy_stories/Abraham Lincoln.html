@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 2500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDExMjhf/Abraham%20Lincoln.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+Abraham Lincoln is a name that is forever embedded into the collective conscience of every American. <br>
+အီဗရာဟင္ လင္ကြန္းဆိုတာ..အေမရိကန္ေတြအားလံုးရဲ႕ႏွစ္လံုးသားထဲမွာအျမဲရွိေနတဲ့နာမည္တစ္လံုးျဖစ္တယ္<br><br>
+It is perhaps the most recognizable name in the history of the country even as his death occurred approximately 150 years ago.<br>
+သူေသဆံုးမႈဟာလြန္ခဲ့တယ္..ႏွစ္ေပါင္း၁၅၀ ကတည္းကဆိုရင္ေတာင္..ႏိုင္ငံရဲ႕သမိုင္းမွာအသိမွတ္ျပဴခံရဆံုးနာမည္တစ္ခုျဖစ္တယ္.<br><br>
+Lincoln presided over the country during, what is perhaps, the most divisive era in its history. <br>
+လင္ကြန္းဟာႏိုင္ငံသမိုင္းမွာစိတ္ဝန္းကြဲျပားမႈအရွိဆံုးအခ်ိန္အတြင္းႏိုင္ငံကို အုပ္ခ်ဳပ္ခဲ့တယ္..<br><br>
+Lincoln served as president for only four short years, but his impact on the country at the time, and today, has been huge.<br>
+လင္ကြန္းဟာ အခ်ိန္တိုေလးႏွစ္ပဲ သမၼတတစ္ေယာက္ျဖစ္ခဲ့တယ္..ဒါေပမဲ့အဲ့အခ်ိန္တုန္းကနဲ႕ဒီေန႕သူ႕ရဲ႕သက္ေရာက္မႈဟာအအင္မတန္းမွၾကီးမားပါတယ္..<br><br>
+
+During his presidency, the United States was in the middle of a terrible civil war.<br>
+သူ႕သမၼတသက္တမ္းအတြင္း.အေမရကန္ဟာ ေၾကာက္မက္ထိတ္လန္႕ဖြကယ္ ျပည္တြင္းစစ္အလယ္မွာရွိေနခဲ့တယ္.<br><br>
+At the center of the split between the two sides was slavery.<br>
+ႏွစ္ဖက္အၾကားစိတ္ဝန္းကြဲျမားမႈရဲ႕အဓိကအခ်က္က..ကၽြန္ျပဳမႈကိစၥျဖစ္တယ္<br><br>
+The north was a fast-growing, industrial region that was more progressive than their southern counterpart.<br>
+ေျမာက္ပိုင္းဟာသူတို႕ရဲ႕ျပိဳင္ဘက္ေတာင္ပိုင္းထက္ပိုျပီးလွ်င္ျမန္စြာတိုးတက္ေနတဲ့ စက္မႈဇုန္ေနရာျဖစ္တယ္..<br><br>
+The southern economy was based on cotton production that mostly used forced labor. <br>
+ေတာင္ပိုင္းရဲ႕စီးပြားေရာ အဓမၼခိုင္ေစးမႈေတြကိုသံုးတဲ့ ဝါထုတ္လုပ္မႈကိုအေျခခံတယ္..<br><br>
+The north viewed this practice as unethical, and immoral, while southerners claimed it was an integral part of their culture.<br>
+ေျမာက္ပိုင္းဟာေတာင္ပိုင္းရဲ႕က်င့္သံုးမႈကိုကိုယ့္က်င့္တရားအရာအမြန္ျမတ္ဘူးလို႕သံုးသပ္ျပီး..ေတာင္းပိုင္းကေတာ့ ဒါဟာသူတို႕ယာဥ္ေက်းမႈရဲ႕အစိတ္ပိုင္းလို႕အခိုင္မာဆိုခဲ့တယ္.<br><br>
+When Lincoln won the election, the southern states began to secede from the Union, and the war began.<br>
+လင္ကြန္းေရြးေကါက္ပြဲအႏိုင္ရတဲ့အခါ....ေတာင္ပိုင္းျပည္နယ္ေတြဟာ.ျပည္ေထာင္စုကေနခြဲထြက္ဖို႕စတင္ခဲ့တယ္..စစ္ပြဲစတင္ေလ့ေလျပီ..<br><br>
+
+Lincoln vowed to end slavery during his campaign for president, while never speaking about how the country would keep its relationship with the southern states when slavery was ended.<br>
+လင္ကြန္းဟာသမၼအတြက္မဲေဆြပြဲတုန္းက ကၽြန္ျပဳမႈကိုအဆံုးသတ္မယ္လို႕သိႏၷဌာန္ခ်ခဲ့တယ္..ကၽြန္ျပဳမႈအဆံုးသတ္တဲ့အခါ ေတာင္ပိုင္းျပည္နယ္ေတြနဲ႕ဘယ္လိုဆက္ဆံေရးမ်ိဳးထားမလဲဆိုတာဘယ္ေတာ့မွမေျပာခဲ့ဘူး<br><br>
+This angered many southerners who promised to rebel if Lincoln won. <br>
+ဒါကေတာင္ပိုင္းက လူေတြအမ်ားၾကီးကိုေဒါသထြက္ေစခဲ့ျပီး လင္ကြန္ႏိုင္ရင္သူတို႕ေတာ္လွန္မယ္လို႕ကတိေပးခဲ့ၾကတယ္<br><br>
+The war lasted four years, and about 620,000 soldiers died. <br>
+စစ္ပြဲဟာ ၄ႏွစ္ၾကာတယ္..၆သိန္းႏွစ္ေသာင္းခန္႕စစ္သားေတြေသတယ္...<br><br>
+In what is considered the turning point of the war, Lincoln issued his famous Emancipation Proclamation in January 1863.<br>
+စစ္ပြဲရဲ႕အဓိကအခ်က္လို႕ထင္ရတာက..လင္ကြန္းဟာသူ႕ရဲ႕နာမည္ေက်ာ္အမိန္႕ေၾကညာစာတမ္းကို ၁၈၆၃ ဇန္နဝါရီမွာထုတ္ျပန္ခဲ့တယ္.<br><br>
+What it did was gain international favor from the world because of its ethical qualities.<br>
+ဒါရဲ႕လုပ္ေဆာင္ခ်က္က.ကိုယ့္က်င့္တရားအရည္ခ်င္းေၾကာင့္ တစ္ကမၻာလံုးရဲ႕ေထာက္ခံမႈကိုရရွိခဲ့တယ္..<br><br>
+It put pressure on those countries doing business with the south to review their practices.<br>
+ေတာင္ပိုင္းနဲ႕စီးပြားေရလုပ္ေနတဲ့ ႏိုင္ငံေတြကိုဖိအားျဖစ္ေစခဲ့ျပီး..သူတို႕ရဲ႕က်င့္သံုးမႈကိုျပန္လည္သံုးသပ္ေစခဲ့တယ္<br><br>
+It effectively put an end to the war.<br>
+သူဟာတကယ္ျပည္တြင္းစစ္ကိုအက်ိဳးရွိစြာ အဆံုးသတ္ခဲ့တယ္<br><br>
+Lincoln was assassinated on April 15, 1865 by a southern sympathizer as he sat in a theater with his wife.<br>
+လင္ကြန္းဟာေတာင္ပိုင္းေထာက္ခံသူတစ္ေယာက္ရဲ႕လုပ္ၾကံသတ္ျဖတ္ျခင္းကို ၁၈၆၅ ဧပရယ္ ၁၅မွာ.သူ႕မိန္းမနဲ႕ပြဲရံုမွာထိုင္ေနစဥ္ခံခဲ့ရတယ္..
+</p>
+</body>
+</html>

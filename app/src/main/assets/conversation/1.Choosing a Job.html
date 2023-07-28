@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI3OThf/Easy%20Dialogue%201.%20Choosing%20a%20Job.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I have a problem.<br>
+ငါျပသနာတစ္ခုရွိေနတယ္<br><br>
+B: Tell me about it.<br>
+ငါ့ကိုေျပာျပစမ္းပါ<br><br>
+A: I got hired at a restaurant and a clothing store.<br>
+သားေသာက္ဆုိင္တစ္ခုနဲ႕အ၀တ္စတိုးဆိုင္တစ္ခုကငါ့ကိုငွားေနၾကတယ္<br><br>
+B: What's the problem?<br>
+ျပသနာကဘာလဲ<br><br>
+A: I can only work for one of them.<br>
+ငါသူတို႕ထဲကတစ္ခုအတြက္ပဲလုပ္ႏိုင္မယ္<br><br>
+B: I think you should work at the restaurant.<br>
+ငါ့အထင္နင္စားေသာက္ဆိုင္မွာလုပ္သင့္တယ္<br><br>
+A: Tell me why.<br>
+ဘာေၾကာင့္လဲ ငါ့ကိုေျပာျပ<br><br>
+B: Folding clothes is annoying.<br>
+အ၀တ္စတိုးဆိုင္က စိတ္မသက္သာစရာပဲ<br><br>
+A: What else is bad about clothing stores.<br>
+အ၀တ္စတိုးဆိုင္မွာ တစ္ျခားဘာဆိုးတာေတြရွိေသးလဲ<br><br>
+B: Customers always mess up the clothes.<br>
+ေဖာက္သည္ေတြက အ၀တ္ထည္ေတြကိုအျမဲပဲ ရႈပ္ပြေအာင္လုပ္တယ္.<br><br>
+A: Anything else?<br>
+တျခားေကါ<br><br>
+B: You get tips at restaurants.<br>
+စားေသာက္ဆိုင္မွာ ေအာက္ဆိုက္ေလးေတြရတယ္<br><br>
+A: That's a good point.<br>
+ဒါေကါင္းတဲ့အခ်က္ပဲ<br>
+</p>
+<br>
+<br>
+</body>
+</html>

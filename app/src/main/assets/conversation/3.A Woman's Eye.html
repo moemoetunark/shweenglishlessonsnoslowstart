@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMxNDdf/Easy%20Dialogue%203.%20A%20Woman%27s%20Eye.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Excuse me, I'd like your opinion on something.<br>
+တစ္ဆိတ္ေလာက္..မင္းရဲ႕ထင္ျမင္ခ်က္တစ္ခု...ရခ်င္တယ္..<br><br>
+B: Of course, sir. How may I help you?<br>
+ေသခ်ာတာေပါ့...sir...ဘယ္လိုကူညီရမွာလဲ<br><br>
+A: I want to buy my wife a new scarf.<br>
+ငါ့မိန္းမအတြက္လည္စည္ပ၀ါတစ္ခု၀ယ္ခ်င္တယ္..<br><br>
+B: That is very thoughtful of you!<br>
+မင္းကအရမ္းအေတြးေကါင္းတာပဲ<br><br>
+A: Her favorite color is blue, so I chose blue scarves.<br>
+သူမရဲ႕အၾကိဳက္ဆံုးအေရာင္က အျပာေလ..ဒါေၾကာင့္အျပာေရာင္လည္စည္းပ၀ါေတြကိုေရြးတယ္..<br><br>
+B: What do you need me to do?<br>
+မင္းငါ့ကိုဘာလုပ္ေပးေစခ်င္တာလဲ<br><br>
+A: Well, I was wondering which scarf was the prettiest. <br>
+ဘယ္လည္စည္းပ၀ါကအလွဆံုးလဲငါသိခ်င္ေနတယ္..<br><br>
+B: I see. Well, this one seems a little too dark.<br>
+သိျပီ..ဒီတစ္ခုက နည္းနည္းအရက္မ်ားသလိုုပဲ<br><br>
+A: What about this one?<br>
+ဒီတစ္ခုကေကါ..<br><br>
+B: Maybe something with a nicer pattern.<br>
+ပိုလွတဲ့..ပန္းေျပာက္ပါတဲ့တစ္ခုေပါ့..<br><br>
+A: Is this one alright?<br>
+ဒီတစ္ခု အိုေကလား<br><br>
+B: That one is perfect! I'm sure she'll love it.<br>
+အဲ့ဒီတစ္ခုကအမိုက္ဆံုး.....သူမၾကိဳက္မယ္ဆိုတာ..ငါက်ိမ္းေသတယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

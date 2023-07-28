@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defaults>
+  <entry>
+    <key>new_version_code</key>
+    <value>49</value>
+  </entry>
+  <entry>
+    <key>admob_interstitial_id</key>
+    <value>ca-app-pub-3940256099942544/1033173712</value>
+  </entry>
+  <entry>
+    <key>version_code_eng4mm</key>
+    <value>25</value>
+  </entry>
+</defaults>

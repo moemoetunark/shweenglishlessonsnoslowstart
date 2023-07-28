@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI5MjRf/Easy%20Dialogue%2011.%20Skateboard.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I want to buy my son a skateboard.<br>
+ငါ့သားအတြက္ငါ..စကိတ္ခံုတစ္ခု၀ယ္ခ်င္တယ္..<br><br>
+B: Do you know what kind of board he'd like?<br>
+သူဘယ္လိုခံုမ်ိဳးၾကိဳက္တာမင္းသိလား<br><br>
+A: I was thinking a basic board.<br>
+ကၽြန္ေနာ္စဥ္းစားေနတာသမာန္ခံုတစ္ခုပဲ..<br><br>
+B: There are many different kinds.<br>
+အမ်ိဳးစားေတြကအမ်ားၾကီးရွိတယ္.<br<br>>
+A: Is there one that is safer than the others?<br>
+တစ္ျခားဟာေတြထက္ပံုလံုျခံဳစိတ္ခ်ရတာ ရွိလား<br><br>
+B: Not really. You should buy safety equipment.<br>
+မရွိဘူး..လံုျခံဳေရး..ကိရိယာေတြမင္း၀ယ္သင့္တယ္..<br><br>
+A: What should I buy?<br>
+ငါဘာ၀ယ္သင့္လဲ..<br><br>
+B: A helmet, some elbow pads, and some knee pads.<br>
+ဦးထုတ္...တံေတာင္စြတ္...ဒူးစြတ္ေတြေပါ့..<br><br>
+A: Can I also have some wrist guards?<br>
+လက္ေကါက္၀တ္မွာသံုးတာေကါရႏိုင္လား<br><br>
+B: Certainly, you may choose any color you'd like.<br>
+ေသခ်ာတာေပါ့..မင္းၾကိဳက္တဲ့အေရာင္ေရြးလို႕ရတယ္<br><br>
+A: I came for a skateboard and left with the whole store.<br>
+ငါစကိတ္ခံုတစ္ခုအတြက္လာတာ..ဆုိင္တစ္ခုလံုးရွိတာ၀ယ္ေနရတယ္..<br><br>
+B: Well, safety always comes first!<br>
+လံုျခံဳဖို႕ကနံပါတ္တစ္ေလ..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

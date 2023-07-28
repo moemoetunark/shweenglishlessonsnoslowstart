@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI3OTFf/Doing%20the%20Right%20Thing.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I am doing poorly in my history class. <br>
+ငါသမိုင္းအတန္းမွာအရမ္းညံ့ေနတယ္...<br><br>
+B: What is your grade? <br>
+မင္းရဲ႕ အဆင့္ကဘာလဲ<br><br>
+A: I have an F. <br>
+ကၽြန္ေနာ္က်တယ္..(F =fail)<br><br>
+B: You need to do well on the final exam.<br>
+ေနာက္ဆံုးစာေမးပြဲမွာမင္းေကါင္းေကါင္းလုပ္ဖို႕လိုတယ္<br><br>
+A: I am planning to study.<br>
+စာလုပ္ဖို႕ငါအစီစဥ္ခ်ေနတယ္.<br><br>
+B: That did not work all the times before.<br>
+အရင္က အဲ့ဒါလည္းအျမဲလအလုပ္မျဖစ္ခဲ့ဘူး<br><br>
+A: What do you think I should do then?<br>
+အာ့ဆို ငါဘာလုပ္သင့္လို႕မင္းထင္လဲ<br><br>
+B: Look at a smart person's test answers.<br>
+ေတာ္တဲ့သူတစ္ေယာက္ရဲ႕အေျဖကိုၾကည့္ေလ<br><br>
+A: But that is cheating!<br>
+ဒါေပမဲ့ အဲ့ဒါက လိမ္ညာတာပဲေလ<br><br>
+B: What other choice do you have?<br>
+မင္းမွာတျခားေရြးစရာ ဘာရွိလို႕လဲ<br><br>
+A: I would rather fail the class than cheat.<br>
+လိမ္တာထက္ငါကအတန္းက်ပဲခံမယ္..<br><br>
+B: You're a good student. <br>
+မင္းကေက်ာင္းသားေကါင္းတစ္ေယာက္ပဲ<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

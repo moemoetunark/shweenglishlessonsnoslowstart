@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMxNjVf/Easy%20Dialogue%203.%20Swimming%20%282%29.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Are you going to camp this summer?<br>
+ဒီေႏြရာသီ camp လုပ္ဖို႕မင္းသြားမလား<br><br>
+B: I don't think so.<br>
+ငါမထင္ဘူး<br><br>
+A: Why not?<br>
+ဘာလို႕မသြားလဲ<br><br>
+B: I'm kind of traumatized from last year.<br>
+လြန္ခဲ့တ့ဲႏွစ္ကတည္းကငါအရမ္းလန္႕ေနတာ..<br><br>
+A: What happened last year?<br>
+မႏွစ္ကဘာျဖစ္ခဲ့လဲ<br><br>
+B: I got a cramp while swimming and almost drowned.<br>
+ငါေရကူးေနတုန္း..camp တစ္ခုနဲ႕ထိတယ္....ငါေရနစ္လုနီးပါးပဲ<br><br>
+A: I thought you took swimming lessons last semester.<br>
+လြန္ခဲ့တဲ့ စီမီစတာတုန္းကမင္း ေရကူးသင္တန္းတက္တယ္လို႕ငါထင္ခဲ့တာ<br><br>
+B: I did, but I'm still afraid. Anything could happen.<br>
+ငါတက္ခ့ဲတယ္..ဒါေပမဲ့ငါေၾကာက္တုန္း...ဘာမဆိုျဖစ္ႏိုင္တယ္ေလ..<br><br>
+A: You just have to trust in your abilities.<br>
+မင္းရဲ႕အရည္ခ်င္းကိုမင္းယံုၾကည္ရမယ္..<br><br>
+B: Do you really think I'll be okay?<br>
+ငါအဆင္ေျပမယ္လို႕မင္းတကယ္ထင္လား<br><br>
+A: I know you will. You swim like a fish now!<br>
+ငါသိတယ္..မင္းအိုေကမွာ..မင္းအခုငါးတစ္ေကာင္လိုပဲေရကူးတာ..<br><br>
+B: Thanks for your encouragement. I think I will go, after all.<br>
+အားေပးတာေက်းဇူး...အားလံုးျပီးေနာက္.ငါသြားမယ္ထင္တယ္..<br><br>
+</font>
+</p>
+<br>
+<br>
+</body>
+</html>

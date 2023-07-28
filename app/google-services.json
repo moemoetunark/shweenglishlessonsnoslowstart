@@ -1,0 +1,341 @@
+{
+  "project_info": {
+    "project_number": "693384973568",
+    "firebase_url": "https://moemoetunsiam.firebaseio.com",
+    "project_id": "moemoetunsiam",
+    "storage_bucket": "moemoetunsiam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693384973568:android:26120b2acb835a88",
+        "android_client_info": {
+          "package_name": "com.eng4mmnew.moemoetun.eng4mm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWOjyS2abn2Xf7UG5KHnTMvspZKK3zPMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-4137439985376631~9871119382"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693384973568:android:77de32b33f7680d8acb7e5",
+        "android_client_info": {
+          "package_name": "com.english4mm.grammar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693384973568-tn8jrkapglff10d9v3fkri2h05grgjvf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.english4mm.grammar",
+            "certificate_hash": "eda01693a24ea91bed422e80d7e4e96539cbce6b"
+          }
+        },
+        {
+          "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWOjyS2abn2Xf7UG5KHnTMvspZKK3zPMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693384973568:android:a7619e6e8ab419fdacb7e5",
+        "android_client_info": {
+          "package_name": "com.englishgrammar.formyanmar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWOjyS2abn2Xf7UG5KHnTMvspZKK3zPMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693384973568:android:b3ba75c6f4916186acb7e5",
+        "android_client_info": {
+          "package_name": "com.moemoetun.shweenglish.grammar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWOjyS2abn2Xf7UG5KHnTMvspZKK3zPMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693384973568:android:36b890ff5e81374cacb7e5",
+        "android_client_info": {
+          "package_name": "com.shweenglish.quiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWOjyS2abn2Xf7UG5KHnTMvspZKK3zPMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693384973568:android:f46d9cd1ec1b2cc0acb7e5",
+        "android_client_info": {
+          "package_name": "com.shweenglish4mm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWOjyS2abn2Xf7UG5KHnTMvspZKK3zPMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693384973568:android:aad38e4cf20d4c72acb7e5",
+        "android_client_info": {
+          "package_name": "com.shweenglishquiz.quiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWOjyS2abn2Xf7UG5KHnTMvspZKK3zPMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693384973568:android:fb02f38b4a18d7b1acb7e5",
+        "android_client_info": {
+          "package_name": "com.starstudio.allinoneenglishapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWOjyS2abn2Xf7UG5KHnTMvspZKK3zPMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693384973568:android:bcbcc0c6bbfed4e4",
+        "android_client_info": {
+          "package_name": "me.moemoetun.englishforlife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWOjyS2abn2Xf7UG5KHnTMvspZKK3zPMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-4137439985376631~5243412965"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693384973568:android:e054bb996f927d06acb7e5",
+        "android_client_info": {
+          "package_name": "me.moemoetun.shweenggrammar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWOjyS2abn2Xf7UG5KHnTMvspZKK3zPMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693384973568:android:f635ee334cbd4307",
+        "android_client_info": {
+          "package_name": "siam.moemoetun.com.shwedailyenglish"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWOjyS2abn2Xf7UG5KHnTMvspZKK3zPMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693384973568-pert6vfe4iijdjclqsmsutlia7p8at8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-4137439985376631~4759465300"
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,42 @@
+﻿bagel ေပါင္မုန္႕ကြင္း
+bread ေပါင္မုန္႕
+cereal ႏွံစားပင္
+cheese ဒိန္ခဲ
+croissant လျခမ္းကြဲေပါင္မုန္႕
+egg    ဥ
+fish    ငါး
+ketchup အခ်ဥ္ရည္
+mayonnaise စားျမိန္ရည္
+noodles ေခါက္ဆြဲ
+pancakes မုန္႕ခ်ပ္၀ိုင္း
+pasta  အီတလီေခါက္ဆြဲေျခာက္
+peanuts  ေျမပဲ
+rice ဆန္
+salad အသုပ္
+sandwich အသားညွပ္ေပါင္မုန္႕
+shrimp ပုဇြန္ဆိတ္
+toast အကင္
+bacon ၀က္ဆားနယ္ေျခာက္
+beef အမဲသား
+chicken ၾကက္သား
+chicken breast ၾကက္ရင္ဖံုး
+chicken leg ၾကက္ေျခေထာက္
+chicken wing ၾကက္ေတာင္ပံ
+ham  ဝက္ေပါင္ေျခာက္
+hamburger အမဲသားညွပ္ေပါင္မုန္႕
+heart အသည္း
+mutton သိုးသား
+pork ၀က္သား
+sausage ၀က္အူေခ်ာင္း
+steak အမဲသားတံုး
+asparagus ကညြတ္
+beans ပဲေတာင့္သီး
+broccoli ပန္းေဂၚဖီစိမ္း
+cabbage ေဂၚဖီထုတ္
+carrot မူလာဥနီ
+cauliflower ပန္းေဂၚဖီ
+corn ဂ်ံဳ
+cucumber သခြားသီး
+eggplant ခရမ္းသီး
+
+

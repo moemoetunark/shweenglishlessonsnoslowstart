@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 100%;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 100%;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM4NjJf/Track%2054.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>Birthday plans! ေမြးေန႕အစီစဥ္     </h3>
+<img src="img/cake.JPG"/>
+<p>
+Angie: Are you going to do anything exciting this weekend? <br>
+ဒီ စေနတနဂၤေႏြနင္စိတ္လႈပ္ရွားစရာေကါင္းတာလုပ္မွာလား             <br><br>
+Philip: Well, I'm going to celebrate my birthday <br>
+အင္း...ငါ့ ေမြးေန႕ပြဲ က်င္းပမယ္         <br><br>
+Angie: Oh, happy birthday! When it it, exactly? <br>
+အိုး..happy birthday ေနာ္။   တိတိက်က် ဘယ္ေတာ့လဲ         <br><br>
+Philip: It's August ninth-Sunday. <br>
+ၾသဂုတ္ ၈ရက္။ တနဂၤေႏြေန႕ေပါ့။
+Angie: So what are you palns? <br>
+ဒါဆို..နင့္အစီစဥ္ေတြက ဘာလဲ       <br><br>
+Philip: I'm going to go to my friend's Kayla's house.<br>
+ငါ့သူငယ္ခ်င္း ေကလာ အိမ္သို႕သြားမ်ာ     <br>
+She's going to cook a special dinner for me. <br>
+သူမ ငါ့အတြက္ အထူးညေနစာ ခ်က္ေပးမွာ    <br><br>
+Angie: Nice. Is she going to bake a cake, too?
+ေကါင္းပါတယ္...ကိတ္မုန္႕လည္း သူမ လုပ္မွာလား        <br><br>
+Philip: Bake a cake? Oh, I'm not sure. <br>
+ကိတ္မုန္႕ဖုတ္တာလား...ဒါေတာ့ မေသခ်ာဘူး      <br>
+</p>
+<br>
+<br>
+</body>
+</html>

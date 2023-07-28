@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM0MThf/Livng%20in%20the%20Dorms.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Do you live in the dorms?<br>
+မင္းအေဆာင္မွာေနလား<br><br>
+B: Yes, I do.<br>
+အင္းဟုတ္တယ္..<br><br>
+A: What do you like about it?<br>
+အေဆာင္နဲ႕ပတ္သက္လို႕မင္းဘယ္ဟာကိုၾကိဳက္တယ္.<br><br>
+B: I get to see my friends almost all the time.<br>
+အခ်ိန္တိုင္းနီးပါးသူငယ္ခ်င္းေတြကို ေတြ႕လို႕ရတယ္.<br><br>
+A: What else?<br>
+ေနာက္ထပ္ေကါ<br><br>
+B: I don't have to see my parents.<br>
+ငါရဲ႕မိဘေတြကိုေတြ႕စရာမလိုဘူး<br><br>
+A: How much does it cost to dorm?<br>
+အေဆာင္မွာေနတာ ဘယ္ေလာက္ကုန္လဲ<br><br>
+B: It is very expensive.<br>
+အရမ္းေစ်းၾကီးတယ္<br><br>
+A: Tell me exactly how much.<br>
+ဘယ္ေလာက္လဲဆိုတာ တိတိက်က်ငါ့ကိုေျပာပါ.<br><br>
+B: You're going to faint after I tell you.<br>
+ငါေျပာျပီးေနာက္မင္းေခါင္းမူးသြားလိမ့္မယ္<br><br>
+A: Just tell me.<br>
+ေျပာသာေျပာစမ္းပါ..<br><br>
+B: It costs $15,000 per year.<br>
+ႏွစ္စဥ္ ေဒၚလာတစ္ေသာင္းငါးေထာင္ကုန္တယ္<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

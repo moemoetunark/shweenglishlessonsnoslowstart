@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDMxODJf/Easy%20Dialogue%204.%20Bus%20Tickets.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Where do I buy my bus ticket?<br>
+ဘတ္စ္ကားလက္မွတ္ ဘယ္မွာ၀ယ္ရမလဲ<br><br>
+B: You buy it in the bus.<br>
+ကားထဲမွာ၀ယ္ရတယ္..<br><br>
+A: Isn't there a station?<br>
+ကားဂိတ္မရွိဘူးလား<br><br>
+B: Yes, but that's not where you buy tickets.<br>
+ရွိတယ္.ဒါေပမဲ့..အဲဒါကလက္မွတ္၀ယ္တဲ့ေနရာမဟုတ္ဘူး<br><br>
+A: Does the bus driver give me my ticket?<br>
+ကားဆရာကလက္မွတ္ကိုေပးလား<br><br>
+B: The bus driver has a machine that does.<br>
+ကားဆရာမွာလက္မွတ္ေပးတဲ့စက္ရွိတယ္..<br><br>
+A: Do I buy a new ticket every time I ride the bus?<br>
+ဘတ္စ္ကားစီးတိုင္းမွာ..ကၽြန္ေနာ္လက္အသစ္၀ယ္ရမလား<br><br>
+B: Yes, but if you plan to ride several buses, buy a day pass.<br>
+ဟုတတယ္...ဒါေပမဲ့မင္းဘတ္စ္ကားေတြအမ်ားၾကီးစီးဖို႕အစီစဥ္ရွိရင္..တစ္ေန႕စာ၀ယ္ေပါ့<br><br>
+A: Why should I buy a day pass?<br>
+တစ္ေန႕စာလက္မွာဘာလို႕၀ယ္ရမွာလဲ<br><br>
+B: It would be cheaper than buying several tickets.<br>
+လက္မွတ္ေတြအမ်ားၾကီး၀ယ္တာထက္.ေစ်းသက္တာတယ္..<br><br>
+A: So I just wait for the bus to get here?<br>
+ဒါဆို...ကါးဒီကိုလာဖို႕ကၽြန္ေနာ္ေစာင့္ရမွာေပါ့<br><br>
+B: Yes, and make sure you have change.<br>
+ဟုတ္တယ္...ျပီးရင္ေငြလည္း  လဲထားလိုက္ဦး<br>
+</p>
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMzNDRf/Easy%20Dialogue%209.%20Boxing.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: What happened to your eye?<br>
+မင္းမ်က္လံုးဘာျဖစ္တာလဲ<br><br>
+B: I was punched in the eye.<br>
+ငါမ်က္လံုးကိုအထိုးခံရတာ..<br><br>
+A: You got into a fight?<br>
+မင္းရန္ျဖစ္ခဲ့တာလား<br><br>
+B: Yes, but it's alright.<br>
+ဟုတ္တယ္..ဒါေပမဲ့ ဘာမွမျဖစ္ပါဘူး<br><br>
+A: I don't think fighting is okay!<br>
+ရန္ျဖစ္တာက..အိုေကဆိုတာ ငါမထင္ဘူး<br><br>
+B: I was fighting in a boxing match.<br>
+ငါကလက္ေ၀ွ႕ပြဲတစ္ခုမွာ ဖိုက္ခဲ့တာ.<br><br>
+A: Are you taking boxing lessons?<br>
+မင္းလက္ေ၀ွ႕ေလ့က်င့္ေနတာလား<br><br>
+B: Yes, I go every evening.<br>
+ဟုတ္တယ္...ညေနခင္းတိုင္းငါသြားတယ္..<br><br>
+A: Have you ever fought in a competition?<br>
+ျပိဳင္ပြဲမွာေကါ မင္းထိုးဖူးလား<br><br>
+B: Yes, but I didn't make it to the finals.<br>
+ဟုတ္တယ္..ဒါေပမဲ့..ေနာက္ဆံုးအဆင့္ေတာ့မေရာက္ခဲ့ဘူး<br><br>
+A: Well, maybe you should wait until your eye heals to compete again.<br>
+အင္း..မင္းမ်က္လံုးကုသတာ..လံုး၀ေကါင္္းသြားတဲ့အထိေစာင့္သင့္တယ္..<br><br>
+B: I definitely will! It's hard to box with only one eye open!<br>
+ေသခ်ာတာေပါ့..မ်က္လံုးတစ္ဖက္နဲ႕ထိုးတာကခက္ခဲတယ္<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

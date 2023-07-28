@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI4MjJf/Easy%20Dialogue%201.%20Should%20I.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Should I ask Nancy out or not?<br>
+ကၽြန္ေနာ္နန္စီကိုခ်စ္ေရးဆိုသင့္လား<br><br>
+B: You should not.<br>
+မင္းမဆိုသင့္ဘူး<br><br>
+A: Why shouldn't I?<br>
+ဘာလို႕မဆိုသင့္တာလဲ<br><br>
+B: Nancy is a liar.<br>
+နန္စီကလူလိမ္တစ္ေယာက္ပဲ<br><br>
+A: What does she lie about?<br>
+သူမဘာလိမ္လို႕လဲ<br><br>
+B: She lies about everything.<br>
+သူမကအရာအားလံုးကိုလိမ္တယ္<br><br>
+A: Please be specific.<br>
+ေက်းဇူးျပဳလို႕ေသခ်ာေျပာပါ.<br><br>
+B: She lied, saying that her mom died.<br>
+သူမအေမေသသြားတယ္လို႕ေျပာျပီးလိမ္ခ့ဲတာ<br><br>
+A: Wow, that's terrible.<br>
+၀ိုး..ဒါအရမ္းဆိုးတယ္<br><br>
+B: She wanted people to do favors for her.<br>
+သူမကလူေတြကိုသူမကိုသူမအၾကိဳက္ကိုလုပ္ေပးေစခ်င္တာ<br><br>
+A: I'm never asking her out.<br>
+ကၽြန္ေနာ္သူမကိုဘယ္ေတာ့မွခ်စ္ေရးမဆိုေတာ့ဘူး<br><br>
+B: I'm glad you decided to listen to me.<br>
+မင္းငါ့စကားကိုနားေထာင္ဖို႕ဆံုးျဖတ္လို႕ငါ၀မ္းသာပါတယ္<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

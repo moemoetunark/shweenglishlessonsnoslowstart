@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMwODdf/Easy%20Dialogue%202.%20A%20Salesperson.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Are you interested in buying this bike?<br>
+ဒီစက္ဘီးကို၀ယ္ဖို႕မင္းစိတ္၀င္စားလား<br><br>
+B: That thing? I don't think so.<br>
+ဒါလား.....ကၽြန္ေနာ္မထင္ဘူး<br><br>
+A: I assure you, it is a wonderful sale.<br>
+ငါအာမခံတယ္..ဒါကတကယ္ေစ်းေကါင္းပဲ<br><br>
+B: It looks rusted.<br>
+ဒါကသံေခ်းတက္ေနသလိုပဲ<br><br>
+A: That can be fixed with a light coat of paint.<br>
+အဲဒါကိုသုတ္ေဆးနဲ႕သုတ္ျပီးျပင္လိုက္လို႕ရတယ္..<br><br>
+B: The chain looks old.<br>
+ခ်ိန္းၾကိဳးကေဟာင္းေနသလိုပဲ<br><br>
+A: Just oil it a little, and it will be good as new!<br>
+ဆီနည္းနည္းထည့္လိုက္..ျပီးရင္အသစ္လို႕ေကါင္းသြားလိမ့္မယ္..<br><br>
+B: The seat is uncomfortable.<br>
+ထိုင္ခံုက သက္ေတာင့္သက္သာမရွိဘူး<br><br>
+A: All great bikes have high seats like this.<br>
+စက္ဘီးေကါင္ေတြကဒီလုိပဲ..ထိုင္ခံုျမင့္တယ္..<br><br>
+B: Well, how much are you asking for it?<br>
+မင္းဘယ္ေလာက္ ေတာင္းမွာလဲ<br><br>
+A: For this fantastic find, only $140.<br>
+ဒီအဖိုးထိုက္တဲ့ေတြ႕ရွိမႈအတြက္..ေဒၚလာ ၄၀ပဲ<br><br>
+B: No way! If it's so valuable, sell it to the museum!<br>
+လံုး၀မ၀ယ္ဘူး..ဒါကအရမ္းတန္ဖိုးရွိေနရင္..ျပတိုက္ကိုသာေရာင္းလိုက္ေတာ့<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDI5MzJf/Easy%20Dialogue%2011.%20Using%20ATM.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I just got my first ATM card.<br>
+ငါ့ရဲ႕ ပထမဆံုး ATM ကတ္ငါရတယ္..<br><br>
+B: That's great. Do you know how to use it?<br>
+ေကါင္းတယ္...မင္းဘယ္လိုသံုးရမလဲဆိုတာ သိလား<br><br>
+A: Actually I could use some help.<br>
+တကယ္ေတာ့ အကူညီနည္းနည္းရမွသံုးတတ္မွာ<br><br>
+B: Let's go to your bank's ATM.<br>
+မင္းဘဏ္ရဲ႕ ATM ကိုသြားၾကစို႕<br><br>
+A: Does it have to be my bank's ATM?<br>
+ငါ့ဘဏ္ရဲ႕ ATM ပဲျဖစ္ရမွာလား<br><br>
+B: It should be or else you will get hit with fees.<br>
+ျဖစ္သင့္တယ္..မဟုတ္ရင္မင္းအခနည္းနည္းေပးရမယ္..<br><br>
+A: Once I put my card in, what do I do?<br>
+ငါ့ကတ္ကိုထည့္လိုက္တ့ဲအခါ..ငါဘာလုပ္ရမလဲ<br><br>
+B: You need to put your pin number in.<br>
+မင္းရဲ႕ pin နံပါတ္ကိုထည့္ရမယ္.<br><br>
+A: I wrote my pin number down. It's in my wallet. <br>
+ငါ့pin နံပါတ္ကိုငါေရးထားတယ္..ငါ့ရဲ႕ wallet ေပၚမွာ<br<br>>
+B: To be safe you should memorize it.<br>
+လံုျခံဳဖို႕အတြက္မင္းမွတ္ထားရမယ္<br><br>
+A: Once I punch in my pin number, what do I do?<br>
+pinနံပါတ္ထည့္တ့ဲအခါ ငါဘာလုပ္ရမလဲ<br><br>
+B: You need to choose what transaction you want to make.<br>
+မင္းဘာလုပ္မယ္ဆိုတာကို ေရြးဖို႕လိုတယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

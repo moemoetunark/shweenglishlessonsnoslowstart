@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMwNzBf/Easy%20Dialogue%2018.%20Overtime.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: I have overtime next week.<br>
+ေနာက္အပတ္ငါ့မွာ အခ်န္ပိုရွိတယ္..<br><br>
+B: What does that mean?<br>
+ဘာကိုဆိုလိုတာလဲ<br><br>
+A: It means I'm working more hours than usual.<br>
+ငါဆိုလိုတာ..ငါပံုမွန္ထက္ အလုပ္အပိုလုပ္ရမယ္..<br><br>
+B: What are your usual hours?<br>
+မင္းရဲ႕ပံုမွန္အခ်ိန္ကဘာလဲ<br><br>
+A: I usually work 8 hours a day for five days.<br>
+ငါပံုမွန္အားျဖင့္..၅ရက္တစ္ရက္ကိုရွစ္နာရီလုပ္တယ္..<br><br>
+B: How about next week?<br>
+ေနာက္တစ္ပတ္ကေကာ...<br><br>
+A: I'm working another 8 hours on Saturday.<br>
+စေနေန႕မွာေနာက္ထပ္..၈နာရီလုပ္ရမယ္..<br><br>
+B: But Mom was planning a party on Saturday.<br>
+ဒါေပမဲ့ အေမက စေနေန႕မွာ ပါတီပြဲတစ္ခု စီစဥ္ေနတယ္..<br><br>
+A: I can't make it.<br>
+ငါမလုပ္ႏိုင္ဘူး<br><br>
+B: Can't you tell your boss?<br>
+မင္းရဲ႕ေဘာ့စ္ကို..ေျပာလို႕မရဘူးလား<br><br>
+A: That's not how the real world works.<br>
+ဒါကတစ္ကယ့္မကၻာကအလုပ္လုပ္တ့ဲပံုစံမဟုတ္ဘူးေလ..<br><br>
+B: I wish the world was perfect.<br>
+ကမၻာၾကီးျပည့္စံုဖို႕ငါဆႏၵရွိတယ္...<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

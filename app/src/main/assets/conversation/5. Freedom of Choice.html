@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDMyMTBf/Easy%20Dialogue%205.%20Freedom%20of%20Choice.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: My household is registered as Republican.<br>
+ငါတို႕အိမ္ကလူေတြက ရီပတ္ဘလီကန္အျဖစ္ မွတ္ပံုတင္ၾကတယ္..<br><br>
+B: Why is that so upsetting?<br>
+ဒါကဘာလို႕အရမ္းစိတ္ပ်က္စရာျဖစ္ေနတာလဲ<br><br>
+A: I really want to vote for Obama!<br>
+ငါက အိုဘားမားကိုပဲ.မဲေပးခ်င္တာ..<br><br>
+B: You're allowed to vote for him even if you're Republican.<br>
+မင္းက ရီပတ္ဘလီကန္ဆိုရင္ေတာင္မွ မင္းသူ႕ကိုမဲေပးလို႕ရတယ္..<br><br>
+A: Really? I didn't know that.<br>
+တကယ္...ငါမသိခဲ့ဘူး.<br><br>
+B: Of course, you're not restricted from anything.<br>
+ေသခ်ာတာေပါ့..မင္းကိုဘယ္ရာကိုမွကန္႕သတ္ထားလို႕မရဘူး..<br><br>
+A: Can I also vote for Republican State representatives?<br>
+ရီပတ္ဘလီကန္ ကိုယ္စလွယ္ကိုလည္းငါမဲေပးလို႕ရလား<br><br>
+B: Yes, that's okay, too.<br><br>
+ဟုတ္တယ္..ဒါလည္းအိုေကတယ္.<br><br>
+A: I prefer a world not based on what party you're in.<br>
+မင္းကဘယ္ပါတီကလဲဆိုတာကို အေျခမခံတဲ့ ကမၻာကိုပဲငါပိုႏွစ္သက္တယ္..<br><br>
+B: Me, too. It makes things seem a lot more equal.<br>
+ငါလည္းပဲ...ဒီလိုမွ..အရာအားလံုးတန္းတူ..က်မယ္..<br><br>
+A: I'm going to fill out my sample ballot now!<br>
+မဲေပးရမယ္ပံုစံမွာငါသြားျဖည့္ေတာ့မယ္..<br><br>
+B: Alright! I will, too.<br>
+အိုေက..ငါလည္းသြားမယ္..<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

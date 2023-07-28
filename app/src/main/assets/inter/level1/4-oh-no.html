@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 100%;
+height: auto;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM2NDJf/Track%2024.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>Oh, No! မဟုတ္ေသးပါဘူး    </h3>
+<img src="img/oh-no.JPG"/>
+<p>
+Kate: Oh, no! Where are my keys? <br>
+မဟုတ္ေသးပါဘူး ..င့ါကားေသာ့ ဘယ္မွာလဲ         <br><br>
+Joe: I don't know. Are they in your purse? <br>
+ကၽြန္ေနာ္မသိဘူးေလ။ နင့္ပိတ္ဆံအိတ္ထဲမွာမ်ားလား <br><br>
+Kate: No, They're not. <br>
+ႏိုး....မရွိဘူး   <br><br>
+Joe: Maybe they're on the table in the restaurant.<br>
+စားေသာက္ဆိုင္ စားပြဲေပၚမွာ ရွိႏိုင္တယ္           <br><br>
+Sever: Excuse me. Are these your keys? <br>
+တစ္ဆိတ္ေလာက္...ဒါနင့္ေသာ့ေတြလား              <br><br>
+Kate: Yes, they are. Thank you. <br>
+ဟုတ္တ္...ေက်းဇူးပဲေနာ္         <br><br>
+Sever: You're welcome. And is this your wallet? <br>
+ၾကိဳဆိုပါတယ္။ ဒါေကာ နင့္ပိုက္ဆံလား       <br><br>
+Kate: Hmm. No, it's not. Where's your wallet, Joe? <br>
+ဟင္..မဟုတ္ပါဘူး။ ဂ်ိဳး နင့္ပိတ္ဆံဘယ္မွာလဲ   <br><br>
+Joe: It's in my pocket. .....Wait a minute! That is my wallet. <br>
+ငါ့ အိတ္ထဲမွာ.....ေနပါဦး....အဲ့ဒါ ငါ့ပိတ္ဆံ။   <br>
+
+</p>
+<br>
+<br>
+</body>
+</html>

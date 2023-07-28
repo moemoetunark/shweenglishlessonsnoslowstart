@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Audio player HTML5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+	  
+	  <style>
+	  @font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+p {
+    border: 1px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: lightblue;
+}
+
+p{
+    font-size: 15px;
+}
+</style>
+</head>
+
+<body>
+  <!-- Options -->
+<p>
+•	Sylvia: Micah Information System. Sylvia speaking. <br>
+•	Micah Information System ကပါ။ ဆယ္ဗီယာ စကားေျပာေနပါတယ္      <br><br>
+•	John: Hello. This is John Ellis from Retex Plc. Could I speak to Jog Seide, please? <br>
+•	ဟလို Retex ကုမၸဏီက ဂၽြန္အဲလ္စ္ပါ. ေက်းဇူးျပဳလို႕ Jog Seide ကိုစကားေျပာလို႕ရလား             <br><br>
+•	Sylvia: I’m afraid. Mr Seide is in a meeting. Can I take a message? <br>
+•	အားနာပါတယ္..မာစတာ Seide အစည္းေဝးေရာက္ေနတယ္. ကၽြန္ေနာ္ စကားမွာယူထားလို႕ရမလား               <br><br>
+•	John: Yes, please. Can you ask him to call me back? <br>
+•	ေက်းဇူးျပဳလို႕ငါ့ကိုျပန္ေခၚဖို႕သူ႕ကိုေျပာေပးပါလား                    <br><br>
+•	Sylvia: Certainly. Could you tell me your name again? <br>
+•	ေသခ်ာတာေပါ့...သင့္နာမည္င့ါကို ထပ္ေျပာေပးလို႕ရမလား                  <br><br>
+•	John: My name is John Ellis. And I'm calling from Retex Plc.  <br>
+•	ကၽြန္ေနာ့္နာမည္ ဂၽြန္အဲလဲ့စ္ပါ..Retex ကုမၸဏီကဆက္ေနတာပါ           <br><br>
+•	Sylvia: Does Mr Seide have your number? <br>
+•	မာစတာ Seide မွာသင့္ရဲ႕နံပါတ္ေကာရွိရဲ႕လား          <br><br>
+•	John: Actually, I don't think he does. It's 00 44 140 397 834.  <br>
+•	တကယ္ေတာ့..သူ႕မွာရွိမယ္မထင္ဘူး။ ၀၀ ၄၄ ၁၄၀ ၃၉၇ ၈၃၄ ျဖစ္ပါတယ္။         <br><br>
+•	Sylvia: 397 834. That's great. OK. Mr Ellis, I'll tell Mr Seide you called. <br>
+•	၃၉၇ ၈၃၄ ေနာ္..အိုေက..ေကာင္းျပီ. 
+•	မာစတာ အဲလဲ့စ္ ခင္ဗ်ားဖုန္းဆက္တယ္ဆိုတာ Mr Seide ကိုေျပာျပလိုက္မယ္           <br><br>
+•	John: Thank you very much, Sylvia. <br>
+•	ေက်းဇူးအထူးတင္ပါတယ္..ဆယ္ဗီယာေရ            <br><br>
+•	Sylvia: You are welcome. Bye now. <br>
+•	ၾကိဳဆိုပါတယ္..ဒီေလာက္ပဲေနာ္...            <br><br>
+•	John: Bye <br>
+•	ဘိုင့္ေနာ္           <br><br>
+</p>
+<br>
+<br>
+<br>
+<br>
+<!-- Audio player -->
+<div class="ap" id="ap">
+  <div class="ap__inner">
+      <div class="ap__item ap__item--playback">
+        <button class="ap__controls ap__controls--prev">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M9.516 12l8.484-6v12zM6 6h2.016v12h-2.016v-12z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--toggle">
+          <svg class="icon-play" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="36" height="36" viewBox="0 0 36 36" data-play="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z" data-pause="M 12,26 16.33,26 16.33,10 12,10 z M 20.66,26 25,26 25,10 20.66,10 z">
+            <path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--next">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M15.984 6h2.016v12h-2.016v-12zM6 18v-12l8.484 6z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="ap__item ap__item--track">
+        <div class="track">
+          <div class="track__title">Queue is empty</div>
+          <div class="track__time">
+            <span class="track__time--current">--</span>
+            <span> / </span>
+            <span class="track__time--duration">--</span>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress">
+              <div class="progress__bar"></div>
+              <div class="progress__preload"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="ap__item ap__item--settings">
+        <div class="ap__controls volume-container">
+          <button class="volume-btn">
+            <svg class="icon-volume-on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M14.016 3.234q3.047 0.656 5.016 3.117t1.969 5.648-1.969 5.648-5.016 3.117v-2.063q2.203-0.656 3.586-2.484t1.383-4.219-1.383-4.219-3.586-2.484v-2.063zM16.5 12q0 2.813-2.484 4.031v-8.063q2.484 1.219 2.484 4.031zM3 9h3.984l5.016-5.016v16.031l-5.016-5.016h-3.984v-6z"></path>
+            </svg>
+            <svg class="icon-volume-off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M12 3.984v4.219l-2.109-2.109zM4.266 3l16.734 16.734-1.266 1.266-2.063-2.063q-1.734 1.359-3.656 1.828v-2.063q1.172-0.328 2.25-1.172l-4.266-4.266v6.75l-5.016-5.016h-3.984v-6h4.734l-4.734-4.734zM18.984 12q0-2.391-1.383-4.219t-3.586-2.484v-2.063q3.047 0.656 5.016 3.117t1.969 5.648q0 2.25-1.031 4.172l-1.5-1.547q0.516-1.266 0.516-2.625zM16.5 12q0 0.422-0.047 0.609l-2.438-2.438v-2.203q2.484 1.219 2.484 4.031z"></path>
+            </svg>
+          </button>
+          <div class="volume">
+            <div class="volume__track">
+              <div class="volume__bar"></div>
+            </div>
+          </div>
+        </div>
+        <button class="ap__controls ap__controls--repeat">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17.016 17.016v-4.031h1.969v6h-12v3l-3.984-3.984 3.984-3.984v3h10.031zM6.984 6.984v4.031h-1.969v-6h12v-3l3.984 3.984-3.984 3.984v-3h-10.031z"></path>
+          </svg>
+        </button>
+        <button class="ap__controls ap__controls--playlist">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17.016 12.984l4.969 3-4.969 3v-6zM2.016 15v-2.016h12.984v2.016h-12.984zM18.984 5.016v1.969h-16.969v-1.969h16.969zM18.984 9v2.016h-16.969v-2.016h16.969z"></path>
+          </svg>
+        </button>
+      </div>
+  </div>
+</div>
+  
+    <script src="js/call_1.js"></script>
+
+</body>
+</html>

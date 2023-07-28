@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 2500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDExMTVf/a%20baby%20and%20a%20sock.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+The mother gave her baby a red apple.<br>
+အေမဟာသူ႕ရဲ႕ကေလးကိုပန္းသီးအနီေရာင္တစ္လံုးေပးလိုက္တယ္..<br><br>
+The baby tried to eat the apple.<br>
+ကေလးငယ္က ပန္းသီးကိုစားဖို႕ၾကိဳးစားတယ္<br><br>
+His mouth was too small.<br>
+သူ႕ရဲ႕ပါးစပ္ကအရမ္းေသးငယ္လြန္းတယ္..<br><br>
+And he didn't have any teeth.<br>
+ျပီးရင္သူ႕မွာက သြားမရွိဘူး<br><br>
+His brother took the apple.<br>
+သူ႕ရဲ႕အကိုကပန္းသီးကိုယူသြားခဲ့တယ္<br><br>
+ His brother ate the apple.<br>
+သူ႕ရဲ႕အကိုကပန္းသီးကိုစားလိုက္တယ္..<br><br>
+The baby cried.<br>
+ကေလးကငိုတယ္...<br><br>
+His brother gave the baby a blue ball to play with.<br>
+သူ႕ရဲ႕အကိုကကေလးကိုကစားဖို႕အျပာေရာင္ေဘာလံုးတစ္လံုးေပးလိုက္တယ္<br><br>
+The baby smiled.<br>
+ကေလးကျပံဳးေနျပီ..<br><br>
+His brother took the ball from the baby.<br>
+သူ႕ရဲ႕အကိုကကေလးဆီးကေဘာလံုးကိုယူလို္ကတယ္..<br><br>
+ He rolled the ball on the floor.<br>
+သူေဘာလံုးကိုၾကမ္းျပင္မွာလိမ့္လိုက္တယ္..<br><br>
+The brown and white dog picked up the ball.<br>
+ညိုျပဴေရာင္ေခြးကေဘာလံုးကိုခ်ီသြားတယ္.<br><br>
+The dog chewed on the ball.<br>
+ေခြးကေဘာလံုးကိုကိုက္တယ္..<br><br>
+The baby cried again.<br>
+ကေလးကထပ္လို႕ငိုတယ္..<br><br>
+His brother picked up the cat.<br>
+သူ႕အကိုကေၾကာင္ကိုေကါက္ယူလိုက္တယ္..<br><br>
+He put the cat on the bed with the baby.<br>
+သူေၾကာင္ကိုကေလးနဲ႕အတူအိပ္ရာေပၚမွာထားလိုက္တယ္.<br><br>
+The baby pulled the cat's tail.<br>
+ကေလးကေၾကာင္ရဲ႕အျမီးကိုဆြဲတယ္..<br><br>
+The cat jumped off the bed.<br>
+ေၾကာင္ကအိပ္ရာကေနထခုန္ထြက္သြားတယ္<br><br>
+The dog chased the cat.<br>
+ေခြးကေၾကာင္ကိုလိုက္တယ္..<br><br>
+The baby cried again.<br>
+ကေလးကတစ္ဖန္ငိုတယ္..<br><br>
+ His brother let the baby hold a sock.<br>
+သူ႕ရဲ႕အကိုကကေလးကို ေျခအိတ္တစ္ခုကိုေပးကိုင္လိုက္တယ္..<br><br>
+The baby played with the sock. <br>
+ကေလးကေျခအိတ္နဲ႕ကစားတယ္...<br><br>
+The baby was happy.<br>
+ကေလးကေပ်ာ္ေနျပီ..<br>
+</p>
+</body>
+</html>

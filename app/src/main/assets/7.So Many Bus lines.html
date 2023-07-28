@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDMyODFf/Easy%20Dialogue%207.%20So%20Many%20Bus%20lines.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: There are so many bus lines here!<br>
+ဒီမွာကားလိုင္းေတြအရမ္းမ်ားတယ္ေနာ္<br><br>
+B: Yes, there are! I still get confused sometimes.<br>
+အင္း..ဟုတ္တယ္..တစ္ခါတစ္ရံငါရႈပ္ေနတုန္းပဲ<br><br>
+A: How do you know which buses to get on?<br>
+ဘယ္ကားစီးရမလဲဆိုတာ..မင္းဘယ္လိုသိလဲ<br><br>
+B: I check the schedules at each bus stop.<br>
+မွတ္တိုင္တိုင္းမွာ..ခရီးစဥ္ကိုကၽြန္ေနာ္စစ္ေဆးတယ္<br><br>
+A: That is so convenient!<br>
+ဒါကေတာ္ေတာ္အဆင္ေျပတယ္..<br><br>
+B: Yes, it is. It helps to keep me from getting lost.<br>
+အင္းဟုတ္တယ္..ဒါကကၽြန္ေနာ္ကုိ လမ္းမေပ်ာက္ေစဘူးေလ.<br><br>
+A: So many bus lines can be confusing.<br>
+ကားလိုင္းေတာ္ေတာ္မ်ားမ်ားက ရႈပ္ေထြးတယ္..<br><br>
+B: The buses pass by very frequently.<br>
+ကားေတြကမၾကာခဏသြားေနၾကတယ္..<br><br>
+A: How often do they pass by?<br>
+ဘယ္ႏွစ္ၾကိမ္ျဖတ္သြားလဲ<br><br>
+B: Maybe once every 10 to 15 minutes.<br>
+၁၀မိနစ္ကေန.၁၅မိနစ္မွာတစ္ၾကိမ္သြားတယ္..<br><br>
+A: I feel like I'll never get stranded here! <br>
+ဒီမွာဘယ္ေတာ့မွ ရပ္စရာမလိုသလိုပဲ<br><br>
+B: Definitely not! Just make sure you have a ticket!<br>
+ေသခ်ာတာေပါ့..မင္းမွာလက္ရွိတာပဲေသခ်ာေစ<br>
+</p>
+</body>
+</html>

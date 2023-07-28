@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDM0MzVf/Show%20and%20Tell.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: Tomorrow is show and tell.<br>
+မနက္ျဖန္ Show and Tell ေနာ္<br>
+(Show and Tell ဆိုတာ အေမရိကမွာ ကေလးေတြကိုအိမ္ကတစ္ခုခုယူလာျပီး
+ေက်ာင္းမွာ အဲ့ဒါနဲ႕ပတ္သက္လို႕ေျပာခိုင္းတာကိုေခၚသည္)<br><br>
+B: Yeah, I know.<br>
+ဟုတ္ကဲ့ငါသိတယ္..<br><br>
+A: I am bringing my new purse for show and tell.<br>
+ငါ show adn tell အတြက္ငါ့ရဲ႕ပိုက္ဆံအိပ္အသစ္ကုိယူလာမယ္<br><br>
+B: Purses are boring.<br>
+ပိုက္ဆံအိတ္က စိတ္၀င္စားစရာမေကါင္းဘူး<br><br>
+A: No, they're not!<br>
+မဟုတ္ပါဘူး..<br><br>
+B: Well, I'm bringing my dog.<br>
+ငါကေတာ့ ငါ့ရဲ႕ေခြးကိုယူလာမယ္...<br><br>
+A: You can't bring dogs to school.<br>
+မင္းေခြးေတြကို ေက်ာင္းသို႕ယူလာလို႕မရဘူးေလ<br><br>
+B: No one has to know until tomorrow.<br>
+မနက္ျဖန္အထိဘယ္သူမွ မသိဘူး<br><br>
+A: You are going to get into so much trouble.<br>
+မင္းကေတာ့ဒုကၡထဲက်ေရာက္ေတာ့မယ္.<br><br>
+B: But I'll be the coolest kid in school.<br>
+ငါကေက်ာင္းမွာ အေတာ္ဆံုးကေလးျဖစ္မွာ.<br><br>
+A: You won't be saying that in jail.<br>
+မင္းအဲ့ဒါကို ေထာင္မွာမေျပာရပါေစနဲ႕<br><br>
+B: I am not falling for that.<br>
+ငါအာ့လိုမျဖစ္ေစရဘူး<br><br>
+</p>
+<br>
+<br>
+</body>
+</html>

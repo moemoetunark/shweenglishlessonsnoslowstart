@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDMyMzlf/Easy%20Dialogue%206.%20Christmas%20Decorations.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+A: You sure bought a lot of Christmas lights!<br>
+ခရစၥမတ္မီးလံုးေတြမင္းတကယ္၀ယ္ခဲ့ေနာ္<br><br>
+B: I want the house to be shining this Christmas!<br>
+ဒီခရစၥမတ္မွာငါတို႕အိမ္ကို.ေတာက္ေျပာင္ေနခ်င္တယ္..<br><br>
+A: Do all of the houses on the block decorate?<br>
+ဒီဘေလာက္မွာရွိတဲ့အိမ္ေတြအားလံုး အလွဆင္ၾကလား<br><br>
+B: Yes, they do! It is quite beautiful.<br>
+ဟုတ္တယ္..သူတို႕ဆင္ၾကတယ္..အရမ္းလွတယ္.<br><br>.
+A: I can't wait to see it when it's done!<br>
+အဲ့ဒါေတြလုပ္ျပီးတဲ့အခါၾကည့္ဖို႕ငါမေစာင့္ႏိုင္ေတာ့ဘူး<br><br>
+B: A parade marches by every year so people can see them.<br>
+ခ်ီတက္ပြဲကိုႏွစ္တိုင္းလုပ္တယ္ေလ..ဒါေၾကာင့္လူေတြၾကည့္လို႕ရတာေပါ့<br><br>
+A: What are you doing on the roof?<br>
+အေခါင္မိုးမွာမင္းဘာလုပ္ေနတာလဲ<br><br>
+B: I'm going to make it look like it snowed up here!<br>
+အေပၚမွာ..ႏွင္းေတြက်ေနသလိုကါလုပ္ေတာ့မွာ..<br><br>
+A: Are you using Christmas lights and cotton?<br>
+မင္း၀ါနဲ႕.မီးလံုးေတြကိုသံုးလား<br><br>
+B: That's right. I'll install a Santa Claus, too.<br>
+ဟုတ္တယ္...ငါဆန္တာခရုဇ္လည္းတပ္ဆင္ထားမယ္..<br><br>
+A: You sure are full of Christmas spirit!<br>
+ဒါမင္းရဲ႕ခရစၥမတ္..စိတ္ဓာတ္ေတြပဲေနာ္..<br><br>
+B: Of course! It only comes once a year!<br>
+ဟုတ္တယ္...ဒါကတစ္ႏွစ္မွတစ္ခါလာတာေလ..<br>
+</p>
+</body>
+</html>

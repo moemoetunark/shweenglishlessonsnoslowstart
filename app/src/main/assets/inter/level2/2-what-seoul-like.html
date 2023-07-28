@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+့h3{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img {
+width: 320px;
+height: auto;
+}
+p{
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+img{
+width: 320px;
+height: auto;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 5px;
+  margin-top: 30px;
+  height: auto; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'A mother and a baby',
+        url: 'https://od.lk/s/NjJfNDY1MDA1MDBf/Track%2003.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<h3>What's Seoul like? ဆိုးလ္ျမိဳ႕က ဘယ္လိုလဲ</h3>
+<p>
+Beth: Sun-hee, this is David Garza. He's a new club member from Mexico. <br>
+စန္ဟီးေရ..သူက ေဒးဗစ္ဂါဇာ။    မကၠစီကုိက အသင္းဝင္အသစ္တစ္ေယာက္ေပါ့။                <br><br>
+Sun-hee: Nice to meet you, David. I'm Sun-hee Park. <br>
+ေတြ႕ရတာဝမ္းသာပါတယ္ ေဒးဗစ္။ ကၽြန္မက စန္ဟီး ပတ္ပါ။          <br><br>
+David: Hi. So, you are from Seoul? 
+ဟိုင့္..ဒါဆို..နင္က ဆိုးလ္ျမိဳ႕ကေပါ့    <br><br>
+That's right. I'm from Seoul. <br>
+မွန္ပါတယ္။ ကၽြန္မကဆိုးလ္ျမိဳ႕ကပါ     <br>
+David: That's cool. What's Seoul like? <br>
+မိုက္တာေပါ့။ ဆိုးလ္ျမိဳ႕ကဘယ္လိုလဲ      <br><br>
+Sun-hee: It's really nice. It's a very exciting city.<br>
+အရမ္းေကါင္းတယ္။  စိတ္လႈပ္ရွားစရာေကါင္းတဲ့ ျမိဳ႕တစ္ျမိဳ႕ပါပဲ                    <br><br>
+<h3>be ႏွင့္ wh ေမးခြန္း       </h3>
+ေမး။ Where's your friend? <br>
+နင့္သူငယ္ခ်င္းဘယ္မွာလဲ       <br>
+ေျဖ။ He's in the class. <br>
+သူအတန္းထဲမွာ       <br><br>
+ေမး။  Who's Sun-hee? <br>
+စန္ဟီးကဘယ္သူလဲ  <br>
+ေျဖ:  She's my classmate.  <br>
+သူမငါ့ရဲ႕အတန္းေဖာ္        <br><br>
+ေမး : What's Seoul like?    <br>
+ဆိုးလ္ျမိဳ႕ကဘယ္လိုလဲ    <br>
+ေျဖ : It's a very exciting city.   <br>
+စိတ္လႈပ္ရွားစရာေကါင္းတဲ့ျမိဳ႕ပဲ          <br><br>
+ေမး   း     How are your class? <br>
+အတန္းက ဘယ္လုိလဲ       <br>
+ေျဖ    :   It's pretty interesting. <br>
+အရမ္းစိတ္ဝင္စားဖို႕ေကါင္းတယ္        <br><br>
+ေမး း What are your classmates like?  <br>
+နင့္အတန္းေဖာ္ေတြက ဘယ္လိုလဲ             <br>
+ေျဖ   း     They're really nice.    <br>
+သူတို႕ကအရမ္းသေဘာေကါင္းၾကတယ္         <br>
+</p>
+<br>
+<br>
+</body>
+</html>

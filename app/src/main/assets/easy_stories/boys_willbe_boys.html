@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+   font-family: myFirstFont;
+   src: url(file:///android_asset/fonts/zawgyi.woff);
+}
+p {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+div {
+   font-family: myFirstFont;
+   font-size: 100%;
+}
+
+body {margin:0;}
+
+.navbar {
+  font-family: myFirstFont;
+  overflow: hidden;
+  background-color: #black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+   font-family: myFirstFont;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  font-family: myFirstFont;
+  padding: 16px;
+  margin-top: 30px;
+  height: 2500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+ <div id="player1" class="aplayer"></div>
+    <script src="file:///android_asset/audio_player/APlayer.min.js"></script>
+	<script>
+	var ap1 = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: false,
+    showlrc: false,
+    mutex: true,
+    theme: '#F1F41F',
+    preload: 'metadata',
+	listmaxheight: '113px',
+    mode: 'circulation',
+    music: {
+        title: 'A Red Apple',
+        author: 'CLick To Listen Audio',
+        url: 'https://od.lk/s/NjJfNDY1MDExMzFf/Boys%20Will%20Be%20Boys.mp3',
+        pic: 'file:///android_asset/audio_player/icon.png'
+    }
+});
+ap1.on('play', function () {
+    console.log('play');
+});
+ap1.on('play', function () {
+    console.log('play play');
+});
+ap1.on('pause', function () {
+    console.log('pause');
+});
+ap1.on('canplay', function () {
+    console.log('canplay');
+});
+ap1.on('playing', function () {
+    console.log('playing');
+});
+ap1.on('ended', function () {
+    console.log('ended');
+});
+ap1.on('error', function () {
+    console.log('error');
+});
+</script>
+	</div>
+<div class="main">
+<br>
+<p>
+<p>
+The two brothers loved each other.<br>
+ညီအကိုႏွစ္ေယာက္ဟာတစ္ေယာက္ကိုတစ္ေယာက္ခ်စ္ခင္ၾကတယ္<br><br>
+But sometimes they argued with each other.<br>
+ဒါေပမဲ့တစ္ခါတစ္ရံသူတို႕အခ်င္းခ်င္းျငင္းခံုၾကတယ္<br><br>
+Sometimes they yelled at each other.<br>
+တစ္ခါတစ္ရံသူတို႕အခ်င္းခ်င္းေအာ္ဟစ္ၾကတယ္<br><br>
+Sometimes they pushed each other.<br>
+တစ္ခါတစ္ရံသူတို႕အခ်င္းခ်င္းတြန္းၾကတယ္..<br><br>
+Sometimes they hit each other.<br>
+တစ္ခါတစ္ရံသူတို႕အခ်င္းခ်င္းရိုက္ၾကတယ္.<br><br>
+Sometimes they got into a fight with each other.<br>
+တစ္ခါတစ္ရံသူတို႕အခ်င္းခ်င္းရန္ျဖစ္ၾကတယ္.<br><br>
+ Bobby was the older brother.<br>
+ေဘာ့ဘီကေတာ့ အကိုၾကီးျဖစ္တယ္.<br><br>
+ Billy was the younger brother.<br>
+ဘီလီကေတာ့ ညီငယ္ျဖစ္တယ္<br><br>
+ Bobby was older than Billy.<br>
+ေဘာ့ဘီဟာ ဘီလီထက္ၾကီးတယ္..<br><br>
+ Billy was younger than Bobby.<br>
+ဘီလီဟာေဘာ့ဘီထက္ငယ္တယ္<br><br>
+ Bobby climbed into a tree.<br>
+ေဘာ့ဘီကသစ္ပင္ထက္သို႕တက္လိုက္တယ္.<br><br>
+ His kite was in the tree.<br>
+သူ႕ရဲ႕စြန္ကသစ္ပင္မွာေလ..<br><br>
+He could not reach his kite.<br>
+သူ႕ရဲ႕စြန္ဆီသို႕သူမေရာက္ႏိုင္ဘူး<br><br>
+ He fell out of the tree.<br>
+သူဟာသစ္ပင္ကေနျပဳတ္က်တယ္.<br><br>
+Billy laughed.<br>
+ဘီလီက ရယ္တယ္.<br><br>
+He laughed when he saw Bobby fall to the ground. <br>
+ေဘာ့ဘီေျပၾကီးသို႕က်သြားတာကိုသူျမင္တဲ့အခါ သူရယ္တယ္..<br><br>
+Bobby was not hurt.<br>
+ေဘာ့ဘီမနာခဲ့ပါဘူး..<br><br>
+But he was angry.<br>
+ဒါေပမဲ့သူေဒါသထြက္ခဲ့တယ္<br><br>
+"Why are you laughing?" he asked Billy.<br>
+သူကဘီလီကိုေမးလိုက္တယ္..မင္းဘာလို႕ရယ္ေနတာလဲလို႕<br><br>
+"That was funny!" Billy said. <br>
+ဒါကရယ္စရာပဲလို႕..ဘီလီကေျပာလိုက္တယ္..<br><br>
+Bobby said it wasn't funny.<br>
+ေဘာ့ဘီက ဒါရယ္စရာမဟုတ္ဘူးလို႕ေျပာတယ္..<br><br>
+Billy said it was funny.<br>
+ဘီလီကဒါရယ္စရာလို႕ေျပာတယ္.<br><br>
+Bobby pushed Billy. <br>
+ေဘာ့ဘီက ဘီလီကိုတြန္းလိုက္တယ္..<br><br>
+Billy pushed Bobby.<br>
+ဘီလီကလည္းေဘာ့ဘီကိုတြန္းလိုက္တ္..<br><br>
+Bobby punched Billy in the stomach.<br>
+ေဘာ့ဘီဟာဘီလီရဲ႕ဝမ္းဗိုက္ကိုထိုးလိုက္တယ္.<br><br>
+Billy punched Bobby in the stomach.<br>
+ဘီလီကလည္းေဘာဘီရဲ႕ဝမ္းဗိုက္ကိုထိုးလိုက္တယ္..<br><br>
+They put their arms around each other.<br>
+သူတို႕အခ်င္းခ်င္းနယ္ၾကတယ္.<br><br>
+They wrestled on the ground.<br>
+သူတို႕ေျမျပင္မွာနပန္းလံုးၾကတယ္.<br><br>
+They rolled around and around.<br>
+သူတို႕ေျပၾကီးမွာလွိမ့္ေနၾကတယ္.<br><br>
+Their mom came outside.<br>
+သူတို႕အေမထြက္လာတယ္...<br><br>
+"What are you two doing?" she asked.<br>
+နင္တို႕ႏွစ္ေယာက္ဘာလုပ္ေနၾကလဲလို႕ အေမကေမးလိုက္တယ္..<br><br>
+She separated them. <br>
+သူမကသူတို႕ကိုခြဲလိုက္တယ္..<br><br>
+She said, "You shouldn't hit each other.<br>
+နင္တို႕အခ်င္းခ်င္းမရိုက္သင့္ဘူး<br>
+That's not nice.<br>
+ဒါမေကါင္းဘူး..<br>
+Wait till your father gets home."<br>
+နင္တို႕အေဖအိမ္ကိုလာတဲ့အထိေစာင့္ေနၾကလို႕ သူမကေျပာလိုက္တယ္..<br><br>
+She sent them to their rooms.<br>
+သူမဟာသူတို႕ကိုအခန္းထဲသို႕ပို႕လုိက္တယ္..<br>
+</p>
+</body>
+</html>
