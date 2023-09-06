@@ -15,8 +15,8 @@ import siam.moemoetun.com.shwedailyenglish.R;
 
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
 
-    private List<String> mData;
-    private LayoutInflater mInflater;
+    private final List<String> mData;
+    private final LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
     // data is passed into the constructor
@@ -38,7 +38,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     public void onBindViewHolder(ViewHolder holder, int position) {
         String animal = mData.get(position);
         holder.myTextView.setText(animal);
-        holder.myTextView.setTypeface(Typeface.createFromAsset(MyRecyclerViewAdapter.this.mInflater.getContext().getAssets(), "fonts/zawgyi.ttf"));
+        holder.myTextView.setTypeface(Typeface.createFromAsset(MyRecyclerViewAdapter.this.mInflater.getContext().getAssets(), "fonts/tharlon.ttf"));
 
     }
 

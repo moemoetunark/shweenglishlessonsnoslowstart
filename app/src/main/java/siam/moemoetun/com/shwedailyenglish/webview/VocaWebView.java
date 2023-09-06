@@ -26,6 +26,7 @@ import java.util.Map;
 import java.util.Objects;
 
 import siam.moemoetun.com.shwedailyenglish.R;
+import siam.moemoetun.com.shwedailyenglish.utility.ToolbarUtils;
 
 public class VocaWebView extends AppCompatActivity {
 
@@ -65,8 +66,6 @@ public class VocaWebView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.voca_textview);
-
-
         AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
@@ -90,14 +89,12 @@ public class VocaWebView extends AppCompatActivity {
                 });
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        Drawable navigationIcon = toolbar.getNavigationIcon();
-        if (navigationIcon != null) {
-            navigationIcon.setColorFilter(ContextCompat.getColor(this, R.color.white), PorterDuff.Mode.SRC_ATOP);
-        }
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-
+        ToolbarUtils.setupToolbarWithCustomFont(
+                this,
+                toolbar,
+                getIntent().getStringExtra("clickedItemName"),
+                "fonts/tharlon.ttf" // Replace with your font path
+        );
         textView = findViewById(R.id.textView2);
         AssetManager assets = getAssets();
 

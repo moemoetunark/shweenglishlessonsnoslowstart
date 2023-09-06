@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.appbar.AppBarLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:elevation="0dp"
-    app:elevation="0dp"
-    tools:targetApi="lollipop">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:elevation="0dp"
-        android:minHeight="?attr/actionBarSize"
-        android:weightSum="1"
-        app:elevation="0dp" />
-
-</com.google.android.material.appbar.AppBarLayout>
-
+    android:background="@color/colorPrimary"
+    android:theme="@style/ToolbarTheme"
+    app:title="@string/app_name"
+    app:titleTextAppearance="@style/ToolbarTitleStyle"
+    android:layout_height="?attr/actionBarSize">
+</androidx.appcompat.widget.Toolbar>

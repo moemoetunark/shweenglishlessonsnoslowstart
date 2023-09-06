@@ -2,13 +2,13 @@ package siam.moemoetun.com.shwedailyenglish.fragments;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,7 +19,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
@@ -27,14 +26,32 @@ import java.util.ArrayList;
 
 import siam.moemoetun.com.shwedailyenglish.R;
 import siam.moemoetun.com.shwedailyenglish.adapter.MyRecyclerViewAdapter;
-import siam.moemoetun.com.shwedailyenglish.webview.StoryWebView;
+import siam.moemoetun.com.shwedailyenglish.webview.DetailsWebView;
 
 public class Fragment3 extends Fragment implements MyRecyclerViewAdapter.ItemClickListener{
 
    private InterstitialAd mInterstitialAd;
     MyRecyclerViewAdapter adapter;
-
+    ArrayList<String> animalNames = new ArrayList<>();
     TextView textView;
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        animalNames.add("လူကလေးနဲ့ခြေအိတ်တစ်စုံ");
+        animalNames.add("ခွေးနဲ့ကြောင်");
+        animalNames.add("ပန်းသီးဖျော်ရည်");
+        animalNames.add("ငှက်နဲ့လူကလေး");
+        animalNames.add("မွေးနေ့ကိတ်မုန့်");
+        animalNames.add("ယောက်ျားလေးဟာယောကျ်ားလေးပဲ");
+        animalNames.add("ပန်းခြံထဲမှာ");
+        animalNames.add("အလုပ်မရှိ အစားမရှိ");
+        animalNames.add("ငါ့အတွက် သူငယ်ချင်းမရှိ");
+        animalNames.add("အမှန်ပြောပါ");
+        animalNames.add("ဝက်ဝံကလေး");
+        animalNames.add("အိုဘားမား");
+        animalNames.add("အီဗရာဟင် လင်ကွန်း");
+        animalNames.add("မာတင်လေသာကင်း");
+        animalNames.add("ဂျော့ဝါချင်တာန်");
+    }
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -45,22 +62,7 @@ public class Fragment3 extends Fragment implements MyRecyclerViewAdapter.ItemCli
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ArrayList<String> animalNames = new ArrayList<>();
-        animalNames.add("လူကေလးနဲ႕ေျခအိတ္တစ္စံု");
-        animalNames.add("ေခြးနဲ႕ေၾကာင္");
-        animalNames.add("ပန္းသီးေဖ်ာ္ရည္");
-        animalNames.add("ငွက္နဲ႕လူကေလး");
-        animalNames.add("ေမြးေန႕ကိတ္မုန္႕");
-        animalNames.add("ေယာက္်ားေလးဟာေယာက်္ားေလးပဲ");
-        animalNames.add("ပန္းျခံထဲမွာ");
-        animalNames.add("အလုပ္မရွိ အစားမရွိ");
-        animalNames.add("ငါ့အတြက္ သူငယ္ခ်င္းမရွိ");
-        animalNames.add("အမွန္ေျပာပါ");
-        animalNames.add("ဝက္ဝံကေလး");
-        animalNames.add("အိုဘားမား");
-        animalNames.add("အီဗရာဟင္ လင္ကြန္း");
-        animalNames.add("မာတင္ေလသာကင္း");
-        animalNames.add("ေဂ်ာ့ဝါခ်င္တာန္");
+
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView_1);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new MyRecyclerViewAdapter(getContext(), animalNames);
@@ -98,8 +100,12 @@ public class Fragment3 extends Fragment implements MyRecyclerViewAdapter.ItemCli
             mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback(){
                 @Override
                 public void onAdDismissedFullScreenContent() {
-                    Intent intent = new Intent(getContext(), StoryWebView.class);
+                    Intent intent = new Intent(getContext(), DetailsWebView.class);
+                    String itemClicked = adapter.getItem(position);
+                    Toast.makeText(getContext(), "Clicked: " + itemClicked, Toast.LENGTH_SHORT).show();
                     intent.putExtra("key",position);
+                    intent.putExtra("clickedItemName", itemClicked);
+                    intent.putExtra("FRAGMENT_ID","Fragment3");
                     startActivity(intent);
                     mInterstitialAd = null;
                     // Called when fullscreen content is dismissed.
@@ -107,8 +113,12 @@ public class Fragment3 extends Fragment implements MyRecyclerViewAdapter.ItemCli
                 }
             });
         }else {
-            Intent intent = new Intent(getContext(), StoryWebView.class);
+            Intent intent = new Intent(getContext(), DetailsWebView.class);
+            String itemClicked = adapter.getItem(position);
+            Toast.makeText(getContext(), "Clicked: " + itemClicked, Toast.LENGTH_SHORT).show();
             intent.putExtra("key",position);
+            intent.putExtra("clickedItemName", itemClicked);
+            intent.putExtra("FRAGMENT_ID","Fragment3");
             startActivity(intent);
         }
     }

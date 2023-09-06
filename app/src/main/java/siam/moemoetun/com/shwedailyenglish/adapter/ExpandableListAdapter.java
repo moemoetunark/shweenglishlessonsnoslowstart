@@ -15,10 +15,10 @@ import siam.moemoetun.com.shwedailyenglish.R;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
-    private Context _context;
-    private List<String> _listDataHeader; // header titles
+    private final Context _context;
+    private final List<String> _listDataHeader; // header titles
     // child data in format of header title, child title
-    private HashMap<String, List<String>> _listDataChild;
+    private final HashMap<String, List<String>> _listDataChild;
 
     public ExpandableListAdapter(Context context, List<String> listDataHeader,
                                  HashMap<String, List<String>> listChildData) {
@@ -50,10 +50,10 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(R.layout.list_item, null);
         }
 
-        TextView txtListChild = (TextView) convertView.findViewById(R.id.lblListItem);
+        TextView txtListChild = convertView.findViewById(R.id.lblListItem);
 
         txtListChild.setText(childText);
-        txtListChild.setTypeface(Typeface.createFromAsset(ExpandableListAdapter.this._context.getAssets(), "fonts/zawgyi.ttf"));
+        txtListChild.setTypeface(Typeface.createFromAsset(ExpandableListAdapter.this._context.getAssets(), "fonts/tharlon.ttf"));
         return convertView;
     }
 
@@ -87,11 +87,11 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(R.layout.list_group, null);
         }
 
-        TextView lblListHeader = (TextView) convertView
+        TextView lblListHeader = convertView
                 .findViewById(R.id.lblListHeader);
 
         lblListHeader.setTypeface(null, Typeface.BOLD);
-        lblListHeader.setTypeface(Typeface.createFromAsset(ExpandableListAdapter.this._context.getAssets(), "fonts/zawgyi.ttf"));
+        lblListHeader.setTypeface(Typeface.createFromAsset(ExpandableListAdapter.this._context.getAssets(), "fonts/tharlon.ttf"));
         lblListHeader.setText(headerTitle);
 
         return convertView;

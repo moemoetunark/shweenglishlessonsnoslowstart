@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,9 +18,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
@@ -27,27 +25,19 @@ import java.util.ArrayList;
 
 import siam.moemoetun.com.shwedailyenglish.R;
 import siam.moemoetun.com.shwedailyenglish.adapter.MyRecyclerViewAdapter;
+import siam.moemoetun.com.shwedailyenglish.webview.DetailsWebView;
 import siam.moemoetun.com.shwedailyenglish.webview.VocaWebView;
 
 
 public class Fragment4 extends Fragment implements MyRecyclerViewAdapter.ItemClickListener {
 
     private InterstitialAd mInterstitialAd;
+    ArrayList<String> animalNames = new ArrayList<>();
     MyRecyclerViewAdapter adapter;
     //TextView textView;
 
-
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_tools, container, false);
-    }
-
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        //textView = view.findViewById(R.id.textView_item);
-        ArrayList<String> animalNames = new ArrayList<>();
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         animalNames.add("1.Make and Do");
         animalNames.add("2.Give, keep and Break");
         animalNames.add("3.Go and Get");
@@ -62,7 +52,7 @@ public class Fragment4 extends Fragment implements MyRecyclerViewAdapter.ItemCli
         animalNames.add("12.Money");
         animalNames.add("13.Food");
         animalNames.add("14.Transportation");
-        animalNames.add("15.Job အလုပ္");
+        animalNames.add("15.Job အလုပ်");
         animalNames.add("16.Sports - အားကစား");
         animalNames.add("17.Movies");
         animalNames.add("18.Music");
@@ -70,6 +60,17 @@ public class Fragment4 extends Fragment implements MyRecyclerViewAdapter.ItemCli
         animalNames.add("20.Crimes");
         animalNames.add("21.Pollutions and Environment");
         animalNames.add("22.Ministry in Myanmar");
+    }
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_tools, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        //textView = view.findViewById(R.id.textView_item);
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView_1);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -107,18 +108,23 @@ public class Fragment4 extends Fragment implements MyRecyclerViewAdapter.ItemCli
             mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback(){
                 @Override
                 public void onAdDismissedFullScreenContent() {
-                    Intent intent = new Intent(getContext(), VocaWebView.class);
-                    intent.putExtra("key",position);
-                    startActivity(intent);
+                   showItemClickToast(position);
                     mInterstitialAd = null;
                     // Called when fullscreen content is dismissed.
                     Log.d("TAG", "The ad was dismissed.");
                 }
             });
         }else {
-            Intent intent = new Intent(getContext(), VocaWebView.class);
-            intent.putExtra("key",position);
-            startActivity(intent);
+           showItemClickToast(position);
         }
+    }
+
+    private void showItemClickToast(int position) {
+        String itemClicked = adapter.getItem(position); // Get the clicked item text
+        Toast.makeText(getContext(), "Clicked: " + itemClicked, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getContext(), VocaWebView.class);
+        intent.putExtra("key", position);
+        intent.putExtra("clickedItemName", itemClicked);
+        startActivity(intent);
     }
 }

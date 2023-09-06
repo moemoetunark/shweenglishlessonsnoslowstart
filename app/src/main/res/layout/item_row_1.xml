@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:background="@color/background"
         android:padding="5dp"
-        android:text="Card Title"
+        android:text="@string/card_title"
         android:textColor="@color/black"
         android:textSize="15sp" />
 </androidx.cardview.widget.CardView>

@@ -1,0 +1,49 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+        <!-- Section 1 -->
+        <item
+            android:id="@+id/download"
+            android:icon="@drawable/cloud_download_30"
+            android:title="@string/download"/>
+    </group>
+
+    <group
+        android:id="@+id/menu_middle"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/note"
+            android:icon="@drawable/pen_50"
+            android:title="@string/take_notes" />
+        <!-- Section 2 -->
+
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="single">
+        <!-- Section 3 -->
+        <item
+            android:id="@+id/privacy_policy"
+            android:icon="@drawable/baseline_privacy_30"
+            android:title="@string/menu_privacy1" />
+
+        <item
+            android:id="@+id/rate"
+            android:icon="@drawable/ic_baseline_star_outline_24"
+            android:title="@string/rate" />
+
+        <item
+            android:id="@+id/email"
+            android:icon="@drawable/email_30"
+            android:title="@string/send_feedback" />
+        <item
+            android:id="@+id/foloow_youtube"
+            android:icon="@drawable/video_camera_front_30"
+            android:title="@string/follow_youtube" />
+
+    </group>
+
+</menu>

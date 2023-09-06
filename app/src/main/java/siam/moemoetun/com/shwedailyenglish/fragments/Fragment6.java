@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,9 +17,6 @@ import androidx.fragment.app.Fragment;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
@@ -28,8 +26,7 @@ import java.util.List;
 
 import siam.moemoetun.com.shwedailyenglish.R;
 import siam.moemoetun.com.shwedailyenglish.adapter.ExpandableListAdapter;
-import siam.moemoetun.com.shwedailyenglish.webview.InterchangeWeb;
-
+import siam.moemoetun.com.shwedailyenglish.webview.DetailsWebView;
 
 public class Fragment6 extends Fragment {
 
@@ -39,7 +36,10 @@ public class Fragment6 extends Fragment {
     HashMap<String, List<String>> listDataChild;
     private InterstitialAd mInterstitialAd;
 
-
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        prepareListData();
+    }
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -69,10 +69,9 @@ public class Fragment6 extends Fragment {
 
 
 
-        expListView = (ExpandableListView) view.findViewById(R.id.lvExp);
+        expListView = view.findViewById(R.id.lvExp);
 
         // preparing list data
-        prepareListData();
 
         listAdapter = new ExpandableListAdapter(getContext(), listDataHeader, listDataChild);
 
@@ -128,9 +127,14 @@ public class Fragment6 extends Fragment {
                     mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback(){
                         @Override
                         public void onAdDismissedFullScreenContent() {
-                            Intent intent = new Intent(getContext(), InterchangeWeb.class);
+                            Intent intent = new Intent(getContext(), DetailsWebView.class);
+                            String clickedItemName = listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition);
                             intent.putExtra("key",groupPosition);
                             intent.putExtra("key1",childPosition);
+                            intent.putExtra("clickedItemName", clickedItemName);
+                            String toastMessage = "Clicked: " + clickedItemName;
+                            intent.putExtra("FRAGMENT_ID","Fragment6");
+                            Toast.makeText(getContext(), toastMessage, Toast.LENGTH_SHORT).show();
                             startActivity(intent);
                             mInterstitialAd = null;
                             // Called when fullscreen content is dismissed.
@@ -139,9 +143,14 @@ public class Fragment6 extends Fragment {
                     });
 
                 }else {
-                    Intent intent = new Intent(getContext(), InterchangeWeb.class);
+                    Intent intent = new Intent(getContext(), DetailsWebView.class);
+                    String clickedItemName = listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition);
                     intent.putExtra("key",groupPosition);
                     intent.putExtra("key1",childPosition);
+                    intent.putExtra("clickedItemName", clickedItemName);
+                    String toastMessage = "Clicked: " + clickedItemName;
+                    intent.putExtra("FRAGMENT_ID","Fragment6");
+                    Toast.makeText(getContext(), toastMessage, Toast.LENGTH_SHORT).show();
                     startActivity(intent);
                }
 
@@ -159,7 +168,7 @@ public class Fragment6 extends Fragment {
         // Adding child data
         listDataHeader.add("Interchange Level 1");
         listDataHeader.add("Interchange Level 2- Greeting");
-        listDataHeader.add("Interchange Level 2(အလုပ္အကိုင္)");
+        listDataHeader.add("Interchange Level 2(အလုပ်အကိုင်)");
         listDataHeader.add("Interchange Level 2 - Shopping");
         listDataHeader.add("Interchange Level 2 - Talking about Music, Like and Dislike");
         listDataHeader.add("Interchange Level 2- About family");
@@ -169,33 +178,33 @@ public class Fragment6 extends Fragment {
 
         // Adding child data
         List<String> Grammar = new ArrayList<String>();
-        Grammar.add("It's nice to meet you.\\nေတြ႕ရတာဝမ္းသာပါတယ္");
-        Grammar.add("He's over there. သူဟိုမွာ");
-        Grammar.add("It's ...interesting.\n စိတ္ဝင္စားစရာပဲ");
-        Grammar.add("Oh, no! မဟုတ္ေသးပါဘူး");
-        Grammar.add("Are you from Seoul? \nနင္ ဆိုးလ္ျမိဳ႕ကလား");
-        Grammar.add("He's cute. သူကခ်စ္စရာေလးေနာ္");
-        Grammar.add("It's disaster.အရမ္းဆိုးတာပဲ");
-        Grammar.add("It's really cold.\nအရမ္းေအးတယ္");
+        Grammar.add("It's nice to meet you.\\nတွေ့ရတာဝမ်းသာပါတယ်");
+        Grammar.add("He's over there. သူဟိုမှာ");
+        Grammar.add("It's ...interesting.\n စိတ်ဝင်စားစရာပဲ");
+        Grammar.add("Oh, no! မဟုတ်သေးပါဘူး");
+        Grammar.add("Are you from Seoul? \nနင် ဆိုးလ်မြို့ကလား");
+        Grammar.add("He's cute. သူကချစ်စရာလေးနော်");
+        Grammar.add("It's disaster.အရမ်းဆိုးတာပဲ");
+        Grammar.add("It's really cold.\nအရမ်းအေးတယ်");
 
-        Grammar.add("What time is it there?\nအဲ့ဒီမွာ ဘယ္အခ်ိန္ ရွိျပီလဲ");
-        Grammar.add("I'm really hungry.\nငါဗိုက္အရမ္းဆာေနတယ္");
-        Grammar.add("Nice Car. သိပ္ေကါင္းတဲ့ကားေနာ္");
-        Grammar.add("I get up at noon.\nငါေန႕လည္မွ အိပ္ရာကထတယ္");
-        Grammar.add("My new apartment.\nငါ့ရဲ႕အခန္းသစ္");
-        Grammar.add("There aren't any chairs. \nကုလားထိုင္ေတြ မရွိဘူး");
-        Grammar.add("He works in a hotel.\\nသူဟိုတယ္မွာ အလုပ္လုပ္တယ္");
-        Grammar.add("Please be careful.\\n ေက်းဇူးျပဳလို႕ ဂရုစိုက္ပါ။");
-        Grammar.add("How about some sandwiches?\\nအသားညွပ္ေပါင္မုန္႕ဆုိ ဘယ္လိုလဲ");
-        Grammar.add("Fish for the breakfast \\n မနက္စာအတြက္ ငါး");
-        Grammar.add("I love sports\\nအားကစားကို ႏွစ္သက္တယ္");
-        Grammar.add("I can't sing. သီခ်င္းမဆိုတတ္ဘူး");
-        Grammar.add("Birthday plan ေမြးေန႕အစီစဥ္");
-        Grammar.add("Valentine's Day -ခ်စ္သူမ်ားေန႕");
-        Grammar.add("I don't feel well. \\n ေနမေကါင္းဘူး");
-        Grammar.add("Don't work too hard \\n သိပ္ပင္ပန္းခံျပီး အလုပ္မလုပ္နဲ႕");
-        Grammar.add("It's emergency အေရးေပၚ");
-        Grammar.add("Is it far from here? \\n ဒီကေနေဝးလား");
+        Grammar.add("What time is it there?\nအဲ့ဒီမှာ ဘယ်အချိန် ရှိပြီလဲ");
+        Grammar.add("I'm really hungry.\nငါဗိုက်အရမ်းဆာနေတယ်");
+        Grammar.add("Nice Car. သိပ်ကေါင်းတဲ့ကားနော်");
+        Grammar.add("I get up at noon.\nငါနေ့လည်မှ အိပ်ရာကထတယ်");
+        Grammar.add("My new apartment.\nငါ့ရဲ့အခန်းသစ်");
+        Grammar.add("There aren't any chairs. \nကုလားထိုင်တွေ မရှိဘူး");
+        Grammar.add("He works in a hotel.\\nသူဟိုတယ်မှာ အလုပ်လုပ်တယ်");
+        Grammar.add("Please be careful.\\n ကျေးဇူးပြုလို့ ဂရုစိုက်ပါ။");
+        Grammar.add("How about some sandwiches?\\nအသားညှပ်ပေါင်မုန့်ဆို ဘယ်လိုလဲ");
+        Grammar.add("Fish for the breakfast \\n မနက်စာအတွက် ငါး");
+        Grammar.add("I love sports\\nအားကစားကို နှစ်သက်တယ်");
+        Grammar.add("I can't sing. သီချင်းမဆိုတတ်ဘူး");
+        Grammar.add("Birthday plan မွေးနေ့အစီစဉ်");
+        Grammar.add("Valentine's Day -ချစ်သူများနေ့");
+        Grammar.add("I don't feel well. \\n နေမကေါင်းဘူး");
+        Grammar.add("Don't work too hard \\n သိပ်ပင်ပန်းခံပြီး အလုပ်မလုပ်နဲ့");
+        Grammar.add("It's emergency အရေးပေါ်");
+        Grammar.add("Is it far from here? \\n ဒီကနေဝေးလား");
 
 
 
@@ -203,20 +212,20 @@ public class Fragment6 extends Fragment {
 
 
         List<String> Grammar1 = new ArrayList<String>();
-        Grammar1.add("Please call me Beth. \\n Beth လို႕ေခၚပါ");
-        Grammar1.add("What's Seoul like?\\n ဆိုးလ္ျမိဳက ဘယ္လိုလဲ");
-        Grammar1.add("How's it going?\\nေနေကါင္းရဲ႕လား");
+        Grammar1.add("Please call me Beth. \\n Beth လို့ခေါ်ပါ");
+        Grammar1.add("What's Seoul like?\\n ဆိုးလ်မြိုက ဘယ်လိုလဲ");
+        Grammar1.add("How's it going?\\nနေကေါင်းရဲ့လား");
 
 
         List<String> Grammar2 = new ArrayList<String>();
-        Grammar2.add("Where do you work?\\nနင္ဘယ္မွာ အလုပ္လုပ္လဲ");
-        Grammar2.add("I start work at five.\\n ငါးနာရီမွာ ငါစအလုပ္လုပ္တယ္");
+        Grammar2.add("Where do you work?\\nနင်ဘယ်မှာ အလုပ်လုပ်လဲ");
+        Grammar2.add("I start work at five.\\n ငါးနာရီမှာ ငါစအလုပ်လုပ်တယ်");
 
 
 
         List<String>Grammar3 = new ArrayList<String>();
-        Grammar3.add("It's really pretty. \\nဒါေလးအရမ္းလွတယ္");
-        Grammar3.add("I prefer the blue one\\nအျပာေရာင္တစ္ခုကို ပိုၾကိဳက္တယ္");
+        Grammar3.add("It's really pretty. \\nဒါလေးအရမ်းလှတယ်");
+        Grammar3.add("I prefer the blue one\\nအပြာရောင်တစ်ခုကို ပိုကြိုက်တယ်");
 
         List<String> Grammar4 = new ArrayList<String>();
         Grammar4.add("Who is your favorite singer?");
@@ -229,12 +238,12 @@ public class Fragment6 extends Fragment {
 
 
         List<String> Grammar6 = new ArrayList<String>();
-        Grammar6.add("I hardly ever exercise.\\nတစ္ခါတစ္ရံ႔ပဲေလ့က်င့္ခန္းလုပ္တယ္");
-        Grammar6.add("I'm a real fitness freak.\\nက်န္းမာေရးအရမ္းလိုက္စားသူ");
+        Grammar6.add("I hardly ever exercise.\\nတစ်ခါတစ်ရံ့ပဲလေ့ကျင့်ခန်းလုပ်တယ်");
+        Grammar6.add("I'm a real fitness freak.\\nကျန်းမာရေးအရမ်းလိုက်စားသူ");
 
         List<String> Grammar7 = new ArrayList<String>();
         Grammar7.add("Did you do anything special?");
-        Grammar7.add("How was your vocation? \\nနင့္အားလပ္ရက္ခရီးဘယ္လိုလဲ");
+        Grammar7.add("How was your vocation? \\nနင့်အားလပ်ရက်ခရီးဘယ်လိုလဲ");
 
 
 

@@ -1,0 +1,47 @@
+<!-- res/layout/custom_fullscreen_dialog.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- Use a vertical orientation to stack views vertically -->
+
+    <FrameLayout
+        android:id="@+id/dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <!-- Your dialog content goes here -->
+    </FrameLayout>
+
+    <!-- Button LinearLayout to hold the two buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"> <!-- Align buttons to the right -->
+
+        <Button
+            android:id="@+id/button_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_yes"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginEnd="15dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginStart="4dp"/>
+
+        <Button
+            android:id="@+id/button_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dismiss_dialog_button"
+            android:textColor="@color/colorPrimary"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginStart="4dp"/>
+    </LinearLayout>
+</LinearLayout>

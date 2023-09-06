@@ -10,11 +10,6 @@ import android.widget.TextView;
 /** Splash Activity that inflates splash activity xml. */
 public class SplashActivity extends AppCompatActivity {
     private static final String LOG_TAG = "SplashActivity";
-
-    /**
-     * Number of seconds to count down before showing the app open ad. This simulates the time needed
-     * to load the app.
-     */
     private static final long COUNTER_TIME = 5;
 
     private long secondsRemaining;
@@ -23,21 +18,13 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
-        // Create a timer so the SplashActivity will be displayed for a fixed amount of time.
-        createTimer(COUNTER_TIME);
+        createTimer();
     }
-
-    /**
-     * Create the countdown timer, which counts down to zero and show the app open ad.
-     *
-     * @param seconds the number of seconds that the timer counts down from
-     */
-    private void createTimer(long seconds) {
+    private void createTimer() {
         final TextView counterTextView = findViewById(R.id.timer);
 
         CountDownTimer countDownTimer =
-                new CountDownTimer(seconds * 1000, 1000) {
+                new CountDownTimer(SplashActivity.COUNTER_TIME * 1000, 1000) {
                     @Override
                     public void onTick(long millisUntilFinished) {
                         secondsRemaining = ((millisUntilFinished / 1000) + 1);

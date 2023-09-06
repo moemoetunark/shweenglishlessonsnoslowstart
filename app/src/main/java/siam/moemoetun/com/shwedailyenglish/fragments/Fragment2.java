@@ -1,5 +1,4 @@
 package siam.moemoetun.com.shwedailyenglish.fragments;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,45 +7,36 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
-
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import siam.moemoetun.com.shwedailyenglish.R;
 import siam.moemoetun.com.shwedailyenglish.adapter.ExpandableListAdapter;
-import siam.moemoetun.com.shwedailyenglish.webview.Conversation_web;
-
+import siam.moemoetun.com.shwedailyenglish.webview.DetailsWebView;
 public class Fragment2 extends Fragment {
-
-
-
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
     private InterstitialAd mInterstitialAd;
-
-
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        prepareListData();
+    }
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_gallery, container, false);
     }
-
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -69,10 +59,9 @@ public class Fragment2 extends Fragment {
                 });
 
 
-        expListView = (ExpandableListView) view.findViewById(R.id.lvExp);
+        expListView = view.findViewById(R.id.lvExp);
 
         // preparing list data
-        prepareListData();
 
         listAdapter = new ExpandableListAdapter(getContext(), listDataHeader, listDataChild);
 
@@ -83,18 +72,13 @@ public class Fragment2 extends Fragment {
         expListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
 
             @Override
-            public boolean onGroupClick(ExpandableListView parent, View v,
-                                        int groupPosition, long id) {
-                // Toast.makeText(getApplicationContext(),
-                // "Group Clicked " + listDataHeader.get(groupPosition),
-                // Toast.LENGTH_SHORT).show();
+            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
                 return false;
             }
         });
 
         // Listview Group expanded listener
         expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
-
             @Override
             public void onGroupExpand(int groupPosition) {
                 //Toast.makeText(getContext(),
@@ -127,9 +111,14 @@ public class Fragment2 extends Fragment {
                     mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback(){
                         @Override
                         public void onAdDismissedFullScreenContent() {
-                            Intent intent = new Intent(getContext(), Conversation_web.class);
+                            Intent intent = new Intent(getContext(), DetailsWebView.class);
+                            String clickedItemName = listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition);
                             intent.putExtra("key",groupPosition);
                             intent.putExtra("key1",childPosition);
+                            intent.putExtra("clickedItemName", clickedItemName);
+                            String toastMessage = "Clicked: " + clickedItemName;
+                            intent.putExtra("FRAGMENT_ID","Fragment2");
+                            Toast.makeText(getContext(), toastMessage, Toast.LENGTH_SHORT).show();
                             startActivity(intent);
                             mInterstitialAd = null;
                             // Called when fullscreen content is dismissed.
@@ -138,9 +127,14 @@ public class Fragment2 extends Fragment {
                     });
 
                 }else {
-                    Intent intent = new Intent(getContext(), Conversation_web.class);
+                    Intent intent = new Intent(getContext(), DetailsWebView.class);
+                    String clickedItemName = listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition);
                     intent.putExtra("key",groupPosition);
                     intent.putExtra("key1",childPosition);
+                    intent.putExtra("clickedItemName", clickedItemName);
+                    String toastMessage = "Clicked: " + clickedItemName;
+                    intent.putExtra("FRAGMENT_ID","Fragment2");
+                    Toast.makeText(getContext(), toastMessage, Toast.LENGTH_SHORT).show();
                     startActivity(intent);
                 }
                 return false;
@@ -153,24 +147,24 @@ public class Fragment2 extends Fragment {
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data
-        listDataHeader.add("School Life - ေက်ာင္းသားဘဝ");
-        listDataHeader.add("About Job - အလုပ္အေၾကာင္း");
+        listDataHeader.add("School Life - ကျောင်းသားဘဝ");
+        listDataHeader.add("About Job - အလုပ်အကြောင်း");
         listDataHeader.add("Talking about House)");
-        listDataHeader.add("Taking Bus - ဘတ္စ္ကားစီးျခင္း");
+        listDataHeader.add("Taking Bus - ဘတ်စ်ကားစီးခြင်း");
         listDataHeader.add("Talking about Banking");
-        listDataHeader.add("Social Networking - လူမႈကြန္ယက္");
-        listDataHeader.add("Shopping - ေစ်းဝယ္ျခင္း");
-        listDataHeader.add("Dating - ခ်ိန္းဆိုျခင္း");
-        listDataHeader.add("Health - က်န္းမာေရး");
+        listDataHeader.add("Social Networking - လူမှုကွန်ယက်");
+        listDataHeader.add("Shopping - ဈေးဝယ်ခြင်း");
+        listDataHeader.add("Dating - ချိန်းဆိုခြင်း");
+        listDataHeader.add("Health - ကျန်းမာရေး");
         listDataHeader.add("Sports - အားကစား");
-        listDataHeader.add("eating out - အျပင္ထြက္စားျခင္း");
-        listDataHeader.add("Voting - ေမးေပးျခင္း");
+        listDataHeader.add("eating out - အပြင်ထွက်စားခြင်း");
+        listDataHeader.add("Voting - မေးပေးခြင်း");
         listDataHeader.add("Talking about nature");
 
 
 
         // Adding child data
-        List<String> Grammar = new ArrayList<String>();
+        List<String> Grammar = new ArrayList<>();
         Grammar.add("Class Registration");
         Grammar.add("A laptop for school");
         Grammar.add("New Student");
@@ -190,8 +184,8 @@ public class Fragment2 extends Fragment {
         Grammar.add("Borrowing books from the library");
 
 
-        List<String> Grammar1 = new ArrayList<String>();
-        Grammar1.add("Choosing a job - အလုပ္ေရြးျခင္း");
+        List<String> Grammar1 = new ArrayList<>();
+        Grammar1.add("Choosing a job - အလုပ်ရွေးခြင်း");
         Grammar1.add("Money and Happiness");
         Grammar1.add("A job at 16");
         Grammar1.add("Starting a business");
@@ -214,7 +208,7 @@ public class Fragment2 extends Fragment {
         Grammar1.add("Night owl");
 
 
-        List<String> Grammar2 = new ArrayList<String>();
+        List<String> Grammar2 = new ArrayList<>();
         Grammar2.add("Key Confusion");
         Grammar2.add("Nice Blue Color");
         Grammar2.add("Broke Window");
@@ -230,7 +224,7 @@ public class Fragment2 extends Fragment {
         Grammar2.add("Noisy Neighbor");
 
 
-        List<String>Grammar3 = new ArrayList<String>();
+        List<String>Grammar3 = new ArrayList<>();
         Grammar3.add("Bus Lines");
         Grammar3.add("Bus Schedule");
         Grammar3.add("Alternate Bus Route");
@@ -243,7 +237,7 @@ public class Fragment2 extends Fragment {
         Grammar3.add("Falling Asleep On the Bus");
 
 
-        List<String> Grammar4 = new ArrayList<String>();
+        List<String> Grammar4 = new ArrayList<>();
         Grammar4.add("Different Bank Accounts");
         Grammar4.add("Opening a Bank Account");
         Grammar4.add(" ATM Card Being Declined");
@@ -256,7 +250,7 @@ public class Fragment2 extends Fragment {
 
 
 
-        List<String> Grammar5 = new ArrayList<String>();
+        List<String> Grammar5 = new ArrayList<>();
         Grammar5.add("Online Accounts");
         Grammar5.add("Joining Facebook");
         Grammar5.add("Profile Picture");
@@ -269,7 +263,7 @@ public class Fragment2 extends Fragment {
         Grammar5.add("Irresponsible");
 
 
-        List<String> Grammar6 = new ArrayList<String>();
+        List<String> Grammar6 = new ArrayList<>();
         Grammar6.add("Nice Shoes");
         Grammar6.add("A sale person");
         Grammar6.add("A woman's Eyes");
@@ -283,7 +277,7 @@ public class Fragment2 extends Fragment {
         Grammar6.add("Skateboard");
 
 
-        List<String> Grammar7 = new ArrayList<String>();
+        List<String> Grammar7 = new ArrayList<>();
         Grammar7.add("Should I .....?");
         Grammar7.add("Dating Two people");
         Grammar7.add("Personality");
@@ -299,7 +293,7 @@ public class Fragment2 extends Fragment {
         Grammar7.add("The first Kiss");
 
 
-        List<String> Grammar8 = new ArrayList<String>();
+        List<String> Grammar8 = new ArrayList<>();
         Grammar8.add("Caught A cold");
         Grammar8.add("Emergency Kit");
         Grammar8.add("Running A feverး");
@@ -392,8 +386,6 @@ public class Fragment2 extends Fragment {
         listDataChild.put(listDataHeader.get(11), Grammar11);
         listDataChild.put(listDataHeader.get(12), Grammar12);
         // listDataChild.put(listDataHeader.get(13), Grammar13);
-
-
 
     }
 }

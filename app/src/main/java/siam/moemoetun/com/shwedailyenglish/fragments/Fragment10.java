@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,27 +28,18 @@ import java.util.ArrayList;
 
 import siam.moemoetun.com.shwedailyenglish.R;
 import siam.moemoetun.com.shwedailyenglish.adapter.MyRecyclerViewAdapter;
+import siam.moemoetun.com.shwedailyenglish.webview.DetailsWebView;
 import siam.moemoetun.com.shwedailyenglish.webview.SongLyrics;
 
 
 public  class Fragment10 extends Fragment implements MyRecyclerViewAdapter.ItemClickListener {
    MyRecyclerViewAdapter adapter;
    private InterstitialAd mInterstitialAd;
+    ArrayList<String> animalNames = new ArrayList<>();
 
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_song, container, false);
-    }
-
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        // data to populate the RecyclerView with
-        // data to populate the RecyclerView with
-        ArrayList<String> animalNames = new ArrayList<>();
         animalNames.add("Cry on my shoulder");
         animalNames.add("Flashlight by Jessie J");
         animalNames.add("Forgiveness");
@@ -70,6 +62,20 @@ public  class Fragment10 extends Fragment implements MyRecyclerViewAdapter.ItemC
         animalNames.add("Westlife if i let you go");
         animalNames.add("Why not me");
         animalNames.add("You are my sunshine");
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_song, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // data to populate the RecyclerView with
+        // data to populate the RecyclerView with
+
 
         AdRequest adRequest = new AdRequest.Builder().build();
         InterstitialAd.load(getContext(), getString(R.string.interstial_2021),
@@ -104,18 +110,23 @@ public  class Fragment10 extends Fragment implements MyRecyclerViewAdapter.ItemC
             mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback(){
                 @Override
                 public void onAdDismissedFullScreenContent() {
-                    Intent intent = new Intent(getContext(), SongLyrics.class);
-                    intent.putExtra("key",position);
-                    startActivity(intent);
+                    showItemClickToast(position);
                     mInterstitialAd = null;
                     // Called when fullscreen content is dismissed.
                     Log.d("TAG", "The ad was dismissed.");
                 }
             });
         }else {
-            Intent intent = new Intent(getContext(), SongLyrics.class);
-            intent.putExtra("key",position);
-            startActivity(intent);
+           showItemClickToast(position);
         }
+    }
+
+    private void showItemClickToast(int position) {
+        String itemClicked = adapter.getItem(position); // Get the clicked item text
+        Toast.makeText(getContext(), "Clicked: " + itemClicked, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getContext(), SongLyrics.class);
+        intent.putExtra("key", position);
+        intent.putExtra("clickedItemName", itemClicked);
+        startActivity(intent);
     }
 }

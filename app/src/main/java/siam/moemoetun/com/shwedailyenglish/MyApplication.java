@@ -172,7 +172,7 @@ public class MyApplication extends Application
                          * @param loadAdError the error.
                          */
                         @Override
-                        public void onAdFailedToLoad(LoadAdError loadAdError) {
+                        public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
                             isLoadingAd = false;
                             Log.d(LOG_TAG, "onAdFailedToLoad: " + loadAdError.getMessage());
                             //Toast.makeText(context, "onAdFailedToLoad", Toast.LENGTH_SHORT).show();
@@ -192,11 +192,6 @@ public class MyApplication extends Application
             return appOpenAd != null && wasLoadTimeLessThanNHoursAgo(4);
         }
 
-        /**
-         * Show the ad if one isn't already showing.
-         *
-         * @param activity the activity that shows the app open ad
-         */
         private void showAdIfAvailable(@NonNull final Activity activity) {
             showAdIfAvailable(
                     activity,
@@ -207,13 +202,6 @@ public class MyApplication extends Application
                         }
                     });
         }
-
-        /**
-         * Show the ad if one isn't already showing.
-         *
-         * @param activity the activity that shows the app open ad
-         * @param onShowAdCompleteListener the listener to be notified when an app open ad is complete
-         */
         private void showAdIfAvailable(
                 @NonNull final Activity activity,
                 @NonNull OnShowAdCompleteListener onShowAdCompleteListener) {
@@ -248,16 +236,13 @@ public class MyApplication extends Application
                             onShowAdCompleteListener.onShowAdComplete();
                             loadAd(activity);
                         }
-
                         /** Called when fullscreen content failed to show. */
                         @Override
-                        public void onAdFailedToShowFullScreenContent(AdError adError) {
+                        public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {
                             appOpenAd = null;
                             isShowingAd = false;
-
                             Log.d(LOG_TAG, "onAdFailedToShowFullScreenContent: " + adError.getMessage());
                             //Toast.makeText(activity, "onAdFailedToShowFullScreenContent", Toast.LENGTH_SHORT).show();
-
                             onShowAdCompleteListener.onShowAdComplete();
                             loadAd(activity);
                         }

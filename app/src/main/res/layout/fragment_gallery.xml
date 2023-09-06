@@ -4,7 +4,6 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="@color/background" >
-
     <ExpandableListView
         android:id="@+id/lvExp"
         android:layout_height="match_parent"
