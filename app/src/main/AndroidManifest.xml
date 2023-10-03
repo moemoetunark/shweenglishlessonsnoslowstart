@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -18,7 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ShweEnglishLessons"
         tools:targetApi="31">
-
+        <activity
+            android:name=".download.DownloadActivity"
+            android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -32,12 +35,12 @@
         </activity>
         <activity
             android:name=".quiz.QuizPlayer"
-            android:noHistory="true"
-            android:exported="false" />
+            android:exported="false"
+            android:noHistory="true" />
         <activity
             android:name=".MainActivity"
-            android:hardwareAccelerated="true"
-            android:exported="true" />
+            android:exported="true"
+            android:hardwareAccelerated="true" />
         <activity
             android:name=".webview.VocaWebView"
             android:exported="false" />
@@ -53,17 +56,27 @@
         <activity
             android:name=".note.NoteTakingActivity"
             android:exported="false" />
-
         <activity
             android:name=".quiz.QuizMain"
-            android:hardwareAccelerated="true"
-            android:exported="false" />
+            android:exported="false"
+            android:hardwareAccelerated="true" />
         <activity
             android:name=".quiz.QuizReviewActivity"
             android:exported="false" />
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/admob_app_id" />
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import siam.moemoetun.com.shwedailyenglish.fragments.Fragment1;
 import siam.moemoetun.com.shwedailyenglish.fragments.Fragment10;
+import siam.moemoetun.com.shwedailyenglish.fragments.Fragment11;
 import siam.moemoetun.com.shwedailyenglish.fragments.Fragment2;
 import siam.moemoetun.com.shwedailyenglish.fragments.Fragment3;
 import siam.moemoetun.com.shwedailyenglish.fragments.Fragment4;
@@ -30,13 +31,15 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         }else if (position==5){
             return new Fragment6();
         }
-        else  {
+        else if(position==6) {
             return new Fragment10();
-        }
+        } else {
+            return new Fragment11();
+         }
     }
 
     @Override
     public int getCount() {
-        return 7;
+        return 8;
     }
 }

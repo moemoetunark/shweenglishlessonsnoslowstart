@@ -77,7 +77,6 @@ public class QuizPlayer extends AppCompatActivity {
 
         correctIcon = ContextCompat.getDrawable(this, R.drawable.correct);
         wrongIcon = ContextCompat.getDrawable(this, R.drawable.error);
-
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

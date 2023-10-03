@@ -33,7 +33,6 @@ public class VocaWebView extends AppCompatActivity {
     TextView textView;
     Typeface typeface;
     public InputStream input;
-    private InterstitialAd mInterstitialAd;
 
 
     private final String[] assetFiles = {
@@ -72,21 +71,6 @@ public class VocaWebView extends AppCompatActivity {
         mAdView = new AdView(this);
         mAdView.setAdUnitId(getString(R.string.banner_2021));
 
-        InterstitialAd.load(VocaWebView.this, getString(R.string.inter_goback),
-                adRequest, new InterstitialAdLoadCallback() {
-                    @Override
-                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                        // The mInterstitialAd reference will be null until
-                        // an ad is loaded.
-                        mInterstitialAd = interstitialAd;
-                    }
-
-                    @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        // Handle the error
-                        mInterstitialAd = null;
-                    }
-                });
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         ToolbarUtils.setupToolbarWithCustomFont(
@@ -116,18 +100,6 @@ public class VocaWebView extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (mInterstitialAd !=null) {
-            mInterstitialAd.show(VocaWebView.this);
-            mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback(){
-                @Override
-                public void onAdShowedFullScreenContent() {
-                    // Called when fullscreen content is shown.
-                    // Make sure to set your reference to null so you don't
-                    // show it a second time.
-                    mInterstitialAd = null;
-                }
-            });
-        }
         super.onBackPressed();
     }
 
@@ -139,6 +111,4 @@ public class VocaWebView extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(menuItem);
     }
-
-
 }

@@ -1,4 +1,5 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <group
         android:id="@+id/menu_top"
@@ -7,6 +8,22 @@
         <item
             android:id="@+id/download"
             android:icon="@drawable/cloud_download_30"
+            android:title="@string/download"/>
+        <item
+            android:id="@+id/download1"
+            android:icon="@drawable/baseline_navigate_next_24"
+            android:title="@string/download"/>
+        <item
+            android:id="@+id/download2"
+            android:icon="@drawable/baseline_navigate_next_24"
+            android:title="@string/download"/>
+        <item
+            android:id="@+id/download3"
+            android:icon="@drawable/baseline_navigate_next_24"
+            android:title="@string/download"/>
+        <item
+            android:id="@+id/download4"
+            android:icon="@drawable/baseline_navigate_next_24"
             android:title="@string/download"/>
     </group>
 
@@ -44,6 +61,14 @@
             android:icon="@drawable/video_camera_front_30"
             android:title="@string/follow_youtube" />
 
+        <item
+            android:id="@+id/app_exit"
+            android:icon="@drawable/exit_app_30"
+            android:title="@string/exit_the_app" />
+
+
     </group>
+
+
 
 </menu>

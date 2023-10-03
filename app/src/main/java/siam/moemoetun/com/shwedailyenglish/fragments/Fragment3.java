@@ -71,7 +71,7 @@ public class Fragment3 extends Fragment implements MyRecyclerViewAdapter.ItemCli
 
 
         AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(getContext(), getString(R.string.interstial_2021),
+        InterstitialAd.load(getContext(), getString(R.string.shwe_lessons_preload),
                 adRequest, new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {

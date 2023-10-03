@@ -25,8 +25,6 @@ import siam.moemoetun.com.shwedailyenglish.R;
 import siam.moemoetun.com.shwedailyenglish.adapter.ExpandableListAdapter;
 import siam.moemoetun.com.shwedailyenglish.quiz.QuizMain;
 public class Fragment1 extends Fragment {
-
-
    private InterstitialAd mInterstitialAd;
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
@@ -49,7 +47,7 @@ public class Fragment1 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(requireContext(),getString(R.string.interstial_2021),
+        InterstitialAd.load(requireContext(),getString(R.string.shwe_lessons_preload),
                 adRequest, new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
@@ -78,8 +76,7 @@ public class Fragment1 extends Fragment {
         expListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
 
             @Override
-            public boolean onGroupClick(ExpandableListView parent, View v,
-                                        int groupPosition, long id) {
+            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
                 return false;
             }
         });

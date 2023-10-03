@@ -11,7 +11,7 @@
     <string name="admob_app_id">ca-app-pub-4137439985376631~4759465300</string>
     <string name="banner_2021">ca-app-pub-4137439985376631/6236198507</string>
     <string name="exit_banner">ca-app-pub-4137439985376631/7440349937</string>
-    <string name="interstial_2021">ca-app-pub-4137439985376631/7532985951</string>
+    <string name="shwe_lessons_preload">ca-app-pub-4137439985376631/7532985951</string>
     <string name="inter_goback">ca-app-pub-4137439985376631/7392286906</string>
     <string name="app_open_ads">ca-app-pub-4137439985376631/2141894404</string>
 
@@ -55,8 +55,11 @@
     <string name="option_d">Option D</string>
     <string name="next">Next</string>
     <string name="explanations">Explanations</string>
+
     <string name="charttext">Quiz Review</string>
+
     <string name="follow_youtube">Subscribe on YouTube</string>
+
     <string name="tabs_for_navigation">Tabs for navigation</string>
     <string name="play">Play</string>
     <string name="quiz_title">Quiz Title</string>
@@ -64,5 +67,6 @@
     <string name="btn_yes">YES</string>
     <string name="dismiss_dialog_button">NO</string>
     <string name="ad_attribution">Ad</string>
+    <string name="now">Get</string>
 
 </resources>

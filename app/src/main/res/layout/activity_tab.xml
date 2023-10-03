@@ -26,21 +26,10 @@
         app:tabIndicatorColor="#EA0909"
         android:contentDescription="@string/tabs_for_navigation"
         android:textSize="16sp" />
-
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
-
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        ads:adSize="BANNER"
-        android:layout_gravity="center"
-        ads:adUnitId="ca-app-pub-4137439985376631/6236198507">
-    </com.google.android.gms.ads.AdView>
 
 </LinearLayout>

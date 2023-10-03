@@ -1,6 +1,5 @@
 package siam.moemoetun.com.shwedailyenglish.webview;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 import androidx.annotation.NonNull;
@@ -14,11 +13,8 @@ import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import siam.moemoetun.com.shwedailyenglish.R;
 import siam.moemoetun.com.shwedailyenglish.utility.ToolbarUtils;
-
 public class DetailsWebView extends AppCompatActivity {
-
 public WebView webView;
-private InterstitialAd mInterstitialAd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,17 +32,6 @@ private InterstitialAd mInterstitialAd;
         mAdView.loadAd(adRequest);
         mAdView = new AdView(this);
         mAdView.setAdUnitId(getString(R.string.banner_2021));
-        InterstitialAd.load(DetailsWebView.this, getString(R.string.inter_goback),
-                adRequest, new InterstitialAdLoadCallback() {
-                    @Override
-                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                        mInterstitialAd = interstitialAd;
-                    }
-                    @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        mInterstitialAd = null;
-                    }
-                });
         webView = findViewById(R.id.webview);
         webView.getSettings().setJavaScriptEnabled(true);
         String fragmentId = getIntent().getStringExtra("FRAGMENT_ID");
@@ -86,17 +71,9 @@ private InterstitialAd mInterstitialAd;
         super.onDestroy();
     }
     private void showInterstitial(){
-        if (mInterstitialAd !=null) {
-            mInterstitialAd.show(DetailsWebView.this);
-            mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback(){
-                @Override
-                public void onAdShowedFullScreenContent() {
-                    mInterstitialAd = null;
-                }
-            });
-        }else {
+
             super.onBackPressed();
-        }
+
     }
 
     private void displayConversation(){

@@ -6,19 +6,16 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <!-- Content Layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <!-- App Bar Layout (Toolbar) -->
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
@@ -28,7 +25,6 @@
                 android:theme="@style/ThemeOverlay.AppCompat.Dark"
                 app:titleTextColor="@android:color/white" />
         </com.google.android.material.appbar.AppBarLayout>
-
         <!-- TabLayout -->
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
@@ -41,7 +37,6 @@
             app:tabSelectedTextColor="#FFD600"
             app:tabTextColor="@color/white"
             tools:ignore="SpeakableTextPresentCheck" />
-
         <!-- ViewPager -->
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
@@ -50,7 +45,6 @@
             android:layout_weight="1"
             tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
-
     <!-- NavigationView -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -58,6 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
         android:fitsSystemWindows="true"
         app:menu="@menu/nav_menu" />
 </androidx.drawerlayout.widget.DrawerLayout>

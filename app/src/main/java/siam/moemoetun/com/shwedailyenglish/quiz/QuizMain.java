@@ -15,7 +15,6 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.gms.ads.AdView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-
 import java.util.Objects;
 
 import siam.moemoetun.com.shwedailyenglish.R;
@@ -29,10 +28,13 @@ public class QuizMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab);
+        /**
+         *Ad Units should be in the type of IronSource.Ad_Unit.AdUnitName, example
+         */
+
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
-        adMobHelper = new AdMobHelper(this);
-        AdView adView = findViewById(R.id.adView);
-        adMobHelper.loadBannerAd(adView);
         String selectedCategory = getIntent().getStringExtra("selectedCategory");
         toolbar.setTitle(selectedCategory);
         setSupportActionBar(toolbar);
@@ -104,4 +106,5 @@ public class QuizMain extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(menuItem);
     }
+
 }

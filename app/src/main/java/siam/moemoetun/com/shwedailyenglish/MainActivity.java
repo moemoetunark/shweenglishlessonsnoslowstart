@@ -1,20 +1,11 @@
 package siam.moemoetun.com.shwedailyenglish;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.RatingBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -26,27 +17,19 @@ import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
-
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdLoader;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.VideoController;
-import com.google.android.gms.ads.nativead.MediaView;
-import com.google.android.gms.ads.nativead.NativeAd;
-import com.google.android.gms.ads.nativead.NativeAdView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
+
+
 import java.util.HashMap;
-import java.util.Locale;
-import java.util.Objects;
+import java.util.Hashtable;
 
 import siam.moemoetun.com.shwedailyenglish.adapter.ViewPagerAdapter;
+import siam.moemoetun.com.shwedailyenglish.download.DownloadActivity;
 import siam.moemoetun.com.shwedailyenglish.note.NoteActivity;
 import siam.moemoetun.com.shwedailyenglish.utility.NavigationHandler;
 public class MainActivity extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener {
@@ -55,17 +38,13 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
     private DrawerLayout drawer;
     NavigationView navigationView;
     FirebaseRemoteConfig mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
-    private NativeAd nativeAds;
-    private static final String ADMOB_AD_UNIT_ID = "ca-app-pub-4137439985376631/3407696032";
-    private AlertDialog alertDialog;
     private final String[] pageTitle = {"Basic Grammar", "Basic Speaking", "Story", "Vocabulary",
-            "Spoken Patterns", "Interchange", "Song Lyrics"};
+            "Spoken Patterns", "Interchange", "Song Lyrics","Dictionary"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MobileAds.initialize(MainActivity.this);
-        loadNativeAds();
         HashMap<String, Object> defaultRate = new HashMap<>();
         defaultRate.put("new_version_code", String.valueOf(getVersionCode()));
         FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder()
@@ -97,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
 
         //setting Tab layout (number of Tabs = number of ViewPager pages)
         TabLayout tabLayout = findViewById(R.id.tab_layout);
-        for (int i = 0; i <7; i++) {
+        for (int i = 0; i <8; i++) {
             tabLayout.addTab(tabLayout.newTab().setText(pageTitle[i]));
         }
 
@@ -168,6 +147,10 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
             intent.launchUrl(MainActivity.this, Uri.parse(url));
         } else if (id ==R.id.foloow_youtube){
             NavigationHandler.openYouTubeChannel(MainActivity.this);
+        }else if (id ==R.id.app_exit){
+            Intent intent = new Intent(MainActivity.this, DownloadActivity.class);
+            intent.putExtra("item_id", id);
+            startActivity(intent);
         }
 
         drawer.closeDrawer(GravityCompat.START);
@@ -176,12 +159,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
 
     @Override
     public void onBackPressed() {
-
-        if(nativeAds !=null){
-            alertDialog.show();
-        }else {
-            finish();
-        }
+        super.onBackPressed();
         assert drawer != null;
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
@@ -206,173 +184,15 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
                     startActivity(intent);
                 }).show();
     }
-
     public int getVersionCode() {
         PackageInfo packageInfo = null;
         try {
             packageInfo = getPackageManager().getPackageInfo(getCallingPackage(),0);
         } catch (PackageManager.NameNotFoundException e) {
-            Log.i("mylog", "NameNotFoundExcepton" + e.getMessage());
+            Log.i("my log", "NameNotFoundException" + e.getMessage());
         }
-        return packageInfo != null ? packageInfo.versionCode : 55;
+        return packageInfo != null ? packageInfo.versionCode : 58;
     }
-    private void populateNativeAdView(NativeAd nativeAd, NativeAdView adView) {
-        // Set the media view.
-        adView.setMediaView((MediaView) adView.findViewById(R.id.ad_media));
-        // Set other ad assets.
-        adView.setHeadlineView(adView.findViewById(R.id.ad_headline));
-        adView.setBodyView(adView.findViewById(R.id.ad_body));
-        adView.setCallToActionView(adView.findViewById(R.id.ad_call_to_action));
-        adView.setIconView(adView.findViewById(R.id.ad_app_icon));
-        adView.setPriceView(adView.findViewById(R.id.ad_price));
-        adView.setStarRatingView(adView.findViewById(R.id.ad_stars));
-        adView.setStoreView(adView.findViewById(R.id.ad_store));
-        adView.setAdvertiserView(adView.findViewById(R.id.ad_advertiser));
 
-        // The headline and mediaContent are guaranteed to be in every NativeAd.
-        ((TextView) adView.getHeadlineView()).setText(nativeAd.getHeadline());
-        adView.getMediaView().setMediaContent(nativeAd.getMediaContent());
-
-        // These assets aren't guaranteed to be in every NativeAd, so it's important to
-        // check before trying to display them.
-        if (nativeAd.getBody() == null) {
-            adView.getBodyView().setVisibility(View.INVISIBLE);
-        } else {
-            adView.getBodyView().setVisibility(View.VISIBLE);
-            ((TextView) adView.getBodyView()).setText(nativeAd.getBody());
-        }
-
-        if (nativeAd.getCallToAction() == null) {
-            adView.getCallToActionView().setVisibility(View.INVISIBLE);
-        } else {
-            adView.getCallToActionView().setVisibility(View.VISIBLE);
-            ((Button) adView.getCallToActionView()).setText(nativeAd.getCallToAction());
-        }
-
-        if (nativeAd.getIcon() == null) {
-            adView.getIconView().setVisibility(View.GONE);
-        } else {
-            ((ImageView) adView.getIconView()).setImageDrawable(
-                    nativeAd.getIcon().getDrawable());
-            adView.getIconView().setVisibility(View.VISIBLE);
-        }
-
-        if (nativeAd.getPrice() == null) {
-            adView.getPriceView().setVisibility(View.INVISIBLE);
-        } else {
-            adView.getPriceView().setVisibility(View.VISIBLE);
-            ((TextView) adView.getPriceView()).setText(nativeAd.getPrice());
-        }
-
-        if (nativeAd.getStore() == null) {
-            adView.getStoreView().setVisibility(View.INVISIBLE);
-        } else {
-            adView.getStoreView().setVisibility(View.VISIBLE);
-            ((TextView) adView.getStoreView()).setText(nativeAd.getStore());
-        }
-
-        if (nativeAd.getStarRating() == null) {
-            adView.getStarRatingView().setVisibility(View.INVISIBLE);
-        } else {
-            ((RatingBar) adView.getStarRatingView())
-                    .setRating(nativeAd.getStarRating().floatValue());
-            adView.getStarRatingView().setVisibility(View.VISIBLE);
-        }
-
-        if (nativeAd.getAdvertiser() == null) {
-            adView.getAdvertiserView().setVisibility(View.INVISIBLE);
-        } else {
-            ((TextView) adView.getAdvertiserView()).setText(nativeAd.getAdvertiser());
-            adView.getAdvertiserView().setVisibility(View.VISIBLE);
-        }
-
-        // This method tells the Google Mobile Ads SDK that you have finished populating your
-        // native ad view with this native ad.
-        adView.setNativeAd(nativeAd);
-
-        // Get the video controller for the ad. One will always be provided, even if the ad doesn't
-        // have a video asset.
-        VideoController vc = nativeAd.getMediaContent().getVideoController();
-
-        // Updates the UI to say whether or not this ad has a video asset.
-        if (nativeAd.getMediaContent() != null && nativeAd.getMediaContent().hasVideoContent()) {
-
-            // Create a new VideoLifecycleCallbacks object and pass it to the VideoController. The
-            // VideoController will call methods on this object when events occur in the video
-            // lifecycle.
-            vc.setVideoLifecycleCallbacks(new VideoController.VideoLifecycleCallbacks() {
-                @Override
-                public void onVideoEnd() {
-                    // Publishers should allow native ads to complete video playback before
-                    // refreshing or replacing them with another ad in the same UI location.
-                    //refresh.setEnabled(true);
-                    //videoStatus.setText("Video status: Video playback has ended.");
-                    super.onVideoEnd();
-                }
-            });
-        } else {
-            //videoStatus.setText("Video status: Ad does not contain a video asset.");
-            //refresh.setEnabled(true);
-        }
-    }
-    public void loadNativeAds(){
-        AdLoader.Builder builder = new AdLoader.Builder(this, ADMOB_AD_UNIT_ID);
-        builder.forNativeAd(
-                new NativeAd.OnNativeAdLoadedListener() {
-                    // OnLoadedListener implementation.
-                    @Override
-                    public void onNativeAdLoaded(@NonNull NativeAd nativeAd) {
-                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.fullScreenDialog);
-                        builder.setTitle("Do you want to exit the app?");
-                        // Inflate the custom dialog layout
-                        View dialogView = LayoutInflater.from(MainActivity.this).inflate(R.layout.custom_fullscreen_exit_dialog, null);
-                        FrameLayout adContainer = dialogView.findViewById(R.id.dialog_content);
-                        Button buttonYes = dialogView.findViewById(R.id.button_yes);
-                        Button buttonNo = dialogView.findViewById(R.id.button_no);
-                        buttonYes.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                finish();
-                            }
-                        });
-                        buttonNo.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                alertDialog.dismiss();
-                            }
-                        });
-                        // Populate the native ad view
-                        NativeAdView adView = (NativeAdView) getLayoutInflater().inflate(R.layout.ad_unified, adContainer, false);
-                        populateNativeAdView(nativeAd, adView);
-                        populateNativeAdView(nativeAd, adView);
-                        MainActivity.this.nativeAds = nativeAd;
-                        // Add the ad view to the dialog content
-                        adContainer.addView(adView);
-                        builder.setView(dialogView);
-                        alertDialog = builder.create();
-                        Objects.requireNonNull(alertDialog.getWindow()).clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-                        //Toast.makeText(MainActivity.this, "Failed to load native ad with error ", Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-
-
-
-        AdLoader adLoader = builder.withAdListener(new AdListener() {
-                    @Override
-                    public void onAdFailedToLoad(LoadAdError loadAdError) {
-                        String error = String.format(Locale.getDefault(),
-                                        "domain: %s, code: %d, message: %s",
-                                        loadAdError.getDomain(),
-                                        loadAdError.getCode(),
-                                        loadAdError.getMessage());
-                    }
-                })
-                .build();
-
-        adLoader.loadAd(new AdRequest.Builder().build());
-
-
-    }
 
 }
