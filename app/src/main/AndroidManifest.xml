@@ -20,7 +20,7 @@
         android:theme="@style/Theme.ShweEnglishLessons"
         tools:targetApi="31">
         <activity
-            android:name=".download.DownloadActivity"
+            android:name=".online.OnlineActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"

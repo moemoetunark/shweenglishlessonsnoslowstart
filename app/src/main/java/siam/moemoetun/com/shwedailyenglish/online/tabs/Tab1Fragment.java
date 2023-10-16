@@ -1,55 +1,59 @@
-package siam.moemoetun.com.shwedailyenglish.download;
-
+package siam.moemoetun.com.shwedailyenglish.online.tabs;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.MenuItem;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.browser.customtabs.CustomTabsIntent;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import siam.moemoetun.com.shwedailyenglish.MainActivity;
 import siam.moemoetun.com.shwedailyenglish.R;
-import siam.moemoetun.com.shwedailyenglish.download.adapter.ItemAdapter;
-import siam.moemoetun.com.shwedailyenglish.download.adapter.SecondAdapter;
-import siam.moemoetun.com.shwedailyenglish.download.api.ApiService;
-import siam.moemoetun.com.shwedailyenglish.download.api.RetrofitClient;
+import siam.moemoetun.com.shwedailyenglish.online.ItemModel;
+import siam.moemoetun.com.shwedailyenglish.online.adapter.ItemAdapter;
+import siam.moemoetun.com.shwedailyenglish.online.adapter.SecondAdapter;
+import siam.moemoetun.com.shwedailyenglish.online.api.ApiService;
+import siam.moemoetun.com.shwedailyenglish.online.api.RetrofitClient;
 import siam.moemoetun.com.shwedailyenglish.utility.Slide;
 
-public class DownloadActivity extends AppCompatActivity implements SecondAdapter.OnItemClickListener {
+public class Tab1Fragment extends Fragment implements SecondAdapter.OnItemClickListener {
     private RecyclerView recyclerView;
     private RecyclerView secondRecyclerView;
     private ItemAdapter adapter;
     private SecondAdapter secondAdapter;
     private List<ItemModel> itemList;
+    public Tab1Fragment() {
+        // Required empty public constructor
+    }
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_download);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-
-        recyclerView = findViewById(R.id.recyclerView);
-        secondRecyclerView = findViewById(R.id.secondRecyclerView);
-        GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
+    }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+         return inflater.inflate(R.layout.fragment_tab1, container, false);
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        recyclerView = view.findViewById(R.id.recyclerView);
+        secondRecyclerView = view.findViewById(R.id.secondRecyclerView);
+        GridLayoutManager layoutManager = new GridLayoutManager(requireContext(), 2);
         secondRecyclerView.setLayoutManager(layoutManager);
-
 
         // Set up RecyclerViews with LinearLayoutManager and auto-scroll
         setupRecyclerView(recyclerView);
-
-
         ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
         Call<List<ItemModel>> call = apiService.getData();
 
@@ -60,15 +64,14 @@ public class DownloadActivity extends AppCompatActivity implements SecondAdapter
                     List<ItemModel> allItems = response.body();
 
                     // Filter items with the desired category "A"
-                    itemList = filterItemsByCategory(allItems, "A");
+                    itemList = filterItemsByCategory(allItems);
                     adapter = new ItemAdapter(itemList);
                     recyclerView.setAdapter(adapter);
 
                     // Filter items with the desired category "B" for the second RecyclerView
-                    List<ItemModel> secondItemList = filterItemsByCategory(allItems, "A");
-                    secondAdapter = new SecondAdapter(secondItemList, DownloadActivity.this);
+                    List<ItemModel> secondItemList = filterItemsByCategory(allItems);
+                    secondAdapter = new SecondAdapter(secondItemList, Tab1Fragment.this);
                     secondRecyclerView.setAdapter(secondAdapter);
-
                 } else {
                     // Handle API error
                 }
@@ -82,26 +85,17 @@ public class DownloadActivity extends AppCompatActivity implements SecondAdapter
     }
 
     private void setupRecyclerView(RecyclerView recyclerView) {
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(requireContext());
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(layoutManager);
         Slide.startAutoScroll(recyclerView);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem menuItem) {
-        if (menuItem.getItemId() == android.R.id.home) {
-            onBackPressed();
-            return true;
-        }
-        return super.onOptionsItemSelected(menuItem);
-    }
-
-    private List<ItemModel> filterItemsByCategory(List<ItemModel> items, String desiredCategory) {
+    private List<ItemModel> filterItemsByCategory(List<ItemModel> items) {
         List<ItemModel> filteredItems = new ArrayList<>();
 
         for (ItemModel item : items) {
-            if (item.getCategory().equals(desiredCategory)) {
+            if (item.getCategory().equals("Noun")) {
                 filteredItems.add(item);
             }
         }
@@ -111,7 +105,8 @@ public class DownloadActivity extends AppCompatActivity implements SecondAdapter
 
     @Override
     public void onItemClick(String url) {
+        // Handle item click
         CustomTabsIntent intent = new CustomTabsIntent.Builder().build();
-        intent.launchUrl(this, Uri.parse(url));
+        intent.launchUrl(requireContext(), Uri.parse(url));
     }
 }

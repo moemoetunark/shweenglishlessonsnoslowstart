@@ -1,5 +1,4 @@
-package siam.moemoetun.com.shwedailyenglish.download.adapter;
-import android.net.Uri;
+package siam.moemoetun.com.shwedailyenglish.online.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,13 +6,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import siam.moemoetun.com.shwedailyenglish.R;
-import siam.moemoetun.com.shwedailyenglish.download.ItemModel;
+import siam.moemoetun.com.shwedailyenglish.online.ItemModel;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     private List<ItemModel> itemList;
@@ -47,14 +45,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                 into(holder.circularImageView);
 
         // Set click listener for Learn More button
-        holder.learnMoreButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle the click action here (e.g., open the URL in a web browser)
-                CustomTabsIntent intent = new CustomTabsIntent.Builder().build();
-                intent.launchUrl(v.getContext(), Uri.parse(item.getUrl()));
-            }
-        });
+//        holder.learnMoreButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Handle the click action here (e.g., open the URL in a web browser)
+//                CustomTabsIntent intent = new CustomTabsIntent.Builder().build();
+//                intent.launchUrl(v.getContext(), Uri.parse(item.getUrl()));
+//            }
+//        });
     }
 
     @Override

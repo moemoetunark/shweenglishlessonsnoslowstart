@@ -1,4 +1,4 @@
-package siam.moemoetun.com.shwedailyenglish.download.api;
+package siam.moemoetun.com.shwedailyenglish.online.api;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import siam.moemoetun.com.shwedailyenglish.BuildConfig;
-import siam.moemoetun.com.shwedailyenglish.download.ItemModel;
+import siam.moemoetun.com.shwedailyenglish.online.ItemModel;
 
 public interface ApiService {
     @GET("f4664be1-4ce9-4bee-a1d3-79c1cc1ff0cc")

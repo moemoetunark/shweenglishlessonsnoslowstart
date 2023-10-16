@@ -1,4 +1,4 @@
-package siam.moemoetun.com.shwedailyenglish.download;
+package siam.moemoetun.com.shwedailyenglish.online;
 public class ItemModel {
     private String title;
     private String description;

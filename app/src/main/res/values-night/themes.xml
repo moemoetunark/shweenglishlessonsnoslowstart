@@ -50,4 +50,10 @@
         <item name="android:textColorSecondary">@color/colorPrimary</item>
     </style>
 
+    <style name="AppbarOverlay" parent="Widget.Design.AppBarLayout">
+        <item name="android:background">?attr/colorPrimary</item>
+        <!-- Add other styling attributes as needed -->
+    </style>
+
+
 </resources>

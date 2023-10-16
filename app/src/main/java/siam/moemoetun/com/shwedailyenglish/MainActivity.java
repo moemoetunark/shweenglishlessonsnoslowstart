@@ -1,4 +1,6 @@
 package siam.moemoetun.com.shwedailyenglish;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -6,8 +8,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
+import android.window.OnBackInvokedDispatcher;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -17,6 +23,12 @@ import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
@@ -26,15 +38,17 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
 
 import java.util.HashMap;
-import java.util.Hashtable;
 
 import siam.moemoetun.com.shwedailyenglish.adapter.ViewPagerAdapter;
-import siam.moemoetun.com.shwedailyenglish.download.DownloadActivity;
+import siam.moemoetun.com.shwedailyenglish.online.OnlineActivity;
 import siam.moemoetun.com.shwedailyenglish.note.NoteActivity;
+import siam.moemoetun.com.shwedailyenglish.utility.CustomDialog;
 import siam.moemoetun.com.shwedailyenglish.utility.NavigationHandler;
 public class MainActivity extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener {
 
     private ViewPager viewPager;
+    private AlertDialog dialog;
+
     private DrawerLayout drawer;
     NavigationView navigationView;
     FirebaseRemoteConfig mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
@@ -45,6 +59,12 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
         HashMap<String, Object> defaultRate = new HashMap<>();
         defaultRate.put("new_version_code", String.valueOf(getVersionCode()));
         FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder()
@@ -110,7 +130,20 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
 
             }
         });
+        dialog = CustomDialog.createDialog(this);
 
+
+
+        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                dialog.show();
+                // Handle the back button press here
+                // You can perform custom logic or navigate back.
+            }
+        };
+        // Add the callback to the OnBackPressedDispatcher
+        MainActivity.this.getOnBackPressedDispatcher().addCallback(this, callback);
 
     }
 
@@ -142,31 +175,16 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
                 Toast.makeText(MainActivity.this, "No email app found.", Toast.LENGTH_SHORT).show();
             }
         } else if(id ==R.id.download){
-            String url = "https://www.grammar-owl.de/p/blog-page_7.html";
-            CustomTabsIntent intent = new CustomTabsIntent.Builder().build();
-            intent.launchUrl(MainActivity.this, Uri.parse(url));
+            Intent intent = new Intent(MainActivity.this, OnlineActivity.class);
+            startActivity(intent);
         } else if (id ==R.id.foloow_youtube){
             NavigationHandler.openYouTubeChannel(MainActivity.this);
         }else if (id ==R.id.app_exit){
-            Intent intent = new Intent(MainActivity.this, DownloadActivity.class);
-            intent.putExtra("item_id", id);
-            startActivity(intent);
+          dialog.show();
         }
-
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        assert drawer != null;
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        }
-
-    }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();

@@ -22,9 +22,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
             return new Fragment2();
         }else if(position==2){
             return new Fragment3();
-        }
-
-        else if (position ==3) {
+        } else if (position ==3) {
             return new Fragment4();
         }else if (position==4){
             return new Fragment5();

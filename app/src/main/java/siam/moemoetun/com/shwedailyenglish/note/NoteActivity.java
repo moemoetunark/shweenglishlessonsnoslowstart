@@ -69,11 +69,10 @@ public class NoteActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         if (menuItem.getItemId() == android.R.id.home) {
-            onBackPressed();
+            super.onBackPressed();
             return true;
         }
         return super.onOptionsItemSelected(menuItem);
     }
-
 
 }

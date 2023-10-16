@@ -1,4 +1,4 @@
-package siam.moemoetun.com.shwedailyenglish.download.adapter;
+package siam.moemoetun.com.shwedailyenglish.online.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import siam.moemoetun.com.shwedailyenglish.R;
-import siam.moemoetun.com.shwedailyenglish.download.ItemModel;
+import siam.moemoetun.com.shwedailyenglish.online.ItemModel;
 
 public class SecondAdapter extends RecyclerView.Adapter<SecondAdapter.ViewHolder> {
     private List<ItemModel> SeconditemList;
@@ -48,7 +48,7 @@ public class SecondAdapter extends RecyclerView.Adapter<SecondAdapter.ViewHolder
                 centerCrop().
                 into(holder.circularImageView);
 
-        // Set click listener for Learn More button
+         //Set click listener for Learn More button
         holder.learnMoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
