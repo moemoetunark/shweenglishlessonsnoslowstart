@@ -1,7 +1,10 @@
 package siam.moemoetun.com.shwedailyenglish.webview;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.webkit.WebView;
+
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -9,24 +12,46 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+
+import siam.moemoetun.com.shwedailyenglish.MainActivity;
 import siam.moemoetun.com.shwedailyenglish.R;
 import siam.moemoetun.com.shwedailyenglish.utility.ToolbarUtils;
 public class DetailsWebView extends AppCompatActivity {
 public WebView webView;
+private InterstitialAd mInterstitialAd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_web_view);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        MobileAds.initialize(this);
         ToolbarUtils.setupToolbarWithCustomFont(
                 this,
                 toolbar,
                 getIntent().getStringExtra("clickedItemName"),
                 "fonts/tharlon.ttf" // Replace with your font path
         );
+
+        AdRequest InterstitialAdRequest = new AdRequest.Builder().build();
+        InterstitialAd.load(DetailsWebView.this,getString(R.string.shwe_lessons_preload),
+                InterstitialAdRequest, new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        // The mInterstitialAd reference will be null until
+                        // an ad is loaded.
+                        mInterstitialAd = interstitialAd;
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        mInterstitialAd = null;
+                    }
+                });
+
+
         AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
@@ -44,20 +69,23 @@ public WebView webView;
         }else if(fragmentId.equals("Fragment6")){
             displayInterchange();
         }
+    }
 
+    @Override
+    public void onBackPressed() {
+        if(mInterstitialAd!=null){
+            mInterstitialAd.show(DetailsWebView.this);
+        }else {
+            super.onBackPressed();
+        }
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         if (menuItem.getItemId() == android.R.id.home) {
-            showInterstitial();
-            return true;
+           onBackPressed();
         }
         return super.onOptionsItemSelected(menuItem);
-    }
-    @Override
-    public void onBackPressed() {
-        showInterstitial();
     }
 
     /* access modifiers changed from: protected */
@@ -69,11 +97,6 @@ public WebView webView;
             e.printStackTrace();
         }
         super.onDestroy();
-    }
-    private void showInterstitial(){
-
-            super.onBackPressed();
-
     }
 
     private void displayConversation(){

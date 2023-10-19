@@ -1,11 +1,14 @@
 package siam.moemoetun.com.shwedailyenglish.online.adapter;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 import java.util.List;
@@ -40,19 +43,19 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
         // Load image using Picasso or any other image-loading library
         Picasso.get().load(item.getImage()).
-                resize(100, 100).
+                resize(80, 80).
                 centerCrop().
                 into(holder.circularImageView);
 
         // Set click listener for Learn More button
-//        holder.learnMoreButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Handle the click action here (e.g., open the URL in a web browser)
-//                CustomTabsIntent intent = new CustomTabsIntent.Builder().build();
-//                intent.launchUrl(v.getContext(), Uri.parse(item.getUrl()));
-//            }
-//        });
+        holder.learnMoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle the click action here (e.g., open the URL in a web browser)
+                CustomTabsIntent intent = new CustomTabsIntent.Builder().build();
+                intent.launchUrl(v.getContext(), Uri.parse(item.getUrl()));
+            }
+        });
     }
 
     @Override
@@ -64,7 +67,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         ImageView circularImageView;
         TextView titleTextView;
         TextView descriptionTextView;
-        TextView learnMoreButton;
+        Button learnMoreButton;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

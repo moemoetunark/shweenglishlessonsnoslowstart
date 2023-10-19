@@ -7,6 +7,9 @@ import android.os.CountDownTimer;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
+
+import com.unity3d.ads.metadata.MetaData;
+
 /** Splash Activity that inflates splash activity xml. */
 public class SplashActivity extends AppCompatActivity {
     private static final String LOG_TAG = "SplashActivity";
@@ -59,6 +62,12 @@ public class SplashActivity extends AppCompatActivity {
                     }
                 };
         countDownTimer.start();
+        MetaData gdprMetaData = new MetaData(this);
+        gdprMetaData.set("gdpr.consent", true);
+        gdprMetaData.commit();
+        MetaData ccpaMetaData = new MetaData(this);
+        ccpaMetaData.set("privacy.consent", true);
+        ccpaMetaData.commit();
     }
 
     /** Start the MainActivity. */

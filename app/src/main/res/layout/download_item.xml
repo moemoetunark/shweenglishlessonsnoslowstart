@@ -16,23 +16,23 @@
 
         <!-- Image -->
         <ImageView android:id="@+id/circularImageView"
-            android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:src="@drawable/pen_50"
-        android:scaleType="centerCrop"
-        android:adjustViewBounds="true"
-            android:contentDescription="place holder image" />
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pen_50"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/place_holder_image" />
 
         <!-- Title -->
         <TextView
             android:id="@+id/titleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="If you want the title and description"
+            android:text="@string/if_you_want_the_title_and_description"
             android:textSize="14sp"
             android:layout_marginStart="3dp"
-            android:maxLines="2"
+            android:maxLines="1"
             android:textStyle="bold"
             android:layout_toEndOf="@id/circularImageView" />
 
@@ -41,27 +41,25 @@
             android:id="@+id/descriptionTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="rewrite this code. Put tton, it goes to the corresponding url"
+            android:text="@string/online_text_desc"
             android:textSize="13sp"
             android:layout_marginStart="3dp"
-            android:maxLines="3"
+            android:maxLines="2"
             android:layout_toEndOf="@id/circularImageView"
             android:layout_below="@id/titleTextView"
             android:layout_marginTop="3dp"/>
 
         <!-- Learn More Button -->
-        <TextView
+        <Button
             android:id="@+id/learnMoreButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/now"
-            android:background="@drawable/text_item_background"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:padding="5dp"
-            android:textColor="@color/white"
+            android:text="@string/download_now"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
             android:layout_below="@id/descriptionTextView"
             android:layout_centerHorizontal="true"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_marginTop="0dp" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

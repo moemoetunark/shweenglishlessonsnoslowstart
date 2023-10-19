@@ -14,7 +14,7 @@ import siam.moemoetun.com.shwedailyenglish.R;
 import siam.moemoetun.com.shwedailyenglish.adapter.ViewPagerAdapter;
 import siam.moemoetun.com.shwedailyenglish.online.adapter.TabPagerAdapter;
 public class OnlineActivity extends AppCompatActivity {
-    private final String[] pageTitle = {"Basic Grammar", "Basic Speaking", "Story"};
+    private final String[] pageTitle = {"အင်္ဂလိပ်စာအုပ်", "ကွန်ပျူတာ"};
     private ViewPager viewPager;
 
     @Override
@@ -27,7 +27,7 @@ public class OnlineActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TabLayout tabLayout = findViewById(R.id.tab_layout);
-        for (int i = 0; i <3; i++) {
+        for (int i = 0; i <2; i++) {
             tabLayout.addTab(tabLayout.newTab().setText(pageTitle[i]));
         }
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);

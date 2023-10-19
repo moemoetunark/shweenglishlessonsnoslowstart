@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
     NavigationView navigationView;
     FirebaseRemoteConfig mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
     private final String[] pageTitle = {"Basic Grammar", "Basic Speaking", "Story", "Vocabulary",
-            "Spoken Patterns", "Interchange", "Song Lyrics","Dictionary"};
+            "Spoken Patterns", "Interchange", "Song Lyrics"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
 
         //setting Tab layout (number of Tabs = number of ViewPager pages)
         TabLayout tabLayout = findViewById(R.id.tab_layout);
-        for (int i = 0; i <8; i++) {
+        for (int i = 0; i <7; i++) {
             tabLayout.addTab(tabLayout.newTab().setText(pageTitle[i]));
         }
 

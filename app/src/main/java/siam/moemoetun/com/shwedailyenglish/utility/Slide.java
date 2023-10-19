@@ -17,9 +17,9 @@ public class Slide {
 
             @Override
             public void run() {
-                LinearLayoutManager layoutManager = (LinearLayoutManager) Objects.requireNonNull(recyclerView.getLayoutManager());
+                LinearLayoutManager layoutManager = (LinearLayoutManager) (recyclerView.getLayoutManager());
                 int currentPosition = layoutManager.findFirstVisibleItemPosition();
-                int itemCount = Objects.requireNonNull(recyclerView.getAdapter()).getItemCount();
+                int itemCount = (recyclerView.getAdapter()).getItemCount();
                 int nextPosition;
 
                 if (forward) {

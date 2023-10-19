@@ -144,7 +144,6 @@ public class QuizPlayFragment extends Fragment {
         bePrepositionExercise.add("Be + Preposition လေ့ကျင့်ခန်း");
         bePrepositionExercise.add("Be + Preposition - Short Forms");
         categoryMap.put("Be + preposition", bePrepositionExercise);
-
         ArrayList<String> thereBeExercise = new ArrayList<>();
         thereBeExercise.add("There + am/is/are လေ့ကျင့်ခန်း");
         thereBeExercise.add("There Was/Were");

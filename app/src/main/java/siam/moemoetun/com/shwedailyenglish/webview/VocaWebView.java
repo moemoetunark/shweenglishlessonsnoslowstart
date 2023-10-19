@@ -29,7 +29,6 @@ import siam.moemoetun.com.shwedailyenglish.R;
 import siam.moemoetun.com.shwedailyenglish.utility.ToolbarUtils;
 
 public class VocaWebView extends AppCompatActivity {
-
     TextView textView;
     Typeface typeface;
     public InputStream input;
