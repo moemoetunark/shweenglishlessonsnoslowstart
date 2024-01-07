@@ -9,11 +9,12 @@
     <string name="download">ဒေါင်းလုပ်ယူရန်များ</string>
     <!--These are all test app ID and AdUnit IDS -->
     <string name="admob_app_id">ca-app-pub-4137439985376631~4759465300</string>
-    <string name="banner_2021">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="exit_banner">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="shwe_lessons_preload">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="inter_goback">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="app_open_ads">ca-app-pub-3940256099942544/3419835294</string>
+    <string name="banner_2021">ca-app-pub-4137439985376631/6236198507</string>
+    <string name="exit_banner">ca-app-pub-4137439985376631/7200829056</string>
+    <string name="quiz_complete">ca-app-pub-4137439985376631/2373510414</string>
+    <string name="shwe_lessons_preload">ca-app-pub-4137439985376631/7532985951</string>
+    <string name="inter_goback">ca-app-pub-4137439985376631/7392286906</string>
+    <string name="app_open_ads">ca-app-pub-4137439985376631/2141894404</string>
 
     <string name="splah_text">Learn English for free!</string>
     <string name="splash_description">Learn English on your finger tip!</string>
@@ -73,5 +74,7 @@
     <string name="place_holder_image">place holder image</string>
     <string name="if_you_want_the_title_and_description">If you want the title and description</string>
     <string name="online_text_desc">rewrite this code. Put tton, it goes to the corresponding url</string>
+    <string name="more_menu">More</string>
+    <string name="ads_consent">Ads Consent</string>
 
 </resources>

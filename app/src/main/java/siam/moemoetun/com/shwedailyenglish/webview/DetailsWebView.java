@@ -1,33 +1,87 @@
 package siam.moemoetun.com.shwedailyenglish.webview;
-import android.app.Activity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.Display;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.widget.FrameLayout;
 
-import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
-import siam.moemoetun.com.shwedailyenglish.MainActivity;
+import java.util.concurrent.atomic.AtomicBoolean;
+
 import siam.moemoetun.com.shwedailyenglish.R;
+import siam.moemoetun.com.shwedailyenglish.utility.GoogleMobileAdsConsentManager;
 import siam.moemoetun.com.shwedailyenglish.utility.ToolbarUtils;
 public class DetailsWebView extends AppCompatActivity {
 public WebView webView;
-private InterstitialAd mInterstitialAd;
+    private static final String TAG = "DetailsWebView";
+    private final AtomicBoolean isMobileAdsInitializeCalled = new AtomicBoolean(false);
+    private GoogleMobileAdsConsentManager googleMobileAdsConsentManager;
+    private AdView adView;
+    private FrameLayout adContainerView;
+    private AtomicBoolean initialLayoutComplete = new AtomicBoolean(false);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        MobileAds.initialize(this);
+        adContainerView = findViewById(R.id.ad_view_container);
+        // Log the Mobile Ads SDK version.
+        Log.d(TAG, "Google Mobile Ads SDK Version: " + MobileAds.getVersion());
+        googleMobileAdsConsentManager =
+                GoogleMobileAdsConsentManager.getInstance(getApplicationContext());
+        googleMobileAdsConsentManager.gatherConsent(
+                this,
+                consentError -> {
+                    if (consentError != null) {
+                        // Consent not obtained in current session.
+                        Log.w(
+                                TAG,
+                                String.format("%s: %s", consentError.getErrorCode(), consentError.getMessage()));
+                    }
+
+                    if (googleMobileAdsConsentManager.canRequestAds()) {
+                        initializeMobileAdsSdk();
+                    }
+
+                    if (googleMobileAdsConsentManager.isPrivacyOptionsRequired()) {
+                        // Regenerate the options menu to include a privacy setting.
+                        invalidateOptionsMenu();
+                    }
+                });
+
+        // This sample attempts to load ads using consent obtained in the previous session.
+        if (googleMobileAdsConsentManager.canRequestAds()) {
+            initializeMobileAdsSdk();
+        }
+
+
+
+        adContainerView
+                .getViewTreeObserver()
+                .addOnGlobalLayoutListener(
+                        () -> {
+                            if (!initialLayoutComplete.getAndSet(true)
+                                    && googleMobileAdsConsentManager.canRequestAds()) {
+                                loadBanner();
+                            }
+                        });
+
+
+        Log.d(TAG, "Google Mobile Ads SDK Version: " + MobileAds.getVersion());
         ToolbarUtils.setupToolbarWithCustomFont(
                 this,
                 toolbar,
@@ -36,27 +90,6 @@ private InterstitialAd mInterstitialAd;
         );
 
         AdRequest InterstitialAdRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(DetailsWebView.this,getString(R.string.shwe_lessons_preload),
-                InterstitialAdRequest, new InterstitialAdLoadCallback() {
-                    @Override
-                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                        // The mInterstitialAd reference will be null until
-                        // an ad is loaded.
-                        mInterstitialAd = interstitialAd;
-                    }
-
-                    @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        mInterstitialAd = null;
-                    }
-                });
-
-
-        AdView mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-        mAdView = new AdView(this);
-        mAdView.setAdUnitId(getString(R.string.banner_2021));
         webView = findViewById(R.id.webview);
         webView.getSettings().setJavaScriptEnabled(true);
         String fragmentId = getIntent().getStringExtra("FRAGMENT_ID");
@@ -71,13 +104,41 @@ private InterstitialAd mInterstitialAd;
         }
     }
 
+    private void initializeMobileAdsSdk() {
+        if (isMobileAdsInitializeCalled.getAndSet(true)) {
+            return;
+        }
+        // Initialize the Mobile Ads SDK.
+        MobileAds.initialize(
+                this,
+                new OnInitializationCompleteListener() {
+                    @Override
+                    public void onInitializationComplete(InitializationStatus initializationStatus) {}
+                });
+
+        // Load an ad.
+        if (initialLayoutComplete.get()) {
+            loadBanner();
+        }
+    }
+    private void loadBanner() {
+        // Create a new ad view.
+        adView = new AdView(this);
+        adView.setAdUnitId(getString(R.string.banner_2021));
+        adView.setAdSize(getAdSize());
+        Bundle extras = new Bundle();
+        extras.putString("collapsible", "bottom");
+        // Replace ad container with new ad view.
+        adContainerView.removeAllViews();
+        adContainerView.addView(adView);
+        // Start loading the ad in the background.
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+    }
+
     @Override
     public void onBackPressed() {
-        if(mInterstitialAd!=null){
-            mInterstitialAd.show(DetailsWebView.this);
-        }else {
             super.onBackPressed();
-        }
     }
 
     @Override
@@ -887,5 +948,24 @@ private InterstitialAd mInterstitialAd;
             webView.loadUrl("file:///android_asset/easy_stories/George Washington.html");
         }
 
+    }
+
+    private AdSize getAdSize() {
+        // Determine the screen width (less decorations) to use for the ad width.
+        Display display = getWindowManager().getDefaultDisplay();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        display.getMetrics(outMetrics);
+
+        float density = outMetrics.density;
+
+        float adWidthPixels = adContainerView.getWidth();
+
+        // If the ad hasn't been laid out, default to the full screen width.
+        if (adWidthPixels == 0) {
+            adWidthPixels = outMetrics.widthPixels;
+        }
+
+        int adWidth = (int) (adWidthPixels / density);
+        return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth);
     }
 }

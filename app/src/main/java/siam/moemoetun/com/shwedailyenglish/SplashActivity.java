@@ -1,5 +1,6 @@
 package siam.moemoetun.com.shwedailyenglish;
 
+
 import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,13 +8,23 @@ import android.os.CountDownTimer;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
+import com.google.android.gms.ads.MobileAds;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
 
-import com.unity3d.ads.metadata.MetaData;
+import siam.moemoetun.com.shwedailyenglish.utility.GoogleMobileAdsConsentManager;
 
 /** Splash Activity that inflates splash activity xml. */
 public class SplashActivity extends AppCompatActivity {
     private static final String LOG_TAG = "SplashActivity";
-    private static final long COUNTER_TIME = 5;
+    private final AtomicBoolean isMobileAdsInitializeCalled = new AtomicBoolean(false);
+    private GoogleMobileAdsConsentManager googleMobileAdsConsentManager;
+
+    /**
+     * Number of milliseconds to count down before showing the app open ad. This simulates the time
+     * needed to load the app.
+     */
+    private static final long COUNTER_TIME_MILLISECONDS = 5000;
 
     private long secondsRemaining;
 
@@ -21,16 +32,51 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        createTimer();
+
+        // Create a timer so the SplashActivity will be displayed for a fixed amount of time.
+        createTimer(COUNTER_TIME_MILLISECONDS);
+
+        googleMobileAdsConsentManager =
+                GoogleMobileAdsConsentManager.getInstance(getApplicationContext());
+        googleMobileAdsConsentManager.gatherConsent(
+                this,
+                consentError -> {
+                    if (consentError != null) {
+                        // Consent not obtained in current session.
+                        Log.w(
+                                LOG_TAG,
+                                String.format(
+                                        "%s: %s", consentError.getErrorCode(), consentError.getMessage()));
+                    }
+
+                    if (googleMobileAdsConsentManager.canRequestAds()) {
+                        initializeMobileAdsSdk();
+                    }
+
+                    if (secondsRemaining <= 0) {
+                        startMainActivity();
+                    }
+                });
+
+        // This sample attempts to load ads using consent obtained in the previous session.
+        if (googleMobileAdsConsentManager.canRequestAds()) {
+            initializeMobileAdsSdk();
+        }
     }
-    private void createTimer() {
+
+    /**
+     * Create the countdown timer, which counts down to zero and show the app open ad.
+     *
+     * @param time the number of milliseconds that the timer counts down from
+     */
+    private void createTimer(long time) {
         final TextView counterTextView = findViewById(R.id.timer);
 
         CountDownTimer countDownTimer =
-                new CountDownTimer(SplashActivity.COUNTER_TIME * 1000, 1000) {
+                new CountDownTimer(time, 1000) {
                     @Override
                     public void onTick(long millisUntilFinished) {
-                        secondsRemaining = ((millisUntilFinished / 1000) + 1);
+                        secondsRemaining = TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) + 1;
                         counterTextView.setText("App is done loading in: " + secondsRemaining);
                     }
 
@@ -40,34 +86,36 @@ public class SplashActivity extends AppCompatActivity {
                         counterTextView.setText("Done.");
 
                         Application application = getApplication();
-
-                        // If the application is not an instance of MyApplication, log an error message and
-                        // start the MainActivity without showing the app open ad.
-                        if (!(application instanceof MyApplication)) {
-                            Log.e(LOG_TAG, "Failed to cast application to MyApplication.");
-                            startMainActivity();
-                            return;
-                        }
-
-                        // Show the app open ad.
                         ((MyApplication) application)
                                 .showAdIfAvailable(
                                         SplashActivity.this,
                                         new MyApplication.OnShowAdCompleteListener() {
                                             @Override
                                             public void onShowAdComplete() {
-                                                startMainActivity();
+                                                // Check if the consent form is currently on screen before moving to the
+                                                // main
+                                                // activity.
+                                                if (googleMobileAdsConsentManager.canRequestAds()) {
+                                                    startMainActivity();
+                                                }
                                             }
                                         });
                     }
                 };
         countDownTimer.start();
-        MetaData gdprMetaData = new MetaData(this);
-        gdprMetaData.set("gdpr.consent", true);
-        gdprMetaData.commit();
-        MetaData ccpaMetaData = new MetaData(this);
-        ccpaMetaData.set("privacy.consent", true);
-        ccpaMetaData.commit();
+    }
+
+    private void initializeMobileAdsSdk() {
+        if (isMobileAdsInitializeCalled.getAndSet(true)) {
+            return;
+        }
+
+        // Initialize the Mobile Ads SDK.
+        MobileAds.initialize(this);
+
+        // Load an ad.
+        Application application = getApplication();
+        ((MyApplication) application).loadAd(this);
     }
 
     /** Start the MainActivity. */

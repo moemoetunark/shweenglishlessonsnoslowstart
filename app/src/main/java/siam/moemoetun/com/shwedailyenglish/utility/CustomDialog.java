@@ -24,13 +24,9 @@ public class CustomDialog {
         AdView adView = dialogView.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
-
         customPositiveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle the custom positive button click
-                // Add your logic here
-                alertDialog.dismiss(); // Close the dialog if needed
                 System.exit(0);
             }
         });

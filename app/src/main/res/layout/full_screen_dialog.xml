@@ -24,7 +24,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
         ads:adSize="MEDIUM_RECTANGLE"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        ads:adUnitId="ca-app-pub-4137439985376631/7200829056">
     </com.google.android.gms.ads.AdView>
 
     <LinearLayout

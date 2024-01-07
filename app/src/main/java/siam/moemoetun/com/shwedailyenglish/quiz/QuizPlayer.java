@@ -311,7 +311,7 @@ public class QuizPlayer extends AppCompatActivity {
 
     private void loadInterstitialAds(){
         AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(this,"ca-app-pub-4137439985376631/2373510414", adRequest,
+        InterstitialAd.load(this, getString(R.string.quiz_complete), adRequest,
                 new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
@@ -339,7 +339,7 @@ public class QuizPlayer extends AppCompatActivity {
                     }
                 });
     }
-private void showInterstitialAds(){
+    private void showInterstitialAds(){
     if (mInterstitialAd != null) {
         mInterstitialAd.show(QuizPlayer.this);
     }

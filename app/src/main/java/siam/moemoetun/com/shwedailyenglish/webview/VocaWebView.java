@@ -65,6 +65,7 @@ public class VocaWebView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.voca_textview);
         AdView mAdView = findViewById(R.id.adView);
+
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         mAdView = new AdView(this);

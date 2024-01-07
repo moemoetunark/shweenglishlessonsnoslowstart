@@ -22,13 +22,11 @@ public class AdMobHelper {
     private InterstitialAd interstitialAd;
     private final Context context;
     private String adUnitId;
-
     // Default constructor
     public AdMobHelper(Context context) {
         this.context = context;
         MobileAds.initialize(context);
     }
-
     // Parameterized constructor
     public AdMobHelper(Context context, String adUnitId) {
         this.context = context;

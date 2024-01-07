@@ -1,19 +1,15 @@
 package siam.moemoetun.com.shwedailyenglish;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.PopupMenu;
 import android.widget.Toast;
-import android.window.OnBackInvokedDispatcher;
-
-import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -23,47 +19,33 @@ import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
-
-
 import java.util.HashMap;
-
 import siam.moemoetun.com.shwedailyenglish.adapter.ViewPagerAdapter;
-import siam.moemoetun.com.shwedailyenglish.online.OnlineActivity;
 import siam.moemoetun.com.shwedailyenglish.note.NoteActivity;
 import siam.moemoetun.com.shwedailyenglish.utility.CustomDialog;
+import siam.moemoetun.com.shwedailyenglish.utility.GoogleMobileAdsConsentManager;
 import siam.moemoetun.com.shwedailyenglish.utility.NavigationHandler;
 public class MainActivity extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener {
 
     private ViewPager viewPager;
     private AlertDialog dialog;
-
     private DrawerLayout drawer;
     NavigationView navigationView;
     FirebaseRemoteConfig mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
+    GoogleMobileAdsConsentManager googleMobileAdsConsentManager;
     private final String[] pageTitle = {"Basic Grammar", "Basic Speaking", "Story", "Vocabulary",
             "Spoken Patterns", "Interchange", "Song Lyrics"};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
+        googleMobileAdsConsentManager = GoogleMobileAdsConsentManager.getInstance(getApplicationContext());
 
         HashMap<String, Object> defaultRate = new HashMap<>();
         defaultRate.put("new_version_code", String.valueOf(getVersionCode()));
@@ -132,19 +114,6 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         });
         dialog = CustomDialog.createDialog(this);
 
-
-
-        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
-            @Override
-            public void handleOnBackPressed() {
-                dialog.show();
-                // Handle the back button press here
-                // You can perform custom logic or navigate back.
-            }
-        };
-        // Add the callback to the OnBackPressedDispatcher
-        MainActivity.this.getOnBackPressedDispatcher().addCallback(this, callback);
-
     }
 
     @Override
@@ -175,8 +144,9 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
                 Toast.makeText(MainActivity.this, "No email app found.", Toast.LENGTH_SHORT).show();
             }
         } else if(id ==R.id.download){
-            Intent intent = new Intent(MainActivity.this, OnlineActivity.class);
-            startActivity(intent);
+            String url = "https://englishlearning4mm.blogspot.com/2023/03/blog-post.html";
+            CustomTabsIntent intent = new CustomTabsIntent.Builder().build();
+            intent.launchUrl(MainActivity.this, Uri.parse(url));
         } else if (id ==R.id.foloow_youtube){
             NavigationHandler.openYouTubeChannel(MainActivity.this);
         }else if (id ==R.id.app_exit){
@@ -188,6 +158,38 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.action_menu, menu);
+        MenuItem moreMenu = menu.findItem(R.id.action_more);
+        moreMenu.setVisible(googleMobileAdsConsentManager.isPrivacyOptionsRequired());
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        View menuItemView = findViewById(item.getItemId());
+        PopupMenu popup = new PopupMenu(this, menuItemView);
+        popup.getMenuInflater().inflate(R.menu.popup_menu, popup.getMenu());
+        popup.show();
+        popup.setOnMenuItemClickListener(
+                popupMenuItem -> {
+                    if (popupMenuItem.getItemId() == R.id.privacy_settings) {
+                        // Handle changes to user consent.
+                        googleMobileAdsConsentManager.showPrivacyOptionsForm(
+                                this,
+                                formError -> {
+                                    if (formError != null) {
+                                        Toast.makeText(this, formError.getMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                        return true;
+                    }
+                    return false;
+                });
+        return super.onOptionsItemSelected(item);
     }
 
 
@@ -209,7 +211,13 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         } catch (PackageManager.NameNotFoundException e) {
             Log.i("my log", "NameNotFoundException" + e.getMessage());
         }
-        return packageInfo != null ? packageInfo.versionCode : 58;
+        return packageInfo != null ? packageInfo.versionCode : 60;
+    }
+
+    @Override
+    @SuppressWarnings("MissingSuperCall")
+    public void onBackPressed() {
+        dialog.show();
     }
 
 

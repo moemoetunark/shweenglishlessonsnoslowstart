@@ -18,7 +18,6 @@ public class NavigationHandler {
         } else {
             intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/channel/" + channelUrl));
         }
-
         context.startActivity(intent);
     }
 

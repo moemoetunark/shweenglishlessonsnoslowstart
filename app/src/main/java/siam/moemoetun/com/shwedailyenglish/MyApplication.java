@@ -1,10 +1,7 @@
 package siam.moemoetun.com.shwedailyenglish;
-
 import android.app.Activity;
 import android.app.Application;
 import android.app.Application.ActivityLifecycleCallbacks;
-import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.ProcessLifecycleOwner;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,18 +9,17 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.DefaultLifecycleObserver;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.ProcessLifecycleOwner;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.appopen.AppOpenAd;
 import com.google.android.gms.ads.appopen.AppOpenAd.AppOpenAdLoadCallback;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.firebase.FirebaseApp;
-
 import java.util.Date;
+
+import siam.moemoetun.com.shwedailyenglish.utility.GoogleMobileAdsConsentManager;
 
 /** Application class that initializes, loads and show ads when activities change states. */
 public class MyApplication extends Application
@@ -37,19 +33,6 @@ public class MyApplication extends Application
     public void onCreate() {
         super.onCreate();
         this.registerActivityLifecycleCallbacks(this);
-
-        // Log the Mobile Ads SDK version.
-        Log.d(TAG, "Google Mobile Ads SDK Version: " + MobileAds.getVersion());
-
-        MobileAds.initialize(
-                this,
-                new OnInitializationCompleteListener() {
-                    @Override
-                    public void onInitializationComplete(
-                            @NonNull InitializationStatus initializationStatus) {}
-                });
-        FirebaseApp.initializeApp(this);
-
 
         ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
         appOpenAdManager = new AppOpenAdManager();
@@ -96,14 +79,24 @@ public class MyApplication extends Application
     public void onActivityDestroyed(@NonNull Activity activity) {}
 
     /**
+     * Load an app open ad.
+     *
+     * @param activity the activity that shows the app open ad
+     */
+    public void loadAd(@NonNull Activity activity) {
+        // We wrap the loadAd to enforce that other classes only interact with MyApplication
+        // class.
+        appOpenAdManager.loadAd(activity);
+    }
+
+    /**
      * Shows an app open ad.
      *
      * @param activity the activity that shows the app open ad
      * @param onShowAdCompleteListener the listener to be notified when an app open ad is complete
      */
     public void showAdIfAvailable(
-            @NonNull Activity activity,
-            @NonNull OnShowAdCompleteListener onShowAdCompleteListener) {
+            @NonNull Activity activity, @NonNull OnShowAdCompleteListener onShowAdCompleteListener) {
         // We wrap the showAdIfAvailable to enforce that other classes only interact with MyApplication
         // class.
         appOpenAdManager.showAdIfAvailable(activity, onShowAdCompleteListener);
@@ -123,6 +116,8 @@ public class MyApplication extends Application
         private static final String LOG_TAG = "AppOpenAdManager";
         private static final String AD_UNIT_ID = "ca-app-pub-4137439985376631/2141894404";
 
+        private final GoogleMobileAdsConsentManager googleMobileAdsConsentManager =
+                GoogleMobileAdsConsentManager.getInstance(getApplicationContext());
         private AppOpenAd appOpenAd = null;
         private boolean isLoadingAd = false;
         private boolean isShowingAd = false;
@@ -172,7 +167,7 @@ public class MyApplication extends Application
                          * @param loadAdError the error.
                          */
                         @Override
-                        public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        public void onAdFailedToLoad(LoadAdError loadAdError) {
                             isLoadingAd = false;
                             Log.d(LOG_TAG, "onAdFailedToLoad: " + loadAdError.getMessage());
                             //Toast.makeText(context, "onAdFailedToLoad", Toast.LENGTH_SHORT).show();
@@ -189,9 +184,17 @@ public class MyApplication extends Application
 
         /** Check if ad exists and can be shown. */
         private boolean isAdAvailable() {
+            // Ad references in the app open beta will time out after four hours, but this time limit
+            // may change in future beta versions. For details, see:
+            // https://support.google.com/admob/answer/9341964?hl=en
             return appOpenAd != null && wasLoadTimeLessThanNHoursAgo(4);
         }
 
+        /**
+         * Show the ad if one isn't already showing.
+         *
+         * @param activity the activity that shows the app open ad
+         */
         private void showAdIfAvailable(@NonNull final Activity activity) {
             showAdIfAvailable(
                     activity,
@@ -202,6 +205,13 @@ public class MyApplication extends Application
                         }
                     });
         }
+
+        /**
+         * Show the ad if one isn't already showing.
+         *
+         * @param activity the activity that shows the app open ad
+         * @param onShowAdCompleteListener the listener to be notified when an app open ad is complete
+         */
         private void showAdIfAvailable(
                 @NonNull final Activity activity,
                 @NonNull OnShowAdCompleteListener onShowAdCompleteListener) {
@@ -215,7 +225,9 @@ public class MyApplication extends Application
             if (!isAdAvailable()) {
                 Log.d(LOG_TAG, "The app open ad is not ready yet.");
                 onShowAdCompleteListener.onShowAdComplete();
-                loadAd(activity);
+                if (googleMobileAdsConsentManager.canRequestAds()) {
+                    loadAd(currentActivity);
+                }
                 return;
             }
 
@@ -234,17 +246,24 @@ public class MyApplication extends Application
                             //Toast.makeText(activity, "onAdDismissedFullScreenContent", Toast.LENGTH_SHORT).show();
 
                             onShowAdCompleteListener.onShowAdComplete();
-                            loadAd(activity);
+                            if (googleMobileAdsConsentManager.canRequestAds()) {
+                                loadAd(activity);
+                            }
                         }
+
                         /** Called when fullscreen content failed to show. */
                         @Override
-                        public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {
+                        public void onAdFailedToShowFullScreenContent(AdError adError) {
                             appOpenAd = null;
                             isShowingAd = false;
+
                             Log.d(LOG_TAG, "onAdFailedToShowFullScreenContent: " + adError.getMessage());
                             //Toast.makeText(activity, "onAdFailedToShowFullScreenContent", Toast.LENGTH_SHORT).show();
+
                             onShowAdCompleteListener.onShowAdComplete();
-                            loadAd(activity);
+                            if (googleMobileAdsConsentManager.canRequestAds()) {
+                                loadAd(activity);
+                            }
                         }
 
                         /** Called when fullscreen content is shown. */
