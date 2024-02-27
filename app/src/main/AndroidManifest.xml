@@ -20,9 +20,6 @@
         android:theme="@style/Theme.ShweEnglishLessons"
         tools:targetApi="31">
         <activity
-            android:name=".online.OnlineActivity"
-            android:exported="false" />
-        <activity
             android:name=".SplashActivity"
             android:exported="true"
             android:noHistory="true"
@@ -48,6 +45,9 @@
             android:name=".webview.DetailsWebView"
             android:exported="false" />
         <activity
+            android:name=".content.WebViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".webview.SongLyrics"
             android:exported="false" />
         <activity
@@ -63,7 +63,6 @@
         <activity
             android:name=".quiz.QuizReviewActivity"
             android:exported="false" />
-
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/admob_app_id" />
@@ -76,7 +75,6 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
     </application>
 
 </manifest>

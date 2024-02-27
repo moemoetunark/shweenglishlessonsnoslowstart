@@ -1,6 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <group
         android:id="@+id/menu_top"
         android:checkableBehavior="single">
@@ -9,6 +10,16 @@
             android:id="@+id/download"
             android:icon="@drawable/cloud_download_30"
             android:title="@string/download"/>
+        <item
+            android:id="@+id/get_coins"
+            android:icon="@drawable/ads_icon_30"
+            android:title="@string/get_coins" />
+
+        <item
+            android:id="@+id/coin_balance"
+            android:icon="@drawable/coins_30"
+            android:title="@string/coins_balance" />
+
     </group>
 
     <group
