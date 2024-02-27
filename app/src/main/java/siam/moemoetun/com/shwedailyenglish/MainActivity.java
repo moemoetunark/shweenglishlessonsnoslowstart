@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,9 @@ import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.gms.ads.OnUserEarnedRewardListener;
+import com.google.android.gms.ads.rewarded.RewardItem;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
@@ -27,25 +31,33 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import java.util.HashMap;
 import siam.moemoetun.com.shwedailyenglish.adapter.ViewPagerAdapter;
+import siam.moemoetun.com.shwedailyenglish.constant.AppConstant;
 import siam.moemoetun.com.shwedailyenglish.note.NoteActivity;
+import siam.moemoetun.com.shwedailyenglish.utility.AdMobHelper;
 import siam.moemoetun.com.shwedailyenglish.utility.CustomDialog;
 import siam.moemoetun.com.shwedailyenglish.utility.GoogleMobileAdsConsentManager;
 import siam.moemoetun.com.shwedailyenglish.utility.NavigationHandler;
-public class MainActivity extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements OnUserEarnedRewardListener, NavigationView.OnNavigationItemSelectedListener {
 
     private ViewPager viewPager;
     private AlertDialog dialog;
     private DrawerLayout drawer;
     NavigationView navigationView;
+    private AdMobHelper adMobHelper;
     FirebaseRemoteConfig mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
     GoogleMobileAdsConsentManager googleMobileAdsConsentManager;
-    private final String[] pageTitle = {"Basic Grammar", "Basic Speaking", "Story", "Vocabulary",
+    private final String[] pageTitle = {"Advanced Grammar","Basic Grammar", "Basic Speaking", "Story", "Vocabulary",
             "Spoken Patterns", "Interchange", "Song Lyrics"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         googleMobileAdsConsentManager = GoogleMobileAdsConsentManager.getInstance(getApplicationContext());
+        AppConstant.initialize(getApplicationContext());
+
+        adMobHelper = new AdMobHelper(this, "ca-app-pub-4137439985376631/9876463747");
+        adMobHelper.loadRewardedAd();
+
 
         HashMap<String, Object> defaultRate = new HashMap<>();
         defaultRate.put("new_version_code", String.valueOf(getVersionCode()));
@@ -78,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
 
         //setting Tab layout (number of Tabs = number of ViewPager pages)
         TabLayout tabLayout = findViewById(R.id.tab_layout);
-        for (int i = 0; i <7; i++) {
+        for (int i = 0; i <8; i++) {
             tabLayout.addTab(tabLayout.newTab().setText(pageTitle[i]));
         }
 
@@ -117,11 +129,74 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
     }
 
     @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+
+        int coinBalance = AppConstant.getCoinBalance();
+        Menu menu = navigationView.getMenu();
+        MenuItem coinBalanceItem = menu.findItem(R.id.coin_balance);
+        coinBalanceItem.setTitle("Your coins: " + coinBalance);
+        navigationView.invalidate();
+        adMobHelper.loadRewardedAd();
+
+
+    }
+
+    @Override
+    public void onUserEarnedReward(@NonNull RewardItem rewardItem) {
+        Toast.makeText(MainActivity.this, "You earned 10 coins", Toast.LENGTH_SHORT).show();
+        int currentBalance = AppConstant.getCoinBalance();
+        currentBalance += 10;
+        AppConstant.setCoinBalance(currentBalance);
+
+        // Update the coin balance in the coin_balance menu item
+        Menu menu = navigationView.getMenu();
+        MenuItem coinBalanceItem = menu.findItem(R.id.coin_balance);
+        coinBalanceItem.setTitle("Your coins: " + AppConstant.getCoinBalance());
+    }
+
+    public void showRewardedAd() {
+        adMobHelper.showRewardedAd(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        adMobHelper.loadRewardedAd();
+        int coinBalance = AppConstant.getCoinBalance();
+        Menu menu = navigationView.getMenu();
+        MenuItem coinBalanceItem = menu.findItem(R.id.coin_balance);
+        coinBalanceItem.setTitle("Your coins: " + coinBalance);
+        navigationView.invalidate();
+
+        mFirebaseRemoteConfig.fetchAndActivate().addOnCompleteListener(this, new OnCompleteListener<Boolean>() {
+            @Override
+            public void onComplete(@NonNull Task<Boolean> task) {
+                if (task.isSuccessful()) {
+                    final String new_version_code = mFirebaseRemoteConfig.getString("new_version_code");
+                    if (Integer.parseInt(new_version_code) > getVersionCode()) upDateApp();
+                }
+            }
+        });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
         if (id == R.id.privacy_policy) {
-            startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://www.moemoetun.me/p/privacy-policy.html")));
+            startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://shweenglishlessons.blogspot.com/p/privacy-policy.html")));
         } else if (id == R.id.rate) {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse(
@@ -149,7 +224,9 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
             intent.launchUrl(MainActivity.this, Uri.parse(url));
         } else if (id ==R.id.foloow_youtube){
             NavigationHandler.openYouTubeChannel(MainActivity.this);
-        }else if (id ==R.id.app_exit){
+        } else if(id == R.id.get_coins){
+            showRewardedAd();
+        } else if (id ==R.id.app_exit){
           dialog.show();
         }
         drawer.closeDrawer(GravityCompat.START);
@@ -211,7 +288,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         } catch (PackageManager.NameNotFoundException e) {
             Log.i("my log", "NameNotFoundException" + e.getMessage());
         }
-        return packageInfo != null ? packageInfo.versionCode : 60;
+        return packageInfo != null ? packageInfo.versionCode : 64;
     }
 
     @Override

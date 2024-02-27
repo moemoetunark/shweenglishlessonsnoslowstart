@@ -13,6 +13,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
@@ -23,6 +24,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import siam.moemoetun.com.shwedailyenglish.R;
+import siam.moemoetun.com.shwedailyenglish.utility.AdMobHelper;
 import siam.moemoetun.com.shwedailyenglish.utility.GoogleMobileAdsConsentManager;
 import siam.moemoetun.com.shwedailyenglish.utility.ToolbarUtils;
 public class DetailsWebView extends AppCompatActivity {
@@ -33,6 +35,7 @@ public WebView webView;
     private AdView adView;
     private FrameLayout adContainerView;
     private AtomicBoolean initialLayoutComplete = new AtomicBoolean(false);
+    private InterstitialAd mInterstitialAd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,7 +92,21 @@ public WebView webView;
                 "fonts/tharlon.ttf" // Replace with your font path
         );
 
-        AdRequest InterstitialAdRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().build();
+        InterstitialAd.load(this,getString(R.string.inter_goback),
+                adRequest, new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        // The mInterstitialAd reference will be null until
+                        // an ad is loaded.
+                        mInterstitialAd = interstitialAd;
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        mInterstitialAd = null;
+                    }
+                });
         webView = findViewById(R.id.webview);
         webView.getSettings().setJavaScriptEnabled(true);
         String fragmentId = getIntent().getStringExtra("FRAGMENT_ID");
@@ -138,13 +155,45 @@ public WebView webView;
 
     @Override
     public void onBackPressed() {
+        if(mInterstitialAd !=null){
+            mInterstitialAd.show(DetailsWebView.this);
+            mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                @Override
+                public void onAdDismissedFullScreenContent() {
+                    onBackPressed();
+                    super.onAdDismissedFullScreenContent();
+                }
+            });
+        } else {
             super.onBackPressed();
+        }
+
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         if (menuItem.getItemId() == android.R.id.home) {
-           onBackPressed();
+            if(mInterstitialAd !=null){
+                mInterstitialAd.show(DetailsWebView.this);
+                mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                    @Override
+                    public void onAdDismissedFullScreenContent() {
+                        if(mInterstitialAd !=null){
+                            mInterstitialAd.show(DetailsWebView.this);
+                            mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                                @Override
+                                public void onAdDismissedFullScreenContent() {
+                                    onBackPressed();
+                                    super.onAdDismissedFullScreenContent();
+                                }
+                            });
+                        }
+                        super.onAdDismissedFullScreenContent();
+                    }
+                });
+            }else {
+                super.onBackPressed();
+            }
         }
         return super.onOptionsItemSelected(menuItem);
     }
@@ -968,4 +1017,5 @@ public WebView webView;
         int adWidth = (int) (adWidthPixels / density);
         return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth);
     }
+
 }

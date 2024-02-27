@@ -1,6 +1,5 @@
 package siam.moemoetun.com.shwedailyenglish;
 
-
 import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import siam.moemoetun.com.shwedailyenglish.utility.GoogleMobileAdsConsentManager;
-
 /** Splash Activity that inflates splash activity xml. */
 public class SplashActivity extends AppCompatActivity {
     private static final String LOG_TAG = "SplashActivity";
@@ -24,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
      * Number of milliseconds to count down before showing the app open ad. This simulates the time
      * needed to load the app.
      */
-    private static final long COUNTER_TIME_MILLISECONDS = 5000;
+    private static final long COUNTER_TIME_MILLISECONDS = 6000;
 
     private long secondsRemaining;
 

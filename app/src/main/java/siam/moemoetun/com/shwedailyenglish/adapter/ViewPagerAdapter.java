@@ -10,6 +10,8 @@ import siam.moemoetun.com.shwedailyenglish.fragments.Fragment3;
 import siam.moemoetun.com.shwedailyenglish.fragments.Fragment4;
 import siam.moemoetun.com.shwedailyenglish.fragments.Fragment5;
 import siam.moemoetun.com.shwedailyenglish.fragments.Fragment6;
+import siam.moemoetun.com.shwedailyenglish.fragments.FragmentPremium;
+
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     public ViewPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -17,17 +19,20 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-         if (position ==0) {
+        if(position == 0 ){
+            return new FragmentPremium();
+        }
+         if (position ==1) {
             return new Fragment1();
-        }else if(position ==1){
+        }else if(position ==2){
             return new Fragment2();
-        }else if(position==2){
+        }else if(position==3){
             return new Fragment3();
-        } else if (position ==3) {
+        } else if (position ==4) {
             return new Fragment4();
-        }else if (position==4){
-            return new Fragment5();
         }else if (position==5){
+            return new Fragment5();
+        }else if (position==6){
             return new Fragment6();
         }
         else {
@@ -37,6 +42,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 7;
+        return 8;
     }
 }

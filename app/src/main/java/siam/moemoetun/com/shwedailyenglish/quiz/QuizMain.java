@@ -23,7 +23,6 @@ import siam.moemoetun.com.shwedailyenglish.quiz.frag.QuizPlayFragment;
 import siam.moemoetun.com.shwedailyenglish.utility.AdMobHelper;
 
 public class QuizMain extends AppCompatActivity {
-  AdMobHelper adMobHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +30,6 @@ public class QuizMain extends AppCompatActivity {
         /**
          *Ad Units should be in the type of IronSource.Ad_Unit.AdUnitName, example
          */
-
-
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         String selectedCategory = getIntent().getStringExtra("selectedCategory");
         toolbar.setTitle(selectedCategory);
